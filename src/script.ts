@@ -18,11 +18,18 @@ interface IngredientData {
   pkey: string;
   id: string;
   collected_by: string;
-  effects: { fkey: string }[];
+  effects: IngredientEffect[];
   value: number;
   weight: number;
   merchant_avail: string;
-  GardenHF: null;
+  garden_hf: null;
+}
+
+interface IngredientEffect { 
+  fkey: string;
+  magnitude: number;
+  duration: number;
+  value: number;
 }
 
 async function fetchData(): Promise<void> {
