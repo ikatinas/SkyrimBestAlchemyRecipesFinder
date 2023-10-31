@@ -21,7 +21,7 @@
     ],
     "value": 15,
     "weight": 0.5,
-    "merchant_avail.": "Common",
+    "merchant_avail": "Common",
     "GardenHF": null
   },
   {
@@ -47,7 +47,7 @@
     ],
     "value": 2,
     "weight": 0.1,
-    "merchant_avail.": "None",
+    "merchant_avail": "None",
     "GardenHF": null
   },
   {
@@ -73,7 +73,7 @@
     ],
     "value": 20,
     "weight": 0.25,
-    "merchant_avail.": "None",
+    "merchant_avail": "None",
     "GardenHF": null
   },
   {
@@ -99,7 +99,7 @@
     ],
     "value": 20,
     "weight": 0.25,
-    "merchant_avail.": "",
+    "merchant_avail": "",
     "GardenHF": null
   },
   {
@@ -127,7 +127,7 @@
     ],
     "value": 1,
     "weight": 0.1,
-    "merchant_avail.": "",
+    "merchant_avail": "",
     "GardenHF": null
   },
   {
@@ -154,7 +154,7 @@
     ],
     "value": 2,
     "weight": 0.1,
-    "merchant_avail.": "None (Uncommon)",
+    "merchant_avail": "None (Uncommon)",
     "GardenHF": null
   },
   {
@@ -179,7 +179,7 @@
     ],
     "value": 3,
     "weight": 0.1,
-    "merchant_avail.": "Common",
+    "merchant_avail": "Common",
     "GardenHF": null
   },
   {
@@ -205,7 +205,7 @@
     ],
     "value": 5,
     "weight": 1,
-    "merchant_avail.": "None (Common)",
+    "merchant_avail": "None (Common)",
     "GardenHF": null
   },
   {
@@ -230,7 +230,7 @@
     ],
     "value": 10,
     "weight": 0.3,
-    "merchant_avail.": "Uncommon",
+    "merchant_avail": "Uncommon",
     "GardenHF": 3
   },
   {
@@ -257,7 +257,7 @@
     ],
     "value": 12,
     "weight": 0.2,
-    "merchant_avail.": "Uncommon",
+    "merchant_avail": "Uncommon",
     "GardenHF": 4
   },
   {
@@ -282,7 +282,7 @@
     ],
     "value": 2,
     "weight": 0.1,
-    "merchant_avail.": "Uncommon",
+    "merchant_avail": "Uncommon",
     "GardenHF": null
   },
   {
@@ -307,7 +307,7 @@
     ],
     "value": 1,
     "weight": 0.1,
-    "merchant_avail.": "None (Uncommon)",
+    "merchant_avail": "None (Uncommon)",
     "GardenHF": null
   },
   {
@@ -332,7 +332,7 @@
     ],
     "value": 2,
     "weight": 0.1,
-    "merchant_avail.": "Common",
+    "merchant_avail": "Common",
     "GardenHF": 3
   },
   {
@@ -363,7 +363,7 @@
     ],
     "value": 20,
     "weight": 0.5,
-    "merchant_avail.": "",
+    "merchant_avail": "",
     "GardenHF": null
   },
   {
@@ -388,7 +388,7 @@
     ],
     "value": 5,
     "weight": 0.5,
-    "merchant_avail.": "Common",
+    "merchant_avail": "Common",
     "GardenHF": null
   },
   {
@@ -414,7 +414,7 @@
     ],
     "value": 20,
     "weight": 0.5,
-    "merchant_avail.": "Rare",
+    "merchant_avail": "Rare",
     "GardenHF": null
   },
   {
@@ -440,7 +440,7 @@
     ],
     "value": 20,
     "weight": 0.5,
-    "merchant_avail.": "",
+    "merchant_avail": "",
     "GardenHF": null
   },
   {
@@ -465,7 +465,7 @@
     ],
     "value": 3,
     "weight": 0.1,
-    "merchant_avail.": "Uncommon",
+    "merchant_avail": "Uncommon",
     "GardenHF": null
   },
   {
@@ -490,7 +490,7 @@
     ],
     "value": 5,
     "weight": 0.1,
-    "merchant_avail.": "Uncommon",
+    "merchant_avail": "Uncommon",
     "GardenHF": 4
   },
   {
@@ -516,7 +516,7 @@
     ],
     "value": 1,
     "weight": 0.5,
-    "merchant_avail.": "Uncommon",
+    "merchant_avail": "Uncommon",
     "GardenHF": null
   },
   {
@@ -541,7 +541,7 @@
     ],
     "value": 10,
     "weight": 0.2,
-    "merchant_avail.": "Uncommon",
+    "merchant_avail": "Uncommon",
     "GardenHF": null
   },
   {
@@ -567,7 +567,7 @@
     ],
     "value": 2,
     "weight": 0.1,
-    "merchant_avail.": "None",
+    "merchant_avail": "None",
     "GardenHF": null
   },
   {
@@ -592,7 +592,7 @@
     ],
     "value": 2,
     "weight": 0.5,
-    "merchant_avail.": "Uncommon",
+    "merchant_avail": "Uncommon",
     "GardenHF": null
   },
   {
@@ -617,7 +617,7 @@
     ],
     "value": 1,
     "weight": 0.2,
-    "merchant_avail.": "Uncommon",
+    "merchant_avail": "Uncommon",
     "GardenHF": 5
   },
   {
@@ -644,7 +644,7 @@
     ],
     "value": 10,
     "weight": 0.2,
-    "merchant_avail.": "None",
+    "merchant_avail": "None",
     "GardenHF": null
   },
   {
@@ -669,7 +669,7 @@
     ],
     "value": 15,
     "weight": 0.25,
-    "merchant_avail.": "Common",
+    "merchant_avail": "Common",
     "GardenHF": null
   },
   {
@@ -694,7 +694,7 @@
     ],
     "value": 250,
     "weight": 0.5,
-    "merchant_avail.": "Rare",
+    "merchant_avail": "Rare",
     "GardenHF": null
   },
   {
@@ -721,7 +721,7 @@
     ],
     "value": 4,
     "weight": 0.1,
-    "merchant_avail.": "Rare",
+    "merchant_avail": "Rare",
     "GardenHF": 3
   },
   {
@@ -746,7 +746,7 @@
     ],
     "value": 5,
     "weight": 0.1,
-    "merchant_avail.": "Common",
+    "merchant_avail": "Common",
     "GardenHF": 4
   },
   {
@@ -771,7 +771,7 @@
     ],
     "value": 15,
     "weight": 0.25,
-    "merchant_avail.": "Uncommon",
+    "merchant_avail": "Uncommon",
     "GardenHF": null
   },
   {
@@ -797,7 +797,7 @@
     ],
     "value": 25,
     "weight": 0.1,
-    "merchant_avail.": "Uncommon",
+    "merchant_avail": "Uncommon",
     "GardenHF": null
   },
   {
@@ -822,7 +822,7 @@
     ],
     "value": 10,
     "weight": 0.1,
-    "merchant_avail.": "Common",
+    "merchant_avail": "Common",
     "GardenHF": null
   },
   {
@@ -849,7 +849,7 @@
     ],
     "value": 1,
     "weight": 0.25,
-    "merchant_avail.": "",
+    "merchant_avail": "",
     "GardenHF": null
   },
   {
@@ -874,7 +874,7 @@
     ],
     "value": 2,
     "weight": 0.1,
-    "merchant_avail.": "None (Uncommon)",
+    "merchant_avail": "None (Uncommon)",
     "GardenHF": null
   },
   {
@@ -899,7 +899,7 @@
     ],
     "value": 10,
     "weight": 0.2,
-    "merchant_avail.": "Uncommon",
+    "merchant_avail": "Uncommon",
     "GardenHF": null
   },
   {
@@ -925,7 +925,7 @@
     ],
     "value": 15,
     "weight": 0.1,
-    "merchant_avail.": "",
+    "merchant_avail": "",
     "GardenHF": null
   },
   {
@@ -950,7 +950,7 @@
     ],
     "value": 50,
     "weight": 0.25,
-    "merchant_avail.": "Rare",
+    "merchant_avail": "Rare",
     "GardenHF": null
   },
   {
@@ -975,7 +975,7 @@
     ],
     "value": 2,
     "weight": 0.1,
-    "merchant_avail.": "Uncommon",
+    "merchant_avail": "Uncommon",
     "GardenHF": 4
   },
   {
@@ -1000,7 +1000,7 @@
     ],
     "value": 1,
     "weight": 0.1,
-    "merchant_avail.": "Uncommon",
+    "merchant_avail": "Uncommon",
     "GardenHF": null
   },
   {
@@ -1025,7 +1025,7 @@
     ],
     "value": 100,
     "weight": 0.25,
-    "merchant_avail.": "Rare",
+    "merchant_avail": "Rare",
     "GardenHF": null
   },
   {
@@ -1050,7 +1050,7 @@
     ],
     "value": 1,
     "weight": 0.25,
-    "merchant_avail.": "Common",
+    "merchant_avail": "Common",
     "GardenHF": null
   },
   {
@@ -1075,7 +1075,7 @@
     ],
     "value": 5,
     "weight": 0.25,
-    "merchant_avail.": "Uncommon",
+    "merchant_avail": "Uncommon",
     "GardenHF": 4
   },
   {
@@ -1102,7 +1102,7 @@
     ],
     "value": 20,
     "weight": 1,
-    "merchant_avail.": "Rare",
+    "merchant_avail": "Rare",
     "GardenHF": null
   },
   {
@@ -1128,7 +1128,7 @@
     ],
     "value": 5,
     "weight": 0.1,
-    "merchant_avail.": "None",
+    "merchant_avail": "None",
     "GardenHF": null
   },
   {
@@ -1153,7 +1153,7 @@
     ],
     "value": 20,
     "weight": 0.5,
-    "merchant_avail.": "Uncommon",
+    "merchant_avail": "Uncommon",
     "GardenHF": null
   },
   {
@@ -1178,7 +1178,7 @@
     ],
     "value": 5,
     "weight": 0.2,
-    "merchant_avail.": "None",
+    "merchant_avail": "None",
     "GardenHF": 5
   },
   {
@@ -1203,7 +1203,7 @@
     ],
     "value": 1,
     "weight": 0.1,
-    "merchant_avail.": "Uncommon",
+    "merchant_avail": "Uncommon",
     "GardenHF": 3
   },
   {
@@ -1228,7 +1228,7 @@
     ],
     "value": 20,
     "weight": 0.25,
-    "merchant_avail.": "Rare",
+    "merchant_avail": "Rare",
     "GardenHF": null
   },
   {
@@ -1253,7 +1253,7 @@
     ],
     "value": 20,
     "weight": 0.1,
-    "merchant_avail.": "Rare",
+    "merchant_avail": "Rare",
     "GardenHF": null
   },
   {
@@ -1278,7 +1278,7 @@
     ],
     "value": 1,
     "weight": 0.25,
-    "merchant_avail.": "Uncommon",
+    "merchant_avail": "Uncommon",
     "GardenHF": null
   },
   {
@@ -1303,7 +1303,7 @@
     ],
     "value": 15,
     "weight": 0.25,
-    "merchant_avail.": "Uncommon",
+    "merchant_avail": "Uncommon",
     "GardenHF": null
   },
   {
@@ -1329,7 +1329,7 @@
     ],
     "value": 15,
     "weight": 0.1,
-    "merchant_avail.": "Uncommon",
+    "merchant_avail": "Uncommon",
     "GardenHF": null
   },
   {
@@ -1355,7 +1355,7 @@
     ],
     "value": 5,
     "weight": 0.5,
-    "merchant_avail.": "None",
+    "merchant_avail": "None",
     "GardenHF": null
   },
   {
@@ -1380,7 +1380,7 @@
     ],
     "value": 6,
     "weight": 0.25,
-    "merchant_avail.": "Common",
+    "merchant_avail": "Common",
     "GardenHF": null
   },
   {
@@ -1406,7 +1406,7 @@
     ],
     "value": 5,
     "weight": 1,
-    "merchant_avail.": "None (Common)",
+    "merchant_avail": "None (Common)",
     "GardenHF": null
   },
   {
@@ -1431,7 +1431,7 @@
     ],
     "value": 1,
     "weight": 0.25,
-    "merchant_avail.": "None",
+    "merchant_avail": "None",
     "GardenHF": null
   },
   {
@@ -1456,7 +1456,7 @@
     ],
     "value": 0,
     "weight": 1,
-    "merchant_avail.": "None",
+    "merchant_avail": "None",
     "GardenHF": null
   },
   {
@@ -1481,7 +1481,7 @@
     ],
     "value": 30,
     "weight": 0.25,
-    "merchant_avail.": "Rare",
+    "merchant_avail": "Rare",
     "GardenHF": null
   },
   {
@@ -1508,7 +1508,7 @@
     ],
     "value": 0,
     "weight": 0.3,
-    "merchant_avail.": "Rare",
+    "merchant_avail": "Rare",
     "GardenHF": 4
   },
   {
@@ -1533,7 +1533,7 @@
     ],
     "value": 1,
     "weight": 0.2,
-    "merchant_avail.": "Rare",
+    "merchant_avail": "Rare",
     "GardenHF": 3
   },
   {
@@ -1558,7 +1558,7 @@
     ],
     "value": 1,
     "weight": 0.1,
-    "merchant_avail.": "Common",
+    "merchant_avail": "Common",
     "GardenHF": 4
   },
   {
@@ -1585,7 +1585,7 @@
     ],
     "value": 2,
     "weight": 0.1,
-    "merchant_avail.": "None (Uncommon)",
+    "merchant_avail": "None (Uncommon)",
     "GardenHF": null
   },
   {
@@ -1610,7 +1610,7 @@
     ],
     "value": 1,
     "weight": 0.1,
-    "merchant_avail.": "Common",
+    "merchant_avail": "Common",
     "GardenHF": 3
   },
   {
@@ -1635,7 +1635,7 @@
     ],
     "value": 5,
     "weight": 0.1,
-    "merchant_avail.": "Uncommon",
+    "merchant_avail": "Uncommon",
     "GardenHF": null
   },
   {
@@ -1660,7 +1660,7 @@
     ],
     "value": 50,
     "weight": 0.25,
-    "merchant_avail.": "Uncommon",
+    "merchant_avail": "Uncommon",
     "GardenHF": null
   },
   {
@@ -1685,7 +1685,7 @@
     ],
     "value": 4,
     "weight": 0.25,
-    "merchant_avail.": "Uncommon",
+    "merchant_avail": "Uncommon",
     "GardenHF": 3
   },
   {
@@ -1710,7 +1710,7 @@
     ],
     "value": 2,
     "weight": 0.25,
-    "merchant_avail.": "None (Common)",
+    "merchant_avail": "None (Common)",
     "GardenHF": null
   },
   {
@@ -1735,7 +1735,7 @@
     ],
     "value": 0,
     "weight": 0.25,
-    "merchant_avail.": "Uncommon",
+    "merchant_avail": "Uncommon",
     "GardenHF": 3
   },
   {
@@ -1762,7 +1762,7 @@
     ],
     "value": 20,
     "weight": 0.5,
-    "merchant_avail.": "",
+    "merchant_avail": "",
     "GardenHF": null
   },
   {
@@ -1788,7 +1788,7 @@
     ],
     "value": 8,
     "weight": 0.1,
-    "merchant_avail.": "Rare",
+    "merchant_avail": "Rare",
     "GardenHF": 3
   },
   {
@@ -1814,7 +1814,7 @@
     ],
     "value": 10,
     "weight": 0.2,
-    "merchant_avail.": "Rare",
+    "merchant_avail": "Rare",
     "GardenHF": null
   },
   {
@@ -1839,7 +1839,7 @@
     ],
     "value": 5,
     "weight": 0.2,
-    "merchant_avail.": "Uncommon",
+    "merchant_avail": "Uncommon",
     "GardenHF": null
   },
   {
@@ -1864,7 +1864,7 @@
     ],
     "value": 1,
     "weight": 0.1,
-    "merchant_avail.": "None (Common)",
+    "merchant_avail": "None (Common)",
     "GardenHF": null
   },
   {
@@ -1889,7 +1889,7 @@
     ],
     "value": 2,
     "weight": 0.1,
-    "merchant_avail.": "None (Uncommon)",
+    "merchant_avail": "None (Uncommon)",
     "GardenHF": null
   },
   {
@@ -1914,7 +1914,7 @@
     ],
     "value": 2,
     "weight": 0.5,
-    "merchant_avail.": "Common",
+    "merchant_avail": "Common",
     "GardenHF": null
   },
   {
@@ -1941,7 +1941,7 @@
     ],
     "value": 5,
     "weight": 0.25,
-    "merchant_avail.": "None",
+    "merchant_avail": "None",
     "GardenHF": null
   },
   {
@@ -1966,7 +1966,7 @@
     ],
     "value": 2,
     "weight": 0.1,
-    "merchant_avail.": "None (Uncommon)",
+    "merchant_avail": "None (Uncommon)",
     "GardenHF": null
   },
   {
@@ -1991,7 +1991,7 @@
     ],
     "value": 2,
     "weight": 0.1,
-    "merchant_avail.": "Common",
+    "merchant_avail": "Common",
     "GardenHF": 3
   },
   {
@@ -2016,7 +2016,7 @@
     ],
     "value": 2,
     "weight": 0.1,
-    "merchant_avail.": "Common",
+    "merchant_avail": "Common",
     "GardenHF": 3
   },
   {
@@ -2042,7 +2042,7 @@
     ],
     "value": 15,
     "weight": 0.25,
-    "merchant_avail.": "Common",
+    "merchant_avail": "Common",
     "GardenHF": null
   },
   {
@@ -2067,7 +2067,7 @@
     ],
     "value": 2,
     "weight": 0.5,
-    "merchant_avail.": "Uncommon",
+    "merchant_avail": "Uncommon",
     "GardenHF": null
   },
   {
@@ -2092,7 +2092,7 @@
     ],
     "value": 2,
     "weight": 0.1,
-    "merchant_avail.": "None (Uncommon)",
+    "merchant_avail": "None (Uncommon)",
     "GardenHF": null
   },
   {
@@ -2123,7 +2123,7 @@
     ],
     "value": 5,
     "weight": 0.2,
-    "merchant_avail.": "None",
+    "merchant_avail": "None",
     "GardenHF": null
   },
   {
@@ -2148,7 +2148,7 @@
     ],
     "value": 1,
     "weight": 0.2,
-    "merchant_avail.": "None",
+    "merchant_avail": "None",
     "GardenHF": null
   },
   {
@@ -2173,7 +2173,7 @@
     ],
     "value": 4,
     "weight": 0.25,
-    "merchant_avail.": "Uncommon",
+    "merchant_avail": "Uncommon",
     "GardenHF": 5
   },
   {
@@ -2199,7 +2199,7 @@
     ],
     "value": 1,
     "weight": 0.1,
-    "merchant_avail.": "",
+    "merchant_avail": "",
     "GardenHF": null
   },
   {
@@ -2224,7 +2224,7 @@
     ],
     "value": 15,
     "weight": 0.25,
-    "merchant_avail.": "Common",
+    "merchant_avail": "Common",
     "GardenHF": null
   },
   {
@@ -2249,7 +2249,7 @@
     ],
     "value": 3,
     "weight": 0.2,
-    "merchant_avail.": "Common",
+    "merchant_avail": "Common",
     "GardenHF": null
   },
   {
@@ -2274,7 +2274,7 @@
     ],
     "value": 3,
     "weight": 0.2,
-    "merchant_avail.": "Uncommon",
+    "merchant_avail": "Uncommon",
     "GardenHF": null
   },
   {
@@ -2299,7 +2299,7 @@
     ],
     "value": 3,
     "weight": 0.1,
-    "merchant_avail.": "Uncommon",
+    "merchant_avail": "Uncommon",
     "GardenHF": null
   },
   {
@@ -2324,7 +2324,7 @@
     ],
     "value": 2,
     "weight": 0.1,
-    "merchant_avail.": "None (Common)",
+    "merchant_avail": "None (Common)",
     "GardenHF": null
   },
   {
@@ -2349,7 +2349,7 @@
     ],
     "value": 2,
     "weight": 0.1,
-    "merchant_avail.": "None (Uncommon)",
+    "merchant_avail": "None (Uncommon)",
     "GardenHF": null
   },
   {
@@ -2374,7 +2374,7 @@
     ],
     "value": 4,
     "weight": 0.1,
-    "merchant_avail.": "Common",
+    "merchant_avail": "Common",
     "GardenHF": 4
   },
   {
@@ -2400,7 +2400,7 @@
     ],
     "value": 20,
     "weight": 0.1,
-    "merchant_avail.": "",
+    "merchant_avail": "",
     "GardenHF": null
   },
   {
@@ -2425,7 +2425,7 @@
     ],
     "value": 5,
     "weight": 0.2,
-    "merchant_avail.": "Uncommon",
+    "merchant_avail": "Uncommon",
     "GardenHF": null
   },
   {
@@ -2450,7 +2450,7 @@
     ],
     "value": 15,
     "weight": 0.2,
-    "merchant_avail.": "Uncommon",
+    "merchant_avail": "Uncommon",
     "GardenHF": null
   },
   {
@@ -2475,7 +2475,7 @@
     ],
     "value": 5,
     "weight": 0.25,
-    "merchant_avail.": "Uncommon",
+    "merchant_avail": "Uncommon",
     "GardenHF": 3
   },
   {
@@ -2500,7 +2500,7 @@
     ],
     "value": 15,
     "weight": 0.5,
-    "merchant_avail.": "Uncommon",
+    "merchant_avail": "Uncommon",
     "GardenHF": null
   },
   {
@@ -2528,7 +2528,7 @@
     ],
     "value": 1,
     "weight": 0.1,
-    "merchant_avail.": "Common",
+    "merchant_avail": "Common",
     "GardenHF": 3
   },
   {
@@ -2553,7 +2553,7 @@
     ],
     "value": 1,
     "weight": 0.1,
-    "merchant_avail.": "None (Common)",
+    "merchant_avail": "None (Common)",
     "GardenHF": null
   },
   {
@@ -2579,7 +2579,7 @@
     ],
     "value": 1,
     "weight": 0.2,
-    "merchant_avail.": "",
+    "merchant_avail": "",
     "GardenHF": null
   },
   {
@@ -2604,7 +2604,7 @@
     ],
     "value": 15,
     "weight": 1,
-    "merchant_avail.": "Uncommon",
+    "merchant_avail": "Uncommon",
     "GardenHF": null
   },
   {
@@ -2629,7 +2629,7 @@
     ],
     "value": 1,
     "weight": 0.1,
-    "merchant_avail.": "Common",
+    "merchant_avail": "Common",
     "GardenHF": 3
   },
   {
@@ -2654,7 +2654,7 @@
     ],
     "value": 25,
     "weight": 0.2,
-    "merchant_avail.": "Rare",
+    "merchant_avail": "Rare",
     "GardenHF": null
   },
   {
@@ -2679,7 +2679,7 @@
     ],
     "value": 125,
     "weight": 0.2,
-    "merchant_avail.": "Rare",
+    "merchant_avail": "Rare",
     "GardenHF": null
   },
   {
@@ -2704,7 +2704,7 @@
     ],
     "value": 5,
     "weight": 0.1,
-    "merchant_avail.": "Common",
+    "merchant_avail": "Common",
     "GardenHF": 4
   },
   {
@@ -2729,7 +2729,7 @@
     ],
     "value": 0,
     "weight": 0.3,
-    "merchant_avail.": "Uncommon",
+    "merchant_avail": "Uncommon",
     "GardenHF": 2
   },
   {
@@ -2754,7 +2754,7 @@
     ],
     "value": 2,
     "weight": 0.1,
-    "merchant_avail.": "None (Uncommon)",
+    "merchant_avail": "None (Uncommon)",
     "GardenHF": null
   },
   {
@@ -2781,7 +2781,7 @@
     ],
     "value": 2,
     "weight": 0.1,
-    "merchant_avail.": "None",
+    "merchant_avail": "None",
     "GardenHF": null
   },
   {
@@ -2813,7 +2813,7 @@
     ],
     "value": 22,
     "weight": 0.25,
-    "merchant_avail.": "",
+    "merchant_avail": "",
     "garden": null
   },
   {
@@ -2846,7 +2846,7 @@
     ],
     "value": 15,
     "weight": 0.1,
-    "merchant_avail.": "",
+    "merchant_avail": "",
     "garden": null
   },
   {
@@ -2872,7 +2872,7 @@
     ],
     "value": 30,
     "weight": 0.25,
-    "merchant_avail.": "",
+    "merchant_avail": "",
     "garden": null
   },
   {
@@ -2898,7 +2898,7 @@
     ],
     "value": 1,
     "weight": 0.25,
-    "merchant_avail.": "",
+    "merchant_avail": "",
     "garden": null
   },
   {
@@ -2932,7 +2932,7 @@
     ],
     "value": 40,
     "weight": 0.1,
-    "merchant_avail.": "",
+    "merchant_avail": "",
     "garden": null
   },
   {
@@ -2964,7 +2964,7 @@
     ],
     "value": 25,
     "weight": 0.1,
-    "merchant_avail.": "",
+    "merchant_avail": "",
     "garden": null
   },
   {
@@ -2994,7 +2994,7 @@
     ],
     "value": 9,
     "weight": 0.2,
-    "merchant_avail.": "",
+    "merchant_avail": "",
     "garden": null
   },
   {
@@ -3022,7 +3022,7 @@
     ],
     "value": 1,
     "weight": 0.1,
-    "merchant_avail.": "",
+    "merchant_avail": "",
     "garden": null
   },
   {
@@ -3054,7 +3054,7 @@
     ],
     "value": 25,
     "weight": 0.1,
-    "merchant_avail.": "",
+    "merchant_avail": "",
     "garden": null
   },
   {
@@ -3084,7 +3084,7 @@
     ],
     "value": 25,
     "weight": 0.1,
-    "merchant_avail.": "",
+    "merchant_avail": "",
     "garden": null
   },
   {
@@ -3118,7 +3118,7 @@
     ],
     "value": 20,
     "weight": 0.1,
-    "merchant_avail.": "",
+    "merchant_avail": "",
     "garden": null
   },
   {
@@ -3152,7 +3152,7 @@
     ],
     "value": 50,
     "weight": 0.5,
-    "merchant_avail.": "",
+    "merchant_avail": "",
     "garden": null
   },
   {
@@ -3186,7 +3186,7 @@
     ],
     "value": 15,
     "weight": 0.1,
-    "merchant_avail.": "",
+    "merchant_avail": "",
     "garden": null
   },
   {
@@ -3219,7 +3219,7 @@
     ],
     "value": 7,
     "weight": 0.1,
-    "merchant_avail.": "",
+    "merchant_avail": "",
     "garden": null
   },
   {
@@ -3253,7 +3253,7 @@
     ],
     "value": 30,
     "weight": 0.1,
-    "merchant_avail.": "",
+    "merchant_avail": "",
     "garden": null
   },
   {
@@ -3285,7 +3285,7 @@
     ],
     "value": 12,
     "weight": 0.1,
-    "merchant_avail.": "",
+    "merchant_avail": "",
     "garden": null
   },
   {
@@ -3319,7 +3319,7 @@
     ],
     "value": 9,
     "weight": 0.1,
-    "merchant_avail.": "",
+    "merchant_avail": "",
     "garden": null
   },
   {
@@ -3353,7 +3353,7 @@
     ],
     "value": 30,
     "weight": 0.1,
-    "merchant_avail.": "",
+    "merchant_avail": "",
     "garden": null
   },
   {
@@ -3385,7 +3385,7 @@
     ],
     "value": 50,
     "weight": 0.5,
-    "merchant_avail.": "",
+    "merchant_avail": "",
     "garden": null
   },
   {
@@ -3417,7 +3417,7 @@
     ],
     "value": 50,
     "weight": 0.2,
-    "merchant_avail.": "",
+    "merchant_avail": "",
     "garden": null
   },
   {
@@ -3449,7 +3449,7 @@
     ],
     "value": 50,
     "weight": 0.5,
-    "merchant_avail.": "",
+    "merchant_avail": "",
     "garden": null
   },
   {
@@ -3483,7 +3483,7 @@
     ],
     "value": 25,
     "weight": 1,
-    "merchant_avail.": "",
+    "merchant_avail": "",
     "garden": null
   },
   {
@@ -3517,7 +3517,7 @@
     ],
     "value": 30,
     "weight": 0.1,
-    "merchant_avail.": "",
+    "merchant_avail": "",
     "garden": null
   },
   {
@@ -3549,7 +3549,7 @@
     ],
     "value": 30,
     "weight": 0.1,
-    "merchant_avail.": "",
+    "merchant_avail": "",
     "garden": null
   },
   {
@@ -3583,7 +3583,7 @@
     ],
     "value": 25,
     "weight": 0.1,
-    "merchant_avail.": "",
+    "merchant_avail": "",
     "garden": null
   },
   {
@@ -3619,7 +3619,7 @@
     ],
     "value": 30,
     "weight": 0.1,
-    "merchant_avail.": "",
+    "merchant_avail": "",
     "garden": null
   },
   {
@@ -3647,7 +3647,7 @@
     ],
     "value": 1,
     "weight": 0.25,
-    "merchant_avail.": "",
+    "merchant_avail": "",
     "garden": null
   },
   {
@@ -3681,7 +3681,7 @@
     ],
     "value": 15,
     "weight": 0.1,
-    "merchant_avail.": "",
+    "merchant_avail": "",
     "garden": null
   },
   {
@@ -3707,7 +3707,7 @@
     ],
     "value": 10,
     "weight": 0.25,
-    "merchant_avail.": "(?)",
+    "merchant_avail": "(?)",
     "garden": null
   },
   {
@@ -3741,7 +3741,7 @@
     ],
     "value": 30,
     "weight": 0.1,
-    "merchant_avail.": "",
+    "merchant_avail": "",
     "garden": null
   },
   {
@@ -3769,7 +3769,7 @@
     ],
     "value": 25,
     "weight": 0.1,
-    "merchant_avail.": "",
+    "merchant_avail": "",
     "garden": null
   },
   {
@@ -3803,7 +3803,7 @@
     ],
     "value": 30,
     "weight": 0.1,
-    "merchant_avail.": "",
+    "merchant_avail": "",
     "garden": null
   },
   {
@@ -3833,7 +3833,7 @@
     ],
     "value": 25,
     "weight": 0.1,
-    "merchant_avail.": "",
+    "merchant_avail": "",
     "garden": null
   },
   {
@@ -3868,7 +3868,7 @@
     ],
     "value": 40,
     "weight": 0.1,
-    "merchant_avail.": "",
+    "merchant_avail": "",
     "garden": null
   },
   {
@@ -3900,7 +3900,7 @@
     ],
     "value": 10,
     "weight": 0.1,
-    "merchant_avail.": "",
+    "merchant_avail": "",
     "garden": null
   },
   {
@@ -3933,7 +3933,7 @@
     ],
     "value": 30,
     "weight": 0.5,
-    "merchant_avail.": "",
+    "merchant_avail": "",
     "garden": null
   },
   {
@@ -3967,7 +3967,7 @@
     ],
     "value": 23,
     "weight": 0.1,
-    "merchant_avail.": "",
+    "merchant_avail": "",
     "garden": null
   },
   {
@@ -3999,7 +3999,7 @@
     ],
     "value": 15,
     "weight": 0.2,
-    "merchant_avail.": "",
+    "merchant_avail": "",
     "garden": null
   },
   {
@@ -4025,7 +4025,7 @@
     ],
     "value": 5,
     "weight": 0.1,
-    "merchant_avail.": "",
+    "merchant_avail": "",
     "garden": null
   },
   {
@@ -4051,7 +4051,7 @@
     ],
     "value": 10,
     "weight": 0.25,
-    "merchant_avail.": "",
+    "merchant_avail": "",
     "garden": null
   },
   {
@@ -4083,7 +4083,7 @@
     ],
     "value": 20,
     "weight": 1,
-    "merchant_avail.": "",
+    "merchant_avail": "",
     "garden": null
   },
   {
@@ -4117,7 +4117,7 @@
     ],
     "value": 30,
     "weight": 0.1,
-    "merchant_avail.": "",
+    "merchant_avail": "",
     "garden": null
   },
   {
@@ -4149,7 +4149,7 @@
     ],
     "value": 15,
     "weight": 0.1,
-    "merchant_avail.": "",
+    "merchant_avail": "",
     "garden": null
   },
   {
@@ -4183,7 +4183,7 @@
     ],
     "value": 25,
     "weight": 0.2,
-    "merchant_avail.": "",
+    "merchant_avail": "",
     "garden": null
   },
   {
@@ -4209,7 +4209,7 @@
     ],
     "value": 30,
     "weight": 0.25,
-    "merchant_avail.": "",
+    "merchant_avail": "",
     "garden": null
   },
   {
@@ -4243,7 +4243,7 @@
     ],
     "value": 18,
     "weight": 0.1,
-    "merchant_avail.": "",
+    "merchant_avail": "",
     "garden": null
   },
   {
@@ -4277,7 +4277,7 @@
     ],
     "value": 55,
     "weight": 5,
-    "merchant_avail.": "",
+    "merchant_avail": "",
     "garden": null
   },
   {
@@ -4303,7 +4303,7 @@
     ],
     "value": 2,
     "weight": 0.5,
-    "merchant_avail.": "None",
+    "merchant_avail": "None",
     "garden": null
   },
   {
@@ -4330,7 +4330,7 @@
     ],
     "value": 8,
     "weight": 0.1,
-    "merchant_avail.": "None",
+    "merchant_avail": "None",
     "garden": null
   },
   {
@@ -4364,7 +4364,7 @@
     ],
     "value": 50,
     "weight": 3,
-    "merchant_avail.": "",
+    "merchant_avail": "",
     "garden": null
   },
   {
@@ -4390,7 +4390,7 @@
     ],
     "value": 15,
     "weight": 0.25,
-    "merchant_avail.": "",
+    "merchant_avail": "",
     "garden": null
   },
   {
@@ -4416,7 +4416,7 @@
     ],
     "value": 25,
     "weight": 0.1,
-    "merchant_avail.": "",
+    "merchant_avail": "",
     "garden": null
   },
   {
@@ -4442,7 +4442,7 @@
     ],
     "value": 2,
     "weight": 0.25,
-    "merchant_avail.": "",
+    "merchant_avail": "",
     "garden": null
   },
   {
@@ -4475,7 +4475,7 @@
     ],
     "value": 20,
     "weight": 0.1,
-    "merchant_avail.": "",
+    "merchant_avail": "",
     "garden": null
   },
   {
@@ -4507,7 +4507,7 @@
     ],
     "value": 25,
     "weight": 0.1,
-    "merchant_avail.": "",
+    "merchant_avail": "",
     "garden": null
   },
   {
@@ -4539,7 +4539,7 @@
     ],
     "value": 20,
     "weight": 0.1,
-    "merchant_avail.": "",
+    "merchant_avail": "",
     "garden": null
   },
   {
@@ -4571,7 +4571,7 @@
     ],
     "value": 20,
     "weight": 0.1,
-    "merchant_avail.": "",
+    "merchant_avail": "",
     "garden": null
   },
   {
@@ -4605,7 +4605,7 @@
     ],
     "value": 6,
     "weight": 0.1,
-    "merchant_avail.": "",
+    "merchant_avail": "",
     "garden": null
   },
   {
@@ -4639,7 +4639,7 @@
     ],
     "value": 25,
     "weight": 0.1,
-    "merchant_avail.": "",
+    "merchant_avail": "",
     "garden": null
   },
   {
@@ -4675,7 +4675,7 @@
     ],
     "value": 20,
     "weight": 0.1,
-    "merchant_avail.": "",
+    "merchant_avail": "",
     "garden": null
   },
   {
@@ -4706,7 +4706,7 @@
     ],
     "value": 20,
     "weight": 0.1,
-    "merchant_avail.": "",
+    "merchant_avail": "",
     "garden": null
   },
   {
@@ -4740,7 +4740,7 @@
     ],
     "value": 15,
     "weight": 0.2,
-    "merchant_avail.": "",
+    "merchant_avail": "",
     "garden": null
   },
   {
@@ -4774,7 +4774,7 @@
     ],
     "value": 30,
     "weight": 0.1,
-    "merchant_avail.": "",
+    "merchant_avail": "",
     "garden": null
   },
   {
@@ -4800,7 +4800,7 @@
     ],
     "value": 15,
     "weight": 0.25,
-    "merchant_avail.": "",
+    "merchant_avail": "",
     "garden": null
   },
   {
@@ -4832,7 +4832,7 @@
     ],
     "value": 25,
     "weight": 0.1,
-    "merchant_avail.": "",
+    "merchant_avail": "",
     "garden": null
   },
   {
@@ -4858,7 +4858,7 @@
     ],
     "value": 2,
     "weight": 0.1,
-    "merchant_avail.": "Khajiit Traders",
+    "merchant_avail": "Khajiit Traders",
     "garden": 3
   },
   {
@@ -4892,7 +4892,7 @@
     ],
     "value": 15,
     "weight": 0.1,
-    "merchant_avail.": "",
+    "merchant_avail": "",
     "garden": null
   },
   {
@@ -4924,7 +4924,7 @@
     ],
     "value": 20,
     "weight": 0.1,
-    "merchant_avail.": "",
+    "merchant_avail": "",
     "garden": null
   },
   {
@@ -4960,7 +4960,7 @@
     ],
     "value": 60,
     "weight": 0.2,
-    "merchant_avail.": "",
+    "merchant_avail": "",
     "garden": null
   },
   {
@@ -4990,7 +4990,7 @@
     ],
     "value": 9,
     "weight": 0.2,
-    "merchant_avail.": "",
+    "merchant_avail": "",
     "garden": null
   },
   {
@@ -5016,7 +5016,7 @@
     ],
     "value": 1,
     "weight": 0.1,
-    "merchant_avail.": "None",
+    "merchant_avail": "None",
     "garden": null
   },
   {
@@ -5050,7 +5050,7 @@
     ],
     "value": 20,
     "weight": 0.1,
-    "merchant_avail.": "",
+    "merchant_avail": "",
     "garden": null
   },
   {
@@ -5081,7 +5081,7 @@
     ],
     "value": 5,
     "weight": 0.1,
-    "merchant_avail.": "",
+    "merchant_avail": "",
     "garden": null
   },
   {
@@ -5113,7 +5113,7 @@
     ],
     "value": 30,
     "weight": 0.2,
-    "merchant_avail.": "",
+    "merchant_avail": "",
     "garden": null
   },
   {
@@ -5139,7 +5139,7 @@
     ],
     "value": 10,
     "weight": 0.5,
-    "merchant_avail.": "None",
+    "merchant_avail": "None",
     "garden": null
   }
 ]
