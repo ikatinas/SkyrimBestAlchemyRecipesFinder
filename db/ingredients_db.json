@@ -1,0 +1,5145 @@
+[
+  {
+    "image": "//images.uesp.net/thumb/7/7a/SR-icon-ingredient-Abecean_Longfin.png/48px-SR-icon-ingredient-Abecean_Longfin.png",
+    "title": "Abecean Longfin",
+    "pkey": "AbeceanLongfin",
+    "id": "00106e1b",
+    "collected_by": "Collected by catching Abacean Longfin fish.",
+    "effects": [
+      {
+        "fkey": "WeaknesstoFrost"
+      },
+      {
+        "fkey": "FortifySneak"
+      },
+      {
+        "fkey": "WeaknesstoPoison"
+      },
+      {
+        "fkey": "FortifyRestoration"
+      }
+    ],
+    "value": 15,
+    "weight": 0.5,
+    "merchant_avail": "Common",
+    "garden_hf": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/3/31/SR-icon-ingredient-Ancestor_Moth_Wing.png/48px-SR-icon-ingredient-Ancestor_Moth_Wing.png",
+    "title": "Ancestor Moth Wing [DG]",
+    "pkey": "AncestorMothWingDG",
+    "dlc": "DG",
+    "id": "xx0059ba",
+    "collected_by": "Collected by catching Ancestor Moths.",
+    "effects": [
+      {
+        "fkey": "DamageStamina"
+      },
+      {
+        "fkey": "FortifyConjuration"
+      },
+      {
+        "fkey": "DamageMagickaRegen"
+      },
+      {
+        "fkey": "FortifyEnchanting"
+      }
+    ],
+    "value": 2,
+    "weight": 0.1,
+    "merchant_avail": "None",
+    "garden_hf": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/b/b2/SR-icon-ingredient-Ash_Creep_Cluster.png/48px-SR-icon-ingredient-Ash_Creep_Cluster.png",
+    "title": "Ash Creep Cluster [DB]",
+    "pkey": "AshCreepClusterDB",
+    "dlc": "DB",
+    "id": "xx01cd74",
+    "collected_by": "Harvested from creep cluster plants unique to Solstheim.",
+    "effects": [
+      {
+        "fkey": "DamageStamina"
+      },
+      {
+        "fkey": "Invisibility"
+      },
+      {
+        "fkey": "ResistFire"
+      },
+      {
+        "fkey": "FortifyDestruction"
+      }
+    ],
+    "value": 20,
+    "weight": 0.25,
+    "merchant_avail": "None",
+    "garden_hf": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/9/92/SR-icon-ingredient-Ash_Hopper_Jelly.png/48px-SR-icon-ingredient-Ash_Hopper_Jelly.png",
+    "title": "Ash Hopper Jelly [DB]",
+    "pkey": "AshHopperJellyDB",
+    "dlc": "DB",
+    "id": "xx01cd71",
+    "collected_by": "Collected from dead ash hoppers.",
+    "effects": [
+      {
+        "fkey": "RestoreHealth"
+      },
+      {
+        "fkey": "FortifyLightArmor"
+      },
+      {
+        "fkey": "ResistShock"
+      },
+      {
+        "fkey": "WeaknesstoFrost"
+      }
+    ],
+    "value": 20,
+    "weight": 0.25,
+    "merchant_avail": "",
+    "garden_hf": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/c/c0/SR-icon-ingredient-Ashen_Grass_Pod.png/48px-SR-icon-ingredient-Ashen_Grass_Pod.png",
+    "title": "Ashen Grass Pod [DB]",
+    "pkey": "AshenGrassPodDB",
+    "dlc": "DB",
+    "id": "xx016e26",
+    "collected_by": "Harvested from spiky grass plants unique to Solstheim.",
+    "effects": [
+      {
+        "fkey": "ResistFire",
+        "magnitude": 1.33,
+        "value": 1.36
+      },
+      {
+        "fkey": "WeaknesstoShock"
+      },
+      {
+        "fkey": "FortifyLockpicking"
+      },
+      {
+        "fkey": "FortifySneak"
+      }
+    ],
+    "value": 1,
+    "weight": 0.1,
+    "merchant_avail": "",
+    "garden_hf": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/0/04/SR-icon-ingredient-Bear_Claws.png/48px-SR-icon-ingredient-Bear_Claws.png",
+    "title": "Bear Claws",
+    "pkey": "BearClaws",
+    "id": "0006bc02",
+    "collected_by": "Collected from various types of dead Bears.",
+    "effects": [
+      {
+        "fkey": "RestoreStamina",
+        "magnitude": 0.8,
+        "value": 0.78
+      },
+      {
+        "fkey": "FortifyHealth"
+      },
+      {
+        "fkey": "FortifyOne-handed"
+      },
+      {
+        "fkey": "DamageMagickaRegen"
+      }
+    ],
+    "value": 2,
+    "weight": 0.1,
+    "merchant_avail": "None (Uncommon)",
+    "garden_hf": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/b/b8/SR-icon-ingredient-Bee.png/48px-SR-icon-ingredient-Bee.png",
+    "title": "Bee",
+    "pkey": "Bee",
+    "id": "000a9195",
+    "collected_by": "Collected from beehives and by catching Bees.",
+    "effects": [
+      {
+        "fkey": "RestoreStamina"
+      },
+      {
+        "fkey": "RavageStamina"
+      },
+      {
+        "fkey": "RegenerateStamina"
+      },
+      {
+        "fkey": "WeaknesstoShock"
+      }
+    ],
+    "value": 3,
+    "weight": 0.1,
+    "merchant_avail": "Common",
+    "garden_hf": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/8/84/SR-icon-ingredient-Beehive_Husk.png/48px-SR-icon-ingredient-Beehive_Husk.png",
+    "title": "Beehive Husk",
+    "pkey": "BeehiveHusk",
+    "id": "000a9191",
+    "collected_by": "Collected from beehives.",
+    "effects": [
+      {
+        "fkey": "ResistPoison",
+        "magnitude": 0.5
+      },
+      {
+        "fkey": "FortifyLightArmor"
+      },
+      {
+        "fkey": "FortifySneak"
+      },
+      {
+        "fkey": "FortifyDestruction"
+      }
+    ],
+    "value": 5,
+    "weight": 1,
+    "merchant_avail": "None (Common)",
+    "garden_hf": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/a/a6/SR-icon-ingredient-Bleeding_Crown.png/48px-SR-icon-ingredient-Bleeding_Crown.png",
+    "title": "Bleeding Crown",
+    "pkey": "BleedingCrown",
+    "id": "0004da20",
+    "collected_by": "Harvested from Bleeding Crown, a mushroom found in various caves.",
+    "effects": [
+      {
+        "fkey": "WeaknesstoFire"
+      },
+      {
+        "fkey": "FortifyBlock"
+      },
+      {
+        "fkey": "WeaknesstoPoison"
+      },
+      {
+        "fkey": "ResistMagic"
+      }
+    ],
+    "value": 10,
+    "weight": 0.3,
+    "merchant_avail": "Uncommon",
+    "garden_hf": 3
+  },
+  {
+    "image": "//images.uesp.net/thumb/2/2b/SR-icon-ingredient-Blisterwort.png/48px-SR-icon-ingredient-Blisterwort.png",
+    "title": "Blisterwort",
+    "pkey": "Blisterwort",
+    "id": "0004da25",
+    "collected_by": "Harvested from Blisterwort mushrooms found in various caves.",
+    "effects": [
+      {
+        "fkey": "DamageStamina"
+      },
+      {
+        "fkey": "Frenzy"
+      },
+      {
+        "fkey": "RestoreHealth",
+        "magnitude": 0.6,
+        "value": 0.57
+      },
+      {
+        "fkey": "FortifySmithing"
+      }
+    ],
+    "value": 12,
+    "weight": 0.2,
+    "merchant_avail": "Uncommon",
+    "garden_hf": 4
+  },
+  {
+    "image": "//images.uesp.net/thumb/1/16/SR-icon-ingredient-Blue_Butterfly_Wing.png/48px-SR-icon-ingredient-Blue_Butterfly_Wing.png",
+    "title": "Blue Butterfly Wing",
+    "pkey": "BlueButterflyWing",
+    "id": "000727de",
+    "collected_by": "Collected by catching Blue Butterflies. Often found during daylight hours near flowering plants.",
+    "effects": [
+      {
+        "fkey": "DamageStamina"
+      },
+      {
+        "fkey": "FortifyConjuration"
+      },
+      {
+        "fkey": "DamageMagickaRegen"
+      },
+      {
+        "fkey": "FortifyEnchanting"
+      }
+    ],
+    "value": 2,
+    "weight": 0.1,
+    "merchant_avail": "Uncommon",
+    "garden_hf": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/e/ee/SR-icon-ingredient-Blue_Dartwing.png/48px-SR-icon-ingredient-Blue_Dartwing.png",
+    "title": "Blue Dartwing",
+    "pkey": "BlueDartwing",
+    "id": "000e4f0c",
+    "collected_by": "Collected by catching Dragonflies found near rivers and streams below the snow line.",
+    "effects": [
+      {
+        "fkey": "ResistShock"
+      },
+      {
+        "fkey": "FortifyPickpocket"
+      },
+      {
+        "fkey": "RestoreHealth"
+      },
+      {
+        "fkey": "Fear"
+      }
+    ],
+    "value": 1,
+    "weight": 0.1,
+    "merchant_avail": "None (Uncommon)",
+    "garden_hf": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/3/38/SR-icon-ingredient-Blue_Mountain_Flower.png/48px-SR-icon-ingredient-Blue_Mountain_Flower.png",
+    "title": "Blue Mountain Flower",
+    "pkey": "BlueMountainFlower",
+    "id": "00077e1c",
+    "collected_by": "Harvested from the blue variety of Mountain Flower, found throughout Skyrim.",
+    "effects": [
+      {
+        "fkey": "RestoreHealth"
+      },
+      {
+        "fkey": "FortifyConjuration"
+      },
+      {
+        "fkey": "FortifyHealth"
+      },
+      {
+        "fkey": "DamageMagickaRegen"
+      }
+    ],
+    "value": 2,
+    "weight": 0.1,
+    "merchant_avail": "Common",
+    "garden_hf": 3
+  },
+  {
+    "image": "//images.uesp.net/thumb/8/83/SR-icon-ingredient-Boar_Tusk.png/48px-SR-icon-ingredient-Boar_Tusk.png",
+    "title": "Boar Tusk [DB]",
+    "pkey": "BoarTuskDB",
+    "dlc": "DB",
+    "id": "xx01cd6f",
+    "collected_by": "Collected from dead bristlebacks and rieklings.",
+    "effects": [
+      {
+        "fkey": "FortifyStamina",
+        "magnitude": 1.25,
+        "duration": 5,
+        "value": 7.5
+      },
+      {
+        "fkey": "FortifyHealth",
+        "duration": 5,
+        "value": 5.9
+      },
+      {
+        "fkey": "FortifyBlock"
+      },
+      {
+        "fkey": "Frenzy"
+      }
+    ],
+    "value": 20,
+    "weight": 0.5,
+    "merchant_avail": "",
+    "garden_hf": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/f/f9/SR-icon-ingredient-Bone_Meal.png/48px-SR-icon-ingredient-Bone_Meal.png",
+    "title": "Bone Meal",
+    "pkey": "BoneMeal",
+    "id": "00034cdd",
+    "collected_by": "Collected from undead such as skeletons, and Draugr.",
+    "effects": [
+      {
+        "fkey": "DamageStamina"
+      },
+      {
+        "fkey": "ResistFire"
+      },
+      {
+        "fkey": "FortifyConjuration"
+      },
+      {
+        "fkey": "RavageStamina"
+      }
+    ],
+    "value": 5,
+    "weight": 0.5,
+    "merchant_avail": "Common",
+    "garden_hf": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/6/6a/SR-icon-ingredient-Briar_Heart.png/48px-SR-icon-ingredient-Briar_Heart.png",
+    "title": "Briar Heart",
+    "pkey": "BriarHeart",
+    "id": "0003ad61",
+    "collected_by": "Collected from Forsworn Briarhearts.",
+    "effects": [
+      {
+        "fkey": "RestoreMagicka"
+      },
+      {
+        "fkey": "FortifyBlock",
+        "magnitude": 0.5
+      },
+      {
+        "fkey": "Paralysis"
+      },
+      {
+        "fkey": "FortifyMagicka"
+      }
+    ],
+    "value": 20,
+    "weight": 0.5,
+    "merchant_avail": "Rare",
+    "garden_hf": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/6/6f/SR-icon-ingredient-Burnt_Spriggan_Wood.png/48px-SR-icon-ingredient-Burnt_Spriggan_Wood.png",
+    "title": "Burnt Spriggan Wood [DB]",
+    "pkey": "BurntSprigganWoodDB",
+    "dlc": "DB",
+    "id": "xx01cd6e",
+    "collected_by": "Collected from dead burnt spriggans.",
+    "effects": [
+      {
+        "fkey": "WeaknesstoFire"
+      },
+      {
+        "fkey": "FortifyAlteration"
+      },
+      {
+        "fkey": "DamageMagickaRegen"
+      },
+      {
+        "fkey": "Slow"
+      }
+    ],
+    "value": 20,
+    "weight": 0.5,
+    "merchant_avail": "",
+    "garden_hf": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/f/f8/SR-icon-ingredient-Butterfly_Wing.png/48px-SR-icon-ingredient-Butterfly_Wing.png",
+    "title": "Butterfly Wing",
+    "pkey": "ButterflyWing",
+    "id": "000727e0",
+    "collected_by": "Collected from catching Monarch Butterflies. Often found during daylight hours near flowering plants.",
+    "effects": [
+      {
+        "fkey": "RestoreHealth"
+      },
+      {
+        "fkey": "FortifyBarter"
+      },
+      {
+        "fkey": "LingeringDamageStamina"
+      },
+      {
+        "fkey": "DamageMagicka"
+      }
+    ],
+    "value": 3,
+    "weight": 0.1,
+    "merchant_avail": "Uncommon",
+    "garden_hf": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/f/f6/SR-icon-ingredient-Canis_Root.png/48px-SR-icon-ingredient-Canis_Root.png",
+    "title": "Canis Root",
+    "pkey": "CanisRoot",
+    "id": "0006abcb",
+    "collected_by": "Harvested from Canis Root, found in The Rift and Hjaalmarch.",
+    "effects": [
+      {
+        "fkey": "DamageStamina"
+      },
+      {
+        "fkey": "FortifyOne-handed"
+      },
+      {
+        "fkey": "FortifyMarksman"
+      },
+      {
+        "fkey": "Paralysis"
+      }
+    ],
+    "value": 5,
+    "weight": 0.1,
+    "merchant_avail": "Uncommon",
+    "garden_hf": 4
+  },
+  {
+    "image": "//images.uesp.net/thumb/7/71/SR-icon-ingredient-Charred_Skeever_Hide.png/48px-SR-icon-ingredient-Charred_Skeever_Hide.png",
+    "title": "Charred Skeever Hide",
+    "pkey": "CharredSkeeverHide",
+    "id": "00052695",
+    "collected_by": "Food, collected from dead Skeevers found on roasting spits.",
+    "effects": [
+      {
+        "fkey": "RestoreStamina"
+      },
+      {
+        "fkey": "CureDisease",
+        "value": 0.36
+      },
+      {
+        "fkey": "ResistPoison"
+      },
+      {
+        "fkey": "RestoreHealth"
+      }
+    ],
+    "value": 1,
+    "weight": 0.5,
+    "merchant_avail": "Uncommon",
+    "garden_hf": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/4/47/SR-icon-ingredient-Chaurus_Eggs.png/48px-SR-icon-ingredient-Chaurus_Eggs.png",
+    "title": "Chaurus Eggs",
+    "pkey": "ChaurusEggs",
+    "id": "0003ad56",
+    "collected_by": "Collected from Chaurus Egg Sacs, found in Falmer caves.",
+    "effects": [
+      {
+        "fkey": "WeaknesstoPoison"
+      },
+      {
+        "fkey": "FortifyStamina"
+      },
+      {
+        "fkey": "DamageMagicka"
+      },
+      {
+        "fkey": "Invisibility"
+      }
+    ],
+    "value": 10,
+    "weight": 0.2,
+    "merchant_avail": "Uncommon",
+    "garden_hf": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/a/a2/SR-icon-ingredient-Chaurus_Hunter_Antennae.png/48px-SR-icon-ingredient-Chaurus_Hunter_Antennae.png",
+    "title": "Chaurus Hunter Antennae [DG]",
+    "pkey": "ChaurusHunterAntennaeDG",
+    "dlc": "DG",
+    "id": "xx0183b7",
+    "collected_by": "Collected from dead Chaurus Hunters and Chaurus Hunter Fledglings.",
+    "effects": [
+      {
+        "fkey": "DamageStamina"
+      },
+      {
+        "fkey": "FortifyConjuration"
+      },
+      {
+        "fkey": "DamageMagickaRegen"
+      },
+      {
+        "fkey": "FortifyEnchanting"
+      }
+    ],
+    "value": 2,
+    "weight": 0.1,
+    "merchant_avail": "None",
+    "garden_hf": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/d/de/SR-icon-ingredient-Chicken%27s_Egg.png/48px-SR-icon-ingredient-Chicken%27s_Egg.png",
+    "title": "Chicken's Egg",
+    "pkey": "ChickensEgg",
+    "id": "00023d77",
+    "collected_by": "Food, harvested from Chicken nests in various farms.",
+    "effects": [
+      {
+        "fkey": "ResistMagic"
+      },
+      {
+        "fkey": "DamageMagickaRegen"
+      },
+      {
+        "fkey": "Waterbreathing"
+      },
+      {
+        "fkey": "LingeringDamageStamina"
+      }
+    ],
+    "value": 2,
+    "weight": 0.5,
+    "merchant_avail": "Uncommon",
+    "garden_hf": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/1/15/SR-icon-ingredient-Creep_Cluster.png/48px-SR-icon-ingredient-Creep_Cluster.png",
+    "title": "Creep Cluster",
+    "pkey": "CreepCluster",
+    "id": "000b2183",
+    "collected_by": "Harvested from Creep Cluster, found in the volcanic tundra of Eastmarch.",
+    "effects": [
+      {
+        "fkey": "RestoreMagicka"
+      },
+      {
+        "fkey": "DamageStaminaRegen"
+      },
+      {
+        "fkey": "FortifyCarryWeight"
+      },
+      {
+        "fkey": "WeaknesstoMagic"
+      }
+    ],
+    "value": 1,
+    "weight": 0.2,
+    "merchant_avail": "Uncommon",
+    "garden_hf": 5
+  },
+  {
+    "image": "//images.uesp.net/thumb/5/55/SR-icon-ingredient-Crimson_Nirnroot.png/48px-SR-icon-ingredient-Crimson_Nirnroot.png",
+    "title": "Crimson Nirnroot",
+    "pkey": "CrimsonNirnroot",
+    "id": "000b701a",
+    "collected_by": "Harvested from Crimson Nirnroot, found in Blackreach, needed for the quest A Return To Your Roots.",
+    "effects": [
+      {
+        "fkey": "DamageHealth",
+        "magnitude": 3
+      },
+      {
+        "fkey": "DamageStamina",
+        "magnitude": 3
+      },
+      {
+        "fkey": "Invisibility"
+      },
+      {
+        "fkey": "ResistMagic"
+      }
+    ],
+    "value": 10,
+    "weight": 0.2,
+    "merchant_avail": "None",
+    "garden_hf": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/a/a9/SR-icon-ingredient-Cyrodilic_Spadetail.png/48px-SR-icon-ingredient-Cyrodilic_Spadetail.png",
+    "title": "Cyrodilic Spadetail",
+    "pkey": "CyrodilicSpadetail",
+    "id": "00106e19",
+    "collected_by": "Collected by catching Cyrodilic Spadetail fish.",
+    "effects": [
+      {
+        "fkey": "DamageStamina"
+      },
+      {
+        "fkey": "FortifyRestoration"
+      },
+      {
+        "fkey": "Fear"
+      },
+      {
+        "fkey": "RavageHealth"
+      }
+    ],
+    "value": 15,
+    "weight": 0.25,
+    "merchant_avail": "Common",
+    "garden_hf": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/b/b1/SR-icon-ingredient-Daedra_Heart.png/48px-SR-icon-ingredient-Daedra_Heart.png",
+    "title": "Daedra Heart",
+    "pkey": "DaedraHeart",
+    "id": "0003ad5b",
+    "collected_by": "Collected from dead Dremora.",
+    "effects": [
+      {
+        "fkey": "RestoreHealth"
+      },
+      {
+        "fkey": "DamageStaminaRegen"
+      },
+      {
+        "fkey": "DamageMagicka"
+      },
+      {
+        "fkey": "Fear"
+      }
+    ],
+    "value": 250,
+    "weight": 0.5,
+    "merchant_avail": "Rare",
+    "garden_hf": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/5/58/SR-icon-ingredient-Deathbell.png/48px-SR-icon-ingredient-Deathbell.png",
+    "title": "Deathbell",
+    "pkey": "Deathbell",
+    "id": "000516c8",
+    "collected_by": "Harvested from Deathbell, found in Hjaalmarch. Needed for the quests Few and Far Between and The Only Cure.",
+    "effects": [
+      {
+        "fkey": "DamageHealth",
+        "magnitude": 1.5
+      },
+      {
+        "fkey": "RavageStamina",
+        "value": 2.1
+      },
+      {
+        "fkey": "Slow"
+      },
+      {
+        "fkey": "WeaknesstoPoison"
+      }
+    ],
+    "value": 4,
+    "weight": 0.1,
+    "merchant_avail": "Rare",
+    "garden_hf": 3
+  },
+  {
+    "image": "//images.uesp.net/thumb/0/0e/SR-icon-ingredient-Dragons_Tongue.png/48px-SR-icon-ingredient-Dragons_Tongue.png",
+    "title": "Dragon's Tongue",
+    "pkey": "DragonsTongue",
+    "id": "000889a2",
+    "collected_by": "Harvested from Dragon's Tongue, found in the volcanic tundra of Eastmarch.",
+    "effects": [
+      {
+        "fkey": "ResistFire"
+      },
+      {
+        "fkey": "FortifyBarter"
+      },
+      {
+        "fkey": "FortifyIllusion"
+      },
+      {
+        "fkey": "FortifyTwo-handed"
+      }
+    ],
+    "value": 5,
+    "weight": 0.1,
+    "merchant_avail": "Common",
+    "garden_hf": 4
+  },
+  {
+    "image": "//images.uesp.net/thumb/e/e5/SR-icon-ingredient-Dwarven_Oil.png/48px-SR-icon-ingredient-Dwarven_Oil.png",
+    "title": "Dwarven Oil",
+    "pkey": "DwarvenOil",
+    "id": "000f11c0",
+    "collected_by": "Collected from destroyed Dwarven Automatons, found in Dwarven Ruins.",
+    "effects": [
+      {
+        "fkey": "WeaknesstoMagic"
+      },
+      {
+        "fkey": "FortifyIllusion"
+      },
+      {
+        "fkey": "RegenerateMagicka"
+      },
+      {
+        "fkey": "RestoreMagicka"
+      }
+    ],
+    "value": 15,
+    "weight": 0.25,
+    "merchant_avail": "Uncommon",
+    "garden_hf": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/f/f1/SR-icon-ingredient-Ectoplasm.png/48px-SR-icon-ingredient-Ectoplasm.png",
+    "title": "Ectoplasm",
+    "pkey": "Ectoplasm",
+    "id": "0003ad63",
+    "collected_by": "Collected from undead Ghosts.",
+    "effects": [
+      {
+        "fkey": "RestoreMagicka"
+      },
+      {
+        "fkey": "FortifyDestruction",
+        "magnitude": 0.8
+      },
+      {
+        "fkey": "FortifyMagicka"
+      },
+      {
+        "fkey": "DamageHealth"
+      }
+    ],
+    "value": 25,
+    "weight": 0.1,
+    "merchant_avail": "Uncommon",
+    "garden_hf": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/7/7a/SR-icon-ingredient-Elves_Ear.png/48px-SR-icon-ingredient-Elves_Ear.png",
+    "title": "Elves Ear",
+    "pkey": "ElvesEar",
+    "id": "00034d31",
+    "collected_by": "Harvested from Dried Elves Ear bunches found in homes and camps.",
+    "effects": [
+      {
+        "fkey": "RestoreMagicka"
+      },
+      {
+        "fkey": "FortifyMarksman"
+      },
+      {
+        "fkey": "WeaknesstoFrost"
+      },
+      {
+        "fkey": "ResistFire"
+      }
+    ],
+    "value": 10,
+    "weight": 0.1,
+    "merchant_avail": "Common",
+    "garden_hf": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/5/53/SR-icon-ingredient-Emperor_Parasol_Moss.png/48px-SR-icon-ingredient-Emperor_Parasol_Moss.png",
+    "title": "Emperor Parasol Moss [DB]",
+    "pkey": "EmperorParasolMossDB",
+    "dlc": "DB",
+    "id": "xx01ff75",
+    "collected_by": "Harvested from emperor parasol moss plants near Tel Mithryn.",
+    "effects": [
+      {
+        "fkey": "DamageHealth",
+        "magnitude": 1.5
+      },
+      {
+        "fkey": "FortifyMagicka"
+      },
+      {
+        "fkey": "RegenerateHealth"
+      },
+      {
+        "fkey": "FortifyTwo-handed"
+      }
+    ],
+    "value": 1,
+    "weight": 0.25,
+    "merchant_avail": "",
+    "garden_hf": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/4/4e/SR-icon-ingredient-Eye_of_Sabre_Cat.png/48px-SR-icon-ingredient-Eye_of_Sabre_Cat.png",
+    "title": "Eye of Sabre Cat",
+    "pkey": "EyeofSabreCat",
+    "id": "0006bc07",
+    "collected_by": "Collected from dead Sabre Cats.",
+    "effects": [
+      {
+        "fkey": "RestoreStamina"
+      },
+      {
+        "fkey": "RavageHealth"
+      },
+      {
+        "fkey": "DamageMagicka"
+      },
+      {
+        "fkey": "RestoreHealth"
+      }
+    ],
+    "value": 2,
+    "weight": 0.1,
+    "merchant_avail": "None (Uncommon)",
+    "garden_hf": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/6/6e/SR-icon-ingredient-Falmer_Ear.png/48px-SR-icon-ingredient-Falmer_Ear.png",
+    "title": "Falmer Ear",
+    "pkey": "FalmerEar",
+    "id": "0003ad5d",
+    "collected_by": "Collected from dead Falmer.",
+    "effects": [
+      {
+        "fkey": "DamageHealth"
+      },
+      {
+        "fkey": "Frenzy"
+      },
+      {
+        "fkey": "ResistPoison"
+      },
+      {
+        "fkey": "FortifyLockpicking"
+      }
+    ],
+    "value": 10,
+    "weight": 0.2,
+    "merchant_avail": "Uncommon",
+    "garden_hf": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/4/42/SR-icon-ingredient-Felsaad_Tern_Feathers.png/48px-SR-icon-ingredient-Felsaad_Tern_Feathers.png",
+    "title": "Felsaad Tern Feathers [DB]",
+    "pkey": "FelsaadTernFeathersDB",
+    "dlc": "DB",
+    "id": "xx03cd8e",
+    "collected_by": "Collected from dead Felsaad terns.",
+    "effects": [
+      {
+        "fkey": "RestoreHealth"
+      },
+      {
+        "fkey": "FortifyLightArmor"
+      },
+      {
+        "fkey": "CureDisease"
+      },
+      {
+        "fkey": "ResistMagic"
+      }
+    ],
+    "value": 15,
+    "weight": 0.1,
+    "merchant_avail": "",
+    "garden_hf": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/c/cc/SR-icon-ingredient-Fire_Salts.png/48px-SR-icon-ingredient-Fire_Salts.png",
+    "title": "Fire Salts",
+    "pkey": "FireSalts",
+    "id": "0003ad5e",
+    "collected_by": "Collected from dead Flame Atronachs, a type of daedra. Needed for the quest Stoking the Flames.",
+    "effects": [
+      {
+        "fkey": "WeaknesstoFrost"
+      },
+      {
+        "fkey": "ResistFire"
+      },
+      {
+        "fkey": "RestoreMagicka"
+      },
+      {
+        "fkey": "RegenerateMagicka"
+      }
+    ],
+    "value": 50,
+    "weight": 0.25,
+    "merchant_avail": "Rare",
+    "garden_hf": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/7/76/SR-icon-ingredient-Fly_Amanita.png/48px-SR-icon-ingredient-Fly_Amanita.png",
+    "title": "Fly Amanita",
+    "pkey": "FlyAmanita",
+    "id": "0004da00",
+    "collected_by": "Harvested from Fly Amanita mushrooms, found in various caves.",
+    "effects": [
+      {
+        "fkey": "ResistFire"
+      },
+      {
+        "fkey": "FortifyTwo-handed"
+      },
+      {
+        "fkey": "Frenzy"
+      },
+      {
+        "fkey": "RegenerateStamina"
+      }
+    ],
+    "value": 2,
+    "weight": 0.1,
+    "merchant_avail": "Uncommon",
+    "garden_hf": 4
+  },
+  {
+    "image": "//images.uesp.net/thumb/9/99/SR-icon-ingredient-Frost_Mirriam.png/48px-SR-icon-ingredient-Frost_Mirriam.png",
+    "title": "Frost Mirriam",
+    "pkey": "FrostMirriam",
+    "id": "00034d32",
+    "collected_by": "Harvested from Dried Frost Mirriam bunches found in homes and camps.",
+    "effects": [
+      {
+        "fkey": "ResistFrost"
+      },
+      {
+        "fkey": "FortifySneak"
+      },
+      {
+        "fkey": "RavageMagicka"
+      },
+      {
+        "fkey": "DamageStaminaRegen"
+      }
+    ],
+    "value": 1,
+    "weight": 0.1,
+    "merchant_avail": "Uncommon",
+    "garden_hf": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/5/58/SR-icon-ingredient-Frost_Salts.png/48px-SR-icon-ingredient-Frost_Salts.png",
+    "title": "Frost Salts",
+    "pkey": "FrostSalts",
+    "id": "0003ad5f",
+    "collected_by": "Collected from dead Frost Atronachs, a type of daedra. One is needed for the quest Dravynea's Frost Salts.",
+    "effects": [
+      {
+        "fkey": "WeaknesstoFire"
+      },
+      {
+        "fkey": "ResistFrost"
+      },
+      {
+        "fkey": "RestoreMagicka"
+      },
+      {
+        "fkey": "FortifyConjuration"
+      }
+    ],
+    "value": 100,
+    "weight": 0.25,
+    "merchant_avail": "Rare",
+    "garden_hf": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/e/e5/SR-icon-ingredient-Garlic.png/48px-SR-icon-ingredient-Garlic.png",
+    "title": "Garlic",
+    "pkey": "Garlic",
+    "id": "00034d22",
+    "collected_by": "Food. Can also be harvested from Garlic Braids.",
+    "effects": [
+      {
+        "fkey": "ResistPoison"
+      },
+      {
+        "fkey": "FortifyStamina"
+      },
+      {
+        "fkey": "RegenerateMagicka"
+      },
+      {
+        "fkey": "RegenerateHealth"
+      }
+    ],
+    "value": 1,
+    "weight": 0.25,
+    "merchant_avail": "Common",
+    "garden_hf": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/8/8b/SR-icon-ingredient-Giant_Lichen.png/48px-SR-icon-ingredient-Giant_Lichen.png",
+    "title": "Giant Lichen",
+    "pkey": "GiantLichen",
+    "id": "0007e8c1",
+    "collected_by": "Harvested from Giant Lichen, found in Hjaalmarch.",
+    "effects": [
+      {
+        "fkey": "WeaknesstoShock"
+      },
+      {
+        "fkey": "RavageHealth"
+      },
+      {
+        "fkey": "WeaknesstoPoison"
+      },
+      {
+        "fkey": "RestoreMagicka"
+      }
+    ],
+    "value": 5,
+    "weight": 0.25,
+    "merchant_avail": "Uncommon",
+    "garden_hf": 4
+  },
+  {
+    "image": "//images.uesp.net/thumb/b/bc/SR-icon-ingredient-Giants_Toe.png/48px-SR-icon-ingredient-Giants_Toe.png",
+    "title": "Giant's Toe",
+    "pkey": "GiantsToe",
+    "id": "0003ad64",
+    "collected_by": "Collected from dead Giants, which can be found in Giant Camps.",
+    "effects": [
+      {
+        "fkey": "DamageStamina"
+      },
+      {
+        "fkey": "FortifyHealth",
+        "duration": 5,
+        "value": 5.9
+      },
+      {
+        "fkey": "FortifyCarryWeight"
+      },
+      {
+        "fkey": "DamageStaminaRegen"
+      }
+    ],
+    "value": 20,
+    "weight": 1,
+    "merchant_avail": "Rare",
+    "garden_hf": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/c/c5/SR-icon-ingredient-Gleamblossom.png/48px-SR-icon-ingredient-Gleamblossom.png",
+    "title": "Gleamblossom [DG]",
+    "pkey": "GleamblossomDG",
+    "dlc": "DG",
+    "id": "xx00b097",
+    "collected_by": "Harvested from the plant of the same name.",
+    "effects": [
+      {
+        "fkey": "ResistMagic"
+      },
+      {
+        "fkey": "Fear"
+      },
+      {
+        "fkey": "RegenerateHealth"
+      },
+      {
+        "fkey": "Paralysis"
+      }
+    ],
+    "value": 5,
+    "weight": 0.1,
+    "merchant_avail": "None",
+    "garden_hf": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/f/f8/SR-icon-ingredient-Glow_Dust.png/48px-SR-icon-ingredient-Glow_Dust.png",
+    "title": "Glow Dust",
+    "pkey": "GlowDust",
+    "id": "0003ad73",
+    "collected_by": "Collected from dead Wisps and Wispmothers.",
+    "effects": [
+      {
+        "fkey": "DamageMagicka"
+      },
+      {
+        "fkey": "DamageMagickaRegen"
+      },
+      {
+        "fkey": "FortifyDestruction"
+      },
+      {
+        "fkey": "ResistShock"
+      }
+    ],
+    "value": 20,
+    "weight": 0.5,
+    "merchant_avail": "Uncommon",
+    "garden_hf": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/7/71/SR-icon-ingredient-Glowing_Mushroom.png/48px-SR-icon-ingredient-Glowing_Mushroom.png",
+    "title": "Glowing Mushroom",
+    "pkey": "GlowingMushroom",
+    "id": "0007ee01",
+    "collected_by": "Harvested from Glowing Mushrooms, found in various caves.",
+    "effects": [
+      {
+        "fkey": "ResistShock"
+      },
+      {
+        "fkey": "FortifyDestruction"
+      },
+      {
+        "fkey": "FortifySmithing"
+      },
+      {
+        "fkey": "FortifyHealth"
+      }
+    ],
+    "value": 5,
+    "weight": 0.2,
+    "merchant_avail": "None",
+    "garden_hf": 5
+  },
+  {
+    "image": "//images.uesp.net/thumb/7/78/SR-icon-ingredient-Grass_Pod.png/48px-SR-icon-ingredient-Grass_Pod.png",
+    "title": "Grass Pod",
+    "pkey": "GrassPod",
+    "id": "00083e64",
+    "collected_by": "Harvested from Spiky Grass, found in northern regions of Skyrim.",
+    "effects": [
+      {
+        "fkey": "ResistPoison"
+      },
+      {
+        "fkey": "RavageMagicka"
+      },
+      {
+        "fkey": "FortifyAlteration"
+      },
+      {
+        "fkey": "RestoreMagicka"
+      }
+    ],
+    "value": 1,
+    "weight": 0.1,
+    "merchant_avail": "Uncommon",
+    "garden_hf": 3
+  },
+  {
+    "image": "//images.uesp.net/thumb/3/30/SR-icon-ingredient-Hagraven_Claw.png/48px-SR-icon-ingredient-Hagraven_Claw.png",
+    "title": "Hagraven Claw",
+    "pkey": "HagravenClaw",
+    "id": "0006b689",
+    "collected_by": "Collected from dead Hagravens.",
+    "effects": [
+      {
+        "fkey": "ResistMagic"
+      },
+      {
+        "fkey": "LingeringDamageMagicka"
+      },
+      {
+        "fkey": "FortifyEnchanting"
+      },
+      {
+        "fkey": "FortifyBarter"
+      }
+    ],
+    "value": 20,
+    "weight": 0.25,
+    "merchant_avail": "Rare",
+    "garden_hf": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/d/d8/SR-icon-ingredient-Hagraven_Feathers.png/48px-SR-icon-ingredient-Hagraven_Feathers.png",
+    "title": "Hagraven Feathers",
+    "pkey": "HagravenFeathers",
+    "id": "0003ad66",
+    "collected_by": "Collected from dead Hagravens. Can also be found scattered around their sleeping areas.",
+    "effects": [
+      {
+        "fkey": "DamageMagicka"
+      },
+      {
+        "fkey": "FortifyConjuration"
+      },
+      {
+        "fkey": "Frenzy"
+      },
+      {
+        "fkey": "WeaknesstoShock"
+      }
+    ],
+    "value": 20,
+    "weight": 0.1,
+    "merchant_avail": "Rare",
+    "garden_hf": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/2/22/SR-icon-ingredient-Hanging_Moss.png/48px-SR-icon-ingredient-Hanging_Moss.png",
+    "title": "Hanging Moss",
+    "pkey": "HangingMoss",
+    "id": "00057f91",
+    "collected_by": "Harvested from Hanging Moss.",
+    "effects": [
+      {
+        "fkey": "DamageMagicka"
+      },
+      {
+        "fkey": "FortifyHealth"
+      },
+      {
+        "fkey": "DamageMagickaRegen"
+      },
+      {
+        "fkey": "FortifyOne-handed"
+      }
+    ],
+    "value": 1,
+    "weight": 0.25,
+    "merchant_avail": "Uncommon",
+    "garden_hf": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/6/69/SR-icon-ingredient-Hawk_Beak.png/48px-SR-icon-ingredient-Hawk_Beak.png",
+    "title": "Hawk Beak",
+    "pkey": "HawkBeak",
+    "id": "000e7ebc",
+    "collected_by": "Collected from dead Hawks.",
+    "effects": [
+      {
+        "fkey": "RestoreStamina"
+      },
+      {
+        "fkey": "ResistFrost"
+      },
+      {
+        "fkey": "FortifyCarryWeight"
+      },
+      {
+        "fkey": "ResistShock"
+      }
+    ],
+    "value": 15,
+    "weight": 0.25,
+    "merchant_avail": "Uncommon",
+    "garden_hf": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/5/5c/SR-icon-ingredient-Hawk_Feathers.png/48px-SR-icon-ingredient-Hawk_Feathers.png",
+    "title": "Hawk Feathers",
+    "pkey": "HawkFeathers",
+    "id": "000e7ed0",
+    "collected_by": "Collected from dead Hawks.",
+    "effects": [
+      {
+        "fkey": "CureDisease",
+        "value": 0.36
+      },
+      {
+        "fkey": "FortifyLightArmor"
+      },
+      {
+        "fkey": "FortifyOne-handed"
+      },
+      {
+        "fkey": "FortifySneak"
+      }
+    ],
+    "value": 15,
+    "weight": 0.1,
+    "merchant_avail": "Uncommon",
+    "garden_hf": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/4/41/SR-icon-ingredient-Hawk%27s_Egg.png/48px-SR-icon-ingredient-Hawk%27s_Egg.png",
+    "title": "Hawk's Egg [HF]",
+    "pkey": "HawksEggHF",
+    "dlc": "HF",
+    "id": "xx00f1cc",
+    "collected_by": "Harvested from Hawk nests.",
+    "effects": [
+      {
+        "fkey": "ResistMagic"
+      },
+      {
+        "fkey": "DamageMagickaRegen"
+      },
+      {
+        "fkey": "Waterbreathing"
+      },
+      {
+        "fkey": "LingeringDamageStamina"
+      }
+    ],
+    "value": 5,
+    "weight": 0.5,
+    "merchant_avail": "None",
+    "garden_hf": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/e/ec/SR-icon-ingredient-Histcarp.png/48px-SR-icon-ingredient-Histcarp.png",
+    "title": "Histcarp",
+    "pkey": "Histcarp",
+    "id": "00106e18",
+    "collected_by": "Collected by catching Histcarp fish.",
+    "effects": [
+      {
+        "fkey": "RestoreStamina"
+      },
+      {
+        "fkey": "FortifyMagicka"
+      },
+      {
+        "fkey": "DamageStaminaRegen"
+      },
+      {
+        "fkey": "Waterbreathing"
+      }
+    ],
+    "value": 6,
+    "weight": 0.25,
+    "merchant_avail": "Common",
+    "garden_hf": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/e/e0/SR-icon-ingredient-Honeycomb.png/48px-SR-icon-ingredient-Honeycomb.png",
+    "title": "Honeycomb",
+    "pkey": "Honeycomb",
+    "id": "000b08c5",
+    "collected_by": "Food. Collected from beehives.",
+    "effects": [
+      {
+        "fkey": "RestoreStamina"
+      },
+      {
+        "fkey": "FortifyBlock",
+        "magnitude": 0.5
+      },
+      {
+        "fkey": "FortifyLightArmor"
+      },
+      {
+        "fkey": "RavageStamina"
+      }
+    ],
+    "value": 5,
+    "weight": 1,
+    "merchant_avail": "None (Common)",
+    "garden_hf": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/9/9d/SR-icon-ingredient-Human_Flesh.png/48px-SR-icon-ingredient-Human_Flesh.png",
+    "title": "Human Flesh",
+    "pkey": "HumanFlesh",
+    "id": "001016b3",
+    "collected_by": "Cannot be harvested or collected; with the Dawnguard add-on installed, several respawning samples can be found in Volkihar Keep.",
+    "effects": [
+      {
+        "fkey": "DamageHealth"
+      },
+      {
+        "fkey": "Paralysis"
+      },
+      {
+        "fkey": "RestoreMagicka"
+      },
+      {
+        "fkey": "FortifySneak"
+      }
+    ],
+    "value": 1,
+    "weight": 0.25,
+    "merchant_avail": "None",
+    "garden_hf": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/f/f6/SR-icon-ingredient-Human_Heart.png/48px-SR-icon-ingredient-Human_Heart.png",
+    "title": "Human Heart",
+    "pkey": "HumanHeart",
+    "id": "000b18cd",
+    "collected_by": "Cannot be harvested or collected; limited number of samples available.",
+    "effects": [
+      {
+        "fkey": "DamageHealth"
+      },
+      {
+        "fkey": "DamageMagicka"
+      },
+      {
+        "fkey": "DamageMagickaRegen"
+      },
+      {
+        "fkey": "Frenzy"
+      }
+    ],
+    "value": 0,
+    "weight": 1,
+    "merchant_avail": "None",
+    "garden_hf": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/9/95/SR-icon-ingredient-Ice_Wraith_Teeth.png/48px-SR-icon-ingredient-Ice_Wraith_Teeth.png",
+    "title": "Ice Wraith Teeth",
+    "pkey": "IceWraithTeeth",
+    "id": "0003ad6a",
+    "collected_by": "Collected from Ice Wraiths. Needed for the quest Ice Cold.",
+    "effects": [
+      {
+        "fkey": "WeaknesstoFrost"
+      },
+      {
+        "fkey": "FortifyHeavyArmor"
+      },
+      {
+        "fkey": "Invisibility"
+      },
+      {
+        "fkey": "WeaknesstoFire"
+      }
+    ],
+    "value": 30,
+    "weight": 0.25,
+    "merchant_avail": "Rare",
+    "garden_hf": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/7/77/SR-icon-ingredient-Imp_Stool.png/48px-SR-icon-ingredient-Imp_Stool.png",
+    "title": "Imp Stool",
+    "pkey": "ImpStool",
+    "id": "0004da23",
+    "collected_by": "Harvested from Imp Stool mushrooms, found in various caves.",
+    "effects": [
+      {
+        "fkey": "DamageHealth"
+      },
+      {
+        "fkey": "LingeringDamageHealth"
+      },
+      {
+        "fkey": "Paralysis"
+      },
+      {
+        "fkey": "RestoreHealth",
+        "magnitude": 0.6,
+        "value": 0.57
+      }
+    ],
+    "value": 0,
+    "weight": 0.3,
+    "merchant_avail": "Rare",
+    "garden_hf": 4
+  },
+  {
+    "image": "//images.uesp.net/thumb/5/50/SR-icon-ingredient-Jazbay_Grapes.png/48px-SR-icon-ingredient-Jazbay_Grapes.png",
+    "title": "Jazbay Grapes",
+    "pkey": "JazbayGrapes",
+    "id": "0006ac4a",
+    "collected_by": "Harvested from Jazbay vines, found in the volcanic tundra of Eastmarch. Needed for the quest Smooth Jazbay.",
+    "effects": [
+      {
+        "fkey": "WeaknesstoMagic"
+      },
+      {
+        "fkey": "FortifyMagicka"
+      },
+      {
+        "fkey": "RegenerateMagicka"
+      },
+      {
+        "fkey": "RavageHealth"
+      }
+    ],
+    "value": 1,
+    "weight": 0.2,
+    "merchant_avail": "Rare",
+    "garden_hf": 3
+  },
+  {
+    "image": "//images.uesp.net/thumb/1/10/SR-icon-ingredient-Juniper_Berries.png/48px-SR-icon-ingredient-Juniper_Berries.png",
+    "title": "Juniper Berries",
+    "pkey": "JuniperBerries",
+    "id": "0005076e",
+    "collected_by": "Harvested from Juniper shrubs, common in The Reach. Needed for the quest Elmus Favor Quest.",
+    "effects": [
+      {
+        "fkey": "WeaknesstoFire"
+      },
+      {
+        "fkey": "FortifyMarksman"
+      },
+      {
+        "fkey": "RegenerateHealth"
+      },
+      {
+        "fkey": "DamageStaminaRegen"
+      }
+    ],
+    "value": 1,
+    "weight": 0.1,
+    "merchant_avail": "Common",
+    "garden_hf": 4
+  },
+  {
+    "image": "//images.uesp.net/thumb/6/69/SR-icon-ingredient-Large_Antlers.png/48px-SR-icon-ingredient-Large_Antlers.png",
+    "title": "Large Antlers",
+    "pkey": "LargeAntlers",
+    "id": "0006bc0a",
+    "collected_by": "Collected from dead male Elk.",
+    "effects": [
+      {
+        "fkey": "RestoreStamina"
+      },
+      {
+        "fkey": "FortifyStamina"
+      },
+      {
+        "fkey": "Slow",
+        "duration": 6,
+        "value": 1.75
+      },
+      {
+        "fkey": "DamageStaminaRegen"
+      }
+    ],
+    "value": 2,
+    "weight": 0.1,
+    "merchant_avail": "None (Uncommon)",
+    "garden_hf": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/3/30/SR-icon-ingredient-Lavender.png/48px-SR-icon-ingredient-Lavender.png",
+    "title": "Lavender",
+    "pkey": "Lavender",
+    "id": "00045c28",
+    "collected_by": "Harvested from Lavender, most common in Whiterun Hold.",
+    "effects": [
+      {
+        "fkey": "ResistMagic"
+      },
+      {
+        "fkey": "FortifyStamina"
+      },
+      {
+        "fkey": "RavageMagicka"
+      },
+      {
+        "fkey": "FortifyConjuration"
+      }
+    ],
+    "value": 1,
+    "weight": 0.1,
+    "merchant_avail": "Common",
+    "garden_hf": 3
+  },
+  {
+    "image": "//images.uesp.net/thumb/f/f6/SR-icon-ingredient-Luna_Moth_Wing.png/48px-SR-icon-ingredient-Luna_Moth_Wing.png",
+    "title": "Luna Moth Wing",
+    "pkey": "LunaMothWing",
+    "id": "000727df",
+    "collected_by": "Collected by catching Luna Moths. Often found near flowers after dark.",
+    "effects": [
+      {
+        "fkey": "DamageMagicka"
+      },
+      {
+        "fkey": "FortifyLightArmor"
+      },
+      {
+        "fkey": "RegenerateHealth"
+      },
+      {
+        "fkey": "Invisibility"
+      }
+    ],
+    "value": 5,
+    "weight": 0.1,
+    "merchant_avail": "Uncommon",
+    "garden_hf": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/4/48/SR-icon-ingredient-Moon_Sugar.png/48px-SR-icon-ingredient-Moon_Sugar.png",
+    "title": "Moon Sugar",
+    "pkey": "MoonSugar",
+    "id": "000d8e3f",
+    "collected_by": "Cannot be collected or harvested. Can be purchased from the Khajiit Traders.",
+    "effects": [
+      {
+        "fkey": "WeaknesstoFire"
+      },
+      {
+        "fkey": "ResistFrost"
+      },
+      {
+        "fkey": "RestoreMagicka"
+      },
+      {
+        "fkey": "RegenerateMagicka"
+      }
+    ],
+    "value": 50,
+    "weight": 0.25,
+    "merchant_avail": "Uncommon",
+    "garden_hf": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/5/51/SR-icon-ingredient-Mora_Tapinella.png/48px-SR-icon-ingredient-Mora_Tapinella.png",
+    "title": "Mora Tapinella",
+    "pkey": "MoraTapinella",
+    "id": "000ec870",
+    "collected_by": "Harvested from Mora Tapinella mushrooms, found growing on dead trees.",
+    "effects": [
+      {
+        "fkey": "RestoreMagicka"
+      },
+      {
+        "fkey": "LingeringDamageHealth"
+      },
+      {
+        "fkey": "RegenerateStamina"
+      },
+      {
+        "fkey": "FortifyIllusion"
+      }
+    ],
+    "value": 4,
+    "weight": 0.25,
+    "merchant_avail": "Uncommon",
+    "garden_hf": 3
+  },
+  {
+    "image": "//images.uesp.net/thumb/7/74/SR-icon-ingredient-Mudcrab_Chitin.png/48px-SR-icon-ingredient-Mudcrab_Chitin.png",
+    "title": "Mudcrab Chitin",
+    "pkey": "MudcrabChitin",
+    "id": "0006bc00",
+    "collected_by": "Collected from dead Mudcrabs, found in or near bodies of water.",
+    "effects": [
+      {
+        "fkey": "RestoreStamina"
+      },
+      {
+        "fkey": "CureDisease"
+      },
+      {
+        "fkey": "ResistPoison"
+      },
+      {
+        "fkey": "ResistFire"
+      }
+    ],
+    "value": 2,
+    "weight": 0.25,
+    "merchant_avail": "None (Common)",
+    "garden_hf": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/5/59/SR-icon-ingredient-Namira%27s_Rot.png/48px-SR-icon-ingredient-Namira%27s_Rot.png",
+    "title": "Namira's Rot",
+    "pkey": "NamirasRot",
+    "id": "0004da24",
+    "collected_by": "Harvested from Namira's Rot mushrooms, found in various caves.",
+    "effects": [
+      {
+        "fkey": "DamageMagicka"
+      },
+      {
+        "fkey": "FortifyLockpicking"
+      },
+      {
+        "fkey": "Fear"
+      },
+      {
+        "fkey": "RegenerateHealth"
+      }
+    ],
+    "value": 0,
+    "weight": 0.25,
+    "merchant_avail": "Uncommon",
+    "garden_hf": 3
+  },
+  {
+    "image": "//images.uesp.net/thumb/9/9a/SR-icon-ingredient-Netch_Jelly.png/48px-SR-icon-ingredient-Netch_Jelly.png",
+    "title": "Netch Jelly [DB]",
+    "pkey": "NetchJellyDB",
+    "dlc": "DB",
+    "id": "xx01cd72",
+    "collected_by": "Collected from dead netch.",
+    "effects": [
+      {
+        "fkey": "Paralysis"
+      },
+      {
+        "fkey": "FortifyCarryWeight"
+      },
+      {
+        "fkey": "RestoreStamina",
+        "magnitude": 2
+      },
+      {
+        "fkey": "Fear"
+      }
+    ],
+    "value": 20,
+    "weight": 0.5,
+    "merchant_avail": "",
+    "garden_hf": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/6/6f/SR-icon-ingredient-Nightshade.png/48px-SR-icon-ingredient-Nightshade.png",
+    "title": "Nightshade",
+    "pkey": "Nightshade",
+    "id": "0002f44c",
+    "collected_by": "Harvested from Nightshade, found growing throughout Skyrim. Needed for the quest Few and Far Between.",
+    "effects": [
+      {
+        "fkey": "DamageHealth"
+      },
+      {
+        "fkey": "DamageMagickaRegen"
+      },
+      {
+        "fkey": "LingeringDamageStamina"
+      },
+      {
+        "fkey": "FortifyDestruction",
+        "magnitude": 0.8
+      }
+    ],
+    "value": 8,
+    "weight": 0.1,
+    "merchant_avail": "Rare",
+    "garden_hf": 3
+  },
+  {
+    "image": "//images.uesp.net/thumb/4/46/SR-icon-ingredient-Nirnroot.png/48px-SR-icon-ingredient-Nirnroot.png",
+    "title": "Nirnroot",
+    "pkey": "Nirnroot",
+    "id": "00059b86",
+    "collected_by": "Harvested from Nirnroot, found near bodies of water throughout Skyrim. Needed for the quest Few and Far Between.",
+    "effects": [
+      {
+        "fkey": "DamageHealth",
+        "Mod": "(12.6×Value)"
+      },
+      {
+        "fkey": "DamageStamina"
+      },
+      {
+        "fkey": "Invisibility"
+      },
+      {
+        "fkey": "ResistMagic"
+      }
+    ],
+    "value": 10,
+    "weight": 0.2,
+    "merchant_avail": "Rare",
+    "garden_hf": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/7/75/SR-icon-ingredient-Nordic_Barnacle.png/48px-SR-icon-ingredient-Nordic_Barnacle.png",
+    "title": "Nordic Barnacle",
+    "pkey": "NordicBarnacle",
+    "id": "0007edf5",
+    "collected_by": "Harvested from Nordic Barnacle Clusters, found in or near water.",
+    "effects": [
+      {
+        "fkey": "DamageMagicka"
+      },
+      {
+        "fkey": "Waterbreathing"
+      },
+      {
+        "fkey": "RegenerateHealth"
+      },
+      {
+        "fkey": "FortifyPickpocket"
+      }
+    ],
+    "value": 5,
+    "weight": 0.2,
+    "merchant_avail": "Uncommon",
+    "garden_hf": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/e/e7/SR-icon-ingredient-Orange_Dartwing.png/48px-SR-icon-ingredient-Orange_Dartwing.png",
+    "title": "Orange Dartwing",
+    "pkey": "OrangeDartwing",
+    "id": "000bb956",
+    "collected_by": "Collected by catching Dragonflies found near rivers and streams below the snow line.",
+    "effects": [
+      {
+        "fkey": "RestoreStamina"
+      },
+      {
+        "fkey": "RavageMagicka"
+      },
+      {
+        "fkey": "FortifyPickpocket"
+      },
+      {
+        "fkey": "LingeringDamageHealth"
+      }
+    ],
+    "value": 1,
+    "weight": 0.1,
+    "merchant_avail": "None (Common)",
+    "garden_hf": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/a/ad/SR-icon-ingredient-Pearl.png/48px-SR-icon-ingredient-Pearl.png",
+    "title": "Pearl",
+    "pkey": "Pearl",
+    "id": "000854fe",
+    "collected_by": "Cannot be harvested or collected in the original version of the game; only readily available after the Merchant perk has been unlocked. With Dragonborn, they can be harvested from Pearl Oysters in Solstheim.",
+    "effects": [
+      {
+        "fkey": "RestoreStamina"
+      },
+      {
+        "fkey": "FortifyBlock"
+      },
+      {
+        "fkey": "RestoreMagicka"
+      },
+      {
+        "fkey": "ResistShock"
+      }
+    ],
+    "value": 2,
+    "weight": 0.1,
+    "merchant_avail": "None (Uncommon)",
+    "garden_hf": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/0/0f/SR-icon-ingredient-Pine_Thrush_Egg.png/48px-SR-icon-ingredient-Pine_Thrush_Egg.png",
+    "title": "Pine Thrush Egg",
+    "pkey": "PineThrushEgg",
+    "id": "00023d6f",
+    "collected_by": "Harvested from bird nests in forested regions, in particular The Rift.",
+    "effects": [
+      {
+        "fkey": "RestoreStamina"
+      },
+      {
+        "fkey": "FortifyLockpicking"
+      },
+      {
+        "fkey": "WeaknesstoPoison"
+      },
+      {
+        "fkey": "ResistShock"
+      }
+    ],
+    "value": 2,
+    "weight": 0.5,
+    "merchant_avail": "Common",
+    "garden_hf": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/1/13/SR-icon-ingredient-Poison_Bloom.png/48px-SR-icon-ingredient-Poison_Bloom.png",
+    "title": "Poison Bloom [DG]",
+    "pkey": "PoisonBloomDG",
+    "dlc": "DG",
+    "id": "xx0185fb",
+    "collected_by": "Harvested from the plant of the same name.",
+    "effects": [
+      {
+        "fkey": "DamageHealth",
+        "magnitude": 1.5
+      },
+      {
+        "fkey": "Slow"
+      },
+      {
+        "fkey": "FortifyCarryWeight"
+      },
+      {
+        "fkey": "Fear"
+      }
+    ],
+    "value": 5,
+    "weight": 0.25,
+    "merchant_avail": "None",
+    "garden_hf": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/c/c9/SR-icon-ingredient-Powdered_Mammoth_Tusk.png/48px-SR-icon-ingredient-Powdered_Mammoth_Tusk.png",
+    "title": "Powdered Mammoth Tusk",
+    "pkey": "PowderedMammothTusk",
+    "id": "0006bc10",
+    "collected_by": "Cannot be harvested or collected; only readily available after the Merchant perk has been unlocked.",
+    "effects": [
+      {
+        "fkey": "RestoreStamina"
+      },
+      {
+        "fkey": "FortifySneak"
+      },
+      {
+        "fkey": "WeaknesstoFire"
+      },
+      {
+        "fkey": "Fear"
+      }
+    ],
+    "value": 2,
+    "weight": 0.1,
+    "merchant_avail": "None (Uncommon)",
+    "garden_hf": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/e/e1/SR-icon-ingredient-Purple_Mountain_Flower.png/48px-SR-icon-ingredient-Purple_Mountain_Flower.png",
+    "title": "Purple Mountain Flower",
+    "pkey": "PurpleMountainFlower",
+    "id": "00077e1e",
+    "collected_by": "Harvested from the purple variety of Mountain Flower.",
+    "effects": [
+      {
+        "fkey": "RestoreStamina"
+      },
+      {
+        "fkey": "FortifySneak"
+      },
+      {
+        "fkey": "LingeringDamageMagicka"
+      },
+      {
+        "fkey": "ResistFrost"
+      }
+    ],
+    "value": 2,
+    "weight": 0.1,
+    "merchant_avail": "Common",
+    "garden_hf": 3
+  },
+  {
+    "image": "//images.uesp.net/thumb/b/bb/SR-icon-ingredient-Red_Mountain_Flower.png/48px-SR-icon-ingredient-Red_Mountain_Flower.png",
+    "title": "Red Mountain Flower",
+    "pkey": "RedMountainFlower",
+    "id": "00077e1d",
+    "collected_by": "Harvested from the red variety of Mountain Flower.",
+    "effects": [
+      {
+        "fkey": "RestoreMagicka"
+      },
+      {
+        "fkey": "RavageMagicka"
+      },
+      {
+        "fkey": "FortifyMagicka"
+      },
+      {
+        "fkey": "DamageHealth"
+      }
+    ],
+    "value": 2,
+    "weight": 0.1,
+    "merchant_avail": "Common",
+    "garden_hf": 3
+  },
+  {
+    "image": "//images.uesp.net/thumb/2/25/SR-icon-ingredient-River_Betty.png/48px-SR-icon-ingredient-River_Betty.png",
+    "title": "River Betty",
+    "pkey": "RiverBetty",
+    "id": "00106e1a",
+    "collected_by": "Collected by catching River Betty fish.",
+    "effects": [
+      {
+        "fkey": "DamageHealth",
+        "magnitude": 2.5
+      },
+      {
+        "fkey": "FortifyAlteration"
+      },
+      {
+        "fkey": "Slow"
+      },
+      {
+        "fkey": "FortifyCarryWeight"
+      }
+    ],
+    "value": 15,
+    "weight": 0.25,
+    "merchant_avail": "Common",
+    "garden_hf": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/f/fc/SR-icon-ingredient-Rock_Warbler_Egg.png/48px-SR-icon-ingredient-Rock_Warbler_Egg.png",
+    "title": "Rock Warbler Egg",
+    "pkey": "RockWarblerEgg",
+    "id": "0007e8c8",
+    "collected_by": "Harvested from bird nests in rocky regions, in particular The Reach.",
+    "effects": [
+      {
+        "fkey": "RestoreHealth"
+      },
+      {
+        "fkey": "FortifyOne-handed"
+      },
+      {
+        "fkey": "DamageStamina"
+      },
+      {
+        "fkey": "WeaknesstoMagic"
+      }
+    ],
+    "value": 2,
+    "weight": 0.5,
+    "merchant_avail": "Uncommon",
+    "garden_hf": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/1/1b/SR-icon-ingredient-Sabre_Cat_Tooth.png/48px-SR-icon-ingredient-Sabre_Cat_Tooth.png",
+    "title": "Sabre Cat Tooth",
+    "pkey": "SabreCatTooth",
+    "id": "0006bc04",
+    "collected_by": "Collected from dead Sabre cats.",
+    "effects": [
+      {
+        "fkey": "RestoreStamina"
+      },
+      {
+        "fkey": "FortifyHeavyArmor"
+      },
+      {
+        "fkey": "FortifySmithing"
+      },
+      {
+        "fkey": "WeaknesstoPoison"
+      }
+    ],
+    "value": 2,
+    "weight": 0.1,
+    "merchant_avail": "None (Uncommon)",
+    "garden_hf": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/2/2a/SR-icon-ingredient-Salmon_Roe.png/48px-SR-icon-ingredient-Salmon_Roe.png",
+    "title": "Salmon Roe [HF]",
+    "pkey": "SalmonRoeHF",
+    "dlc": "HF",
+    "id": "xx003545",
+    "collected_by": "Harvested from jumping Salmon.",
+    "effects": [
+      {
+        "fkey": "RestoreStamina",
+        "magnitude": 0.4,
+        "value": 0.36
+      },
+      {
+        "fkey": "Waterbreathing",
+        "duration": 12,
+        "Mod": "15.4×Value)"
+      },
+      {
+        "fkey": "FortifyMagicka",
+        "Mod": "(12.5×Magnitude,0.08×Duration,1.05×Value)"
+      },
+      {
+        "fkey": "RegenerateMagicka"
+      }
+    ],
+    "value": 5,
+    "weight": 0.2,
+    "merchant_avail": "None",
+    "garden_hf": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/3/36/SR-icon-ingredient-Salt_Pile.png/48px-SR-icon-ingredient-Salt_Pile.png",
+    "title": "Salt Pile",
+    "pkey": "SaltPile",
+    "id": "00074a19",
+    "collected_by": "Food. Cannot be harvested or collected, but is commonly found in barrels and sacks.",
+    "effects": [
+      {
+        "fkey": "WeaknesstoMagic"
+      },
+      {
+        "fkey": "FortifyRestoration"
+      },
+      {
+        "fkey": "Slow"
+      },
+      {
+        "fkey": "RegenerateMagicka"
+      }
+    ],
+    "value": 1,
+    "weight": 0.2,
+    "merchant_avail": "None",
+    "garden_hf": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/1/18/SR-icon-ingredient-Scaly_Pholiota.png/48px-SR-icon-ingredient-Scaly_Pholiota.png",
+    "title": "Scaly Pholiota",
+    "pkey": "ScalyPholiota",
+    "id": "0006f950",
+    "collected_by": "Harvested from Scaly Pholiota mushrooms, found growing on dead trees.",
+    "effects": [
+      {
+        "fkey": "WeaknesstoMagic"
+      },
+      {
+        "fkey": "FortifyIllusion"
+      },
+      {
+        "fkey": "RegenerateStamina"
+      },
+      {
+        "fkey": "FortifyCarryWeight"
+      }
+    ],
+    "value": 4,
+    "weight": 0.25,
+    "merchant_avail": "Uncommon",
+    "garden_hf": 5
+  },
+  {
+    "image": "//images.uesp.net/thumb/e/eb/SR-icon-ingredient-Scathecraw.png/48px-SR-icon-ingredient-Scathecraw.png",
+    "title": "Scathecraw [DB]",
+    "pkey": "ScathecrawDB",
+    "dlc": "DB",
+    "id": "xx017e97",
+    "collected_by": "Harvested from scathecraw plants.",
+    "effects": [
+      {
+        "fkey": "RavageHealth"
+      },
+      {
+        "fkey": "RavageStamina"
+      },
+      {
+        "fkey": "RavageMagicka"
+      },
+      {
+        "fkey": "LingeringDamageHealth"
+      }
+    ],
+    "value": 1,
+    "weight": 0.1,
+    "merchant_avail": "",
+    "garden_hf": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/3/32/SR-icon-ingredient-Silverside_Perch.png/48px-SR-icon-ingredient-Silverside_Perch.png",
+    "title": "Silverside Perch",
+    "pkey": "SilversidePerch",
+    "id": "00106e1c",
+    "collected_by": "Collected by catching Silverside Perch fish.",
+    "effects": [
+      {
+        "fkey": "RestoreStamina"
+      },
+      {
+        "fkey": "DamageStaminaRegen"
+      },
+      {
+        "fkey": "RavageHealth"
+      },
+      {
+        "fkey": "ResistFrost"
+      }
+    ],
+    "value": 15,
+    "weight": 0.25,
+    "merchant_avail": "Common",
+    "garden_hf": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/d/dc/SR-icon-ingredient-Skeever_Tail.png/48px-SR-icon-ingredient-Skeever_Tail.png",
+    "title": "Skeever Tail",
+    "pkey": "SkeeverTail",
+    "id": "0003ad6f",
+    "collected_by": "Collected from dead Skeevers.",
+    "effects": [
+      {
+        "fkey": "DamageStaminaRegen"
+      },
+      {
+        "fkey": "RavageHealth"
+      },
+      {
+        "fkey": "DamageHealth"
+      },
+      {
+        "fkey": "FortifyLightArmor"
+      }
+    ],
+    "value": 3,
+    "weight": 0.2,
+    "merchant_avail": "Common",
+    "garden_hf": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/8/84/SR-icon-ingredient-Slaughterfish_Egg.png/48px-SR-icon-ingredient-Slaughterfish_Egg.png",
+    "title": "Slaughterfish Egg",
+    "pkey": "SlaughterfishEgg",
+    "id": "0007e8c5",
+    "collected_by": "Collected from Slaughterfish Egg Nests, found in or near water.",
+    "effects": [
+      {
+        "fkey": "ResistPoison"
+      },
+      {
+        "fkey": "FortifyPickpocket"
+      },
+      {
+        "fkey": "LingeringDamageHealth"
+      },
+      {
+        "fkey": "FortifyStamina"
+      }
+    ],
+    "value": 3,
+    "weight": 0.2,
+    "merchant_avail": "Uncommon",
+    "garden_hf": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/0/0f/SR-icon-ingredient-Slaughterfish_Scales.png/48px-SR-icon-ingredient-Slaughterfish_Scales.png",
+    "title": "Slaughterfish Scales",
+    "pkey": "SlaughterfishScales",
+    "id": "0003ad70",
+    "collected_by": "Collected from dead Slaughterfish.",
+    "effects": [
+      {
+        "fkey": "ResistFrost"
+      },
+      {
+        "fkey": "LingeringDamageHealth"
+      },
+      {
+        "fkey": "FortifyHeavyArmor"
+      },
+      {
+        "fkey": "FortifyBlock"
+      }
+    ],
+    "value": 3,
+    "weight": 0.1,
+    "merchant_avail": "Uncommon",
+    "garden_hf": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/4/4e/SR-icon-ingredient-Small_Antlers.png/48px-SR-icon-ingredient-Small_Antlers.png",
+    "title": "Small Antlers",
+    "pkey": "SmallAntlers",
+    "id": "0006bc0b",
+    "collected_by": "Collected from dead female Elk.",
+    "effects": [
+      {
+        "fkey": "WeaknesstoPoison"
+      },
+      {
+        "fkey": "FortifyRestoration"
+      },
+      {
+        "fkey": "LingeringDamageStamina"
+      },
+      {
+        "fkey": "DamageHealth"
+      }
+    ],
+    "value": 2,
+    "weight": 0.1,
+    "merchant_avail": "None (Common)",
+    "garden_hf": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/8/8f/SR-icon-ingredient-Small_Pearl.png/48px-SR-icon-ingredient-Small_Pearl.png",
+    "title": "Small Pearl",
+    "pkey": "SmallPearl",
+    "id": "00085500",
+    "collected_by": "Cannot be harvested or collected in the original version of the game; only readily available after the Merchant perk has been unlocked. With Dragonborn, they can be harvested from Pearl Oysters in Solstheim.",
+    "effects": [
+      {
+        "fkey": "RestoreStamina"
+      },
+      {
+        "fkey": "FortifyOne-handed"
+      },
+      {
+        "fkey": "FortifyRestoration"
+      },
+      {
+        "fkey": "ResistFrost"
+      }
+    ],
+    "value": 2,
+    "weight": 0.1,
+    "merchant_avail": "None (Uncommon)",
+    "garden_hf": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/d/d3/SR-icon-ingredient-Snowberries.png/48px-SR-icon-ingredient-Snowberries.png",
+    "title": "Snowberries",
+    "pkey": "Snowberries",
+    "id": "0001b3bd",
+    "collected_by": "Harvested from Snowberry bushes, found in snowy regions of Skyrim.",
+    "effects": [
+      {
+        "fkey": "ResistFire"
+      },
+      {
+        "fkey": "FortifyEnchanting"
+      },
+      {
+        "fkey": "ResistFrost"
+      },
+      {
+        "fkey": "ResistShock"
+      }
+    ],
+    "value": 4,
+    "weight": 0.1,
+    "merchant_avail": "Common",
+    "garden_hf": 4
+  },
+  {
+    "image": "//images.uesp.net/thumb/0/0c/SR-icon-ingredient-Spawn_Ash.png/48px-SR-icon-ingredient-Spawn_Ash.png",
+    "title": "Spawn Ash [DB]",
+    "pkey": "SpawnAshDB",
+    "dlc": "DB",
+    "id": "xx01cd6d",
+    "collected_by": "Collected from dead ash spawn.",
+    "effects": [
+      {
+        "fkey": "RavageStamina"
+      },
+      {
+        "fkey": "ResistFire"
+      },
+      {
+        "fkey": "FortifyEnchanting"
+      },
+      {
+        "fkey": "RavageMagicka"
+      }
+    ],
+    "value": 20,
+    "weight": 0.1,
+    "merchant_avail": "",
+    "garden_hf": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/0/07/SR-icon-ingredient-Spider_Egg.png/48px-SR-icon-ingredient-Spider_Egg.png",
+    "title": "Spider Egg",
+    "pkey": "SpiderEgg",
+    "id": "0009151b",
+    "collected_by": "Collected from spider Egg Sacs and Web Sacs.",
+    "effects": [
+      {
+        "fkey": "DamageStamina"
+      },
+      {
+        "fkey": "DamageMagickaRegen"
+      },
+      {
+        "fkey": "FortifyLockpicking"
+      },
+      {
+        "fkey": "FortifyMarksman"
+      }
+    ],
+    "value": 5,
+    "weight": 0.2,
+    "merchant_avail": "Uncommon",
+    "garden_hf": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/d/d6/SR-icon-ingredient-Spriggan_Sap.png/48px-SR-icon-ingredient-Spriggan_Sap.png",
+    "title": "Spriggan Sap",
+    "pkey": "SprigganSap",
+    "id": "00063b5f",
+    "collected_by": "Cannot be harvested or collected; best source is merchants.",
+    "effects": [
+      {
+        "fkey": "DamageMagickaRegen"
+      },
+      {
+        "fkey": "FortifyEnchanting"
+      },
+      {
+        "fkey": "FortifySmithing"
+      },
+      {
+        "fkey": "FortifyAlteration"
+      }
+    ],
+    "value": 15,
+    "weight": 0.2,
+    "merchant_avail": "Uncommon",
+    "garden_hf": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/9/92/SR-icon-ingredient-Swamp_Fungal_Pod.png/48px-SR-icon-ingredient-Swamp_Fungal_Pod.png",
+    "title": "Swamp Fungal Pod",
+    "pkey": "SwampFungalPod",
+    "id": "0007e8b7",
+    "collected_by": "Harvested from Swamp Fungal Pod, common in the tundra marsh of Hjaalmarch.",
+    "effects": [
+      {
+        "fkey": "ResistShock"
+      },
+      {
+        "fkey": "LingeringDamageMagicka"
+      },
+      {
+        "fkey": "Paralysis"
+      },
+      {
+        "fkey": "RestoreHealth"
+      }
+    ],
+    "value": 5,
+    "weight": 0.25,
+    "merchant_avail": "Uncommon",
+    "garden_hf": 3
+  },
+  {
+    "image": "//images.uesp.net/thumb/7/78/SR-icon-ingredient-Taproot.png/48px-SR-icon-ingredient-Taproot.png",
+    "title": "Taproot",
+    "pkey": "Taproot",
+    "id": "0003ad71",
+    "collected_by": "Collected from dead Spriggans.",
+    "effects": [
+      {
+        "fkey": "WeaknesstoMagic"
+      },
+      {
+        "fkey": "FortifyIllusion"
+      },
+      {
+        "fkey": "RegenerateMagicka"
+      },
+      {
+        "fkey": "RestoreMagicka"
+      }
+    ],
+    "value": 15,
+    "weight": 0.5,
+    "merchant_avail": "Uncommon",
+    "garden_hf": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/b/bf/SR-icon-ingredient-Thistle_Branch.png/48px-SR-icon-ingredient-Thistle_Branch.png",
+    "title": "Thistle Branch",
+    "pkey": "ThistleBranch",
+    "id": "000134aa",
+    "collected_by": "Harvested from Thistle.",
+    "effects": [
+      {
+        "fkey": "ResistFrost"
+      },
+      {
+        "fkey": "RavageStamina"
+      },
+      {
+        "fkey": "ResistPoison",
+        "magnitude": 0.75,
+        "duration": 0,
+        "value": 0.1
+      },
+      {
+        "fkey": "FortifyHeavyArmor"
+      }
+    ],
+    "value": 1,
+    "weight": 0.1,
+    "merchant_avail": "Common",
+    "garden_hf": 3
+  },
+  {
+    "image": "//images.uesp.net/thumb/9/99/SR-icon-ingredient-Torchbug_Thorax.png/48px-SR-icon-ingredient-Torchbug_Thorax.png",
+    "title": "Torchbug Thorax",
+    "pkey": "TorchbugThorax",
+    "id": "0004da73",
+    "collected_by": "Collected by catching Torchbugs. Found below the snowline after dark.",
+    "effects": [
+      {
+        "fkey": "RestoreStamina"
+      },
+      {
+        "fkey": "LingeringDamageMagicka"
+      },
+      {
+        "fkey": "WeaknesstoMagic"
+      },
+      {
+        "fkey": "FortifyStamina"
+      }
+    ],
+    "value": 1,
+    "weight": 0.1,
+    "merchant_avail": "None (Common)",
+    "garden_hf": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/1/1e/SR-icon-ingredient-Trama_Root.png/48px-SR-icon-ingredient-Trama_Root.png",
+    "title": "Trama Root [DB]",
+    "pkey": "TramaRootDB",
+    "dlc": "DB",
+    "id": "xx017008",
+    "collected_by": "Harvested from trama root plants.",
+    "effects": [
+      {
+        "fkey": "WeaknesstoShock"
+      },
+      {
+        "fkey": "FortifyCarryWeight"
+      },
+      {
+        "fkey": "DamageMagicka"
+      },
+      {
+        "fkey": "Slow"
+      }
+    ],
+    "value": 1,
+    "weight": 0.2,
+    "merchant_avail": "",
+    "garden_hf": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/8/8a/SR-icon-ingredient-Troll_Fat.png/48px-SR-icon-ingredient-Troll_Fat.png",
+    "title": "Troll Fat",
+    "pkey": "TrollFat",
+    "id": "0003ad72",
+    "collected_by": "Collected from dead Trolls. Needed for the quest The Cursed Tribe.",
+    "effects": [
+      {
+        "fkey": "ResistPoison"
+      },
+      {
+        "fkey": "FortifyTwo-handed"
+      },
+      {
+        "fkey": "Frenzy"
+      },
+      {
+        "fkey": "DamageHealth"
+      }
+    ],
+    "value": 15,
+    "weight": 1,
+    "merchant_avail": "Uncommon",
+    "garden_hf": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/7/7e/SR-icon-ingredient-Tundra_Cotton.png/48px-SR-icon-ingredient-Tundra_Cotton.png",
+    "title": "Tundra Cotton",
+    "pkey": "TundraCotton",
+    "id": "0003f7f8",
+    "collected_by": "Harvested from Tundra Cotton, found in Whiterun Hold.",
+    "effects": [
+      {
+        "fkey": "ResistMagic"
+      },
+      {
+        "fkey": "FortifyMagicka"
+      },
+      {
+        "fkey": "FortifyBlock"
+      },
+      {
+        "fkey": "FortifyBarter"
+      }
+    ],
+    "value": 1,
+    "weight": 0.1,
+    "merchant_avail": "Common",
+    "garden_hf": 3
+  },
+  {
+    "image": "//images.uesp.net/thumb/2/2f/SR-icon-ingredient-Vampire_Dust.png/48px-SR-icon-ingredient-Vampire_Dust.png",
+    "title": "Vampire Dust",
+    "pkey": "VampireDust",
+    "id": "0003ad76",
+    "collected_by": "Collected from dead Vampires.",
+    "effects": [
+      {
+        "fkey": "Invisibility"
+      },
+      {
+        "fkey": "RestoreMagicka"
+      },
+      {
+        "fkey": "RegenerateHealth"
+      },
+      {
+        "fkey": "CureDisease"
+      }
+    ],
+    "value": 25,
+    "weight": 0.2,
+    "merchant_avail": "Rare",
+    "garden_hf": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/7/77/SR-icon-ingredient-Void_Salts.png/48px-SR-icon-ingredient-Void_Salts.png",
+    "title": "Void Salts",
+    "pkey": "VoidSalts",
+    "id": "0003ad60",
+    "collected_by": "Collected from dead Storm Atronachs.",
+    "effects": [
+      {
+        "fkey": "WeaknesstoShock"
+      },
+      {
+        "fkey": "ResistMagic"
+      },
+      {
+        "fkey": "DamageHealth"
+      },
+      {
+        "fkey": "FortifyMagicka"
+      }
+    ],
+    "value": 125,
+    "weight": 0.2,
+    "merchant_avail": "Rare",
+    "garden_hf": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/7/7f/SR-icon-ingredient-Wheat.png/48px-SR-icon-ingredient-Wheat.png",
+    "title": "Wheat",
+    "pkey": "Wheat",
+    "id": "0004b0ba",
+    "collected_by": "Food. Harvested from wheat bushels, found in various farms.",
+    "effects": [
+      {
+        "fkey": "RestoreHealth"
+      },
+      {
+        "fkey": "FortifyHealth"
+      },
+      {
+        "fkey": "DamageStaminaRegen"
+      },
+      {
+        "fkey": "LingeringDamageMagicka"
+      }
+    ],
+    "value": 5,
+    "weight": 0.1,
+    "merchant_avail": "Common",
+    "garden_hf": 4
+  },
+  {
+    "image": "//images.uesp.net/thumb/f/fa/SR-icon-ingredient-White_Cap.png/48px-SR-icon-ingredient-White_Cap.png",
+    "title": "White Cap",
+    "pkey": "WhiteCap",
+    "id": "0004da22",
+    "collected_by": "Harvested from White Cap mushrooms, found in various caves.",
+    "effects": [
+      {
+        "fkey": "WeaknesstoFrost"
+      },
+      {
+        "fkey": "FortifyHeavyArmor"
+      },
+      {
+        "fkey": "RestoreMagicka"
+      },
+      {
+        "fkey": "RavageMagicka"
+      }
+    ],
+    "value": 0,
+    "weight": 0.3,
+    "merchant_avail": "Uncommon",
+    "garden_hf": 2
+  },
+  {
+    "image": "//images.uesp.net/thumb/9/9d/SR-icon-ingredient-Wisp_Wrappings.png/48px-SR-icon-ingredient-Wisp_Wrappings.png",
+    "title": "Wisp Wrappings",
+    "pkey": "WispWrappings",
+    "id": "0006bc0e",
+    "collected_by": "Collected from dead Wispmothers.",
+    "effects": [
+      {
+        "fkey": "RestoreStamina"
+      },
+      {
+        "fkey": "FortifyDestruction"
+      },
+      {
+        "fkey": "FortifyCarryWeight"
+      },
+      {
+        "fkey": "ResistMagic"
+      }
+    ],
+    "value": 2,
+    "weight": 0.1,
+    "merchant_avail": "None (Uncommon)",
+    "garden_hf": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/6/6e/SR-icon-ingredient-Yellow_Mountain_Flower.png/48px-SR-icon-ingredient-Yellow_Mountain_Flower.png",
+    "title": "Yellow Mountain Flower [DG]",
+    "pkey": "YellowMountainFlowerDG",
+    "dlc": "DG",
+    "id": "xx002a78",
+    "collected_by": "Harvested from the yellow variety of Mountain Flower.",
+    "effects": [
+      {
+        "fkey": "ResistPoison"
+      },
+      {
+        "fkey": "FortifyRestoration",
+        "magnitude": 1.25
+      },
+      {
+        "fkey": "FortifyHealth"
+      },
+      {
+        "fkey": "DamageStaminaRegen"
+      }
+    ],
+    "value": 2,
+    "weight": 0.1,
+    "merchant_avail": "None",
+    "garden_hf": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/3/34/SR-icon-ingredient-Alocasia_Fruit.png/48px-SR-icon-ingredient-Alocasia_Fruit.png",
+    "title": "Alocasia Fruit",
+    "pkey": "AlocasiaFruitCC",
+    "dlc": "CC",
+    "id": "FExxxD62",
+    "collected_by": "Originating from the Shivering Isle. One of the Rare Curios sold by Khajiit trade caravans.",
+    "effects": [
+      {
+        "fkey": "RegenerateStamina",
+        "magnitude": 1.2,
+        "value": 1.22
+      },
+      {
+        "fkey": "Light"
+      },
+      {
+        "fkey": "RavageMagicka",
+        "magnitude": 1.5,
+        "value": 1.56
+      },
+      {
+        "fkey": "RegenerateHealth",
+        "magnitude": 1.2,
+        "value": 1.22
+      }
+    ],
+    "value": 22,
+    "weight": 0.25,
+    "merchant_avail": "",
+    "garden": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/7/71/SR-icon-ingredient-Ambrosia.png/48px-SR-icon-ingredient-Ambrosia.png",
+    "title": "Ambrosia",
+    "pkey": "AmbrosiaCC",
+    "dlc": "CC",
+    "id": "FExxx836",
+    "collected_by": "Originating from Mankar Camoran's destroyed realm of Oblivion. One of the Rare Curios sold by Khajiit trade caravans.",
+    "effects": [
+      {
+        "fkey": "RestoreHealth",
+        "magnitude": 1.2,
+        "value": 1.22
+      },
+      {
+        "fkey": "RegenerateHealth",
+        "magnitude": 1.2,
+        "value": 1.22
+      },
+      {
+        "fkey": "FortifyHealth",
+        "magnitude": 1.25,
+        "value": 1.27
+      },
+      {
+        "fkey": "CurePoison",
+        "value": 1.56
+      }
+    ],
+    "value": 15,
+    "weight": 0.1,
+    "merchant_avail": "",
+    "garden": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/b/b9/SR-icon-ingredient-Angelfish.png/48px-SR-icon-ingredient-Angelfish.png",
+    "title": "Angelfish",
+    "pkey": "AngelfishCC",
+    "dlc": "CC",
+    "id": "xx0008EB",
+    "collected_by": "Caught by Fishing in temperate lakes with an Alik'ri rod, or in the Ancestor Glade.",
+    "effects": [
+      {
+        "fkey": "RegenerateHealth"
+      },
+      {
+        "fkey": "ResistFire"
+      },
+      {
+        "fkey": "FortifyMarksman"
+      },
+      {
+        "fkey": "Waterbreathing"
+      }
+    ],
+    "value": 30,
+    "weight": 0.25,
+    "merchant_avail": "",
+    "garden": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/5/59/SR-icon-ingredient-Angler_Larvae.png/48px-SR-icon-ingredient-Angler_Larvae.png",
+    "title": "Angler Larvae",
+    "pkey": "AnglerLarvaeCC",
+    "dlc": "CC",
+    "id": "xx0008F0",
+    "collected_by": "Caught by Fishing in freezing waters.",
+    "effects": [
+      {
+        "fkey": "LingeringDamageHealth"
+      },
+      {
+        "fkey": "RegenerateStamina"
+      },
+      {
+        "fkey": "Waterbreathing"
+      },
+      {
+        "fkey": "FortifyTwo-handed"
+      }
+    ],
+    "value": 1,
+    "weight": 0.25,
+    "merchant_avail": "",
+    "garden": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/8/8c/SR-icon-ingredient-Aster_Bloom_Core.png/48px-SR-icon-ingredient-Aster_Bloom_Core.png",
+    "title": "Aster Bloom Core",
+    "pkey": "AsterBloomCoreCC",
+    "dlc": "CC",
+    "id": "FExxxD66",
+    "collected_by": "Originating from the Shivering Isle. One of the Rare Curios sold by Khajiit trade caravans.",
+    "effects": [
+      {
+        "fkey": "ResistMagic",
+        "magnitude": 2,
+        "value": 2.14
+      },
+      {
+        "fkey": "FortifyLightArmor",
+        "magnitude": 2,
+        "value": 2.14
+      },
+      {
+        "fkey": "FortifyBlock",
+        "magnitude": 1.25,
+        "value": 1.27
+      },
+      {
+        "fkey": "Paralysis",
+        "duration": 2,
+        "value": 2.14
+      }
+    ],
+    "value": 40,
+    "weight": 0.1,
+    "merchant_avail": "",
+    "garden": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/1/10/SR-icon-ingredient-Bittergreen_Petals.png/48px-SR-icon-ingredient-Bittergreen_Petals.png",
+    "title": "Bittergreen Petals",
+    "pkey": "BittergreenPetalsCC",
+    "dlc": "CC",
+    "id": "FExxxD68",
+    "collected_by": "Originating from Vvardenfell. One of the Rare Curios sold by Khajiit trade caravans.",
+    "effects": [
+      {
+        "fkey": "LingeringDamageStamina",
+        "magnitude": 2,
+        "value": 2.14
+      },
+      {
+        "fkey": "Invisibility",
+        "duration": 1.5,
+        "value": 1.56
+      },
+      {
+        "fkey": "CurePoison"
+      },
+      {
+        "fkey": "DamageMagicka",
+        "magnitude": 1.5,
+        "value": 1.56
+      }
+    ],
+    "value": 25,
+    "weight": 0.1,
+    "merchant_avail": "",
+    "garden": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/0/0a/SR-icon-ingredient-Blind_Watcher%27s_Eye.png/48px-SR-icon-ingredient-Blind_Watcher%27s_Eye.png",
+    "title": "Blind Watcher's Eye",
+    "pkey": "BlindWatchersEyeCC",
+    "dlc": "CC",
+    "id": "FExxx822",
+    "collected_by": "Originating from the Shivering Isle. One of the Rare Curios sold by Khajiit trade caravans.",
+    "effects": [
+      {
+        "fkey": "Light"
+      },
+      {
+        "fkey": "FortifyMagicka",
+        "magnitude": 1.25,
+        "value": 1.27
+      },
+      {
+        "fkey": "FortifyAlteration",
+        "magnitude": 1.25,
+        "value": 1.27
+      },
+      {
+        "fkey": "SpellAbsorption"
+      }
+    ],
+    "value": 9,
+    "weight": 0.2,
+    "merchant_avail": "",
+    "garden": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/5/59/SR-icon-ingredient-Bliss_Bug_Thorax.png/48px-SR-icon-ingredient-Bliss_Bug_Thorax.png",
+    "title": "Bliss Bug Thorax",
+    "pkey": "BlissBugThoraxCC",
+    "dlc": "CC",
+    "id": "xx059155",
+    "collected_by": "Harvested by Saints & Seducers.",
+    "effects": [
+      {
+        "fkey": "WeaknesstoFire"
+      },
+      {
+        "fkey": "ResistFire"
+      },
+      {
+        "fkey": "FortifyHeavyArmor"
+      },
+      {
+        "fkey": "FortifyIllusion",
+        "magnitude": 0.25,
+        "value": 0.21
+      }
+    ],
+    "value": 1,
+    "weight": 0.1,
+    "merchant_avail": "",
+    "garden": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/2/29/SR-icon-ingredient-Blister_Pod_Cap.png/48px-SR-icon-ingredient-Blister_Pod_Cap.png",
+    "title": "Blister Pod Cap",
+    "pkey": "BlisterPodCapCC",
+    "dlc": "CC",
+    "id": "FExxxD6A",
+    "collected_by": "Originating from the Shivering Isle. One of the Rare Curios sold by Khajiit trade caravans.",
+    "effects": [
+      {
+        "fkey": "RestoreMagicka",
+        "magnitude": 1.2,
+        "value": 1.22
+      },
+      {
+        "fkey": "FortifyMagicka",
+        "magnitude": 1.25,
+        "value": 1.27
+      },
+      {
+        "fkey": "NightEye"
+      },
+      {
+        "fkey": "Invisibility",
+        "duration": 1.5,
+        "value": 1.56
+      }
+    ],
+    "value": 25,
+    "weight": 0.1,
+    "merchant_avail": "",
+    "garden": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/c/c3/SR-icon-ingredient-Bloodgrass.png/48px-SR-icon-ingredient-Bloodgrass.png",
+    "title": "Bloodgrass",
+    "pkey": "BloodgrassCC",
+    "dlc": "CC",
+    "id": "xx024C13",
+    "collected_by": "Harvested from the Deadlands, if one has The Cause to go there.",
+    "effects": [
+      {
+        "fkey": "Invisibility"
+      },
+      {
+        "fkey": "ResistPoison"
+      },
+      {
+        "fkey": "Slow",
+        "duration": 6,
+        "value": 0.57
+      },
+      {
+        "fkey": "FortifyHealth",
+        "magnitude": 1.25,
+        "value": 1.27
+      }
+    ],
+    "value": 25,
+    "weight": 0.1,
+    "merchant_avail": "",
+    "garden": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/2/2b/SR-icon-ingredient-Bog_Beacon.png/48px-SR-icon-ingredient-Bog_Beacon.png",
+    "title": "Bog Beacon",
+    "pkey": "BogBeaconCC",
+    "dlc": "CC",
+    "id": "FExxxD6C",
+    "collected_by": "Originating from Cyrodiil. One of the Rare Curios sold by Khajiit trade caravans.",
+    "effects": [
+      {
+        "fkey": "RestoreMagicka",
+        "magnitude": 1.2,
+        "value": 1.22
+      },
+      {
+        "fkey": "FortifyHeavyArmor",
+        "magnitude": 1.5,
+        "value": 1.56
+      },
+      {
+        "fkey": "Fear",
+        "magnitude": 2,
+        "value": 2.14
+      },
+      {
+        "fkey": "DamageStamina",
+        "magnitude": 1.33,
+        "value": 1.36
+      }
+    ],
+    "value": 20,
+    "weight": 0.1,
+    "merchant_avail": "",
+    "garden": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/4/43/SR-icon-ingredient-Bungler%27s_Bane.png/48px-SR-icon-ingredient-Bungler%27s_Bane.png",
+    "title": "Bungler's Bane",
+    "pkey": "BunglersBaneCC",
+    "dlc": "CC",
+    "id": "FExxx802",
+    "collected_by": "Originating from Vvardenfell. One of the Rare Curios sold by Khajiit trade caravans.",
+    "effects": [
+      {
+        "fkey": "Slow",
+        "duration": 2,
+        "value": 2.14
+      },
+      {
+        "fkey": "RavageStamina",
+        "magnitude": 1.5,
+        "value": 3.34
+      },
+      {
+        "fkey": "DamageStaminaRegen",
+        "duration": 2,
+        "value": 2.14
+      },
+      {
+        "fkey": "ResistMagic",
+        "magnitude": 2,
+        "value": 2.14
+      }
+    ],
+    "value": 50,
+    "weight": 0.5,
+    "merchant_avail": "",
+    "garden": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/2/2f/SR-icon-ingredient-Chokeberry.png/48px-SR-icon-ingredient-Chokeberry.png",
+    "title": "Chokeberry",
+    "pkey": "ChokeberryCC",
+    "dlc": "CC",
+    "id": "FExxx838",
+    "collected_by": "Originating from the vile lair of a Cyrodiilic vampire assassin. One of the Rare Curios sold by Khajiit trade caravans.",
+    "effects": [
+      {
+        "fkey": "DamageHealth",
+        "magnitude": 1.5,
+        "value": 1.56
+      },
+      {
+        "fkey": "RavageHealth",
+        "magnitude": 1.5,
+        "value": 3.34
+      },
+      {
+        "fkey": "LingeringDamageHealth",
+        "magnitude": 2,
+        "value": 2.14
+      },
+      {
+        "fkey": "WeaknesstoPoison",
+        "magnitude": 1.5,
+        "value": 1.56
+      }
+    ],
+    "value": 15,
+    "weight": 0.1,
+    "merchant_avail": "",
+    "garden": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/4/40/SR-icon-ingredient-Chokeweed.png/48px-SR-icon-ingredient-Chokeweed.png",
+    "title": "Chokeweed",
+    "pkey": "ChokeweedCC",
+    "dlc": "CC",
+    "id": "FExxx804",
+    "collected_by": "Originating from Vvardenfell. One of the Rare Curios sold by Khajiit trade caravans.",
+    "effects": [
+      {
+        "fkey": "WeaknesstoFrost",
+        "magnitude": 1.33,
+        "value": 1.37
+      },
+      {
+        "fkey": "RestoreStamina",
+        "magnitude": 1.2,
+        "value": 1.22
+      },
+      {
+        "fkey": "CureDisease",
+        "value": 0.36
+      },
+      {
+        "fkey": "DamageMagicka",
+        "magnitude": 1.33,
+        "value": 1.37
+      }
+    ],
+    "value": 7,
+    "weight": 0.1,
+    "merchant_avail": "",
+    "garden": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/7/78/SR-icon-ingredient-Coda_Flower.png/48px-SR-icon-ingredient-Coda_Flower.png",
+    "title": "Coda Flower",
+    "pkey": "CodaFlowerCC",
+    "dlc": "CC",
+    "id": "FExxx805",
+    "collected_by": "Originating from Vvardenfell. One of the Rare Curios sold by Khajiit trade caravans.",
+    "effects": [
+      {
+        "fkey": "DamageHealth",
+        "magnitude": 1.5,
+        "value": 1.56
+      },
+      {
+        "fkey": "LingeringDamageStamina",
+        "magnitude": 2,
+        "value": 2.14
+      },
+      {
+        "fkey": "RavageMagicka",
+        "magnitude": 1.5,
+        "value": 1.56
+      },
+      {
+        "fkey": "FortifyCarryWeight",
+        "magnitude": 1.25,
+        "value": 1.27
+      }
+    ],
+    "value": 30,
+    "weight": 0.1,
+    "merchant_avail": "",
+    "garden": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/2/20/SR-icon-ingredient-Comberry.png/48px-SR-icon-ingredient-Comberry.png",
+    "title": "Comberry",
+    "pkey": "ComberryCC",
+    "dlc": "CC",
+    "id": "FExxx806",
+    "collected_by": "Originating from Vvardenfell. One of the Rare Curios sold by Khajiit trade caravans.",
+    "effects": [
+      {
+        "fkey": "DamageStamina",
+        "magnitude": 1.33,
+        "value": 1.36
+      },
+      {
+        "fkey": "SpellAbsorption"
+      },
+      {
+        "fkey": "RestoreMagicka",
+        "magnitude": 1.2,
+        "value": 1.22
+      },
+      {
+        "fkey": "FortifyDestruction",
+        "magnitude": 1.2,
+        "value": 1.22
+      }
+    ],
+    "value": 12,
+    "weight": 0.1,
+    "merchant_avail": "",
+    "garden": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/9/91/SR-icon-ingredient-Congealed_Putrescence.png/48px-SR-icon-ingredient-Congealed_Putrescence.png",
+    "title": "Congealed Putrescence",
+    "pkey": "CongealedPutrescenceCC",
+    "dlc": "CC",
+    "id": "FExxx807",
+    "collected_by": "Originating from the Shivering Isle. One of the Rare Curios sold by Khajiit trade caravans.",
+    "effects": [
+      {
+        "fkey": "RavageHealth",
+        "magnitude": 1.5,
+        "value": 3.34
+      },
+      {
+        "fkey": "RestoreMagicka",
+        "magnitude": 1.2,
+        "value": 1.22
+      },
+      {
+        "fkey": "WeaknesstoFire",
+        "magnitude": 1.33,
+        "value": 1.36
+      },
+      {
+        "fkey": "FortifyConjuration",
+        "magnitude": 1.2,
+        "value": 1.22
+      }
+    ],
+    "value": 9,
+    "weight": 0.1,
+    "merchant_avail": "",
+    "garden": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/a/a4/SR-icon-ingredient-Corkbulb_Root.png/48px-SR-icon-ingredient-Corkbulb_Root.png",
+    "title": "Corkbulb Root",
+    "pkey": "CorkbulbRootCC",
+    "dlc": "CC",
+    "id": "FExxx809",
+    "collected_by": "Originating from Vvardenfell. One of the Rare Curios sold by Khajiit trade caravans.",
+    "effects": [
+      {
+        "fkey": "Paralysis",
+        "duration": 2,
+        "value": 2.14
+      },
+      {
+        "fkey": "RestoreHealth",
+        "magnitude": 1.2,
+        "value": 1.22
+      },
+      {
+        "fkey": "ResistShock",
+        "magnitude": 1.33,
+        "value": 1.36
+      },
+      {
+        "fkey": "FortifyMarksman",
+        "magnitude": 1.25,
+        "value": 1.27
+      }
+    ],
+    "value": 30,
+    "weight": 0.1,
+    "merchant_avail": "",
+    "garden": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/b/b6/SR-icon-ingredient-Daedra_Silk.png/48px-SR-icon-ingredient-Daedra_Silk.png",
+    "title": "Daedra Silk",
+    "pkey": "DaedraSilkCC",
+    "dlc": "CC",
+    "id": "FExxx80A",
+    "collected_by": "Originating from the planes of Oblivion. One of the Rare Curios sold by Khajiit trade caravans.",
+    "effects": [
+      {
+        "fkey": "LingeringDamageStamina",
+        "magnitude": 2,
+        "value": 2.14
+      },
+      {
+        "fkey": "Paralysis",
+        "duration": 2,
+        "value": 2.14
+      },
+      {
+        "fkey": "NightEye"
+      },
+      {
+        "fkey": "Invisibility",
+        "duration": 1.5,
+        "value": 1.56
+      }
+    ],
+    "value": 50,
+    "weight": 0.5,
+    "merchant_avail": "",
+    "garden": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/7/71/SR-icon-ingredient-Daedra_Venin.png/48px-SR-icon-ingredient-Daedra_Venin.png",
+    "title": "Daedra Venin",
+    "pkey": "DaedraVeninCC",
+    "dlc": "CC",
+    "id": "FExxx80B",
+    "collected_by": "Originating from the planes of Oblivion. One of the Rare Curios sold by Khajiit trade caravans.",
+    "effects": [
+      {
+        "fkey": "RavageHealth",
+        "magnitude": 1.5,
+        "value": 3.34
+      },
+      {
+        "fkey": "Paralysis",
+        "duration": 2,
+        "value": 2.14
+      },
+      {
+        "fkey": "FortifyDestruction",
+        "magnitude": 1.2,
+        "value": 1.22
+      },
+      {
+        "fkey": "SpellAbsorption"
+      }
+    ],
+    "value": 50,
+    "weight": 0.2,
+    "merchant_avail": "",
+    "garden": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/c/cb/SR-icon-ingredient-Daedroth_Teeth.png/48px-SR-icon-ingredient-Daedroth_Teeth.png",
+    "title": "Daedroth Teeth",
+    "pkey": "DaedrothTeethCC",
+    "dlc": "CC",
+    "id": "FExxx826",
+    "collected_by": "Originating from the planes of Oblivion. One of the Rare Curios sold by Khajiit trade caravans.",
+    "effects": [
+      {
+        "fkey": "ResistFrost",
+        "magnitude": 1.33,
+        "value": 1.36
+      },
+      {
+        "fkey": "Light"
+      },
+      {
+        "fkey": "DamageMagickaRegen",
+        "duration": 2,
+        "value": 2.14
+      },
+      {
+        "fkey": "RegenerateStamina",
+        "magnitude": 1.2,
+        "value": 1.22
+      }
+    ],
+    "value": 50,
+    "weight": 0.5,
+    "merchant_avail": "",
+    "garden": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/4/44/SR-icon-ingredient-Dreugh_Wax.png/48px-SR-icon-ingredient-Dreugh_Wax.png",
+    "title": "Dreugh Wax",
+    "pkey": "DreughWaxCC",
+    "dlc": "CC",
+    "id": "FExxx827",
+    "collected_by": "Originating from Vvardenfell's dreughs or Cyrodiil's land dreughs. One of the Rare Curios sold by Khajiit trade caravans.",
+    "effects": [
+      {
+        "fkey": "WeaknesstoMagic",
+        "magnitude": 1.5,
+        "value": 1.56
+      },
+      {
+        "fkey": "Frenzy",
+        "duration": 2,
+        "value": 2.14
+      },
+      {
+        "fkey": "FortifyEnchanting",
+        "magnitude": 2,
+        "value": 2.14
+      },
+      {
+        "fkey": "FortifySmithing",
+        "magnitude": 1.25,
+        "value": 1.27
+      }
+    ],
+    "value": 25,
+    "weight": 1,
+    "merchant_avail": "",
+    "garden": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/0/07/SR-icon-ingredient-Elytra_Ichor.png/48px-SR-icon-ingredient-Elytra_Ichor.png",
+    "title": "Elytra Ichor",
+    "pkey": "ElytraIchorCC",
+    "dlc": "CC",
+    "id": "FExxx828",
+    "collected_by": "Originating from the Shivering Isle. One of the Rare Curios sold by Khajiit trade caravans.",
+    "effects": [
+      {
+        "fkey": "RestoreMagicka",
+        "magnitude": 1.2,
+        "value": 1.22
+      },
+      {
+        "fkey": "Invisibility",
+        "duration": 1.5,
+        "value": 1.56
+      },
+      {
+        "fkey": "Slow",
+        "duration": 2,
+        "value": 2.14
+      },
+      {
+        "fkey": "Fear",
+        "magnitude": 2,
+        "value": 2.14
+      }
+    ],
+    "value": 30,
+    "weight": 0.1,
+    "merchant_avail": "",
+    "garden": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/0/06/SR-icon-ingredient-Fire_Petal.png/48px-SR-icon-ingredient-Fire_Petal.png",
+    "title": "Fire Petal",
+    "pkey": "FirePetalCC",
+    "dlc": "CC",
+    "id": "FExxx829",
+    "collected_by": "Originating from Vvardenfell. One of the Rare Curios sold by Khajiit trade caravans.",
+    "effects": [
+      {
+        "fkey": "DamageHealth",
+        "magnitude": 1.5,
+        "value": 1.56
+      },
+      {
+        "fkey": "ResistFire",
+        "magnitude": 1.33,
+        "value": 1.36
+      },
+      {
+        "fkey": "SpellAbsorption"
+      },
+      {
+        "fkey": "Paralysis",
+        "duration": 2,
+        "value": 2.14
+      }
+    ],
+    "value": 30,
+    "weight": 0.1,
+    "merchant_avail": "",
+    "garden": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/4/49/SR-icon-ingredient-Flame_Stalk.png/48px-SR-icon-ingredient-Flame_Stalk.png",
+    "title": "Flame Stalk",
+    "pkey": "FlameStalkCC",
+    "dlc": "CC",
+    "id": "xx095E23",
+    "collected_by": "Originating from the Shivering Isle. One of the Rare Curios sold by Khajiit trade caravans.",
+    "effects": [
+      {
+        "fkey": "RestoreHealth",
+        "magnitude": 1.2,
+        "value": 1.22
+      },
+      {
+        "fkey": "ResistFrost",
+        "magnitude": 1.33,
+        "value": 1.36
+      },
+      {
+        "fkey": "WeaknesstoFire",
+        "magnitude": 1.33,
+        "value": 1.36
+      },
+      {
+        "fkey": "Invisibility",
+        "duration": 1.5,
+        "value": 1.56
+      }
+    ],
+    "value": 25,
+    "weight": 0.1,
+    "merchant_avail": "",
+    "garden": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/1/15/SR-icon-ingredient-Fungus_Stalk.png/48px-SR-icon-ingredient-Fungus_Stalk.png",
+    "title": "Fungus Stalk",
+    "pkey": "FungusStalkCC",
+    "dlc": "CC",
+    "id": "FExxx82B",
+    "collected_by": "Originating from the Shivering Isle. One of the Rare Curios sold by Khajiit trade caravans.",
+    "effects": [
+      {
+        "fkey": "RestoreMagicka",
+        "magnitude": 1.2,
+        "value": 1.22
+      },
+      {
+        "fkey": "FortifyHealth",
+        "magnitude": 1.25,
+        "duration": 5,
+        "value": 7.5
+      },
+      {
+        "fkey": "FortifyStamina",
+        "magnitude": 1.25,
+        "duration": 5,
+        "value": 7.5
+      },
+      {
+        "fkey": "Waterbreathing",
+        "duration": 1.6,
+        "value": 1.67
+      }
+    ],
+    "value": 30,
+    "weight": 0.1,
+    "merchant_avail": "",
+    "garden": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/1/1e/SR-icon-ingredient-Glassfish.png/48px-SR-icon-ingredient-Glassfish.png",
+    "title": "Glassfish",
+    "pkey": "GlassfishCC",
+    "dlc": "CC",
+    "id": "xx0008EE",
+    "collected_by": "Caught by Fishing in temperate lakes.",
+    "effects": [
+      {
+        "fkey": "RestoreMagicka"
+      },
+      {
+        "fkey": "Invisibility"
+      },
+      {
+        "fkey": "FortifyIllusion",
+        "magnitude": 0.25,
+        "value": 0.21
+      },
+      {
+        "fkey": "FortifyPersuasion"
+      }
+    ],
+    "value": 1,
+    "weight": 0.25,
+    "merchant_avail": "",
+    "garden": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/2/22/SR-icon-ingredient-Gnarl_Bark.png/48px-SR-icon-ingredient-Gnarl_Bark.png",
+    "title": "Gnarl Bark",
+    "pkey": "GnarlBarkCC",
+    "dlc": "CC",
+    "id": "FExxx82C",
+    "collected_by": "Originating from the Shivering Isle. One of the Rare Curios sold by Khajiit trade caravans.",
+    "effects": [
+      {
+        "fkey": "DamageHealth",
+        "magnitude": 1.5,
+        "value": 1.56
+      },
+      {
+        "fkey": "RegenerateHealth",
+        "magnitude": 1.2,
+        "value": 1.22
+      },
+      {
+        "fkey": "FortifyHeavyArmor",
+        "magnitude": 1.5,
+        "value": 1.56
+      },
+      {
+        "fkey": "ResistFire",
+        "magnitude": 1.33,
+        "value": 1.36
+      }
+    ],
+    "value": 15,
+    "weight": 0.1,
+    "merchant_avail": "",
+    "garden": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/a/a1/SR-icon-ingredient-Goldfish.png/48px-SR-icon-ingredient-Goldfish.png",
+    "title": "Goldfish",
+    "pkey": "GoldfishCC",
+    "dlc": "CC",
+    "id": "xx0008EF",
+    "collected_by": "Caught by Fishing in temperate lakes in clear weathers or in the ponds found in some clearings.",
+    "effects": [
+      {
+        "fkey": "RestoreStamina"
+      },
+      {
+        "fkey": "FortifyHeavyArmor"
+      },
+      {
+        "fkey": "Waterbreathing"
+      },
+      {
+        "fkey": "ResistFrost"
+      }
+    ],
+    "value": 10,
+    "weight": 0.25,
+    "merchant_avail": "(?)",
+    "garden": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/2/20/SR-icon-ingredient-Gold_Kanet.png/48px-SR-icon-ingredient-Gold_Kanet.png",
+    "title": "Gold Kanet",
+    "pkey": "GoldKanetCC",
+    "dlc": "CC",
+    "id": "FExxx82D",
+    "collected_by": "Originating from Vvardenfell. One of the Rare Curios sold by Khajiit trade caravans.",
+    "effects": [
+      {
+        "fkey": "Paralysis",
+        "duration": 2,
+        "value": 2.14
+      },
+      {
+        "fkey": "RavageHealth",
+        "magnitude": 1.5,
+        "value": 3.34
+      },
+      {
+        "fkey": "WeaknesstoFrost",
+        "magnitude": 1.33,
+        "value": 1.36
+      },
+      {
+        "fkey": "FortifySmithing",
+        "magnitude": 1.25,
+        "value": 1.27
+      }
+    ],
+    "value": 30,
+    "weight": 0.1,
+    "merchant_avail": "",
+    "garden": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/f/fb/SR-icon-ingredient-Green_Butterfly_Wing.png/48px-SR-icon-ingredient-Green_Butterfly_Wing.png",
+    "title": "Green Butterfly Wing",
+    "pkey": "GreenButterflyWingCC",
+    "dlc": "CC",
+    "id": "xx059151",
+    "collected_by": "Harvested by Saints & Seducers.",
+    "effects": [
+      {
+        "fkey": "RestoreMagicka"
+      },
+      {
+        "fkey": "Fear"
+      },
+      {
+        "fkey": "Slow",
+        "duration": 6,
+        "value": 0.57
+      },
+      {
+        "fkey": "Invisibility"
+      }
+    ],
+    "value": 25,
+    "weight": 0.1,
+    "merchant_avail": "",
+    "garden": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/7/71/SR-icon-ingredient-Hackle-Lo_Leaf.png/48px-SR-icon-ingredient-Hackle-Lo_Leaf.png",
+    "title": "Hackle-Lo Leaf",
+    "pkey": "Hackle-LoLeafCC",
+    "dlc": "CC",
+    "id": "FExxx82E",
+    "collected_by": "Originating from Vvardenfell. One of the Rare Curios sold by Khajiit trade caravans.",
+    "effects": [
+      {
+        "fkey": "RestoreStamina",
+        "magnitude": 1.2,
+        "value": 1.22
+      },
+      {
+        "fkey": "Paralysis",
+        "duration": 2,
+        "value": 2.14
+      },
+      {
+        "fkey": "Waterbreathing",
+        "duration": 1.6,
+        "value": 1.67
+      },
+      {
+        "fkey": "FortifyRestoration",
+        "magnitude": 1.25,
+        "value": 1.27
+      }
+    ],
+    "value": 30,
+    "weight": 0.1,
+    "merchant_avail": "",
+    "garden": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/8/87/SR-icon-ingredient-Harrada.png/48px-SR-icon-ingredient-Harrada.png",
+    "title": "Harrada",
+    "pkey": "HarradaCC",
+    "dlc": "CC",
+    "id": "xx024C11",
+    "collected_by": "Harvested from the Deadlands, if one has The Cause to go there.",
+    "effects": [
+      {
+        "fkey": "DamageHealth",
+        "magnitude": 2,
+        "value": 2.14
+      },
+      {
+        "fkey": "DamageMagicka",
+        "magnitude": 1.33,
+        "value": 1.36
+      },
+      {
+        "fkey": "Paralysis"
+      },
+      {
+        "fkey": "DamageMagickaRegen"
+      }
+    ],
+    "value": 25,
+    "weight": 0.1,
+    "merchant_avail": "",
+    "garden": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/3/3d/SR-icon-ingredient-Heart_of_Order.png/48px-SR-icon-ingredient-Heart_of_Order.png",
+    "title": "Heart of Order",
+    "pkey": "HeartofOrderCC",
+    "dlc": "CC",
+    "id": "FExxx851",
+    "collected_by": "Originating from the Shivering Isle during a Graymarch. One of the Rare Curios sold by Khajiit trade caravans.",
+    "effects": [
+      {
+        "fkey": "RestoreHealth",
+        "magnitude": 1.2,
+        "value": 1.22
+      },
+      {
+        "fkey": "FortifyHealth",
+        "magnitude": 1.25,
+        "duration": 5,
+        "value": 7.5
+      },
+      {
+        "fkey": "FortifyOne-handed",
+        "magnitude": 1.25,
+        "value": 1.27
+      },
+      {
+        "fkey": "FortifyTwo-handed",
+        "magnitude": 1.25,
+        "value": 1.27
+      }
+    ],
+    "value": 40,
+    "weight": 0.1,
+    "merchant_avail": "",
+    "garden": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/7/71/SR-icon-ingredient-Hunger_Tongue.png/48px-SR-icon-ingredient-Hunger_Tongue.png",
+    "title": "Hunger Tongue",
+    "pkey": "HungerTongueCC",
+    "dlc": "CC",
+    "id": "FExxx80C",
+    "collected_by": "Originating from the Shivering Isle. One of the Rare Curios sold by Khajiit trade caravans.",
+    "effects": [
+      {
+        "fkey": "WeaknesstoFire",
+        "magnitude": 1.33,
+        "duration": 2,
+        "value": 2.93
+      },
+      {
+        "fkey": "CureDisease",
+        "value": 0.36
+      },
+      {
+        "fkey": "CurePoison"
+      },
+      {
+        "fkey": "FortifyMagicka",
+        "magnitude": 1.25,
+        "value": 1.27
+      }
+    ],
+    "value": 10,
+    "weight": 0.1,
+    "merchant_avail": "",
+    "garden": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/4/4c/SR-icon-ingredient-Hydnum_Azure_Giant_Spore.png/48px-SR-icon-ingredient-Hydnum_Azure_Giant_Spore.png",
+    "title": "Hydnum Azure Giant Spore",
+    "pkey": "HydnumAzureGiantSporeCC",
+    "dlc": "CC",
+    "id": "FExxx80D",
+    "collected_by": "Originating from the Shivering Isle. One of the Rare Curios sold by Khajiit trade caravans.",
+    "effects": [
+      {
+        "fkey": "ResistFrost",
+        "magnitude": 1.33,
+        "value": 1.36
+      },
+      {
+        "fkey": "FortifyHealth",
+        "magnitude": 1.25,
+        "duration": 5,
+        "value": 7.5
+      },
+      {
+        "fkey": "RegenerateHealth",
+        "magnitude": 1.2,
+        "value": 1.22
+      },
+      {
+        "fkey": "Light"
+      }
+    ],
+    "value": 30,
+    "weight": 0.5,
+    "merchant_avail": "",
+    "garden": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/6/68/SR-icon-ingredient-Hypha_Facia.png/48px-SR-icon-ingredient-Hypha_Facia.png",
+    "title": "Hypha Facia",
+    "pkey": "HyphaFaciaCC",
+    "dlc": "CC",
+    "id": "FExxx80E",
+    "collected_by": "Originating from Vvardenfell. One of the Rare Curios sold by Khajiit trade caravans.",
+    "effects": [
+      {
+        "fkey": "WeaknesstoPoison",
+        "magnitude": 1.5,
+        "value": 1.56
+      },
+      {
+        "fkey": "Frenzy",
+        "duration": 2,
+        "value": 2.14
+      },
+      {
+        "fkey": "RavageStamina",
+        "magnitude": 1.5,
+        "value": 3.34
+      },
+      {
+        "fkey": "ResistMagic",
+        "magnitude": 2,
+        "value": 2.14
+      }
+    ],
+    "value": 23,
+    "weight": 0.1,
+    "merchant_avail": "",
+    "garden": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/3/3a/SR-icon-ingredient-Imp_Gall.png/48px-SR-icon-ingredient-Imp_Gall.png",
+    "title": "Imp Gall",
+    "pkey": "ImpGallCC",
+    "dlc": "CC",
+    "id": "FExxx80F",
+    "collected_by": "Originating from Cyrodiil. One of the Rare Curios sold by Khajiit trade caravans.",
+    "effects": [
+      {
+        "fkey": "DamageHealth",
+        "magnitude": 1.5,
+        "value": 1.56
+      },
+      {
+        "fkey": "WeaknesstoFire",
+        "magnitude": 1.33,
+        "value": 1.36
+      },
+      {
+        "fkey": "FortifyBarter",
+        "magnitude": 2,
+        "value": 2.14
+      },
+      {
+        "fkey": "CurePoison"
+      }
+    ],
+    "value": 15,
+    "weight": 0.2,
+    "merchant_avail": "",
+    "garden": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/a/ab/SR-icon-ingredient-Ironwood_Fruit.png/48px-SR-icon-ingredient-Ironwood_Fruit.png",
+    "title": "Ironwood Fruit",
+    "pkey": "IronwoodFruitCC",
+    "dlc": "CC",
+    "id": "xx034cdf",
+    "collected_by": "Harvested from the Ironwood Trees found in Iron Tusk Cave.",
+    "effects": [
+      {
+        "fkey": "RestoreHealth"
+      },
+      {
+        "fkey": "ResistFire"
+      },
+      {
+        "fkey": "DamageStamina"
+      },
+      {
+        "fkey": "RestoreMagicka"
+      }
+    ],
+    "value": 5,
+    "weight": 0.1,
+    "merchant_avail": "",
+    "garden": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/8/80/SR-ingredient-Juvenile_Mudcrab.png/48px-SR-ingredient-Juvenile_Mudcrab.png",
+    "title": "Juvenile Mudcrab",
+    "pkey": "JuvenileMudcrabCC",
+    "dlc": "CC",
+    "id": "xx0008F2",
+    "collected_by": "Caught by Fishing on the surface.",
+    "effects": [
+      {
+        "fkey": "RegenerateStamina"
+      },
+      {
+        "fkey": "FortifyCarryWeight"
+      },
+      {
+        "fkey": "CureDisease"
+      },
+      {
+        "fkey": "FortifyTwo-handed"
+      }
+    ],
+    "value": 10,
+    "weight": 0.25,
+    "merchant_avail": "",
+    "garden": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/8/81/SR-icon-ingredient-Kagouti_Hide.png/48px-SR-icon-ingredient-Kagouti_Hide.png",
+    "title": "Kagouti Hide",
+    "pkey": "KagoutiHideCC",
+    "dlc": "CC",
+    "id": "FExxx810",
+    "collected_by": "Originating from Vvardenfell. One of the Rare Curios sold by Khajiit trade caravans.",
+    "effects": [
+      {
+        "fkey": "LingeringDamageStamina",
+        "magnitude": 2,
+        "value": 2.14
+      },
+      {
+        "fkey": "NightEye"
+      },
+      {
+        "fkey": "FortifyCarryWeight",
+        "magnitude": 1.25,
+        "value": 1.27
+      },
+      {
+        "fkey": "ResistShock",
+        "magnitude": 1.33,
+        "value": 1.36
+      }
+    ],
+    "value": 20,
+    "weight": 1,
+    "merchant_avail": "",
+    "garden": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/9/99/SR-icon-ingredient-Kresh_Fiber.png/48px-SR-icon-ingredient-Kresh_Fiber.png",
+    "title": "Kresh Fiber",
+    "pkey": "KreshFiberCC",
+    "dlc": "CC",
+    "id": "FExxx811",
+    "collected_by": "Originating from Vvardenfell. One of the Rare Curios sold by Khajiit trade caravans.",
+    "effects": [
+      {
+        "fkey": "WeaknesstoMagic",
+        "magnitude": 1.5,
+        "value": 1.56
+      },
+      {
+        "fkey": "Slow",
+        "duration": 2,
+        "value": 2.14
+      },
+      {
+        "fkey": "FortifySneak",
+        "magnitude": 1.25,
+        "value": 1.27
+      },
+      {
+        "fkey": "FortifyPickpocket",
+        "magnitude": 1.25,
+        "value": 1.27
+      }
+    ],
+    "value": 30,
+    "weight": 0.1,
+    "merchant_avail": "",
+    "garden": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/e/ee/SR-icon-ingredient-Lichor.png/48px-SR-icon-ingredient-Lichor.png",
+    "title": "Lichor",
+    "pkey": "LichorCC",
+    "dlc": "CC",
+    "id": "FExxx837",
+    "collected_by": "Originating from Mankar Camoran's destroyed realm of Oblivion. One of the Rare Curios sold by Khajiit trade caravans.",
+    "effects": [
+      {
+        "fkey": "RestoreMagicka",
+        "magnitude": 1.2,
+        "value": 1.22
+      },
+      {
+        "fkey": "RegenerateMagicka",
+        "magnitude": 1.2,
+        "value": 1.22
+      },
+      {
+        "fkey": "FortifyMagicka",
+        "magnitude": 1.25,
+        "value": 1.27
+      },
+      {
+        "fkey": "SpellAbsorption"
+      }
+    ],
+    "value": 15,
+    "weight": 0.1,
+    "merchant_avail": "",
+    "garden": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/6/63/SR-icon-ingredient-Luminous_Russula.png/48px-SR-icon-ingredient-Luminous_Russula.png",
+    "title": "Luminous Russula",
+    "pkey": "LuminousRussulaCC",
+    "dlc": "CC",
+    "id": "FExxx813",
+    "collected_by": "Originating from Vvardenfell. One of the Rare Curios sold by Khajiit trade caravans.",
+    "effects": [
+      {
+        "fkey": "LingeringDamageStamina",
+        "magnitude": 2,
+        "value": 2.14
+      },
+      {
+        "fkey": "LingeringDamageHealth",
+        "magnitude": 2,
+        "value": 2.14
+      },
+      {
+        "fkey": "Waterbreathing",
+        "duration": 1.6,
+        "value": 1.67
+      },
+      {
+        "fkey": "Fear",
+        "magnitude": 2,
+        "value": 2.14
+      }
+    ],
+    "value": 25,
+    "weight": 0.2,
+    "merchant_avail": "",
+    "garden": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/0/09/SR-icon-ingredient-Lyretail_Anthias.png/48px-SR-icon-ingredient-Lyretail_Anthias.png",
+    "title": "Lyretail Anthias",
+    "pkey": "LyretailAnthiasCC",
+    "dlc": "CC",
+    "id": "xx0008F1",
+    "collected_by": "Caught by Fishing in temperate streams and at Evergreen Grove.",
+    "effects": [
+      {
+        "fkey": "RestoreMagicka"
+      },
+      {
+        "fkey": "FortifyAlteration"
+      },
+      {
+        "fkey": "FortifyConjuration"
+      },
+      {
+        "fkey": "FortifyCarryWeight"
+      }
+    ],
+    "value": 30,
+    "weight": 0.25,
+    "merchant_avail": "",
+    "garden": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/a/a0/SR-icon-ingredient-Marshmerrow.png/48px-SR-icon-ingredient-Marshmerrow.png",
+    "title": "Marshmerrow",
+    "pkey": "MarshmerrowCC",
+    "dlc": "CC",
+    "id": "FExxx814",
+    "collected_by": "Originating from Vvardenfell. One of the Rare Curios sold by Khajiit trade caravans.",
+    "effects": [
+      {
+        "fkey": "RestoreHealth",
+        "magnitude": 1.2,
+        "value": 1.22
+      },
+      {
+        "fkey": "FortifyCarryWeight",
+        "magnitude": 1.25,
+        "value": 1.27
+      },
+      {
+        "fkey": "WeaknesstoMagic",
+        "magnitude": 1.5,
+        "value": 1.56
+      },
+      {
+        "fkey": "DamageStamina",
+        "magnitude": 1.33,
+        "value": 1.36
+      }
+    ],
+    "value": 18,
+    "weight": 0.1,
+    "merchant_avail": "",
+    "garden": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/2/27/SR-icon-ingredient-Minotaur_Horn.png/48px-SR-icon-ingredient-Minotaur_Horn.png",
+    "title": "Minotaur Horn",
+    "pkey": "MinotaurHornCC",
+    "dlc": "CC",
+    "id": "FExxx815",
+    "collected_by": "Originating from Cyrodiil. One of the Rare Curios sold by Khajiit trade caravans.",
+    "effects": [
+      {
+        "fkey": "ResistPoison",
+        "magnitude": 1.25,
+        "value": 1.27
+      },
+      {
+        "fkey": "DamageMagickaRegen",
+        "duration": 2,
+        "value": 2.14
+      },
+      {
+        "fkey": "RegenerateHealth",
+        "magnitude": 1.2,
+        "value": 1.22
+      },
+      {
+        "fkey": "RegenerateMagicka",
+        "magnitude": 1.2,
+        "value": 1.22
+      }
+    ],
+    "value": 55,
+    "weight": 5,
+    "merchant_avail": "",
+    "garden": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/c/c7/SR-icon-ingredient-Mort_Flesh.png/48px-SR-icon-ingredient-Mort_Flesh.png",
+    "title": "Mort Flesh",
+    "pkey": "MortFleshCC",
+    "dlc": "CC",
+    "id": "FExxx80C",
+    "collected_by": "Originating from Cyrodiil. Dropped by the zombies from Skyrim:Plague of the Dead.",
+    "effects": [
+      {
+        "fkey": "DamageHealth"
+      },
+      {
+        "fkey": "DamageMagicka"
+      },
+      {
+        "fkey": "DamageMagickaRegen"
+      },
+      {
+        "fkey": "Frenzy"
+      }
+    ],
+    "value": 2,
+    "weight": 0.5,
+    "merchant_avail": "None",
+    "garden": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/9/96/SR-icon-ingredient-Bloodchill_Nightshade.png/48px-SR-icon-ingredient-Bloodchill_Nightshade.png",
+    "title": "Nightshade",
+    "pkey": "NightshadeCC",
+    "dlc": "CC",
+    "id": "xx042A41",
+    "collected_by": "A variant of the regular Nightshade that has one less leaf on its stem.",
+    "effects": [
+      {
+        "fkey": "DamageHealth"
+      },
+      {
+        "fkey": "DamageMagickaRegen"
+      },
+      {
+        "fkey": "LingeringDamageStamina"
+      },
+      {
+        "fkey": "FortifyDestruction",
+        "magnitude": 0.8
+      }
+    ],
+    "value": 8,
+    "weight": 0.1,
+    "merchant_avail": "None",
+    "garden": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/2/21/SR-icon-ingredient-Ogre%27s_Teeth.png/48px-SR-icon-ingredient-Ogre%27s_Teeth.png",
+    "title": "Ogre's Teeth",
+    "pkey": "OgresTeethCC",
+    "dlc": "CC",
+    "id": "FExxx816",
+    "collected_by": "Originating from Cyrodiil. One of the Rare Curios sold by Khajiit trade caravans.",
+    "effects": [
+      {
+        "fkey": "WeaknesstoShock",
+        "magnitude": 1.33,
+        "value": 1.36
+      },
+      {
+        "fkey": "ResistPoison",
+        "magnitude": 1.25,
+        "value": 1.27
+      },
+      {
+        "fkey": "LingeringDamageMagicka",
+        "magnitude": 2,
+        "value": 2.12
+      },
+      {
+        "fkey": "RegenerateHealth",
+        "magnitude": 1.2,
+        "value": 1.22
+      }
+    ],
+    "value": 50,
+    "weight": 3,
+    "merchant_avail": "",
+    "garden": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/2/28/SR-icon-ingredient-Pearlfish.png/48px-SR-icon-ingredient-Pearlfish.png",
+    "title": "Pearlfish",
+    "pkey": "PearlfishCC",
+    "dlc": "CC",
+    "id": "xx0008EC",
+    "collected_by": "Caught by Fishing in temperate lakes and streams in rainy weather.",
+    "effects": [
+      {
+        "fkey": "RestoreStamina"
+      },
+      {
+        "fkey": "ResistFrost"
+      },
+      {
+        "fkey": "FortifySmithing"
+      },
+      {
+        "fkey": "FortifyOne-handed"
+      }
+    ],
+    "value": 15,
+    "weight": 0.25,
+    "merchant_avail": "",
+    "garden": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/9/9d/SR-icon-ingredient-Purple_Butterfly_Wing.png/48px-SR-icon-ingredient-Purple_Butterfly_Wing.png",
+    "title": "Purple Butterfly Wing",
+    "pkey": "PurpleButterflyWingCC",
+    "dlc": "CC",
+    "id": "xx059153",
+    "collected_by": "Harvested by Saints & Seducers.",
+    "effects": [
+      {
+        "fkey": "RegenerateHealth"
+      },
+      {
+        "fkey": "RegenerateMagicka"
+      },
+      {
+        "fkey": "RegenerateStamina"
+      },
+      {
+        "fkey": "Paralysis"
+      }
+    ],
+    "value": 25,
+    "weight": 0.1,
+    "merchant_avail": "",
+    "garden": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/e/e2/SR-icon-ingredient-Pygmy_Sunfish.png/48px-SR-icon-ingredient-Pygmy_Sunfish.png",
+    "title": "Pygmy Sunfish",
+    "pkey": "PygmySunfishCC",
+    "dlc": "CC",
+    "id": "xx0008ED",
+    "collected_by": "Caught by Fishing in temperate lakes in rainy weather.",
+    "effects": [
+      {
+        "fkey": "RestoreStamina"
+      },
+      {
+        "fkey": "LingeringDamageMagicka"
+      },
+      {
+        "fkey": "DamageMagickaRegen"
+      },
+      {
+        "fkey": "FortifyRestoration"
+      }
+    ],
+    "value": 2,
+    "weight": 0.25,
+    "merchant_avail": "",
+    "garden": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/a/a9/SR-icon-ingredient-Red_Kelp_Gas_Bladder.png/48px-SR-icon-ingredient-Red_Kelp_Gas_Bladder.png",
+    "title": "Red Kelp Gas Bladder",
+    "pkey": "RedKelpGasBladderCC",
+    "dlc": "CC",
+    "id": "FExxx817",
+    "collected_by": "Originating from the Shivering Isle. One of the Rare Curios sold by Khajiit trade caravans.",
+    "effects": [
+      {
+        "fkey": "RegenerateStamina",
+        "magnitude": 1.2,
+        "value": 1.22
+      },
+      {
+        "fkey": "Waterbreathing",
+        "duration": 1.6,
+        "value": 1.67
+      },
+      {
+        "fkey": "CureDisease",
+        "value": 0.36
+      },
+      {
+        "fkey": "FortifyMagicka",
+        "magnitude": 1.25,
+        "value": 1.27
+      }
+    ],
+    "value": 20,
+    "weight": 0.1,
+    "merchant_avail": "",
+    "garden": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/1/16/SR-icon-ingredient-Redwort_Flower.png/48px-SR-icon-ingredient-Redwort_Flower.png",
+    "title": "Redwort Flower",
+    "pkey": "RedwortFlowerCC",
+    "dlc": "CC",
+    "id": "FExxx818",
+    "collected_by": "Originating from Cyrodiil. One of the Rare Curios sold by Khajiit trade caravans.",
+    "effects": [
+      {
+        "fkey": "ResistFrost",
+        "magnitude": 1.33,
+        "value": 1.36
+      },
+      {
+        "fkey": "CurePoison"
+      },
+      {
+        "fkey": "DamageHealth",
+        "magnitude": 1.5,
+        "value": 1.56
+      },
+      {
+        "fkey": "Invisibility",
+        "duration": 1.5,
+        "value": 1.56
+      }
+    ],
+    "value": 25,
+    "weight": 0.1,
+    "merchant_avail": "",
+    "garden": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/7/76/SR-icon-ingredient-Roobrush.png/48px-SR-icon-ingredient-Roobrush.png",
+    "title": "Roobrush",
+    "pkey": "RoobrushCC",
+    "dlc": "CC",
+    "id": "FExxx819",
+    "collected_by": "Originating from Vvardenfell. One of the Rare Curios sold by Khajiit trade caravans.",
+    "effects": [
+      {
+        "fkey": "WeaknesstoMagic",
+        "magnitude": 1.5,
+        "value": 1.56
+      },
+      {
+        "fkey": "FortifySneak",
+        "magnitude": 1.25,
+        "value": 1.27
+      },
+      {
+        "fkey": "LingeringDamageHealth",
+        "magnitude": 2,
+        "value": 2.14
+      },
+      {
+        "fkey": "CurePoison"
+      }
+    ],
+    "value": 20,
+    "weight": 0.1,
+    "merchant_avail": "",
+    "garden": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/9/92/SR-icon-ingredient-Rot_Scale.png/48px-SR-icon-ingredient-Rot_Scale.png",
+    "title": "Rot Scale",
+    "pkey": "RotScaleCC",
+    "dlc": "CC",
+    "id": "0100306D",
+    "collected_by": "Originating from the Shivering Isle.",
+    "effects": [
+      {
+        "fkey": "Slow",
+        "duration": 3,
+        "value": 0.26
+      },
+      {
+        "fkey": "LingeringDamageHealth",
+        "duration": 3,
+        "value": 3.34
+      },
+      {
+        "fkey": "Fear",
+        "duration": 0.16,
+        "value": 0.14
+      },
+      {
+        "fkey": "Paralysis"
+      }
+    ],
+    "value": 20,
+    "weight": 0.1,
+    "merchant_avail": "",
+    "garden": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/4/49/SR-icon-ingredient-Saltrice.png/48px-SR-icon-ingredient-Saltrice.png",
+    "title": "Saltrice",
+    "pkey": "SaltriceCC",
+    "dlc": "CC",
+    "id": "FExxx81A",
+    "collected_by": "Originating from Morrowind. One of the Rare Curios sold by Khajiit trade caravans.",
+    "effects": [
+      {
+        "fkey": "RestoreStamina",
+        "magnitude": 1.2,
+        "value": 1.22
+      },
+      {
+        "fkey": "FortifyMagicka",
+        "magnitude": 1.25,
+        "value": 1.27
+      },
+      {
+        "fkey": "DamageStaminaRegen",
+        "duration": 2,
+        "value": 2.14
+      },
+      {
+        "fkey": "RestoreHealth",
+        "magnitude": 1.2,
+        "value": 1.22
+      }
+    ],
+    "value": 6,
+    "weight": 0.1,
+    "merchant_avail": "",
+    "garden": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/d/df/SR-icon-ingredient-Scalon_Fin.png/48px-SR-icon-ingredient-Scalon_Fin.png",
+    "title": "Scalon Fin",
+    "pkey": "ScalonFinCC",
+    "dlc": "CC",
+    "id": "FExxx81B",
+    "collected_by": "Originating from the Shivering Isle. One of the Rare Curios sold by Khajiit trade caravans.",
+    "effects": [
+      {
+        "fkey": "Waterbreathing",
+        "duration": 1.6,
+        "value": 1.67
+      },
+      {
+        "fkey": "DamageHealth",
+        "magnitude": 1.5,
+        "value": 1.56
+      },
+      {
+        "fkey": "LingeringDamageMagicka",
+        "magnitude": 2,
+        "value": 2.14
+      },
+      {
+        "fkey": "DamageMagickaRegen",
+        "duration": 2,
+        "value": 2.14
+      }
+    ],
+    "value": 25,
+    "weight": 0.1,
+    "merchant_avail": "",
+    "garden": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/2/2d/SR-icon-ingredient-Screaming_Maw.png/48px-SR-icon-ingredient-Screaming_Maw.png",
+    "title": "Screaming Maw",
+    "pkey": "ScreamingMawCC",
+    "dlc": "CC",
+    "id": "0100306E",
+    "collected_by": "Originating from the Shivering Isle. Harvested by Saints & Seducers.",
+    "effects": [
+      {
+        "fkey": "RegenerateMagicka",
+        "magnitude": 4,
+        "duration": 0.2,
+        "value": 0.78
+      },
+      {
+        "fkey": "FortifyAlteration",
+        "magnitude": 1.25,
+        "value": 1.27
+      },
+      {
+        "fkey": "Invisibility",
+        "duration": 0.25,
+        "value": 0.22
+      },
+      {
+        "fkey": "RegenerateHealth",
+        "magnitude": 4,
+        "duration": 0.03,
+        "value": 0.11
+      }
+    ],
+    "value": 20,
+    "weight": 0.1,
+    "merchant_avail": "",
+    "garden": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/4/49/SR-icon-ingredient-Scrib_Jelly.png/48px-SR-icon-ingredient-Scrib_Jelly.png",
+    "title": "Scrib Jelly",
+    "pkey": "ScribJellyCC",
+    "dlc": "CC",
+    "id": "FExxx81C",
+    "collected_by": "Originating from Vvardenfell. One of the Rare Curios sold by Khajiit trade caravans.",
+    "effects": [
+      {
+        "fkey": "RegenerateMagicka",
+        "magnitude": 1.2,
+        "value": 1.22
+      },
+      {
+        "fkey": "CurePoison"
+      },
+      {
+        "fkey": "CureDisease",
+        "value": 0.36
+      },
+      {
+        "fkey": "RegenerateStamina",
+        "magnitude": 1.2,
+        "value": 1.22
+      }
+    ],
+    "value": 20,
+    "weight": 0.1,
+    "merchant_avail": "",
+    "garden": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/0/01/SR-icon-ingredient-Scrib_Jerky.png/48px-SR-icon-ingredient-Scrib_Jerky.png",
+    "title": "Scrib Jerky",
+    "pkey": "ScribJerkyCC",
+    "dlc": "CC",
+    "id": "FExxx81D",
+    "collected_by": "Originating from Vvardenfell. One of the Rare Curios sold by Khajiit trade caravans.",
+    "effects": [
+      {
+        "fkey": "RestoreStamina",
+        "magnitude": 1.2,
+        "value": 1.22
+      },
+      {
+        "fkey": "FortifyStamina",
+        "magnitude": 1.25,
+        "value": 1.27
+      },
+      {
+        "fkey": "Paralysis",
+        "duration": 2,
+        "value": 2.14
+      },
+      {
+        "fkey": "Waterbreathing",
+        "duration": 1.6,
+        "value": 1.67
+      }
+    ],
+    "value": 15,
+    "weight": 0.2,
+    "merchant_avail": "",
+    "garden": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/6/65/SR-icon-ingredient-Sload_Soap.png/48px-SR-icon-ingredient-Sload_Soap.png",
+    "title": "Sload Soap",
+    "pkey": "SloadSoapCC",
+    "dlc": "CC",
+    "id": "FExxx81E",
+    "collected_by": "Popular in Vvardenfell. One of the Rare Curios sold by Khajiit trade caravans.",
+    "effects": [
+      {
+        "fkey": "ResistFire",
+        "magnitude": 1.33,
+        "value": 1.36
+      },
+      {
+        "fkey": "Fear",
+        "magnitude": 2,
+        "value": 2.14
+      },
+      {
+        "fkey": "FortifyConjuration",
+        "magnitude": 1.2,
+        "value": 1.22
+      },
+      {
+        "fkey": "FortifyAlteration",
+        "magnitude": 1.25,
+        "value": 1.27
+      }
+    ],
+    "value": 30,
+    "weight": 0.1,
+    "merchant_avail": "",
+    "garden": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/1/15/SR-icon-ingredient-Spadefish.png/48px-SR-icon-ingredient-Spadefish.png",
+    "title": "Spadefish",
+    "pkey": "SpadefishCC",
+    "dlc": "CC",
+    "id": "xx0008F3",
+    "collected_by": "Caught by Fishing in temperate streams on sunny days, in the Eldergleam Sanctuary, and the Evergreen Grove.",
+    "effects": [
+      {
+        "fkey": "RestoreHealth"
+      },
+      {
+        "fkey": "FortifyLockpicking"
+      },
+      {
+        "fkey": "FortifyPickpocket"
+      },
+      {
+        "fkey": "CureDisease"
+      }
+    ],
+    "value": 15,
+    "weight": 0.25,
+    "merchant_avail": "",
+    "garden": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/2/2a/SR-icon-ingredient-Spiddal_Stick.png/48px-SR-icon-ingredient-Spiddal_Stick.png",
+    "title": "Spiddal Stick",
+    "pkey": "SpiddalStickCC",
+    "dlc": "CC",
+    "id": "xx024C15",
+    "collected_by": "Harvested from the Deadlands, if one has The Cause to go there.",
+    "effects": [
+      {
+        "fkey": "DamageHealth",
+        "magnitude": 2,
+        "value": 2.14
+      },
+      {
+        "fkey": "DamageMagicka",
+        "magnitude": 1.33,
+        "value": 1.36
+      },
+      {
+        "fkey": "WeaknesstoFire"
+      },
+      {
+        "fkey": "RestoreStamina",
+        "magnitude": 0.4,
+        "value": 0.36
+      }
+    ],
+    "value": 25,
+    "weight": 0.1,
+    "merchant_avail": "",
+    "garden": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/6/6a/SR-icon-ingredient-Steel-Blue_Entoloma.png/48px-SR-icon-ingredient-Steel-Blue_Entoloma.png",
+    "title": "Steel-Blue Entoloma",
+    "pkey": "Steel-BlueEntolomaCC",
+    "dlc": "CC",
+    "id": "FExxx832",
+    "collected_by": "Originating from Cyrodiil. Useful to con goblins",
+    "effects": [
+      {
+        "fkey": "RestoreMagicka"
+      },
+      {
+        "fkey": "FortifyDestruction"
+      },
+      {
+        "fkey": "ResistFrost"
+      },
+      {
+        "fkey": "FortifyCarryWeight"
+      }
+    ],
+    "value": 2,
+    "weight": 0.1,
+    "merchant_avail": "Khajiit Traders",
+    "garden": 3
+  },
+  {
+    "image": "//images.uesp.net/thumb/5/52/SR-icon-ingredient-Stoneflower_Petals.png/48px-SR-icon-ingredient-Stoneflower_Petals.png",
+    "title": "Stoneflower Petals",
+    "pkey": "StoneflowerPetalsCC",
+    "dlc": "CC",
+    "id": "FExxx81F",
+    "collected_by": "Originating from Vvardenfell. One of the Rare Curios sold by Khajiit trade caravans.",
+    "effects": [
+      {
+        "fkey": "WeaknesstoShock",
+        "magnitude": 1.33,
+        "value": 1.36
+      },
+      {
+        "fkey": "FortifyOne-handed",
+        "magnitude": 1.25,
+        "value": 1.27
+      },
+      {
+        "fkey": "FortifyMagicka",
+        "magnitude": 1.25,
+        "value": 1.27
+      },
+      {
+        "fkey": "FortifyEnchanting",
+        "magnitude": 2,
+        "value": 2.14
+      }
+    ],
+    "value": 15,
+    "weight": 0.1,
+    "merchant_avail": "",
+    "garden": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/1/10/SR-icon-ingredient-Thorn_Hook.png/48px-SR-icon-ingredient-Thorn_Hook.png",
+    "title": "Thorn Hook",
+    "pkey": "ThornHookCC",
+    "dlc": "CC",
+    "id": "0100306F",
+    "collected_by": "Originating from the Shivering Isle. Harvested by Saints & Seducers.",
+    "effects": [
+      {
+        "fkey": "LingeringDamageHealth"
+      },
+      {
+        "fkey": "Paralysis"
+      },
+      {
+        "fkey": "RegenerateMagicka",
+        "magnitude": 0.6,
+        "duration": 0.6,
+        "value": 0.32
+      },
+      {
+        "fkey": "RegenerateHealth",
+        "magnitude": 0.6,
+        "duration": 0.6,
+        "value": 0.32
+      }
+    ],
+    "value": 20,
+    "weight": 0.1,
+    "merchant_avail": "",
+    "garden": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/5/5a/SR-icon-ingredient-Void_Essence.png/48px-SR-icon-ingredient-Void_Essence.png",
+    "title": "Void Essence",
+    "pkey": "VoidEssenceCC",
+    "dlc": "CC",
+    "id": "FExxx820",
+    "collected_by": "Originating from the Shivering Isle. One of the Rare Curios sold by Khajiit trade caravans.",
+    "effects": [
+      {
+        "fkey": "RestoreHealth",
+        "magnitude": 1.2,
+        "value": 1.22
+      },
+      {
+        "fkey": "FortifyHealth",
+        "magnitude": 1.25,
+        "duration": 5,
+        "value": 7.5
+      },
+      {
+        "fkey": "FortifyStamina",
+        "magnitude": 1.25,
+        "duration": 5,
+        "value": 7.5
+      },
+      {
+        "fkey": "RegenerateHealth",
+        "magnitude": 1.2,
+        "value": 1.22
+      }
+    ],
+    "value": 60,
+    "weight": 0.2,
+    "merchant_avail": "",
+    "garden": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/8/87/SR-icon-ingredient-Watcher%27s_Eye.png/48px-SR-icon-ingredient-Watcher%27s_Eye.png",
+    "title": "Watcher's Eye",
+    "pkey": "WatchersEyeCC",
+    "dlc": "CC",
+    "id": "FExxx821",
+    "collected_by": "Originating from the Shivering Isle. One of the Rare Curios sold by Khajiit trade caravans.",
+    "effects": [
+      {
+        "fkey": "NightEye"
+      },
+      {
+        "fkey": "FortifyMagicka",
+        "magnitude": 1.25,
+        "value": 1.27
+      },
+      {
+        "fkey": "FortifyIllusion",
+        "magnitude": 5,
+        "value": 5.87
+      },
+      {
+        "fkey": "SpellAbsorption"
+      }
+    ],
+    "value": 9,
+    "weight": 0.2,
+    "merchant_avail": "",
+    "garden": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/f/f3/SR-icon-ingredient-Wild_Grass_Pod.png/48px-SR-icon-ingredient-Wild_Grass_Pod.png",
+    "title": "Wild Grass Pod",
+    "pkey": "WildGrassPodCC",
+    "dlc": "CC",
+    "id": "xx019D3A",
+    "collected_by": "Growing near the entrance to the Runoff Caverns, made wild by Forgotten Seasons.",
+    "effects": [
+      {
+        "fkey": "ResistPoison"
+      },
+      {
+        "fkey": "RavageMagicka"
+      },
+      {
+        "fkey": "FortifyAlteration"
+      },
+      {
+        "fkey": "RestoreMagicka"
+      }
+    ],
+    "value": 1,
+    "weight": 0.1,
+    "merchant_avail": "None",
+    "garden": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/0/02/SR-icon-ingredient-Wisp_Stalk_Caps.png/48px-SR-icon-ingredient-Wisp_Stalk_Caps.png",
+    "title": "Wisp Stalk Caps",
+    "pkey": "WispStalkCapsCC",
+    "dlc": "CC",
+    "id": "FExxx823",
+    "collected_by": "Originating from Cyrodiil. One of the Rare Curios sold by Khajiit trade caravans.",
+    "effects": [
+      {
+        "fkey": "DamageHealth",
+        "magnitude": 1.5,
+        "value": 1.56
+      },
+      {
+        "fkey": "WeaknesstoPoison",
+        "magnitude": 1.5,
+        "value": 1.56
+      },
+      {
+        "fkey": "Frenzy",
+        "duration": 2,
+        "value": 2.14
+      },
+      {
+        "fkey": "RegenerateStamina",
+        "magnitude": 1.2,
+        "value": 1.22
+      }
+    ],
+    "value": 20,
+    "weight": 0.1,
+    "merchant_avail": "",
+    "garden": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/e/ef/SR-icon-ingredient-Withering_Moon.png/48px-SR-icon-ingredient-Withering_Moon.png",
+    "title": "Withering Moon",
+    "pkey": "WitheringMoonCC",
+    "dlc": "CC",
+    "id": "FExxx824",
+    "collected_by": "Originating from the Shivering Isle. One of the Rare Curios sold by Khajiit trade caravans.",
+    "effects": [
+      {
+        "fkey": "RestoreMagicka",
+        "magnitude": 1.2,
+        "value": 1.22
+      },
+      {
+        "fkey": "SpellAbsorption"
+      },
+      {
+        "fkey": "FortifyLightArmor",
+        "magnitude": 1.5,
+        "value": 1.56
+      },
+      {
+        "fkey": "CureDisease",
+        "value": 0.36
+      }
+    ],
+    "value": 5,
+    "weight": 0.1,
+    "merchant_avail": "",
+    "garden": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/8/80/SR-icon-ingredient-Worm%27s_Head_Cap.png/48px-SR-icon-ingredient-Worm%27s_Head_Cap.png",
+    "title": "Worm's Head Cap",
+    "pkey": "WormsHeadCapCC",
+    "dlc": "CC",
+    "id": "FExxx825",
+    "collected_by": "Originating from the Shivering Isle. One of the Rare Curios sold by Khajiit trade caravans.",
+    "effects": [
+      {
+        "fkey": "FortifyLockpicking",
+        "magnitude": 1.5,
+        "value": 1.56
+      },
+      {
+        "fkey": "NightEye"
+      },
+      {
+        "fkey": "FortifyCarryWeight",
+        "magnitude": 1.25,
+        "value": 1.27
+      },
+      {
+        "fkey": "Slow",
+        "duration": 2,
+        "value": 2.14
+      }
+    ],
+    "value": 30,
+    "weight": 0.2,
+    "merchant_avail": "",
+    "garden": null
+  },
+  {
+    "image": "//images.uesp.net/thumb/9/95/SR-icon-ingredient-Jarrin_Root.png/48px-SR-icon-ingredient-Jarrin_Root.png",
+    "title": "Jarrin Root",
+    "pkey": "JarrinRoot",
+    "id": "0001bcbc",
+    "collected_by": "You may only receive this ingredient once during the Dark Brotherhood quest line.",
+    "effects": [
+      {
+        "fkey": "DamageHealth",
+        "magnitude": 100
+      },
+      {
+        "fkey": "DamageMagick"
+      },
+      {
+        "fkey": "DamageStamina"
+      },
+      {
+        "fkey": "DamageMagickaRegen"
+      }
+    ],
+    "value": 10,
+    "weight": 0.5,
+    "merchant_avail": "None",
+    "garden": null
+  }
+]
