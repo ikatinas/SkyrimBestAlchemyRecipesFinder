@@ -68,10 +68,15 @@ function buildRecipesDB(ingredientsData: IngredientData[]): Recipe[]{
         ingredient2.effects.some(i2_ef => i2_ef.fkey == i1_ef.fkey)
       )
 
-      if(!twoIngredientsEffects || !twoIngredientsEffects.length){
-        continue;
+      if(!twoIngredientsEffects || !twoIngredientsEffects.length){ 
+        continue; // Empty
       }
-
+      
+      if (recipes2.some(rec => rec.ingredients.every(ingredientKey =>
+        ingredientKey == ingredient1.pkey || ingredientKey == ingredient2.pkey))) {
+        continue; // Already exists
+      }
+      
       recipes2.push({
         ingredients: [
           ingredient1.pkey,
@@ -86,10 +91,14 @@ function buildRecipesDB(ingredientsData: IngredientData[]): Recipe[]{
           continue;
         }
 
-        const threeIngredientsEffects = ingredient3.effects.filter(i3_ef => 
-          ingredient1.effects.some(i1_ef => i1_ef.fkey == i3_ef.fkey) ||
-          ingredient2.effects.some(i2_ef => i2_ef.fkey == i3_ef.fkey)
+        const thirdIngredientEffects = ingredient3.effects.filter(i3_ef => 
+          !twoIngredientsEffects.some(existintEf => existintEf.fkey == i3_ef.fkey) &&
+          (ingredient1.effects.some(i1_ef => i1_ef.fkey == i3_ef.fkey) ||
+          ingredient2.effects.some(i2_ef => i2_ef.fkey == i3_ef.fkey))
         )
+        if (!thirdIngredientEffects.length){
+          continue; // no new effect
+        }
 
         recipes3.push({
           ingredients: [
@@ -97,7 +106,7 @@ function buildRecipesDB(ingredientsData: IngredientData[]): Recipe[]{
             ingredient2.pkey,
             ingredient3.pkey
           ],
-          effects: threeIngredientsEffects
+          effects: [...twoIngredientsEffects, ...thirdIngredientEffects]
         });
 
       }
