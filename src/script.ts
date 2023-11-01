@@ -123,29 +123,49 @@ function parseData(recipes: Recipe[], effectsData: EffectData[], ingredientsData
 function findBestRecipees(recipes: Recipe[], effectsData: EffectData[], ingredientsData: IngredientData[]): void {
 
 }
-
 function showRecipes(recipes: Recipe[]): void {
-  const resultsList = document.querySelector('#results') as HTMLDivElement;
-  resultsList.innerHTML = '';
+  const resultsTable = document.querySelector('#results') as HTMLElement;
+  resultsTable.innerHTML = '';
+
+  const table = document.createElement('table');
+  table.innerHTML = `
+    <tr>
+      <th>Ingredient 1</th>
+      <th>Ingredient 2</th>
+      <th>Ingredient 3</th>
+      <th>Effects</th>
+    </tr>
+  `;
+
   recipes.slice(0, 50).forEach((recipe) => {
-    const li = document.createElement('li');
-    const mainTitleSpan = document.createElement('span');
-    mainTitleSpan.textContent = recipe.ingredients.join(", ");
+    const row = document.createElement('tr');
 
-    li.appendChild(mainTitleSpan);
+    const ingredient1Cell = document.createElement('td');
+    ingredient1Cell.textContent = recipe.ingredients[0];
+    row.appendChild(ingredient1Cell);
 
-    const subList = document.createElement('ul');
-    recipe.effects.forEach((subItem) => {
-      const subLi = document.createElement('li');
-      subLi.textContent = subItem.fkey;
-      subList.appendChild(subLi);
+    const ingredient2Cell = document.createElement('td');
+    ingredient2Cell.textContent = recipe.ingredients[1];
+    row.appendChild(ingredient2Cell);
+
+    const ingredient3Cell = document.createElement('td');
+    ingredient3Cell.textContent = recipe.ingredients[2];
+    row.appendChild(ingredient3Cell);
+
+    const effectsCell = document.createElement('td');
+    const effectsList = document.createElement('ul');
+    recipe.effects.forEach((effect) => {
+      const effectItem = document.createElement('li');
+      effectItem.textContent = effect.fkey;
+      effectsList.appendChild(effectItem);
     });
+    effectsCell.appendChild(effectsList);
+    row.appendChild(effectsCell);
 
-    li.appendChild(subList);
-
-    resultsList.appendChild(li);
+    table.appendChild(row);
   });
 
+  resultsTable.appendChild(table);
 }
 
 document.addEventListener('DOMContentLoaded', () => {

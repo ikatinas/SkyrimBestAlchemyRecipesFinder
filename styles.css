@@ -1,0 +1,25 @@
+body {
+  font-family: 'Inter', sans-serif;
+  background: rgb(40, 42, 54);
+  color: rgb(248, 248, 242);
+}
+.searchContainer{
+  text-align: center;
+  padding: 10px;
+}
+
+table {
+  margin: auto;
+  background: rgb(54, 57, 72);
+  border-radius: 0.25rem;
+}
+td {
+  padding: 0 10px;
+  border: 1px solid #a2a9b1;
+}
+.harmfull {
+  background-color: #FFDDDD !important;
+}
+.beneficial {
+  background-color: #DDFFDD !important;
+}
