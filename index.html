@@ -6,7 +6,9 @@
 </head>
 <body>
   <div class="searchContainer">
-    <input type="text" id="searchInput" placeholder="Search..." />
+    <input type="text" id="filterInput" onkeyup="filterDropdownOptions()" placeholder="Type to filter">
+    <ul id="filterDropdown"></ul>
+    <div id="filtersContainer"></div>
   </div>
   <div id="results"></div>
 

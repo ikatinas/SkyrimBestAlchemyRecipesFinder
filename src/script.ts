@@ -36,7 +36,7 @@ interface Recipe {
   ingredients: string[];
   effects: IngredientEffect[];
 }
-
+var allRecipes: Recipe[] = [];
 async function fetchData(): Promise<void> {
   const promises: Promise<any>[] = [
     fetch('db/effects_db.json').then((response) => response.json()),
@@ -46,7 +46,9 @@ async function fetchData(): Promise<void> {
   try {
     const [effectsData, ingredientsData] = await Promise.all(promises);
     const recipes = buildRecipesDB(ingredientsData)
-    parseData(recipes, effectsData, ingredientsData);
+    allRecipes = recipes.sort((a, b) => b.effects.length - a.effects.length);
+    showRecipes(allRecipes);
+    populateDropdown(effectsData, ingredientsData);
   } catch (error) {
     console.log('Error:', error);
   }
@@ -104,25 +106,6 @@ function buildRecipesDB(ingredientsData: IngredientData[]): Recipe[]{
   return [...recipes2, ...recipes3];
 }
 
-function parseData(recipes: Recipe[], effectsData: EffectData[], ingredientsData: IngredientData[]): void {
-  const searchInput = document.querySelector('#searchInput') as HTMLInputElement;
-  
-  const sorted = recipes.sort((a, b) => b.effects.length - a.effects.length);
-  showRecipes(sorted)
-
-  searchInput.addEventListener('input', () => {
-    const searchValue = searchInput.value.toLowerCase();
-    const results = sorted.filter((recipe) => {
-      return recipe.ingredients.find(ingredient => ingredient.toLowerCase().includes(searchValue)) ||
-        recipe.effects.find(effect => effect.fkey.toLowerCase().includes(searchValue));
-    });
-    showRecipes(results)
-  });
-}
-
-function findBestRecipees(recipes: Recipe[], effectsData: EffectData[], ingredientsData: IngredientData[]): void {
-
-}
 function showRecipes(recipes: Recipe[]): void {
   const resultsTable = document.querySelector('#results') as HTMLElement;
   resultsTable.innerHTML = '';
@@ -166,6 +149,114 @@ function showRecipes(recipes: Recipe[]): void {
   });
 
   resultsTable.appendChild(table);
+}
+
+enum FilterType {
+  Effect,
+  Ingredient
+}
+
+function populateDropdown(effects: EffectData[], ingredientsData: IngredientData[]) {
+  const dropdown = document.getElementById("filterDropdown");
+  if (!dropdown) return;
+
+  dropdown.innerHTML = '';
+
+  effects.forEach((effect) => {
+    const li = document.createElement("li");
+    li.textContent = effect.title;
+    li.onmousedown = () => addFilterCondition(effect.key, FilterType.Effect);
+    dropdown.appendChild(li);
+  });
+
+  ingredientsData.forEach((ingredient) => {
+    const li = document.createElement("li");
+    li.textContent = ingredient.title;
+    li.onmousedown = () => addFilterCondition(ingredient.pkey, FilterType.Ingredient);
+    dropdown.appendChild(li);
+  });
+}
+
+function filterDropdownOptions() {
+  const input = document.getElementById("filterInput") as HTMLInputElement;
+  const filter = input.value.toUpperCase();
+  const dropdown = document.getElementById("filterDropdown") as HTMLInputElement;
+  if (!dropdown) return;
+  const items = dropdown.getElementsByTagName("li");
+
+  for (let i = 0; i < items.length; i++) {
+    const txtValue = items[i].textContent || items[i].innerText;
+
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      items[i].style.display = "";
+    } else {
+      items[i].style.display = "none";
+    }
+  }
+}
+
+interface FilterCondition {
+  ingredientKeys: string[];
+  effectKeys: string[];
+}
+
+var includeConditions: FilterCondition = { ingredientKeys: [], effectKeys: [] };
+
+function addFilterCondition(key: string, type: FilterType) {
+  if(type == FilterType.Effect){
+    includeConditions.effectKeys.push(key);
+  }
+  if(type == FilterType.Ingredient){
+    includeConditions.ingredientKeys.push(key);
+  }
+  addFilterGUI(key, type);
+  applyFilter();
+}
+
+function removeFilterCondition(key: string, type: FilterType) {
+  if (type == FilterType.Effect){
+    includeConditions.effectKeys = includeConditions.effectKeys.filter(key => key != key);
+  }
+  if (type == FilterType.Ingredient){
+    includeConditions.ingredientKeys = includeConditions.ingredientKeys.filter(key => key != key);
+  }
+  removeFilterGUI(key);
+  applyFilter();
+}
+
+function addFilterGUI(effectKey: string, type: FilterType) {
+  const filtersContainer = document.querySelector('#filtersContainer') as HTMLElement;
+  const div = document.createElement('div');
+  div.textContent = effectKey;
+  div.onmousedown = () => removeFilterCondition(effectKey, type);
+  filtersContainer.appendChild(div);
+}
+
+function removeFilterGUI(effectKey: string) {
+  const filtersContainer = document.querySelector('#filtersContainer') as HTMLElement;
+  for (const filterItem of filtersContainer.getElementsByTagName("div")){
+    if(filterItem.textContent == effectKey){
+      filterItem.remove();
+    }
+  }
+}
+
+function applyFilter() {
+  if (!includeConditions.effectKeys.length && !includeConditions.ingredientKeys.length){
+    showRecipes(allRecipes);
+    return;
+  }
+
+  // AND filter
+  const results = allRecipes.filter((recipe) => {
+    return includeConditions.effectKeys.every(effectKey => 
+      recipe.effects.find(effect => effect.fkey == effectKey)
+    ) 
+    && includeConditions.ingredientKeys.every(ingredientKey => 
+      recipe.ingredients.find(ingredient => ingredient == ingredientKey)
+    );
+  });
+  showRecipes(results)
 }
 
 document.addEventListener('DOMContentLoaded', () => {

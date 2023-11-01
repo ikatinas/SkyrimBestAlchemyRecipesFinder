@@ -12,14 +12,64 @@ table {
   margin: auto;
   background: rgb(54, 57, 72);
   border-radius: 0.25rem;
+  border-collapse: collapse;
+}
+th {
+  padding: 5px;
 }
 td {
   padding: 0 10px;
-  border: 1px solid #a2a9b1;
+  border: 1px solid #50555c
 }
 .harmfull {
   background-color: #FFDDDD !important;
 }
 .beneficial {
   background-color: #DDFFDD !important;
+}
+#filterInput {
+  min-width: 160px;
+}
+#filterDropdown {
+  display: none;
+  position: absolute;
+  background-color: rgb(26 27 34);
+  min-width: 160px;
+  right: calc(50% - 80px);
+  max-height: 70%;
+  overflow: scroll;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  z-index: 1;
+  list-style-type: none;
+  padding: 5px 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+#filterDropdown li {
+  padding: 5px;
+}
+
+#filterDropdown li:hover {
+  background-color: #747474;
+}
+
+#filterInput:focus + #filterDropdown {
+  display: block;
+}
+#filtersContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+#filtersContainer div {
+  border: 1px solid #a2a9b1;
+  padding: 5px;
+  margin: 5px;
+  cursor: pointer;
+}
+#filtersContainer div:hover {
+  border-color: rgb(113, 0, 0);
+  color: rgb(113, 0, 0);
 }
