@@ -58,23 +58,22 @@ function buildRecipesDB(ingredientsData: IngredientData[]): Recipe[]{
   let recipes2: Recipe[] = [];
   let recipes3: Recipe[] = [];
   // get 2 ingredients recipes
-  for (const ingredient1 of ingredientsData) {
-    for (const ingredient2 of ingredientsData) { 
-      if (ingredient2.pkey == ingredient1.pkey){
-        continue;
-      }
+  for (var index1 = 0; index1 < ingredientsData.length; index1++) {
+    const ingredient1 = ingredientsData[index1];
+    for (var index2 = index1+1; index2 < ingredientsData.length; index2++) { 
+      const ingredient2 = ingredientsData[index2];
 
       const twoIngredientsEffects = ingredient1.effects.filter(i1_ef => 
         ingredient2.effects.some(i2_ef => i2_ef.fkey == i1_ef.fkey)
       )
 
       if(!twoIngredientsEffects || !twoIngredientsEffects.length){ 
-        continue; // Empty
+        continue; // No matching effects
       }
       
       if (recipes2.some(rec => rec.ingredients.every(ingredientKey =>
         ingredientKey == ingredient1.pkey || ingredientKey == ingredient2.pkey))) {
-        continue; // Already exists
+        continue; // Effects already exists
       }
       
       recipes2.push({
@@ -86,16 +85,15 @@ function buildRecipesDB(ingredientsData: IngredientData[]): Recipe[]{
       });
 
       // get 3 ingredients recipes
-      for (const ingredient3 of ingredientsData) { 
-        if (ingredient1.pkey == ingredient3.pkey || ingredient2.pkey == ingredient3.pkey){
-          continue;
-        }
+      for (var index3 = index2+1; index3 < ingredientsData.length; index3++) { 
+        const ingredient3 = ingredientsData[index3];
 
         const thirdIngredientEffects = ingredient3.effects.filter(i3_ef => 
-          !twoIngredientsEffects.some(existintEf => existintEf.fkey == i3_ef.fkey) &&
+          !twoIngredientsEffects.some(existingEf => existingEf.fkey == i3_ef.fkey) &&
           (ingredient1.effects.some(i1_ef => i1_ef.fkey == i3_ef.fkey) ||
           ingredient2.effects.some(i2_ef => i2_ef.fkey == i3_ef.fkey))
         )
+
         if (!thirdIngredientEffects.length){
           continue; // no new effect
         }
@@ -112,7 +110,24 @@ function buildRecipesDB(ingredientsData: IngredientData[]): Recipe[]{
       }
      }
   }
-  return [...recipes2, ...recipes3];
+  
+  // discard 3 ingredient recipes with no added effect (same as 2 igr. rcp.)
+  const filteredRecipes3 = recipes3.filter(recipe3 => {
+    const matchingRecipes2 = recipes2.filter(recipe2 =>
+      recipe2.ingredients.every(ingredient => recipe3.ingredients.includes(ingredient))
+    );
+    if (!matchingRecipes2 || !matchingRecipes2.length) {
+      console.warn("Some 2 ingridients recipes are missing")
+      return true;
+    };
+    const hasIdenticalEffectsOnly = matchingRecipes2.some(recipe2 => 
+      recipe3.effects.every(effect3 => 
+        recipe2.effects.some(effect2 => effect2.fkey == effect3.fkey)
+      )
+    );
+    return !hasIdenticalEffectsOnly;
+  });
+  return [...recipes2, ...filteredRecipes3];
 }
 
 function showRecipes(recipes: Recipe[]): void {
