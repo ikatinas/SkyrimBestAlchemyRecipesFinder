@@ -21,6 +21,9 @@ td {
   padding: 0 10px;
   border: 1px solid #50555c
 }
+td span, td li {
+  cursor: pointer;
+}
 .harmfull {
   background-color: #FFDDDD !important;
 }
@@ -64,12 +67,16 @@ td {
   align-items: center;
 }
 #filtersContainer div {
-  border: 1px solid #a2a9b1;
   padding: 5px;
   margin: 5px;
   cursor: pointer;
 }
+.filterConditionInclude {
+  border: 1px solid #0c68d2;
+}
+.filterConditionExclude{
+  border: 1px solid #9c0303;
+}
 #filtersContainer div:hover {
-  border-color: rgb(113, 0, 0);
-  color: rgb(113, 0, 0);
+  border-color: #4a4a4a;
 }

@@ -144,19 +144,25 @@ function showRecipes(recipes: Recipe[]): void {
     </tr>
   `;
 
+  const excludeTile = "add to 'exclude' filter";
   recipes.slice(0, 50).forEach((recipe) => {
     const row = document.createElement('tr');
 
     const ingredient1Cell = document.createElement('td');
-    ingredient1Cell.textContent = recipe.ingredients[0];
+    ingredient1Cell.innerHTML = `<span title="${excludeTile}">${recipe.ingredients[0]}</span>`;
+    ingredient1Cell.onmousedown = () => addFilterCondition(recipe.ingredients[0], FilterAction.Exclude, FilterType.Ingredient);
     row.appendChild(ingredient1Cell);
 
     const ingredient2Cell = document.createElement('td');
-    ingredient2Cell.textContent = recipe.ingredients[1];
+    ingredient2Cell.innerHTML = `<span title="${excludeTile}">${recipe.ingredients[1]}</span>`;
+    ingredient2Cell.onmousedown = () => addFilterCondition(recipe.ingredients[1], FilterAction.Exclude, FilterType.Ingredient);
     row.appendChild(ingredient2Cell);
 
     const ingredient3Cell = document.createElement('td');
-    ingredient3Cell.textContent = recipe.ingredients[2];
+    if(recipe.ingredients[2]){
+      ingredient3Cell.innerHTML = `<span title="${excludeTile}">${recipe.ingredients[2]}</span>`;
+      ingredient3Cell.onmousedown = () => addFilterCondition(recipe.ingredients[2], FilterAction.Exclude, FilterType.Ingredient);
+    }
     row.appendChild(ingredient3Cell);
 
     const effectsCell = document.createElement('td');
@@ -164,6 +170,8 @@ function showRecipes(recipes: Recipe[]): void {
     recipe.effects.forEach((effect) => {
       const effectItem = document.createElement('li');
       effectItem.textContent = effect.fkey;
+      effectItem.title = excludeTile;
+      effectItem.onmousedown = () => addFilterCondition(effect.fkey, FilterAction.Exclude, FilterType.Effect);
       effectsList.appendChild(effectItem);
     });
     effectsCell.appendChild(effectsList);
@@ -180,6 +188,11 @@ enum FilterType {
   Ingredient
 }
 
+enum FilterAction {
+  Include,
+  Exclude
+}
+
 function populateDropdown(effects: EffectData[], ingredientsData: IngredientData[]) {
   const dropdown = document.getElementById("filterDropdown");
   if (!dropdown) return;
@@ -189,14 +202,14 @@ function populateDropdown(effects: EffectData[], ingredientsData: IngredientData
   effects.forEach((effect) => {
     const li = document.createElement("li");
     li.textContent = effect.title;
-    li.onmousedown = () => addFilterCondition(effect.key, FilterType.Effect);
+    li.onmousedown = () => addFilterCondition(effect.key, FilterAction.Include, FilterType.Effect);
     dropdown.appendChild(li);
   });
 
   ingredientsData.forEach((ingredient) => {
     const li = document.createElement("li");
     li.textContent = ingredient.title;
-    li.onmousedown = () => addFilterCondition(ingredient.pkey, FilterType.Ingredient);
+    li.onmousedown = () => addFilterCondition(ingredient.pkey, FilterAction.Include, FilterType.Ingredient);
     dropdown.appendChild(li);
   });
 }
@@ -225,38 +238,47 @@ interface FilterCondition {
 }
 
 var includeConditions: FilterCondition = { ingredientKeys: [], effectKeys: [] };
+var excludeConditions: FilterCondition = { ingredientKeys: [], effectKeys: [] };
 
-function addFilterCondition(key: string, type: FilterType) {
-  if(type == FilterType.Effect){
-    if(includeConditions.effectKeys.includes(key)){
-      return;
+function addFilterCondition(key: string, action: FilterAction, type: FilterType) {
+  removeFilterCondition(key, type);
+  if (action == FilterAction.Include){
+    if(type == FilterType.Effect){
+      includeConditions.effectKeys.push(key);
     }
-    includeConditions.effectKeys.push(key);
-  }
-  if(type == FilterType.Ingredient){
-    if(includeConditions.ingredientKeys.includes(key)){
-      return;
+    if(type == FilterType.Ingredient){
+      includeConditions.ingredientKeys.push(key);
     }
-    includeConditions.ingredientKeys.push(key);
   }
-  addFilterGUI(key, type);
+  if (action == FilterAction.Exclude){
+    if(type == FilterType.Effect){
+      excludeConditions.effectKeys.push(key);
+    }
+    if(type == FilterType.Ingredient){
+      excludeConditions.ingredientKeys.push(key);
+    }
+  }
+  addFilterGUI(key, action, type);
   applyFilter();
 }
 
 function removeFilterCondition(filterKey: string, type: FilterType) {
   if (type == FilterType.Effect){
     includeConditions.effectKeys = includeConditions.effectKeys.filter(key => key != filterKey);
+    excludeConditions.effectKeys = excludeConditions.effectKeys.filter(key => key != filterKey);
   }
   if (type == FilterType.Ingredient){
     includeConditions.ingredientKeys = includeConditions.ingredientKeys.filter(key => key != filterKey);
+    excludeConditions.ingredientKeys = excludeConditions.ingredientKeys.filter(key => key != filterKey);
   }
   removeFilterGUI(filterKey);
   applyFilter();
 }
 
-function addFilterGUI(effectKey: string, type: FilterType) {
+function addFilterGUI(effectKey: string, action: FilterAction, type: FilterType) {
   const filtersContainer = document.querySelector('#filtersContainer') as HTMLElement;
   const div = document.createElement('div');
+  div.className = `filterCondition${FilterAction[action]}`
   div.textContent = effectKey;
   div.onmousedown = () => removeFilterCondition(effectKey, type);
   filtersContainer.appendChild(div);
@@ -272,21 +294,45 @@ function removeFilterGUI(effectKey: string) {
 }
 
 function applyFilter() {
-  if (!includeConditions.effectKeys.length && !includeConditions.ingredientKeys.length){
+  if (!includeConditions.effectKeys.length &&
+    !includeConditions.ingredientKeys.length &&
+    !excludeConditions.effectKeys.length &&
+    !excludeConditions.ingredientKeys.length) {
     showRecipes(allRecipes);
     return;
   }
 
   // AND filter
-  const results = allRecipes.filter((recipe) => {
-    return includeConditions.effectKeys.every(effectKey => 
-      recipe.effects.find(effect => effect.fkey == effectKey)
+  let filteredResults: Recipe[] = []
+  if (!includeConditions.effectKeys.length &&
+    !includeConditions.ingredientKeys.length) {
+    filteredResults = allRecipes;
+  } else {
+    filteredResults = allRecipes.filter((recipe) => {
+      return includeConditions.effectKeys.every(effectKey =>
+        recipe.effects.find(effect => effect.fkey == effectKey)
+      )
+        && includeConditions.ingredientKeys.every(ingredientKey =>
+          recipe.ingredients.find(ingredient => ingredient == ingredientKey)
+        );
+    });
+  }
+
+  if (!excludeConditions.effectKeys.length &&
+    !excludeConditions.ingredientKeys.length) {
+    showRecipes(filteredResults);
+    return;
+  }
+  const finalResults = filteredResults.filter((recipe) => {
+    return !excludeConditions.effectKeys.some(excludeEffect =>
+      recipe.effects.some(effect => effect.fkey == excludeEffect)
     ) 
-    && includeConditions.ingredientKeys.every(ingredientKey => 
-      recipe.ingredients.find(ingredient => ingredient == ingredientKey)
+    && !excludeConditions.ingredientKeys.some(excludeIgr =>
+      recipe.ingredients.some(ingredient => ingredient == excludeIgr)
     );
   });
-  showRecipes(results)
+  
+  showRecipes(finalResults)
 }
 
 document.addEventListener('DOMContentLoaded', () => {
