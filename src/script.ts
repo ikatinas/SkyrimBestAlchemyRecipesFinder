@@ -204,23 +204,29 @@ var includeConditions: FilterCondition = { ingredientKeys: [], effectKeys: [] };
 
 function addFilterCondition(key: string, type: FilterType) {
   if(type == FilterType.Effect){
+    if(includeConditions.effectKeys.includes(key)){
+      return;
+    }
     includeConditions.effectKeys.push(key);
   }
   if(type == FilterType.Ingredient){
+    if(includeConditions.ingredientKeys.includes(key)){
+      return;
+    }
     includeConditions.ingredientKeys.push(key);
   }
   addFilterGUI(key, type);
   applyFilter();
 }
 
-function removeFilterCondition(key: string, type: FilterType) {
+function removeFilterCondition(filterKey: string, type: FilterType) {
   if (type == FilterType.Effect){
-    includeConditions.effectKeys = includeConditions.effectKeys.filter(key => key != key);
+    includeConditions.effectKeys = includeConditions.effectKeys.filter(key => key != filterKey);
   }
   if (type == FilterType.Ingredient){
-    includeConditions.ingredientKeys = includeConditions.ingredientKeys.filter(key => key != key);
+    includeConditions.ingredientKeys = includeConditions.ingredientKeys.filter(key => key != filterKey);
   }
-  removeFilterGUI(key);
+  removeFilterGUI(filterKey);
   applyFilter();
 }
 
