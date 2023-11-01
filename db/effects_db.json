@@ -552,7 +552,7 @@
         "key": "RestoreStamina",
         "title": "Restore Stamina",
         "id": "0003EB16",
-        "ingredients": ["NetchJelly(2×Magnitude)DB", "ChokeweedCC", "Hackle-LoLeafCC", "SaltriceCC", "ScribJerkyCC", "Bee", "CharredSkeeverHide", "EyeofSabreCat", "HawkBeak", "Histcarp", "Honeycomb", "LargeAntlers", "MudcrabChitin", "OrangeDartwing", "Pearl", "PineThrushEgg", "PowderedMammothTusk", "PurpleMountainFlower", "SabreCatTooth", "SilversidePerch", "SmallPearl", "TorchbugThorax", "WispWrappings", "BearClaws", "SalmonRoeHF"],
+        "ingredients": ["NetchJellyDB", "ChokeweedCC", "Hackle-LoLeafCC", "SaltriceCC", "ScribJerkyCC", "Bee", "CharredSkeeverHide", "EyeofSabreCat", "HawkBeak", "Histcarp", "Honeycomb", "LargeAntlers", "MudcrabChitin", "OrangeDartwing", "Pearl", "PineThrushEgg", "PowderedMammothTusk", "PurpleMountainFlower", "SabreCatTooth", "SilversidePerch", "SmallPearl", "TorchbugThorax", "WispWrappings", "BearClaws", "SalmonRoeHF"],
         "description": "Restore <mag> Stamina.",
         "base_cost": 0.6,
         "base_mag": 5,
