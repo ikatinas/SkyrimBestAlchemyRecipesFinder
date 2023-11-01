@@ -3775,7 +3775,7 @@
   {
     "image": "//images.uesp.net/thumb/7/71/SR-icon-ingredient-Hackle-Lo_Leaf.png/48px-SR-icon-ingredient-Hackle-Lo_Leaf.png",
     "title": "Hackle-Lo Leaf",
-    "pkey": "Hackle-Lo LeafCC",
+    "pkey": "Hackle-LoLeafCC",
     "dlc": "CC",
     "id": "FExxx82E",
     "collected_by": "Originating from Vvardenfell. One of the Rare Curios sold by Khajiit trade caravans.",
@@ -4838,7 +4838,7 @@
   {
     "image": "//images.uesp.net/thumb/6/6a/SR-icon-ingredient-Steel-Blue_Entoloma.png/48px-SR-icon-ingredient-Steel-Blue_Entoloma.png",
     "title": "Steel-Blue Entoloma",
-    "pkey": "Steel-Blue EntolomaCC",
+    "pkey": "Steel-BlueEntolomaCC",
     "dlc": "CC",
     "id": "FExxx832",
     "collected_by": "Originating from Cyrodiil. Useful to con goblins",
