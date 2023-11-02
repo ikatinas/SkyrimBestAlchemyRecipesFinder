@@ -21,8 +21,15 @@ td {
   padding: 0 10px;
   border: 1px solid #50555c
 }
-td span, td li {
+td svg {
   cursor: pointer;
+  padding-left: 10px;
+}
+td svg.filterHideIcon:hover {
+  color: #9c0303;
+}
+td svg.filterShowIcon:hover {
+  color: #0c68d2;
 }
 .harmfull {
   background-color: #FFDDDD !important;

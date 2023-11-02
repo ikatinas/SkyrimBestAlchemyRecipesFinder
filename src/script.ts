@@ -144,34 +144,31 @@ function showRecipes(recipes: Recipe[]): void {
     </tr>
   `;
 
-  const excludeTile = "add to 'exclude' filter";
   recipes.slice(0, 50).forEach((recipe) => {
     const row = document.createElement('tr');
 
-    const ingredient1Cell = document.createElement('td');
-    ingredient1Cell.innerHTML = `<span title="${excludeTile}">${recipe.ingredients[0]}</span>`;
-    ingredient1Cell.onmousedown = () => addFilterCondition(recipe.ingredients[0], FilterAction.Exclude, FilterType.Ingredient);
-    row.appendChild(ingredient1Cell);
-
-    const ingredient2Cell = document.createElement('td');
-    ingredient2Cell.innerHTML = `<span title="${excludeTile}">${recipe.ingredients[1]}</span>`;
-    ingredient2Cell.onmousedown = () => addFilterCondition(recipe.ingredients[1], FilterAction.Exclude, FilterType.Ingredient);
-    row.appendChild(ingredient2Cell);
-
-    const ingredient3Cell = document.createElement('td');
-    if(recipe.ingredients[2]){
-      ingredient3Cell.innerHTML = `<span title="${excludeTile}">${recipe.ingredients[2]}</span>`;
-      ingredient3Cell.onmousedown = () => addFilterCondition(recipe.ingredients[2], FilterAction.Exclude, FilterType.Ingredient);
+    for (const ingredient of recipe.ingredients){
+      const ingredient1Cell = document.createElement('td');
+      ingredient1Cell.textContent = ingredient;
+      const includeIgrFilterButton = getFilterButton(ingredient, FilterAction.Include, FilterType.Ingredient);
+      ingredient1Cell.appendChild(includeIgrFilterButton);
+      const excludeIgrFilterButton = getFilterButton(ingredient, FilterAction.Exclude, FilterType.Ingredient);
+      ingredient1Cell.appendChild(excludeIgrFilterButton);
+      row.appendChild(ingredient1Cell);
     }
-    row.appendChild(ingredient3Cell);
+    if(recipe.ingredients.length < 3){
+      row.appendChild(document.createElement('td'));
+    }
 
     const effectsCell = document.createElement('td');
     const effectsList = document.createElement('ul');
     recipe.effects.forEach((effect) => {
       const effectItem = document.createElement('li');
       effectItem.textContent = effect.fkey;
-      effectItem.title = excludeTile;
-      effectItem.onmousedown = () => addFilterCondition(effect.fkey, FilterAction.Exclude, FilterType.Effect);
+      const includeEffFilterButton = getFilterButton(effect.fkey, FilterAction.Include, FilterType.Effect);
+      effectItem.appendChild(includeEffFilterButton);
+      const excludeEffFilterButton = getFilterButton(effect.fkey, FilterAction.Exclude, FilterType.Effect);
+      effectItem.appendChild(excludeEffFilterButton);
       effectsList.appendChild(effectItem);
     });
     effectsCell.appendChild(effectsList);
@@ -181,6 +178,28 @@ function showRecipes(recipes: Recipe[]): void {
   });
 
   resultsTable.appendChild(table);
+}
+
+
+function getFilterButton(key: string, filterAction: FilterAction, filterType: FilterType): HTMLSpanElement{
+  const includeSvgString = 
+  `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="filterShowIcon" viewBox="0 0 16 16">
+    <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
+    <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
+  </svg>`
+  const includeTitle = "show it";
+  const excludeSvgString = 
+  `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="filterHideIcon" viewBox="0 0 16 16">
+    <path d="m10.79 12.912-1.614-1.615a3.5 3.5 0 0 1-4.474-4.474l-2.06-2.06C.938 6.278 0 8 0 8s3 5.5 8 5.5a7.029 7.029 0 0 0 2.79-.588zM5.21 3.088A7.028 7.028 0 0 1 8 2.5c5 0 8 5.5 8 5.5s-.939 1.721-2.641 3.238l-2.062-2.062a3.5 3.5 0 0 0-4.474-4.474L5.21 3.089z"/>
+    <path d="M5.525 7.646a2.5 2.5 0 0 0 2.829 2.829l-2.83-2.829zm4.95.708-2.829-2.83a2.5 2.5 0 0 1 2.829 2.829zm3.171 6-12-12 .708-.708 12 12-.708.708z"/>
+  </svg>`
+  const excludeTile = "hide it";
+
+  const filterButton = document.createElement('span');
+  filterButton.innerHTML = filterAction == FilterAction.Include ? includeSvgString : excludeSvgString;
+  filterButton.title = filterAction == FilterAction.Include ? includeTitle : excludeTile;
+  filterButton.onmousedown = () => addFilterCondition(key, filterAction, filterType);
+  return filterButton;
 }
 
 enum FilterType {
