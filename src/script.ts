@@ -47,7 +47,7 @@ async function fetchData(): Promise<void> {
     const [effectsData, ingredientsData] = await Promise.all(promises);
     const recipes = buildRecipesDB(effectsData, ingredientsData)
     allRecipes = recipes.sort((a, b) => b.effects.length - a.effects.length);
-    showRecipes(allRecipes);
+    drawRecipesTableGUI(allRecipes);
     populateDropdown(effectsData, ingredientsData);
   } catch (error) {
     console.log('Error:', error);
@@ -134,7 +134,7 @@ function buildRecipesDB(effectsData: EffectData[], ingredientsData: IngredientDa
   return [...recipes2, ...filteredRecipes3];
 }
 
-function showRecipes(recipes: Recipe[]): void {
+function drawRecipesTableGUI(recipes: Recipe[]): void {
   const resultsTable = document.querySelector('#results') as HTMLElement;
   resultsTable.innerHTML = '';
 
@@ -323,7 +323,7 @@ function applyFilter() {
     !includeConditions.ingredientKeys.length &&
     !excludeConditions.effectKeys.length &&
     !excludeConditions.ingredientKeys.length) {
-    showRecipes(allRecipes);
+    drawRecipesTableGUI(allRecipes);
     return;
   }
 
@@ -345,7 +345,7 @@ function applyFilter() {
 
   if (!excludeConditions.effectKeys.length &&
     !excludeConditions.ingredientKeys.length) {
-    showRecipes(filteredResults);
+    drawRecipesTableGUI(filteredResults);
     return;
   }
   const finalResults = filteredResults.filter((recipe) => {
@@ -357,7 +357,7 @@ function applyFilter() {
     );
   });
   
-  showRecipes(finalResults)
+  drawRecipesTableGUI(finalResults)
 }
 
 document.addEventListener('DOMContentLoaded', () => {
