@@ -32,10 +32,10 @@ td svg.filterShowIcon:hover {
   color: #0c68d2;
 }
 .harmfull {
-  background-color: #FFDDDD !important;
+  color: #fac8c8 !important;
 }
 .beneficial {
-  background-color: #DDFFDD !important;
+  color: #cbfbcb !important;
 }
 #filterInput {
   min-width: 248px;

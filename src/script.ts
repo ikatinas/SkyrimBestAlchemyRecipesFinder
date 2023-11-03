@@ -9,7 +9,6 @@ interface EffectData {
   base_dur: number;
   gold_val: number;
   harmful: boolean;
-  relatedRecords?: IngredientData[];
 }
 
 interface IngredientData {
@@ -30,6 +29,7 @@ interface IngredientEffect {
   magnitude: number;
   duration: number;
   value: number;
+  effectData?: EffectData
 }
 
 interface Recipe {
@@ -45,7 +45,7 @@ async function fetchData(): Promise<void> {
 
   try {
     const [effectsData, ingredientsData] = await Promise.all(promises);
-    const recipes = buildRecipesDB(ingredientsData)
+    const recipes = buildRecipesDB(effectsData, ingredientsData)
     allRecipes = recipes.sort((a, b) => b.effects.length - a.effects.length);
     showRecipes(allRecipes);
     populateDropdown(effectsData, ingredientsData);
@@ -54,7 +54,7 @@ async function fetchData(): Promise<void> {
   }
 }
 
-function buildRecipesDB(ingredientsData: IngredientData[]): Recipe[]{
+function buildRecipesDB(effectsData: EffectData[], ingredientsData: IngredientData[]): Recipe[]{
   let recipes2: Recipe[] = [];
   let recipes3: Recipe[] = [];
   // get 2 ingredients recipes
@@ -63,10 +63,14 @@ function buildRecipesDB(ingredientsData: IngredientData[]): Recipe[]{
     for (var index2 = index1+1; index2 < ingredientsData.length; index2++) { 
       const ingredient2 = ingredientsData[index2];
 
-      const twoIngredientsEffects = ingredient1.effects.filter(i1_ef => 
+      let twoIngredientsEffects = ingredient1.effects.filter(i1_ef => 
         ingredient2.effects.some(i2_ef => i2_ef.fkey == i1_ef.fkey)
       )
 
+      for (let ingEff of twoIngredientsEffects){
+        ingEff.effectData = effectsData.find(eff => eff.key == ingEff.fkey);
+      }
+      
       if(!twoIngredientsEffects || !twoIngredientsEffects.length){ 
         continue; // No matching effects
       }
@@ -164,7 +168,8 @@ function showRecipes(recipes: Recipe[]): void {
     const effectsList = document.createElement('ul');
     recipe.effects.forEach((effect) => {
       const effectItem = document.createElement('li');
-      effectItem.textContent = effect.fkey;
+      effectItem.textContent = effect.effectData?.title ?? effect.fkey;
+      effectItem.classList.add(effect.effectData?.harmful ? "harmfull" : "beneficial")
       const includeEffFilterButton = getFilterButton(effect.fkey, FilterAction.Include, FilterType.Effect);
       effectItem.appendChild(includeEffFilterButton);
       const excludeEffFilterButton = getFilterButton(effect.fkey, FilterAction.Exclude, FilterType.Effect);
@@ -221,6 +226,7 @@ function populateDropdown(effects: EffectData[], ingredientsData: IngredientData
   effects.forEach((effect) => {
     const li = document.createElement("li");
     li.textContent = effect.title;
+    li.classList.add(effect.harmful ? "harmfull" : "beneficial")
     li.onmousedown = () => addFilterCondition(effect.key, FilterAction.Include, FilterType.Effect);
     dropdown.appendChild(li);
   });
