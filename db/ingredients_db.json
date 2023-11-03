@@ -22,7 +22,7 @@
     "value": 15,
     "weight": 0.5,
     "merchant_avail": "Common",
-    "garden_hf": null
+    "garden": null
   },
   {
     "image": "//images.uesp.net/thumb/3/31/SR-icon-ingredient-Ancestor_Moth_Wing.png/48px-SR-icon-ingredient-Ancestor_Moth_Wing.png",
@@ -48,7 +48,7 @@
     "value": 2,
     "weight": 0.1,
     "merchant_avail": "None",
-    "garden_hf": null
+    "garden": null
   },
   {
     "image": "//images.uesp.net/thumb/b/b2/SR-icon-ingredient-Ash_Creep_Cluster.png/48px-SR-icon-ingredient-Ash_Creep_Cluster.png",
@@ -74,7 +74,7 @@
     "value": 20,
     "weight": 0.25,
     "merchant_avail": "None",
-    "garden_hf": null
+    "garden": null
   },
   {
     "image": "//images.uesp.net/thumb/9/92/SR-icon-ingredient-Ash_Hopper_Jelly.png/48px-SR-icon-ingredient-Ash_Hopper_Jelly.png",
@@ -100,7 +100,7 @@
     "value": 20,
     "weight": 0.25,
     "merchant_avail": "",
-    "garden_hf": null
+    "garden": null
   },
   {
     "image": "//images.uesp.net/thumb/c/c0/SR-icon-ingredient-Ashen_Grass_Pod.png/48px-SR-icon-ingredient-Ashen_Grass_Pod.png",
@@ -128,7 +128,7 @@
     "value": 1,
     "weight": 0.1,
     "merchant_avail": "",
-    "garden_hf": null
+    "garden": null
   },
   {
     "image": "//images.uesp.net/thumb/0/04/SR-icon-ingredient-Bear_Claws.png/48px-SR-icon-ingredient-Bear_Claws.png",
@@ -155,7 +155,7 @@
     "value": 2,
     "weight": 0.1,
     "merchant_avail": "None (Uncommon)",
-    "garden_hf": null
+    "garden": null
   },
   {
     "image": "//images.uesp.net/thumb/b/b8/SR-icon-ingredient-Bee.png/48px-SR-icon-ingredient-Bee.png",
@@ -180,7 +180,7 @@
     "value": 3,
     "weight": 0.1,
     "merchant_avail": "Common",
-    "garden_hf": null
+    "garden": null
   },
   {
     "image": "//images.uesp.net/thumb/8/84/SR-icon-ingredient-Beehive_Husk.png/48px-SR-icon-ingredient-Beehive_Husk.png",
@@ -206,7 +206,7 @@
     "value": 5,
     "weight": 1,
     "merchant_avail": "None (Common)",
-    "garden_hf": null
+    "garden": null
   },
   {
     "image": "//images.uesp.net/thumb/a/a6/SR-icon-ingredient-Bleeding_Crown.png/48px-SR-icon-ingredient-Bleeding_Crown.png",
@@ -231,7 +231,7 @@
     "value": 10,
     "weight": 0.3,
     "merchant_avail": "Uncommon",
-    "garden_hf": 3
+    "garden": 3
   },
   {
     "image": "//images.uesp.net/thumb/2/2b/SR-icon-ingredient-Blisterwort.png/48px-SR-icon-ingredient-Blisterwort.png",
@@ -258,7 +258,7 @@
     "value": 12,
     "weight": 0.2,
     "merchant_avail": "Uncommon",
-    "garden_hf": 4
+    "garden": 4
   },
   {
     "image": "//images.uesp.net/thumb/1/16/SR-icon-ingredient-Blue_Butterfly_Wing.png/48px-SR-icon-ingredient-Blue_Butterfly_Wing.png",
@@ -283,7 +283,7 @@
     "value": 2,
     "weight": 0.1,
     "merchant_avail": "Uncommon",
-    "garden_hf": null
+    "garden": null
   },
   {
     "image": "//images.uesp.net/thumb/e/ee/SR-icon-ingredient-Blue_Dartwing.png/48px-SR-icon-ingredient-Blue_Dartwing.png",
@@ -308,7 +308,7 @@
     "value": 1,
     "weight": 0.1,
     "merchant_avail": "None (Uncommon)",
-    "garden_hf": null
+    "garden": null
   },
   {
     "image": "//images.uesp.net/thumb/3/38/SR-icon-ingredient-Blue_Mountain_Flower.png/48px-SR-icon-ingredient-Blue_Mountain_Flower.png",
@@ -333,7 +333,7 @@
     "value": 2,
     "weight": 0.1,
     "merchant_avail": "Common",
-    "garden_hf": 3
+    "garden": 3
   },
   {
     "image": "//images.uesp.net/thumb/8/83/SR-icon-ingredient-Boar_Tusk.png/48px-SR-icon-ingredient-Boar_Tusk.png",
@@ -364,7 +364,7 @@
     "value": 20,
     "weight": 0.5,
     "merchant_avail": "",
-    "garden_hf": null
+    "garden": null
   },
   {
     "image": "//images.uesp.net/thumb/f/f9/SR-icon-ingredient-Bone_Meal.png/48px-SR-icon-ingredient-Bone_Meal.png",
@@ -389,7 +389,7 @@
     "value": 5,
     "weight": 0.5,
     "merchant_avail": "Common",
-    "garden_hf": null
+    "garden": null
   },
   {
     "image": "//images.uesp.net/thumb/6/6a/SR-icon-ingredient-Briar_Heart.png/48px-SR-icon-ingredient-Briar_Heart.png",
@@ -415,7 +415,7 @@
     "value": 20,
     "weight": 0.5,
     "merchant_avail": "Rare",
-    "garden_hf": null
+    "garden": null
   },
   {
     "image": "//images.uesp.net/thumb/6/6f/SR-icon-ingredient-Burnt_Spriggan_Wood.png/48px-SR-icon-ingredient-Burnt_Spriggan_Wood.png",
@@ -441,7 +441,7 @@
     "value": 20,
     "weight": 0.5,
     "merchant_avail": "",
-    "garden_hf": null
+    "garden": null
   },
   {
     "image": "//images.uesp.net/thumb/f/f8/SR-icon-ingredient-Butterfly_Wing.png/48px-SR-icon-ingredient-Butterfly_Wing.png",
@@ -466,7 +466,7 @@
     "value": 3,
     "weight": 0.1,
     "merchant_avail": "Uncommon",
-    "garden_hf": null
+    "garden": null
   },
   {
     "image": "//images.uesp.net/thumb/f/f6/SR-icon-ingredient-Canis_Root.png/48px-SR-icon-ingredient-Canis_Root.png",
@@ -491,7 +491,7 @@
     "value": 5,
     "weight": 0.1,
     "merchant_avail": "Uncommon",
-    "garden_hf": 4
+    "garden": 4
   },
   {
     "image": "//images.uesp.net/thumb/7/71/SR-icon-ingredient-Charred_Skeever_Hide.png/48px-SR-icon-ingredient-Charred_Skeever_Hide.png",
@@ -517,7 +517,7 @@
     "value": 1,
     "weight": 0.5,
     "merchant_avail": "Uncommon",
-    "garden_hf": null
+    "garden": null
   },
   {
     "image": "//images.uesp.net/thumb/4/47/SR-icon-ingredient-Chaurus_Eggs.png/48px-SR-icon-ingredient-Chaurus_Eggs.png",
@@ -542,7 +542,7 @@
     "value": 10,
     "weight": 0.2,
     "merchant_avail": "Uncommon",
-    "garden_hf": null
+    "garden": null
   },
   {
     "image": "//images.uesp.net/thumb/a/a2/SR-icon-ingredient-Chaurus_Hunter_Antennae.png/48px-SR-icon-ingredient-Chaurus_Hunter_Antennae.png",
@@ -568,7 +568,7 @@
     "value": 2,
     "weight": 0.1,
     "merchant_avail": "None",
-    "garden_hf": null
+    "garden": null
   },
   {
     "image": "//images.uesp.net/thumb/d/de/SR-icon-ingredient-Chicken%27s_Egg.png/48px-SR-icon-ingredient-Chicken%27s_Egg.png",
@@ -593,7 +593,7 @@
     "value": 2,
     "weight": 0.5,
     "merchant_avail": "Uncommon",
-    "garden_hf": null
+    "garden": null
   },
   {
     "image": "//images.uesp.net/thumb/1/15/SR-icon-ingredient-Creep_Cluster.png/48px-SR-icon-ingredient-Creep_Cluster.png",
@@ -618,7 +618,7 @@
     "value": 1,
     "weight": 0.2,
     "merchant_avail": "Uncommon",
-    "garden_hf": 5
+    "garden": 5
   },
   {
     "image": "//images.uesp.net/thumb/5/55/SR-icon-ingredient-Crimson_Nirnroot.png/48px-SR-icon-ingredient-Crimson_Nirnroot.png",
@@ -645,7 +645,7 @@
     "value": 10,
     "weight": 0.2,
     "merchant_avail": "None",
-    "garden_hf": null
+    "garden": null
   },
   {
     "image": "//images.uesp.net/thumb/a/a9/SR-icon-ingredient-Cyrodilic_Spadetail.png/48px-SR-icon-ingredient-Cyrodilic_Spadetail.png",
@@ -670,7 +670,7 @@
     "value": 15,
     "weight": 0.25,
     "merchant_avail": "Common",
-    "garden_hf": null
+    "garden": null
   },
   {
     "image": "//images.uesp.net/thumb/b/b1/SR-icon-ingredient-Daedra_Heart.png/48px-SR-icon-ingredient-Daedra_Heart.png",
@@ -695,7 +695,7 @@
     "value": 250,
     "weight": 0.5,
     "merchant_avail": "Rare",
-    "garden_hf": null
+    "garden": null
   },
   {
     "image": "//images.uesp.net/thumb/5/58/SR-icon-ingredient-Deathbell.png/48px-SR-icon-ingredient-Deathbell.png",
@@ -722,7 +722,7 @@
     "value": 4,
     "weight": 0.1,
     "merchant_avail": "Rare",
-    "garden_hf": 3
+    "garden": 3
   },
   {
     "image": "//images.uesp.net/thumb/0/0e/SR-icon-ingredient-Dragons_Tongue.png/48px-SR-icon-ingredient-Dragons_Tongue.png",
@@ -747,7 +747,7 @@
     "value": 5,
     "weight": 0.1,
     "merchant_avail": "Common",
-    "garden_hf": 4
+    "garden": 4
   },
   {
     "image": "//images.uesp.net/thumb/e/e5/SR-icon-ingredient-Dwarven_Oil.png/48px-SR-icon-ingredient-Dwarven_Oil.png",
@@ -772,7 +772,7 @@
     "value": 15,
     "weight": 0.25,
     "merchant_avail": "Uncommon",
-    "garden_hf": null
+    "garden": null
   },
   {
     "image": "//images.uesp.net/thumb/f/f1/SR-icon-ingredient-Ectoplasm.png/48px-SR-icon-ingredient-Ectoplasm.png",
@@ -798,7 +798,7 @@
     "value": 25,
     "weight": 0.1,
     "merchant_avail": "Uncommon",
-    "garden_hf": null
+    "garden": null
   },
   {
     "image": "//images.uesp.net/thumb/7/7a/SR-icon-ingredient-Elves_Ear.png/48px-SR-icon-ingredient-Elves_Ear.png",
@@ -823,7 +823,7 @@
     "value": 10,
     "weight": 0.1,
     "merchant_avail": "Common",
-    "garden_hf": null
+    "garden": null
   },
   {
     "image": "//images.uesp.net/thumb/5/53/SR-icon-ingredient-Emperor_Parasol_Moss.png/48px-SR-icon-ingredient-Emperor_Parasol_Moss.png",
@@ -850,7 +850,7 @@
     "value": 1,
     "weight": 0.25,
     "merchant_avail": "",
-    "garden_hf": null
+    "garden": null
   },
   {
     "image": "//images.uesp.net/thumb/4/4e/SR-icon-ingredient-Eye_of_Sabre_Cat.png/48px-SR-icon-ingredient-Eye_of_Sabre_Cat.png",
@@ -875,7 +875,7 @@
     "value": 2,
     "weight": 0.1,
     "merchant_avail": "None (Uncommon)",
-    "garden_hf": null
+    "garden": null
   },
   {
     "image": "//images.uesp.net/thumb/6/6e/SR-icon-ingredient-Falmer_Ear.png/48px-SR-icon-ingredient-Falmer_Ear.png",
@@ -900,7 +900,7 @@
     "value": 10,
     "weight": 0.2,
     "merchant_avail": "Uncommon",
-    "garden_hf": null
+    "garden": null
   },
   {
     "image": "//images.uesp.net/thumb/4/42/SR-icon-ingredient-Felsaad_Tern_Feathers.png/48px-SR-icon-ingredient-Felsaad_Tern_Feathers.png",
@@ -926,7 +926,7 @@
     "value": 15,
     "weight": 0.1,
     "merchant_avail": "",
-    "garden_hf": null
+    "garden": null
   },
   {
     "image": "//images.uesp.net/thumb/c/cc/SR-icon-ingredient-Fire_Salts.png/48px-SR-icon-ingredient-Fire_Salts.png",
@@ -951,7 +951,7 @@
     "value": 50,
     "weight": 0.25,
     "merchant_avail": "Rare",
-    "garden_hf": null
+    "garden": null
   },
   {
     "image": "//images.uesp.net/thumb/7/76/SR-icon-ingredient-Fly_Amanita.png/48px-SR-icon-ingredient-Fly_Amanita.png",
@@ -976,7 +976,7 @@
     "value": 2,
     "weight": 0.1,
     "merchant_avail": "Uncommon",
-    "garden_hf": 4
+    "garden": 4
   },
   {
     "image": "//images.uesp.net/thumb/9/99/SR-icon-ingredient-Frost_Mirriam.png/48px-SR-icon-ingredient-Frost_Mirriam.png",
@@ -1001,7 +1001,7 @@
     "value": 1,
     "weight": 0.1,
     "merchant_avail": "Uncommon",
-    "garden_hf": null
+    "garden": null
   },
   {
     "image": "//images.uesp.net/thumb/5/58/SR-icon-ingredient-Frost_Salts.png/48px-SR-icon-ingredient-Frost_Salts.png",
@@ -1026,7 +1026,7 @@
     "value": 100,
     "weight": 0.25,
     "merchant_avail": "Rare",
-    "garden_hf": null
+    "garden": null
   },
   {
     "image": "//images.uesp.net/thumb/e/e5/SR-icon-ingredient-Garlic.png/48px-SR-icon-ingredient-Garlic.png",
@@ -1051,7 +1051,7 @@
     "value": 1,
     "weight": 0.25,
     "merchant_avail": "Common",
-    "garden_hf": null
+    "garden": null
   },
   {
     "image": "//images.uesp.net/thumb/8/8b/SR-icon-ingredient-Giant_Lichen.png/48px-SR-icon-ingredient-Giant_Lichen.png",
@@ -1076,7 +1076,7 @@
     "value": 5,
     "weight": 0.25,
     "merchant_avail": "Uncommon",
-    "garden_hf": 4
+    "garden": 4
   },
   {
     "image": "//images.uesp.net/thumb/b/bc/SR-icon-ingredient-Giants_Toe.png/48px-SR-icon-ingredient-Giants_Toe.png",
@@ -1103,7 +1103,7 @@
     "value": 20,
     "weight": 1,
     "merchant_avail": "Rare",
-    "garden_hf": null
+    "garden": null
   },
   {
     "image": "//images.uesp.net/thumb/c/c5/SR-icon-ingredient-Gleamblossom.png/48px-SR-icon-ingredient-Gleamblossom.png",
@@ -1129,7 +1129,7 @@
     "value": 5,
     "weight": 0.1,
     "merchant_avail": "None",
-    "garden_hf": null
+    "garden": null
   },
   {
     "image": "//images.uesp.net/thumb/f/f8/SR-icon-ingredient-Glow_Dust.png/48px-SR-icon-ingredient-Glow_Dust.png",
@@ -1154,7 +1154,7 @@
     "value": 20,
     "weight": 0.5,
     "merchant_avail": "Uncommon",
-    "garden_hf": null
+    "garden": null
   },
   {
     "image": "//images.uesp.net/thumb/7/71/SR-icon-ingredient-Glowing_Mushroom.png/48px-SR-icon-ingredient-Glowing_Mushroom.png",
@@ -1179,7 +1179,7 @@
     "value": 5,
     "weight": 0.2,
     "merchant_avail": "None",
-    "garden_hf": 5
+    "garden": 5
   },
   {
     "image": "//images.uesp.net/thumb/7/78/SR-icon-ingredient-Grass_Pod.png/48px-SR-icon-ingredient-Grass_Pod.png",
@@ -1204,7 +1204,7 @@
     "value": 1,
     "weight": 0.1,
     "merchant_avail": "Uncommon",
-    "garden_hf": 3
+    "garden": 3
   },
   {
     "image": "//images.uesp.net/thumb/3/30/SR-icon-ingredient-Hagraven_Claw.png/48px-SR-icon-ingredient-Hagraven_Claw.png",
@@ -1229,7 +1229,7 @@
     "value": 20,
     "weight": 0.25,
     "merchant_avail": "Rare",
-    "garden_hf": null
+    "garden": null
   },
   {
     "image": "//images.uesp.net/thumb/d/d8/SR-icon-ingredient-Hagraven_Feathers.png/48px-SR-icon-ingredient-Hagraven_Feathers.png",
@@ -1254,7 +1254,7 @@
     "value": 20,
     "weight": 0.1,
     "merchant_avail": "Rare",
-    "garden_hf": null
+    "garden": null
   },
   {
     "image": "//images.uesp.net/thumb/2/22/SR-icon-ingredient-Hanging_Moss.png/48px-SR-icon-ingredient-Hanging_Moss.png",
@@ -1279,7 +1279,7 @@
     "value": 1,
     "weight": 0.25,
     "merchant_avail": "Uncommon",
-    "garden_hf": null
+    "garden": null
   },
   {
     "image": "//images.uesp.net/thumb/6/69/SR-icon-ingredient-Hawk_Beak.png/48px-SR-icon-ingredient-Hawk_Beak.png",
@@ -1304,7 +1304,7 @@
     "value": 15,
     "weight": 0.25,
     "merchant_avail": "Uncommon",
-    "garden_hf": null
+    "garden": null
   },
   {
     "image": "//images.uesp.net/thumb/5/5c/SR-icon-ingredient-Hawk_Feathers.png/48px-SR-icon-ingredient-Hawk_Feathers.png",
@@ -1330,7 +1330,7 @@
     "value": 15,
     "weight": 0.1,
     "merchant_avail": "Uncommon",
-    "garden_hf": null
+    "garden": null
   },
   {
     "image": "//images.uesp.net/thumb/4/41/SR-icon-ingredient-Hawk%27s_Egg.png/48px-SR-icon-ingredient-Hawk%27s_Egg.png",
@@ -1356,7 +1356,7 @@
     "value": 5,
     "weight": 0.5,
     "merchant_avail": "None",
-    "garden_hf": null
+    "garden": null
   },
   {
     "image": "//images.uesp.net/thumb/e/ec/SR-icon-ingredient-Histcarp.png/48px-SR-icon-ingredient-Histcarp.png",
@@ -1381,7 +1381,7 @@
     "value": 6,
     "weight": 0.25,
     "merchant_avail": "Common",
-    "garden_hf": null
+    "garden": null
   },
   {
     "image": "//images.uesp.net/thumb/e/e0/SR-icon-ingredient-Honeycomb.png/48px-SR-icon-ingredient-Honeycomb.png",
@@ -1407,7 +1407,7 @@
     "value": 5,
     "weight": 1,
     "merchant_avail": "None (Common)",
-    "garden_hf": null
+    "garden": null
   },
   {
     "image": "//images.uesp.net/thumb/9/9d/SR-icon-ingredient-Human_Flesh.png/48px-SR-icon-ingredient-Human_Flesh.png",
@@ -1432,7 +1432,7 @@
     "value": 1,
     "weight": 0.25,
     "merchant_avail": "None",
-    "garden_hf": null
+    "garden": null
   },
   {
     "image": "//images.uesp.net/thumb/f/f6/SR-icon-ingredient-Human_Heart.png/48px-SR-icon-ingredient-Human_Heart.png",
@@ -1457,7 +1457,7 @@
     "value": 0,
     "weight": 1,
     "merchant_avail": "None",
-    "garden_hf": null
+    "garden": null
   },
   {
     "image": "//images.uesp.net/thumb/9/95/SR-icon-ingredient-Ice_Wraith_Teeth.png/48px-SR-icon-ingredient-Ice_Wraith_Teeth.png",
@@ -1482,7 +1482,7 @@
     "value": 30,
     "weight": 0.25,
     "merchant_avail": "Rare",
-    "garden_hf": null
+    "garden": null
   },
   {
     "image": "//images.uesp.net/thumb/7/77/SR-icon-ingredient-Imp_Stool.png/48px-SR-icon-ingredient-Imp_Stool.png",
@@ -1509,7 +1509,7 @@
     "value": 0,
     "weight": 0.3,
     "merchant_avail": "Rare",
-    "garden_hf": 4
+    "garden": 4
   },
   {
     "image": "//images.uesp.net/thumb/5/50/SR-icon-ingredient-Jazbay_Grapes.png/48px-SR-icon-ingredient-Jazbay_Grapes.png",
@@ -1534,7 +1534,7 @@
     "value": 1,
     "weight": 0.2,
     "merchant_avail": "Rare",
-    "garden_hf": 3
+    "garden": 3
   },
   {
     "image": "//images.uesp.net/thumb/1/10/SR-icon-ingredient-Juniper_Berries.png/48px-SR-icon-ingredient-Juniper_Berries.png",
@@ -1559,7 +1559,7 @@
     "value": 1,
     "weight": 0.1,
     "merchant_avail": "Common",
-    "garden_hf": 4
+    "garden": 4
   },
   {
     "image": "//images.uesp.net/thumb/6/69/SR-icon-ingredient-Large_Antlers.png/48px-SR-icon-ingredient-Large_Antlers.png",
@@ -1586,7 +1586,7 @@
     "value": 2,
     "weight": 0.1,
     "merchant_avail": "None (Uncommon)",
-    "garden_hf": null
+    "garden": null
   },
   {
     "image": "//images.uesp.net/thumb/3/30/SR-icon-ingredient-Lavender.png/48px-SR-icon-ingredient-Lavender.png",
@@ -1611,7 +1611,7 @@
     "value": 1,
     "weight": 0.1,
     "merchant_avail": "Common",
-    "garden_hf": 3
+    "garden": 3
   },
   {
     "image": "//images.uesp.net/thumb/f/f6/SR-icon-ingredient-Luna_Moth_Wing.png/48px-SR-icon-ingredient-Luna_Moth_Wing.png",
@@ -1636,7 +1636,7 @@
     "value": 5,
     "weight": 0.1,
     "merchant_avail": "Uncommon",
-    "garden_hf": null
+    "garden": null
   },
   {
     "image": "//images.uesp.net/thumb/4/48/SR-icon-ingredient-Moon_Sugar.png/48px-SR-icon-ingredient-Moon_Sugar.png",
@@ -1661,7 +1661,7 @@
     "value": 50,
     "weight": 0.25,
     "merchant_avail": "Uncommon",
-    "garden_hf": null
+    "garden": null
   },
   {
     "image": "//images.uesp.net/thumb/5/51/SR-icon-ingredient-Mora_Tapinella.png/48px-SR-icon-ingredient-Mora_Tapinella.png",
@@ -1686,7 +1686,7 @@
     "value": 4,
     "weight": 0.25,
     "merchant_avail": "Uncommon",
-    "garden_hf": 3
+    "garden": 3
   },
   {
     "image": "//images.uesp.net/thumb/7/74/SR-icon-ingredient-Mudcrab_Chitin.png/48px-SR-icon-ingredient-Mudcrab_Chitin.png",
@@ -1711,7 +1711,7 @@
     "value": 2,
     "weight": 0.25,
     "merchant_avail": "None (Common)",
-    "garden_hf": null
+    "garden": null
   },
   {
     "image": "//images.uesp.net/thumb/5/59/SR-icon-ingredient-Namira%27s_Rot.png/48px-SR-icon-ingredient-Namira%27s_Rot.png",
@@ -1736,7 +1736,7 @@
     "value": 0,
     "weight": 0.25,
     "merchant_avail": "Uncommon",
-    "garden_hf": 3
+    "garden": 3
   },
   {
     "image": "//images.uesp.net/thumb/9/9a/SR-icon-ingredient-Netch_Jelly.png/48px-SR-icon-ingredient-Netch_Jelly.png",
@@ -1763,7 +1763,7 @@
     "value": 20,
     "weight": 0.5,
     "merchant_avail": "",
-    "garden_hf": null
+    "garden": null
   },
   {
     "image": "//images.uesp.net/thumb/6/6f/SR-icon-ingredient-Nightshade.png/48px-SR-icon-ingredient-Nightshade.png",
@@ -1789,7 +1789,7 @@
     "value": 8,
     "weight": 0.1,
     "merchant_avail": "Rare",
-    "garden_hf": 3
+    "garden": 3
   },
   {
     "image": "//images.uesp.net/thumb/4/46/SR-icon-ingredient-Nirnroot.png/48px-SR-icon-ingredient-Nirnroot.png",
@@ -1815,7 +1815,7 @@
     "value": 10,
     "weight": 0.2,
     "merchant_avail": "Rare",
-    "garden_hf": null
+    "garden": null
   },
   {
     "image": "//images.uesp.net/thumb/7/75/SR-icon-ingredient-Nordic_Barnacle.png/48px-SR-icon-ingredient-Nordic_Barnacle.png",
@@ -1840,7 +1840,7 @@
     "value": 5,
     "weight": 0.2,
     "merchant_avail": "Uncommon",
-    "garden_hf": null
+    "garden": null
   },
   {
     "image": "//images.uesp.net/thumb/e/e7/SR-icon-ingredient-Orange_Dartwing.png/48px-SR-icon-ingredient-Orange_Dartwing.png",
@@ -1865,7 +1865,7 @@
     "value": 1,
     "weight": 0.1,
     "merchant_avail": "None (Common)",
-    "garden_hf": null
+    "garden": null
   },
   {
     "image": "//images.uesp.net/thumb/a/ad/SR-icon-ingredient-Pearl.png/48px-SR-icon-ingredient-Pearl.png",
@@ -1890,7 +1890,7 @@
     "value": 2,
     "weight": 0.1,
     "merchant_avail": "None (Uncommon)",
-    "garden_hf": null
+    "garden": null
   },
   {
     "image": "//images.uesp.net/thumb/0/0f/SR-icon-ingredient-Pine_Thrush_Egg.png/48px-SR-icon-ingredient-Pine_Thrush_Egg.png",
@@ -1915,7 +1915,7 @@
     "value": 2,
     "weight": 0.5,
     "merchant_avail": "Common",
-    "garden_hf": null
+    "garden": null
   },
   {
     "image": "//images.uesp.net/thumb/1/13/SR-icon-ingredient-Poison_Bloom.png/48px-SR-icon-ingredient-Poison_Bloom.png",
@@ -1942,7 +1942,7 @@
     "value": 5,
     "weight": 0.25,
     "merchant_avail": "None",
-    "garden_hf": null
+    "garden": null
   },
   {
     "image": "//images.uesp.net/thumb/c/c9/SR-icon-ingredient-Powdered_Mammoth_Tusk.png/48px-SR-icon-ingredient-Powdered_Mammoth_Tusk.png",
@@ -1967,7 +1967,7 @@
     "value": 2,
     "weight": 0.1,
     "merchant_avail": "None (Uncommon)",
-    "garden_hf": null
+    "garden": null
   },
   {
     "image": "//images.uesp.net/thumb/e/e1/SR-icon-ingredient-Purple_Mountain_Flower.png/48px-SR-icon-ingredient-Purple_Mountain_Flower.png",
@@ -1992,7 +1992,7 @@
     "value": 2,
     "weight": 0.1,
     "merchant_avail": "Common",
-    "garden_hf": 3
+    "garden": 3
   },
   {
     "image": "//images.uesp.net/thumb/b/bb/SR-icon-ingredient-Red_Mountain_Flower.png/48px-SR-icon-ingredient-Red_Mountain_Flower.png",
@@ -2017,7 +2017,7 @@
     "value": 2,
     "weight": 0.1,
     "merchant_avail": "Common",
-    "garden_hf": 3
+    "garden": 3
   },
   {
     "image": "//images.uesp.net/thumb/2/25/SR-icon-ingredient-River_Betty.png/48px-SR-icon-ingredient-River_Betty.png",
@@ -2043,7 +2043,7 @@
     "value": 15,
     "weight": 0.25,
     "merchant_avail": "Common",
-    "garden_hf": null
+    "garden": null
   },
   {
     "image": "//images.uesp.net/thumb/f/fc/SR-icon-ingredient-Rock_Warbler_Egg.png/48px-SR-icon-ingredient-Rock_Warbler_Egg.png",
@@ -2068,7 +2068,7 @@
     "value": 2,
     "weight": 0.5,
     "merchant_avail": "Uncommon",
-    "garden_hf": null
+    "garden": null
   },
   {
     "image": "//images.uesp.net/thumb/1/1b/SR-icon-ingredient-Sabre_Cat_Tooth.png/48px-SR-icon-ingredient-Sabre_Cat_Tooth.png",
@@ -2093,7 +2093,7 @@
     "value": 2,
     "weight": 0.1,
     "merchant_avail": "None (Uncommon)",
-    "garden_hf": null
+    "garden": null
   },
   {
     "image": "//images.uesp.net/thumb/2/2a/SR-icon-ingredient-Salmon_Roe.png/48px-SR-icon-ingredient-Salmon_Roe.png",
@@ -2124,7 +2124,7 @@
     "value": 5,
     "weight": 0.2,
     "merchant_avail": "None",
-    "garden_hf": null
+    "garden": null
   },
   {
     "image": "//images.uesp.net/thumb/3/36/SR-icon-ingredient-Salt_Pile.png/48px-SR-icon-ingredient-Salt_Pile.png",
@@ -2149,7 +2149,7 @@
     "value": 1,
     "weight": 0.2,
     "merchant_avail": "None",
-    "garden_hf": null
+    "garden": null
   },
   {
     "image": "//images.uesp.net/thumb/1/18/SR-icon-ingredient-Scaly_Pholiota.png/48px-SR-icon-ingredient-Scaly_Pholiota.png",
@@ -2174,7 +2174,7 @@
     "value": 4,
     "weight": 0.25,
     "merchant_avail": "Uncommon",
-    "garden_hf": 5
+    "garden": 5
   },
   {
     "image": "//images.uesp.net/thumb/e/eb/SR-icon-ingredient-Scathecraw.png/48px-SR-icon-ingredient-Scathecraw.png",
@@ -2200,7 +2200,7 @@
     "value": 1,
     "weight": 0.1,
     "merchant_avail": "",
-    "garden_hf": null
+    "garden": null
   },
   {
     "image": "//images.uesp.net/thumb/3/32/SR-icon-ingredient-Silverside_Perch.png/48px-SR-icon-ingredient-Silverside_Perch.png",
@@ -2225,7 +2225,7 @@
     "value": 15,
     "weight": 0.25,
     "merchant_avail": "Common",
-    "garden_hf": null
+    "garden": null
   },
   {
     "image": "//images.uesp.net/thumb/d/dc/SR-icon-ingredient-Skeever_Tail.png/48px-SR-icon-ingredient-Skeever_Tail.png",
@@ -2250,7 +2250,7 @@
     "value": 3,
     "weight": 0.2,
     "merchant_avail": "Common",
-    "garden_hf": null
+    "garden": null
   },
   {
     "image": "//images.uesp.net/thumb/8/84/SR-icon-ingredient-Slaughterfish_Egg.png/48px-SR-icon-ingredient-Slaughterfish_Egg.png",
@@ -2275,7 +2275,7 @@
     "value": 3,
     "weight": 0.2,
     "merchant_avail": "Uncommon",
-    "garden_hf": null
+    "garden": null
   },
   {
     "image": "//images.uesp.net/thumb/0/0f/SR-icon-ingredient-Slaughterfish_Scales.png/48px-SR-icon-ingredient-Slaughterfish_Scales.png",
@@ -2300,7 +2300,7 @@
     "value": 3,
     "weight": 0.1,
     "merchant_avail": "Uncommon",
-    "garden_hf": null
+    "garden": null
   },
   {
     "image": "//images.uesp.net/thumb/4/4e/SR-icon-ingredient-Small_Antlers.png/48px-SR-icon-ingredient-Small_Antlers.png",
@@ -2325,7 +2325,7 @@
     "value": 2,
     "weight": 0.1,
     "merchant_avail": "None (Common)",
-    "garden_hf": null
+    "garden": null
   },
   {
     "image": "//images.uesp.net/thumb/8/8f/SR-icon-ingredient-Small_Pearl.png/48px-SR-icon-ingredient-Small_Pearl.png",
@@ -2350,7 +2350,7 @@
     "value": 2,
     "weight": 0.1,
     "merchant_avail": "None (Uncommon)",
-    "garden_hf": null
+    "garden": null
   },
   {
     "image": "//images.uesp.net/thumb/d/d3/SR-icon-ingredient-Snowberries.png/48px-SR-icon-ingredient-Snowberries.png",
@@ -2375,7 +2375,7 @@
     "value": 4,
     "weight": 0.1,
     "merchant_avail": "Common",
-    "garden_hf": 4
+    "garden": 4
   },
   {
     "image": "//images.uesp.net/thumb/0/0c/SR-icon-ingredient-Spawn_Ash.png/48px-SR-icon-ingredient-Spawn_Ash.png",
@@ -2401,7 +2401,7 @@
     "value": 20,
     "weight": 0.1,
     "merchant_avail": "",
-    "garden_hf": null
+    "garden": null
   },
   {
     "image": "//images.uesp.net/thumb/0/07/SR-icon-ingredient-Spider_Egg.png/48px-SR-icon-ingredient-Spider_Egg.png",
@@ -2426,7 +2426,7 @@
     "value": 5,
     "weight": 0.2,
     "merchant_avail": "Uncommon",
-    "garden_hf": null
+    "garden": null
   },
   {
     "image": "//images.uesp.net/thumb/d/d6/SR-icon-ingredient-Spriggan_Sap.png/48px-SR-icon-ingredient-Spriggan_Sap.png",
@@ -2451,7 +2451,7 @@
     "value": 15,
     "weight": 0.2,
     "merchant_avail": "Uncommon",
-    "garden_hf": null
+    "garden": null
   },
   {
     "image": "//images.uesp.net/thumb/9/92/SR-icon-ingredient-Swamp_Fungal_Pod.png/48px-SR-icon-ingredient-Swamp_Fungal_Pod.png",
@@ -2476,7 +2476,7 @@
     "value": 5,
     "weight": 0.25,
     "merchant_avail": "Uncommon",
-    "garden_hf": 3
+    "garden": 3
   },
   {
     "image": "//images.uesp.net/thumb/7/78/SR-icon-ingredient-Taproot.png/48px-SR-icon-ingredient-Taproot.png",
@@ -2501,7 +2501,7 @@
     "value": 15,
     "weight": 0.5,
     "merchant_avail": "Uncommon",
-    "garden_hf": null
+    "garden": null
   },
   {
     "image": "//images.uesp.net/thumb/b/bf/SR-icon-ingredient-Thistle_Branch.png/48px-SR-icon-ingredient-Thistle_Branch.png",
@@ -2529,7 +2529,7 @@
     "value": 1,
     "weight": 0.1,
     "merchant_avail": "Common",
-    "garden_hf": 3
+    "garden": 3
   },
   {
     "image": "//images.uesp.net/thumb/9/99/SR-icon-ingredient-Torchbug_Thorax.png/48px-SR-icon-ingredient-Torchbug_Thorax.png",
@@ -2554,7 +2554,7 @@
     "value": 1,
     "weight": 0.1,
     "merchant_avail": "None (Common)",
-    "garden_hf": null
+    "garden": null
   },
   {
     "image": "//images.uesp.net/thumb/1/1e/SR-icon-ingredient-Trama_Root.png/48px-SR-icon-ingredient-Trama_Root.png",
@@ -2580,7 +2580,7 @@
     "value": 1,
     "weight": 0.2,
     "merchant_avail": "",
-    "garden_hf": null
+    "garden": null
   },
   {
     "image": "//images.uesp.net/thumb/8/8a/SR-icon-ingredient-Troll_Fat.png/48px-SR-icon-ingredient-Troll_Fat.png",
@@ -2605,7 +2605,7 @@
     "value": 15,
     "weight": 1,
     "merchant_avail": "Uncommon",
-    "garden_hf": null
+    "garden": null
   },
   {
     "image": "//images.uesp.net/thumb/7/7e/SR-icon-ingredient-Tundra_Cotton.png/48px-SR-icon-ingredient-Tundra_Cotton.png",
@@ -2630,7 +2630,7 @@
     "value": 1,
     "weight": 0.1,
     "merchant_avail": "Common",
-    "garden_hf": 3
+    "garden": 3
   },
   {
     "image": "//images.uesp.net/thumb/2/2f/SR-icon-ingredient-Vampire_Dust.png/48px-SR-icon-ingredient-Vampire_Dust.png",
@@ -2655,7 +2655,7 @@
     "value": 25,
     "weight": 0.2,
     "merchant_avail": "Rare",
-    "garden_hf": null
+    "garden": null
   },
   {
     "image": "//images.uesp.net/thumb/7/77/SR-icon-ingredient-Void_Salts.png/48px-SR-icon-ingredient-Void_Salts.png",
@@ -2680,7 +2680,7 @@
     "value": 125,
     "weight": 0.2,
     "merchant_avail": "Rare",
-    "garden_hf": null
+    "garden": null
   },
   {
     "image": "//images.uesp.net/thumb/7/7f/SR-icon-ingredient-Wheat.png/48px-SR-icon-ingredient-Wheat.png",
@@ -2705,7 +2705,7 @@
     "value": 5,
     "weight": 0.1,
     "merchant_avail": "Common",
-    "garden_hf": 4
+    "garden": 4
   },
   {
     "image": "//images.uesp.net/thumb/f/fa/SR-icon-ingredient-White_Cap.png/48px-SR-icon-ingredient-White_Cap.png",
@@ -2730,7 +2730,7 @@
     "value": 0,
     "weight": 0.3,
     "merchant_avail": "Uncommon",
-    "garden_hf": 2
+    "garden": 2
   },
   {
     "image": "//images.uesp.net/thumb/9/9d/SR-icon-ingredient-Wisp_Wrappings.png/48px-SR-icon-ingredient-Wisp_Wrappings.png",
@@ -2755,7 +2755,7 @@
     "value": 2,
     "weight": 0.1,
     "merchant_avail": "None (Uncommon)",
-    "garden_hf": null
+    "garden": null
   },
   {
     "image": "//images.uesp.net/thumb/6/6e/SR-icon-ingredient-Yellow_Mountain_Flower.png/48px-SR-icon-ingredient-Yellow_Mountain_Flower.png",
@@ -2782,7 +2782,7 @@
     "value": 2,
     "weight": 0.1,
     "merchant_avail": "None",
-    "garden_hf": null
+    "garden": null
   },
   {
     "image": "//images.uesp.net/thumb/3/34/SR-icon-ingredient-Alocasia_Fruit.png/48px-SR-icon-ingredient-Alocasia_Fruit.png",
