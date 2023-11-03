@@ -34,6 +34,7 @@ interface IngredientEffect {
 
 interface Recipe {
   ingredientKeys: string[];
+  ingredients: IngredientData[];
   effects: IngredientEffect[];
 }
 var allRecipes: Recipe[] = [];
@@ -85,6 +86,10 @@ function buildRecipesDB(effectsData: EffectData[], ingredientsData: IngredientDa
           ingredient1.pkey,
           ingredient2.pkey
         ],
+        ingredients: [
+          ingredient1,
+          ingredient2
+        ],
         effects: twoIngredientsEffects
       });
 
@@ -107,6 +112,11 @@ function buildRecipesDB(effectsData: EffectData[], ingredientsData: IngredientDa
             ingredient1.pkey,
             ingredient2.pkey,
             ingredient3.pkey
+          ],
+          ingredients: [
+            ingredient1,
+            ingredient2,
+            ingredient3
           ],
           effects: [...twoIngredientsEffects, ...thirdIngredientEffects]
         });
@@ -151,12 +161,12 @@ function drawRecipesTableGUI(recipes: Recipe[]): void {
   recipes.slice(0, 50).forEach((recipe) => {
     const row = document.createElement('tr');
 
-    for (const ingredient of recipe.ingredientKeys){
+    for (const ingredient of recipe.ingredients){
       const ingredient1Cell = document.createElement('td');
-      ingredient1Cell.textContent = ingredient;
-      const includeIgrFilterButton = getFilterButton(ingredient, FilterAction.Include, FilterType.Ingredient);
+      ingredient1Cell.textContent = ingredient.title;
+      const includeIgrFilterButton = getFilterButton(ingredient.pkey, FilterAction.Include, FilterType.Ingredient);
       ingredient1Cell.appendChild(includeIgrFilterButton);
-      const excludeIgrFilterButton = getFilterButton(ingredient, FilterAction.Exclude, FilterType.Ingredient);
+      const excludeIgrFilterButton = getFilterButton(ingredient.pkey, FilterAction.Exclude, FilterType.Ingredient);
       ingredient1Cell.appendChild(excludeIgrFilterButton);
       row.appendChild(ingredient1Cell);
     }
