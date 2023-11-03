@@ -87,3 +87,7 @@ td svg.filterShowIcon:hover {
 #filtersContainer div:hover {
   border-color: #4a4a4a;
 }
+footer {
+  text-align: center;
+  padding: 10px;
+}
