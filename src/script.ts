@@ -15,6 +15,7 @@ interface IngredientData {
   image: string;
   title: string;
   pkey: string;
+  origin: string;
   id: string;
   collected_by: string;
   effects: IngredientEffect[];
@@ -163,7 +164,7 @@ function drawRecipesTableGUI(recipes: Recipe[]): void {
 
     for (const ingredient of recipe.ingredients){
       const ingredient1Cell = document.createElement('td');
-      ingredient1Cell.textContent = ingredient.title;
+      ingredient1Cell.textContent = ingredient.origin ? `${ingredient.title} [${ingredient.origin}]` : ingredient.title;
       const includeIgrFilterButton = getFilterButton(ingredient.pkey, FilterAction.Include, FilterType.Ingredient);
       ingredient1Cell.appendChild(includeIgrFilterButton);
       const excludeIgrFilterButton = getFilterButton(ingredient.pkey, FilterAction.Exclude, FilterType.Ingredient);
@@ -243,7 +244,7 @@ function populateDropdown(effects: EffectData[], ingredientsData: IngredientData
 
   ingredientsData.forEach((ingredient) => {
     const li = document.createElement("li");
-    li.textContent = ingredient.title;
+    li.textContent = ingredient.origin ? `${ingredient.title} [${ingredient.origin}]` : ingredient.title;
     li.onmousedown = () => addFilterCondition(ingredient.pkey, FilterAction.Include, FilterType.Ingredient);
     dropdown.appendChild(li);
   });
