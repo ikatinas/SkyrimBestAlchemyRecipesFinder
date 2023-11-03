@@ -48,12 +48,30 @@ async function fetchData(): Promise<void> {
 
   try {
     const [effectsData, ingredientsData] = await Promise.all(promises);
+    drawOriginsFilterGUI(ingredientsData);
     const recipes = buildRecipesDB(effectsData, ingredientsData)
     allRecipes = preFilteredRecipes = recipes.sort((a, b) => b.effects.length - a.effects.length);
     drawRecipesTableGUI(allRecipes);
     populateDropdown(effectsData, ingredientsData);
   } catch (error) {
     console.log('Error:', error);
+  }
+}
+
+function drawOriginsFilterGUI(ingredientsData: IngredientData[]){
+  const uniqueOrigins: string[] = Array.from(new Set(ingredientsData.map((ingredient) => ingredient.origin)));
+  const divContainer = document.getElementById("originPreFilterContainer") as HTMLDivElement;
+  for (const origin of uniqueOrigins) {
+    if (!origin) continue;
+    const checkboxHTML = `
+      <label>
+        <input type="checkbox" checked name="origin" value="${origin}" onchange="preFilterLimiters()">
+        ${origin}
+      </label>
+    `;
+    const checkboxDiv = document.createElement('div');
+    checkboxDiv.innerHTML = checkboxHTML;
+    divContainer.appendChild(checkboxDiv)
   }
 }
 
@@ -280,7 +298,6 @@ function preFilterLimiters(){
   const allPreFilterTypeStrings = Object.keys(PreFilterType).filter(key => Number.isNaN(parseInt(key)));
   for (const preFilterType of allPreFilterTypeStrings) {
     const checkbox: HTMLInputElement = document.getElementById(preFilterType) as HTMLInputElement;
-    console.log(preFilterType, checkbox.checked)
     if (checkbox.checked && preFilterType == PreFilterType[PreFilterType.isPureCheck]){
       preFilteredRecipes = preFilteredRecipes.filter(recipe => {
         return !recipe.effects.some(effect => 
@@ -301,6 +318,17 @@ function preFilterLimiters(){
       })
     }
   }
+  const divContainer = document.getElementById("originPreFilterContainer") as HTMLDivElement;
+  const inputFields = divContainer.querySelectorAll("input");
+  inputFields.forEach((input) => {
+    if (!input.checked){
+      preFilteredRecipes = preFilteredRecipes.filter(recipe => {
+        return !recipe.ingredients.some(ingredient => 
+          ingredient.origin == input.value
+        )
+      })
+    }
+  });
   applyFilter();
 }
 

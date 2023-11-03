@@ -68,17 +68,20 @@ td svg.filterShowIcon:hover {
   display: block;
 }
 #preFilterContainer,
+#originPreFilterContainer,
 #filtersContainer {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
+#originPreFilterContainer div,
 #preFilterContainer div,
 #filtersContainer div {
   padding: 5px;
   margin: 5px;
 }
+#originPreFilterContainer label,
 #preFilterContainer input,
 #preFilterContainer label,
 #filtersContainer div {
