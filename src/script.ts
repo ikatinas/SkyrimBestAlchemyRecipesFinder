@@ -33,7 +33,7 @@ interface IngredientEffect {
 }
 
 interface Recipe {
-  ingredients: string[];
+  ingredientKeys: string[];
   effects: IngredientEffect[];
 }
 var allRecipes: Recipe[] = [];
@@ -75,13 +75,13 @@ function buildRecipesDB(effectsData: EffectData[], ingredientsData: IngredientDa
         continue; // No matching effects
       }
       
-      if (recipes2.some(rec => rec.ingredients.every(ingredientKey =>
+      if (recipes2.some(rec => rec.ingredientKeys.every(ingredientKey =>
         ingredientKey == ingredient1.pkey || ingredientKey == ingredient2.pkey))) {
         continue; // Effects already exists
       }
       
       recipes2.push({
-        ingredients: [
+        ingredientKeys: [
           ingredient1.pkey,
           ingredient2.pkey
         ],
@@ -103,7 +103,7 @@ function buildRecipesDB(effectsData: EffectData[], ingredientsData: IngredientDa
         }
 
         recipes3.push({
-          ingredients: [
+          ingredientKeys: [
             ingredient1.pkey,
             ingredient2.pkey,
             ingredient3.pkey
@@ -118,7 +118,7 @@ function buildRecipesDB(effectsData: EffectData[], ingredientsData: IngredientDa
   // discard 3 ingredient recipes with no added effect (same as 2 igr. rcp.)
   const filteredRecipes3 = recipes3.filter(recipe3 => {
     const matchingRecipes2 = recipes2.filter(recipe2 =>
-      recipe2.ingredients.every(ingredient => recipe3.ingredients.includes(ingredient))
+      recipe2.ingredientKeys.every(ingredient => recipe3.ingredientKeys.includes(ingredient))
     );
     if (!matchingRecipes2 || !matchingRecipes2.length) {
       console.warn("Some 2 ingridients recipes are missing")
@@ -151,7 +151,7 @@ function drawRecipesTableGUI(recipes: Recipe[]): void {
   recipes.slice(0, 50).forEach((recipe) => {
     const row = document.createElement('tr');
 
-    for (const ingredient of recipe.ingredients){
+    for (const ingredient of recipe.ingredientKeys){
       const ingredient1Cell = document.createElement('td');
       ingredient1Cell.textContent = ingredient;
       const includeIgrFilterButton = getFilterButton(ingredient, FilterAction.Include, FilterType.Ingredient);
@@ -160,7 +160,7 @@ function drawRecipesTableGUI(recipes: Recipe[]): void {
       ingredient1Cell.appendChild(excludeIgrFilterButton);
       row.appendChild(ingredient1Cell);
     }
-    if(recipe.ingredients.length < 3){
+    if(recipe.ingredientKeys.length < 3){
       row.appendChild(document.createElement('td'));
     }
 
@@ -338,7 +338,7 @@ function applyFilter() {
         recipe.effects.find(effect => effect.fkey == effectKey)
       )
         && includeConditions.ingredientKeys.every(ingredientKey =>
-          recipe.ingredients.find(ingredient => ingredient == ingredientKey)
+          recipe.ingredientKeys.find(ingredient => ingredient == ingredientKey)
         );
     });
   }
@@ -353,7 +353,7 @@ function applyFilter() {
       recipe.effects.some(effect => effect.fkey == excludeEffect)
     ) 
     && !excludeConditions.ingredientKeys.some(excludeIgr =>
-      recipe.ingredients.some(ingredient => ingredient == excludeIgr)
+      recipe.ingredientKeys.some(ingredient => ingredient == excludeIgr)
     );
   });
   
