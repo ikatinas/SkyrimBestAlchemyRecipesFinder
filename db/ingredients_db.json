@@ -26,7 +26,7 @@
   },
   {
     "image": "//images.uesp.net/thumb/3/31/SR-icon-ingredient-Ancestor_Moth_Wing.png/48px-SR-icon-ingredient-Ancestor_Moth_Wing.png",
-    "title": "Ancestor Moth Wing [DG]",
+    "title": "Ancestor Moth Wing",
     "pkey": "AncestorMothWingDG",
     "origin": "DG",
     "id": "xx0059ba",
@@ -52,7 +52,7 @@
   },
   {
     "image": "//images.uesp.net/thumb/b/b2/SR-icon-ingredient-Ash_Creep_Cluster.png/48px-SR-icon-ingredient-Ash_Creep_Cluster.png",
-    "title": "Ash Creep Cluster [DB]",
+    "title": "Ash Creep Cluster",
     "pkey": "AshCreepClusterDB",
     "origin": "DB",
     "id": "xx01cd74",
@@ -78,7 +78,7 @@
   },
   {
     "image": "//images.uesp.net/thumb/9/92/SR-icon-ingredient-Ash_Hopper_Jelly.png/48px-SR-icon-ingredient-Ash_Hopper_Jelly.png",
-    "title": "Ash Hopper Jelly [DB]",
+    "title": "Ash Hopper Jelly",
     "pkey": "AshHopperJellyDB",
     "origin": "DB",
     "id": "xx01cd71",
@@ -104,7 +104,7 @@
   },
   {
     "image": "//images.uesp.net/thumb/c/c0/SR-icon-ingredient-Ashen_Grass_Pod.png/48px-SR-icon-ingredient-Ashen_Grass_Pod.png",
-    "title": "Ashen Grass Pod [DB]",
+    "title": "Ashen Grass Pod",
     "pkey": "AshenGrassPodDB",
     "origin": "DB",
     "id": "xx016e26",
@@ -337,7 +337,7 @@
   },
   {
     "image": "//images.uesp.net/thumb/8/83/SR-icon-ingredient-Boar_Tusk.png/48px-SR-icon-ingredient-Boar_Tusk.png",
-    "title": "Boar Tusk [DB]",
+    "title": "Boar Tusk",
     "pkey": "BoarTuskDB",
     "origin": "DB",
     "id": "xx01cd6f",
@@ -419,7 +419,7 @@
   },
   {
     "image": "//images.uesp.net/thumb/6/6f/SR-icon-ingredient-Burnt_Spriggan_Wood.png/48px-SR-icon-ingredient-Burnt_Spriggan_Wood.png",
-    "title": "Burnt Spriggan Wood [DB]",
+    "title": "Burnt Spriggan Wood",
     "pkey": "BurntSprigganWoodDB",
     "origin": "DB",
     "id": "xx01cd6e",
@@ -546,7 +546,7 @@
   },
   {
     "image": "//images.uesp.net/thumb/a/a2/SR-icon-ingredient-Chaurus_Hunter_Antennae.png/48px-SR-icon-ingredient-Chaurus_Hunter_Antennae.png",
-    "title": "Chaurus Hunter Antennae [DG]",
+    "title": "Chaurus Hunter Antennae",
     "pkey": "ChaurusHunterAntennaeDG",
     "origin": "DG",
     "id": "xx0183b7",
@@ -827,7 +827,7 @@
   },
   {
     "image": "//images.uesp.net/thumb/5/53/SR-icon-ingredient-Emperor_Parasol_Moss.png/48px-SR-icon-ingredient-Emperor_Parasol_Moss.png",
-    "title": "Emperor Parasol Moss [DB]",
+    "title": "Emperor Parasol Moss",
     "pkey": "EmperorParasolMossDB",
     "origin": "DB",
     "id": "xx01ff75",
@@ -904,7 +904,7 @@
   },
   {
     "image": "//images.uesp.net/thumb/4/42/SR-icon-ingredient-Felsaad_Tern_Feathers.png/48px-SR-icon-ingredient-Felsaad_Tern_Feathers.png",
-    "title": "Felsaad Tern Feathers [DB]",
+    "title": "Felsaad Tern Feathers",
     "pkey": "FelsaadTernFeathersDB",
     "origin": "DB",
     "id": "xx03cd8e",
@@ -1107,7 +1107,7 @@
   },
   {
     "image": "//images.uesp.net/thumb/c/c5/SR-icon-ingredient-Gleamblossom.png/48px-SR-icon-ingredient-Gleamblossom.png",
-    "title": "Gleamblossom [DG]",
+    "title": "Gleamblossom",
     "pkey": "GleamblossomDG",
     "origin": "DG",
     "id": "xx00b097",
@@ -1334,7 +1334,7 @@
   },
   {
     "image": "//images.uesp.net/thumb/4/41/SR-icon-ingredient-Hawk%27s_Egg.png/48px-SR-icon-ingredient-Hawk%27s_Egg.png",
-    "title": "Hawk's Egg [HF]",
+    "title": "Hawk's Egg",
     "pkey": "HawksEggHF",
     "origin": "HF",
     "id": "xx00f1cc",
@@ -1740,7 +1740,7 @@
   },
   {
     "image": "//images.uesp.net/thumb/9/9a/SR-icon-ingredient-Netch_Jelly.png/48px-SR-icon-ingredient-Netch_Jelly.png",
-    "title": "Netch Jelly [DB]",
+    "title": "Netch Jelly",
     "pkey": "NetchJellyDB",
     "origin": "DB",
     "id": "xx01cd72",
@@ -1919,7 +1919,7 @@
   },
   {
     "image": "//images.uesp.net/thumb/1/13/SR-icon-ingredient-Poison_Bloom.png/48px-SR-icon-ingredient-Poison_Bloom.png",
-    "title": "Poison Bloom [DG]",
+    "title": "Poison Bloom",
     "pkey": "PoisonBloomDG",
     "origin": "DG",
     "id": "xx0185fb",
@@ -2097,7 +2097,7 @@
   },
   {
     "image": "//images.uesp.net/thumb/2/2a/SR-icon-ingredient-Salmon_Roe.png/48px-SR-icon-ingredient-Salmon_Roe.png",
-    "title": "Salmon Roe [HF]",
+    "title": "Salmon Roe",
     "pkey": "SalmonRoeHF",
     "origin": "HF",
     "id": "xx003545",
@@ -2178,7 +2178,7 @@
   },
   {
     "image": "//images.uesp.net/thumb/e/eb/SR-icon-ingredient-Scathecraw.png/48px-SR-icon-ingredient-Scathecraw.png",
-    "title": "Scathecraw [DB]",
+    "title": "Scathecraw",
     "pkey": "ScathecrawDB",
     "origin": "DB",
     "id": "xx017e97",
@@ -2379,7 +2379,7 @@
   },
   {
     "image": "//images.uesp.net/thumb/0/0c/SR-icon-ingredient-Spawn_Ash.png/48px-SR-icon-ingredient-Spawn_Ash.png",
-    "title": "Spawn Ash [DB]",
+    "title": "Spawn Ash",
     "pkey": "SpawnAshDB",
     "origin": "DB",
     "id": "xx01cd6d",
@@ -2558,7 +2558,7 @@
   },
   {
     "image": "//images.uesp.net/thumb/1/1e/SR-icon-ingredient-Trama_Root.png/48px-SR-icon-ingredient-Trama_Root.png",
-    "title": "Trama Root [DB]",
+    "title": "Trama Root",
     "pkey": "TramaRootDB",
     "origin": "DB",
     "id": "xx017008",
@@ -2759,7 +2759,7 @@
   },
   {
     "image": "//images.uesp.net/thumb/6/6e/SR-icon-ingredient-Yellow_Mountain_Flower.png/48px-SR-icon-ingredient-Yellow_Mountain_Flower.png",
-    "title": "Yellow Mountain Flower [DG]",
+    "title": "Yellow Mountain Flower",
     "pkey": "YellowMountainFlowerDG",
     "origin": "DG",
     "id": "xx002a78",
