@@ -22,7 +22,7 @@ interface IngredientData {
   value: number;
   weight: number;
   merchant_avail: string;
-  garden_hf: null;
+  garden: null;
 }
 
 interface IngredientEffect { 
@@ -39,6 +39,7 @@ interface Recipe {
   effects: IngredientEffect[];
 }
 var allRecipes: Recipe[] = [];
+var preFilteredRecipes: Recipe[] = [];
 async function fetchData(): Promise<void> {
   const promises: Promise<any>[] = [
     fetch('db/effects_db.json').then((response) => response.json()),
@@ -48,7 +49,7 @@ async function fetchData(): Promise<void> {
   try {
     const [effectsData, ingredientsData] = await Promise.all(promises);
     const recipes = buildRecipesDB(effectsData, ingredientsData)
-    allRecipes = recipes.sort((a, b) => b.effects.length - a.effects.length);
+    allRecipes = preFilteredRecipes = recipes.sort((a, b) => b.effects.length - a.effects.length);
     drawRecipesTableGUI(allRecipes);
     populateDropdown(effectsData, ingredientsData);
   } catch (error) {
@@ -268,6 +269,41 @@ function filterDropdownOptions() {
   }
 }
 
+enum PreFilterType{
+  isPureCheck,
+  isLimit2IgrCheck,
+  isGardenCheck
+}
+
+function preFilterLimiters(){
+  preFilteredRecipes = allRecipes;
+  const allPreFilterTypeStrings = Object.keys(PreFilterType).filter(key => Number.isNaN(parseInt(key)));
+  for (const preFilterType of allPreFilterTypeStrings) {
+    const checkbox: HTMLInputElement = document.getElementById(preFilterType) as HTMLInputElement;
+    console.log(preFilterType, checkbox.checked)
+    if (checkbox.checked && preFilterType == PreFilterType[PreFilterType.isPureCheck]){
+      preFilteredRecipes = preFilteredRecipes.filter(recipe => {
+        return !recipe.effects.some(effect => 
+          effect.effectData?.harmful != recipe.effects[0].effectData?.harmful
+        )
+      })
+    }
+    if (checkbox.checked && preFilterType == PreFilterType[PreFilterType.isLimit2IgrCheck]){
+      preFilteredRecipes = preFilteredRecipes.filter(recipe => {
+        return recipe.ingredients.length == 2
+      })
+    }
+    if (checkbox.checked && preFilterType == PreFilterType[PreFilterType.isGardenCheck]){
+      preFilteredRecipes = preFilteredRecipes.filter(recipe => {
+        return recipe.ingredients.every(ingredient => 
+          ingredient.garden != null
+        )
+      })
+    }
+  }
+  applyFilter();
+}
+
 interface FilterCondition {
   ingredientKeys: string[];
   effectKeys: string[];
@@ -334,7 +370,7 @@ function applyFilter() {
     !includeConditions.ingredientKeys.length &&
     !excludeConditions.effectKeys.length &&
     !excludeConditions.ingredientKeys.length) {
-    drawRecipesTableGUI(allRecipes);
+    drawRecipesTableGUI(preFilteredRecipes);
     return;
   }
 
@@ -342,9 +378,9 @@ function applyFilter() {
   let filteredResults: Recipe[] = []
   if (!includeConditions.effectKeys.length &&
     !includeConditions.ingredientKeys.length) {
-    filteredResults = allRecipes;
+    filteredResults = preFilteredRecipes;
   } else {
-    filteredResults = allRecipes.filter((recipe) => {
+    filteredResults = preFilteredRecipes.filter((recipe) => {
       return includeConditions.effectKeys.every(effectKey =>
         recipe.effects.find(effect => effect.fkey == effectKey)
       )

@@ -67,15 +67,21 @@ td svg.filterShowIcon:hover {
 #filterInput:focus + #filterDropdown {
   display: block;
 }
+#preFilterContainer,
 #filtersContainer {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
+#preFilterContainer div,
 #filtersContainer div {
   padding: 5px;
   margin: 5px;
+}
+#preFilterContainer input,
+#preFilterContainer label,
+#filtersContainer div {
   cursor: pointer;
 }
 .filterConditionInclude {

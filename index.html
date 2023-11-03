@@ -6,6 +6,21 @@
 </head>
 <body>
   <div class="searchContainer">
+    <div id="preFilterContainer">
+      <div title="hide potions with negative effects and poisons with positive effects">
+        <input type="checkbox" id="isPureCheck" onchange="preFilterLimiters()">
+        <label for="isPureCheck">Pure</label>
+      </div>
+      <div title="show 2 ingredients recipies only">
+        <input type="checkbox" id="isLimit2IgrCheck" onchange="preFilterLimiters()">
+        <label for="isLimit2IgrCheck">2 igr. limit</label>
+      </div>
+      <div title="show only garden plant ingredients">
+        <input type="checkbox" id="isGardenCheck" onchange="preFilterLimiters()">
+        <label for="isGardenCheck">Garden igr.</label>
+      </div>
+      <div id="originPreFilterContainer"></div>
+    </div>
     <input type="text" id="filterInput" onkeyup="filterDropdownOptions()" placeholder="Type to filter">
     <ul id="filterDropdown"></ul>
     <div id="filtersContainer"></div>
