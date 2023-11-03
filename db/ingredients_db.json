@@ -28,7 +28,7 @@
     "image": "//images.uesp.net/thumb/3/31/SR-icon-ingredient-Ancestor_Moth_Wing.png/48px-SR-icon-ingredient-Ancestor_Moth_Wing.png",
     "title": "Ancestor Moth Wing [DG]",
     "pkey": "AncestorMothWingDG",
-    "dlc": "DG",
+    "origin": "DG",
     "id": "xx0059ba",
     "collected_by": "Collected by catching Ancestor Moths.",
     "effects": [
@@ -54,7 +54,7 @@
     "image": "//images.uesp.net/thumb/b/b2/SR-icon-ingredient-Ash_Creep_Cluster.png/48px-SR-icon-ingredient-Ash_Creep_Cluster.png",
     "title": "Ash Creep Cluster [DB]",
     "pkey": "AshCreepClusterDB",
-    "dlc": "DB",
+    "origin": "DB",
     "id": "xx01cd74",
     "collected_by": "Harvested from creep cluster plants unique to Solstheim.",
     "effects": [
@@ -80,7 +80,7 @@
     "image": "//images.uesp.net/thumb/9/92/SR-icon-ingredient-Ash_Hopper_Jelly.png/48px-SR-icon-ingredient-Ash_Hopper_Jelly.png",
     "title": "Ash Hopper Jelly [DB]",
     "pkey": "AshHopperJellyDB",
-    "dlc": "DB",
+    "origin": "DB",
     "id": "xx01cd71",
     "collected_by": "Collected from dead ash hoppers.",
     "effects": [
@@ -106,7 +106,7 @@
     "image": "//images.uesp.net/thumb/c/c0/SR-icon-ingredient-Ashen_Grass_Pod.png/48px-SR-icon-ingredient-Ashen_Grass_Pod.png",
     "title": "Ashen Grass Pod [DB]",
     "pkey": "AshenGrassPodDB",
-    "dlc": "DB",
+    "origin": "DB",
     "id": "xx016e26",
     "collected_by": "Harvested from spiky grass plants unique to Solstheim.",
     "effects": [
@@ -339,7 +339,7 @@
     "image": "//images.uesp.net/thumb/8/83/SR-icon-ingredient-Boar_Tusk.png/48px-SR-icon-ingredient-Boar_Tusk.png",
     "title": "Boar Tusk [DB]",
     "pkey": "BoarTuskDB",
-    "dlc": "DB",
+    "origin": "DB",
     "id": "xx01cd6f",
     "collected_by": "Collected from dead bristlebacks and rieklings.",
     "effects": [
@@ -421,7 +421,7 @@
     "image": "//images.uesp.net/thumb/6/6f/SR-icon-ingredient-Burnt_Spriggan_Wood.png/48px-SR-icon-ingredient-Burnt_Spriggan_Wood.png",
     "title": "Burnt Spriggan Wood [DB]",
     "pkey": "BurntSprigganWoodDB",
-    "dlc": "DB",
+    "origin": "DB",
     "id": "xx01cd6e",
     "collected_by": "Collected from dead burnt spriggans.",
     "effects": [
@@ -548,7 +548,7 @@
     "image": "//images.uesp.net/thumb/a/a2/SR-icon-ingredient-Chaurus_Hunter_Antennae.png/48px-SR-icon-ingredient-Chaurus_Hunter_Antennae.png",
     "title": "Chaurus Hunter Antennae [DG]",
     "pkey": "ChaurusHunterAntennaeDG",
-    "dlc": "DG",
+    "origin": "DG",
     "id": "xx0183b7",
     "collected_by": "Collected from dead Chaurus Hunters and Chaurus Hunter Fledglings.",
     "effects": [
@@ -829,7 +829,7 @@
     "image": "//images.uesp.net/thumb/5/53/SR-icon-ingredient-Emperor_Parasol_Moss.png/48px-SR-icon-ingredient-Emperor_Parasol_Moss.png",
     "title": "Emperor Parasol Moss [DB]",
     "pkey": "EmperorParasolMossDB",
-    "dlc": "DB",
+    "origin": "DB",
     "id": "xx01ff75",
     "collected_by": "Harvested from emperor parasol moss plants near Tel Mithryn.",
     "effects": [
@@ -906,7 +906,7 @@
     "image": "//images.uesp.net/thumb/4/42/SR-icon-ingredient-Felsaad_Tern_Feathers.png/48px-SR-icon-ingredient-Felsaad_Tern_Feathers.png",
     "title": "Felsaad Tern Feathers [DB]",
     "pkey": "FelsaadTernFeathersDB",
-    "dlc": "DB",
+    "origin": "DB",
     "id": "xx03cd8e",
     "collected_by": "Collected from dead Felsaad terns.",
     "effects": [
@@ -1109,7 +1109,7 @@
     "image": "//images.uesp.net/thumb/c/c5/SR-icon-ingredient-Gleamblossom.png/48px-SR-icon-ingredient-Gleamblossom.png",
     "title": "Gleamblossom [DG]",
     "pkey": "GleamblossomDG",
-    "dlc": "DG",
+    "origin": "DG",
     "id": "xx00b097",
     "collected_by": "Harvested from the plant of the same name.",
     "effects": [
@@ -1336,7 +1336,7 @@
     "image": "//images.uesp.net/thumb/4/41/SR-icon-ingredient-Hawk%27s_Egg.png/48px-SR-icon-ingredient-Hawk%27s_Egg.png",
     "title": "Hawk's Egg [HF]",
     "pkey": "HawksEggHF",
-    "dlc": "HF",
+    "origin": "HF",
     "id": "xx00f1cc",
     "collected_by": "Harvested from Hawk nests.",
     "effects": [
@@ -1742,7 +1742,7 @@
     "image": "//images.uesp.net/thumb/9/9a/SR-icon-ingredient-Netch_Jelly.png/48px-SR-icon-ingredient-Netch_Jelly.png",
     "title": "Netch Jelly [DB]",
     "pkey": "NetchJellyDB",
-    "dlc": "DB",
+    "origin": "DB",
     "id": "xx01cd72",
     "collected_by": "Collected from dead netch.",
     "effects": [
@@ -1921,7 +1921,7 @@
     "image": "//images.uesp.net/thumb/1/13/SR-icon-ingredient-Poison_Bloom.png/48px-SR-icon-ingredient-Poison_Bloom.png",
     "title": "Poison Bloom [DG]",
     "pkey": "PoisonBloomDG",
-    "dlc": "DG",
+    "origin": "DG",
     "id": "xx0185fb",
     "collected_by": "Harvested from the plant of the same name.",
     "effects": [
@@ -2099,7 +2099,7 @@
     "image": "//images.uesp.net/thumb/2/2a/SR-icon-ingredient-Salmon_Roe.png/48px-SR-icon-ingredient-Salmon_Roe.png",
     "title": "Salmon Roe [HF]",
     "pkey": "SalmonRoeHF",
-    "dlc": "HF",
+    "origin": "HF",
     "id": "xx003545",
     "collected_by": "Harvested from jumping Salmon.",
     "effects": [
@@ -2180,7 +2180,7 @@
     "image": "//images.uesp.net/thumb/e/eb/SR-icon-ingredient-Scathecraw.png/48px-SR-icon-ingredient-Scathecraw.png",
     "title": "Scathecraw [DB]",
     "pkey": "ScathecrawDB",
-    "dlc": "DB",
+    "origin": "DB",
     "id": "xx017e97",
     "collected_by": "Harvested from scathecraw plants.",
     "effects": [
@@ -2381,7 +2381,7 @@
     "image": "//images.uesp.net/thumb/0/0c/SR-icon-ingredient-Spawn_Ash.png/48px-SR-icon-ingredient-Spawn_Ash.png",
     "title": "Spawn Ash [DB]",
     "pkey": "SpawnAshDB",
-    "dlc": "DB",
+    "origin": "DB",
     "id": "xx01cd6d",
     "collected_by": "Collected from dead ash spawn.",
     "effects": [
@@ -2560,7 +2560,7 @@
     "image": "//images.uesp.net/thumb/1/1e/SR-icon-ingredient-Trama_Root.png/48px-SR-icon-ingredient-Trama_Root.png",
     "title": "Trama Root [DB]",
     "pkey": "TramaRootDB",
-    "dlc": "DB",
+    "origin": "DB",
     "id": "xx017008",
     "collected_by": "Harvested from trama root plants.",
     "effects": [
@@ -2761,7 +2761,7 @@
     "image": "//images.uesp.net/thumb/6/6e/SR-icon-ingredient-Yellow_Mountain_Flower.png/48px-SR-icon-ingredient-Yellow_Mountain_Flower.png",
     "title": "Yellow Mountain Flower [DG]",
     "pkey": "YellowMountainFlowerDG",
-    "dlc": "DG",
+    "origin": "DG",
     "id": "xx002a78",
     "collected_by": "Harvested from the yellow variety of Mountain Flower.",
     "effects": [
@@ -2788,7 +2788,7 @@
     "image": "//images.uesp.net/thumb/3/34/SR-icon-ingredient-Alocasia_Fruit.png/48px-SR-icon-ingredient-Alocasia_Fruit.png",
     "title": "Alocasia Fruit",
     "pkey": "AlocasiaFruitCC",
-    "dlc": "CC",
+    "origin": "CC",
     "id": "FExxxD62",
     "collected_by": "Originating from the Shivering Isle. One of the Rare Curios sold by Khajiit trade caravans.",
     "effects": [
@@ -2820,7 +2820,7 @@
     "image": "//images.uesp.net/thumb/7/71/SR-icon-ingredient-Ambrosia.png/48px-SR-icon-ingredient-Ambrosia.png",
     "title": "Ambrosia",
     "pkey": "AmbrosiaCC",
-    "dlc": "CC",
+    "origin": "CC",
     "id": "FExxx836",
     "collected_by": "Originating from Mankar Camoran's destroyed realm of Oblivion. One of the Rare Curios sold by Khajiit trade caravans.",
     "effects": [
@@ -2853,7 +2853,7 @@
     "image": "//images.uesp.net/thumb/b/b9/SR-icon-ingredient-Angelfish.png/48px-SR-icon-ingredient-Angelfish.png",
     "title": "Angelfish",
     "pkey": "AngelfishCC",
-    "dlc": "CC",
+    "origin": "CC",
     "id": "xx0008EB",
     "collected_by": "Caught by Fishing in temperate lakes with an Alik'ri rod, or in the Ancestor Glade.",
     "effects": [
@@ -2879,7 +2879,7 @@
     "image": "//images.uesp.net/thumb/5/59/SR-icon-ingredient-Angler_Larvae.png/48px-SR-icon-ingredient-Angler_Larvae.png",
     "title": "Angler Larvae",
     "pkey": "AnglerLarvaeCC",
-    "dlc": "CC",
+    "origin": "CC",
     "id": "xx0008F0",
     "collected_by": "Caught by Fishing in freezing waters.",
     "effects": [
@@ -2905,7 +2905,7 @@
     "image": "//images.uesp.net/thumb/8/8c/SR-icon-ingredient-Aster_Bloom_Core.png/48px-SR-icon-ingredient-Aster_Bloom_Core.png",
     "title": "Aster Bloom Core",
     "pkey": "AsterBloomCoreCC",
-    "dlc": "CC",
+    "origin": "CC",
     "id": "FExxxD66",
     "collected_by": "Originating from the Shivering Isle. One of the Rare Curios sold by Khajiit trade caravans.",
     "effects": [
@@ -2939,7 +2939,7 @@
     "image": "//images.uesp.net/thumb/1/10/SR-icon-ingredient-Bittergreen_Petals.png/48px-SR-icon-ingredient-Bittergreen_Petals.png",
     "title": "Bittergreen Petals",
     "pkey": "BittergreenPetalsCC",
-    "dlc": "CC",
+    "origin": "CC",
     "id": "FExxxD68",
     "collected_by": "Originating from Vvardenfell. One of the Rare Curios sold by Khajiit trade caravans.",
     "effects": [
@@ -2971,7 +2971,7 @@
     "image": "//images.uesp.net/thumb/0/0a/SR-icon-ingredient-Blind_Watcher%27s_Eye.png/48px-SR-icon-ingredient-Blind_Watcher%27s_Eye.png",
     "title": "Blind Watcher's Eye",
     "pkey": "BlindWatchersEyeCC",
-    "dlc": "CC",
+    "origin": "CC",
     "id": "FExxx822",
     "collected_by": "Originating from the Shivering Isle. One of the Rare Curios sold by Khajiit trade caravans.",
     "effects": [
@@ -3001,7 +3001,7 @@
     "image": "//images.uesp.net/thumb/5/59/SR-icon-ingredient-Bliss_Bug_Thorax.png/48px-SR-icon-ingredient-Bliss_Bug_Thorax.png",
     "title": "Bliss Bug Thorax",
     "pkey": "BlissBugThoraxCC",
-    "dlc": "CC",
+    "origin": "CC",
     "id": "xx059155",
     "collected_by": "Harvested by Saints & Seducers.",
     "effects": [
@@ -3029,7 +3029,7 @@
     "image": "//images.uesp.net/thumb/2/29/SR-icon-ingredient-Blister_Pod_Cap.png/48px-SR-icon-ingredient-Blister_Pod_Cap.png",
     "title": "Blister Pod Cap",
     "pkey": "BlisterPodCapCC",
-    "dlc": "CC",
+    "origin": "CC",
     "id": "FExxxD6A",
     "collected_by": "Originating from the Shivering Isle. One of the Rare Curios sold by Khajiit trade caravans.",
     "effects": [
@@ -3061,7 +3061,7 @@
     "image": "//images.uesp.net/thumb/c/c3/SR-icon-ingredient-Bloodgrass.png/48px-SR-icon-ingredient-Bloodgrass.png",
     "title": "Bloodgrass",
     "pkey": "BloodgrassCC",
-    "dlc": "CC",
+    "origin": "CC",
     "id": "xx024C13",
     "collected_by": "Harvested from the Deadlands, if one has The Cause to go there.",
     "effects": [
@@ -3091,7 +3091,7 @@
     "image": "//images.uesp.net/thumb/2/2b/SR-icon-ingredient-Bog_Beacon.png/48px-SR-icon-ingredient-Bog_Beacon.png",
     "title": "Bog Beacon",
     "pkey": "BogBeaconCC",
-    "dlc": "CC",
+    "origin": "CC",
     "id": "FExxxD6C",
     "collected_by": "Originating from Cyrodiil. One of the Rare Curios sold by Khajiit trade caravans.",
     "effects": [
@@ -3125,7 +3125,7 @@
     "image": "//images.uesp.net/thumb/4/43/SR-icon-ingredient-Bungler%27s_Bane.png/48px-SR-icon-ingredient-Bungler%27s_Bane.png",
     "title": "Bungler's Bane",
     "pkey": "BunglersBaneCC",
-    "dlc": "CC",
+    "origin": "CC",
     "id": "FExxx802",
     "collected_by": "Originating from Vvardenfell. One of the Rare Curios sold by Khajiit trade caravans.",
     "effects": [
@@ -3159,7 +3159,7 @@
     "image": "//images.uesp.net/thumb/2/2f/SR-icon-ingredient-Chokeberry.png/48px-SR-icon-ingredient-Chokeberry.png",
     "title": "Chokeberry",
     "pkey": "ChokeberryCC",
-    "dlc": "CC",
+    "origin": "CC",
     "id": "FExxx838",
     "collected_by": "Originating from the vile lair of a Cyrodiilic vampire assassin. One of the Rare Curios sold by Khajiit trade caravans.",
     "effects": [
@@ -3193,7 +3193,7 @@
     "image": "//images.uesp.net/thumb/4/40/SR-icon-ingredient-Chokeweed.png/48px-SR-icon-ingredient-Chokeweed.png",
     "title": "Chokeweed",
     "pkey": "ChokeweedCC",
-    "dlc": "CC",
+    "origin": "CC",
     "id": "FExxx804",
     "collected_by": "Originating from Vvardenfell. One of the Rare Curios sold by Khajiit trade caravans.",
     "effects": [
@@ -3226,7 +3226,7 @@
     "image": "//images.uesp.net/thumb/7/78/SR-icon-ingredient-Coda_Flower.png/48px-SR-icon-ingredient-Coda_Flower.png",
     "title": "Coda Flower",
     "pkey": "CodaFlowerCC",
-    "dlc": "CC",
+    "origin": "CC",
     "id": "FExxx805",
     "collected_by": "Originating from Vvardenfell. One of the Rare Curios sold by Khajiit trade caravans.",
     "effects": [
@@ -3260,7 +3260,7 @@
     "image": "//images.uesp.net/thumb/2/20/SR-icon-ingredient-Comberry.png/48px-SR-icon-ingredient-Comberry.png",
     "title": "Comberry",
     "pkey": "ComberryCC",
-    "dlc": "CC",
+    "origin": "CC",
     "id": "FExxx806",
     "collected_by": "Originating from Vvardenfell. One of the Rare Curios sold by Khajiit trade caravans.",
     "effects": [
@@ -3292,7 +3292,7 @@
     "image": "//images.uesp.net/thumb/9/91/SR-icon-ingredient-Congealed_Putrescence.png/48px-SR-icon-ingredient-Congealed_Putrescence.png",
     "title": "Congealed Putrescence",
     "pkey": "CongealedPutrescenceCC",
-    "dlc": "CC",
+    "origin": "CC",
     "id": "FExxx807",
     "collected_by": "Originating from the Shivering Isle. One of the Rare Curios sold by Khajiit trade caravans.",
     "effects": [
@@ -3326,7 +3326,7 @@
     "image": "//images.uesp.net/thumb/a/a4/SR-icon-ingredient-Corkbulb_Root.png/48px-SR-icon-ingredient-Corkbulb_Root.png",
     "title": "Corkbulb Root",
     "pkey": "CorkbulbRootCC",
-    "dlc": "CC",
+    "origin": "CC",
     "id": "FExxx809",
     "collected_by": "Originating from Vvardenfell. One of the Rare Curios sold by Khajiit trade caravans.",
     "effects": [
@@ -3360,7 +3360,7 @@
     "image": "//images.uesp.net/thumb/b/b6/SR-icon-ingredient-Daedra_Silk.png/48px-SR-icon-ingredient-Daedra_Silk.png",
     "title": "Daedra Silk",
     "pkey": "DaedraSilkCC",
-    "dlc": "CC",
+    "origin": "CC",
     "id": "FExxx80A",
     "collected_by": "Originating from the planes of Oblivion. One of the Rare Curios sold by Khajiit trade caravans.",
     "effects": [
@@ -3392,7 +3392,7 @@
     "image": "//images.uesp.net/thumb/7/71/SR-icon-ingredient-Daedra_Venin.png/48px-SR-icon-ingredient-Daedra_Venin.png",
     "title": "Daedra Venin",
     "pkey": "DaedraVeninCC",
-    "dlc": "CC",
+    "origin": "CC",
     "id": "FExxx80B",
     "collected_by": "Originating from the planes of Oblivion. One of the Rare Curios sold by Khajiit trade caravans.",
     "effects": [
@@ -3424,7 +3424,7 @@
     "image": "//images.uesp.net/thumb/c/cb/SR-icon-ingredient-Daedroth_Teeth.png/48px-SR-icon-ingredient-Daedroth_Teeth.png",
     "title": "Daedroth Teeth",
     "pkey": "DaedrothTeethCC",
-    "dlc": "CC",
+    "origin": "CC",
     "id": "FExxx826",
     "collected_by": "Originating from the planes of Oblivion. One of the Rare Curios sold by Khajiit trade caravans.",
     "effects": [
@@ -3456,7 +3456,7 @@
     "image": "//images.uesp.net/thumb/4/44/SR-icon-ingredient-Dreugh_Wax.png/48px-SR-icon-ingredient-Dreugh_Wax.png",
     "title": "Dreugh Wax",
     "pkey": "DreughWaxCC",
-    "dlc": "CC",
+    "origin": "CC",
     "id": "FExxx827",
     "collected_by": "Originating from Vvardenfell's dreughs or Cyrodiil's land dreughs. One of the Rare Curios sold by Khajiit trade caravans.",
     "effects": [
@@ -3490,7 +3490,7 @@
     "image": "//images.uesp.net/thumb/0/07/SR-icon-ingredient-Elytra_Ichor.png/48px-SR-icon-ingredient-Elytra_Ichor.png",
     "title": "Elytra Ichor",
     "pkey": "ElytraIchorCC",
-    "dlc": "CC",
+    "origin": "CC",
     "id": "FExxx828",
     "collected_by": "Originating from the Shivering Isle. One of the Rare Curios sold by Khajiit trade caravans.",
     "effects": [
@@ -3524,7 +3524,7 @@
     "image": "//images.uesp.net/thumb/0/06/SR-icon-ingredient-Fire_Petal.png/48px-SR-icon-ingredient-Fire_Petal.png",
     "title": "Fire Petal",
     "pkey": "FirePetalCC",
-    "dlc": "CC",
+    "origin": "CC",
     "id": "FExxx829",
     "collected_by": "Originating from Vvardenfell. One of the Rare Curios sold by Khajiit trade caravans.",
     "effects": [
@@ -3556,7 +3556,7 @@
     "image": "//images.uesp.net/thumb/4/49/SR-icon-ingredient-Flame_Stalk.png/48px-SR-icon-ingredient-Flame_Stalk.png",
     "title": "Flame Stalk",
     "pkey": "FlameStalkCC",
-    "dlc": "CC",
+    "origin": "CC",
     "id": "xx095E23",
     "collected_by": "Originating from the Shivering Isle. One of the Rare Curios sold by Khajiit trade caravans.",
     "effects": [
@@ -3590,7 +3590,7 @@
     "image": "//images.uesp.net/thumb/1/15/SR-icon-ingredient-Fungus_Stalk.png/48px-SR-icon-ingredient-Fungus_Stalk.png",
     "title": "Fungus Stalk",
     "pkey": "FungusStalkCC",
-    "dlc": "CC",
+    "origin": "CC",
     "id": "FExxx82B",
     "collected_by": "Originating from the Shivering Isle. One of the Rare Curios sold by Khajiit trade caravans.",
     "effects": [
@@ -3626,7 +3626,7 @@
     "image": "//images.uesp.net/thumb/1/1e/SR-icon-ingredient-Glassfish.png/48px-SR-icon-ingredient-Glassfish.png",
     "title": "Glassfish",
     "pkey": "GlassfishCC",
-    "dlc": "CC",
+    "origin": "CC",
     "id": "xx0008EE",
     "collected_by": "Caught by Fishing in temperate lakes.",
     "effects": [
@@ -3654,7 +3654,7 @@
     "image": "//images.uesp.net/thumb/2/22/SR-icon-ingredient-Gnarl_Bark.png/48px-SR-icon-ingredient-Gnarl_Bark.png",
     "title": "Gnarl Bark",
     "pkey": "GnarlBarkCC",
-    "dlc": "CC",
+    "origin": "CC",
     "id": "FExxx82C",
     "collected_by": "Originating from the Shivering Isle. One of the Rare Curios sold by Khajiit trade caravans.",
     "effects": [
@@ -3688,7 +3688,7 @@
     "image": "//images.uesp.net/thumb/a/a1/SR-icon-ingredient-Goldfish.png/48px-SR-icon-ingredient-Goldfish.png",
     "title": "Goldfish",
     "pkey": "GoldfishCC",
-    "dlc": "CC",
+    "origin": "CC",
     "id": "xx0008EF",
     "collected_by": "Caught by Fishing in temperate lakes in clear weathers or in the ponds found in some clearings.",
     "effects": [
@@ -3714,7 +3714,7 @@
     "image": "//images.uesp.net/thumb/2/20/SR-icon-ingredient-Gold_Kanet.png/48px-SR-icon-ingredient-Gold_Kanet.png",
     "title": "Gold Kanet",
     "pkey": "GoldKanetCC",
-    "dlc": "CC",
+    "origin": "CC",
     "id": "FExxx82D",
     "collected_by": "Originating from Vvardenfell. One of the Rare Curios sold by Khajiit trade caravans.",
     "effects": [
@@ -3748,7 +3748,7 @@
     "image": "//images.uesp.net/thumb/f/fb/SR-icon-ingredient-Green_Butterfly_Wing.png/48px-SR-icon-ingredient-Green_Butterfly_Wing.png",
     "title": "Green Butterfly Wing",
     "pkey": "GreenButterflyWingCC",
-    "dlc": "CC",
+    "origin": "CC",
     "id": "xx059151",
     "collected_by": "Harvested by Saints & Seducers.",
     "effects": [
@@ -3776,7 +3776,7 @@
     "image": "//images.uesp.net/thumb/7/71/SR-icon-ingredient-Hackle-Lo_Leaf.png/48px-SR-icon-ingredient-Hackle-Lo_Leaf.png",
     "title": "Hackle-Lo Leaf",
     "pkey": "Hackle-LoLeafCC",
-    "dlc": "CC",
+    "origin": "CC",
     "id": "FExxx82E",
     "collected_by": "Originating from Vvardenfell. One of the Rare Curios sold by Khajiit trade caravans.",
     "effects": [
@@ -3810,7 +3810,7 @@
     "image": "//images.uesp.net/thumb/8/87/SR-icon-ingredient-Harrada.png/48px-SR-icon-ingredient-Harrada.png",
     "title": "Harrada",
     "pkey": "HarradaCC",
-    "dlc": "CC",
+    "origin": "CC",
     "id": "xx024C11",
     "collected_by": "Harvested from the Deadlands, if one has The Cause to go there.",
     "effects": [
@@ -3840,7 +3840,7 @@
     "image": "//images.uesp.net/thumb/3/3d/SR-icon-ingredient-Heart_of_Order.png/48px-SR-icon-ingredient-Heart_of_Order.png",
     "title": "Heart of Order",
     "pkey": "HeartofOrderCC",
-    "dlc": "CC",
+    "origin": "CC",
     "id": "FExxx851",
     "collected_by": "Originating from the Shivering Isle during a Graymarch. One of the Rare Curios sold by Khajiit trade caravans.",
     "effects": [
@@ -3875,7 +3875,7 @@
     "image": "//images.uesp.net/thumb/7/71/SR-icon-ingredient-Hunger_Tongue.png/48px-SR-icon-ingredient-Hunger_Tongue.png",
     "title": "Hunger Tongue",
     "pkey": "HungerTongueCC",
-    "dlc": "CC",
+    "origin": "CC",
     "id": "FExxx80C",
     "collected_by": "Originating from the Shivering Isle. One of the Rare Curios sold by Khajiit trade caravans.",
     "effects": [
@@ -3907,7 +3907,7 @@
     "image": "//images.uesp.net/thumb/4/4c/SR-icon-ingredient-Hydnum_Azure_Giant_Spore.png/48px-SR-icon-ingredient-Hydnum_Azure_Giant_Spore.png",
     "title": "Hydnum Azure Giant Spore",
     "pkey": "HydnumAzureGiantSporeCC",
-    "dlc": "CC",
+    "origin": "CC",
     "id": "FExxx80D",
     "collected_by": "Originating from the Shivering Isle. One of the Rare Curios sold by Khajiit trade caravans.",
     "effects": [
@@ -3940,7 +3940,7 @@
     "image": "//images.uesp.net/thumb/6/68/SR-icon-ingredient-Hypha_Facia.png/48px-SR-icon-ingredient-Hypha_Facia.png",
     "title": "Hypha Facia",
     "pkey": "HyphaFaciaCC",
-    "dlc": "CC",
+    "origin": "CC",
     "id": "FExxx80E",
     "collected_by": "Originating from Vvardenfell. One of the Rare Curios sold by Khajiit trade caravans.",
     "effects": [
@@ -3974,7 +3974,7 @@
     "image": "//images.uesp.net/thumb/3/3a/SR-icon-ingredient-Imp_Gall.png/48px-SR-icon-ingredient-Imp_Gall.png",
     "title": "Imp Gall",
     "pkey": "ImpGallCC",
-    "dlc": "CC",
+    "origin": "CC",
     "id": "FExxx80F",
     "collected_by": "Originating from Cyrodiil. One of the Rare Curios sold by Khajiit trade caravans.",
     "effects": [
@@ -4006,7 +4006,7 @@
     "image": "//images.uesp.net/thumb/a/ab/SR-icon-ingredient-Ironwood_Fruit.png/48px-SR-icon-ingredient-Ironwood_Fruit.png",
     "title": "Ironwood Fruit",
     "pkey": "IronwoodFruitCC",
-    "dlc": "CC",
+    "origin": "CC",
     "id": "xx034cdf",
     "collected_by": "Harvested from the Ironwood Trees found in Iron Tusk Cave.",
     "effects": [
@@ -4032,7 +4032,7 @@
     "image": "//images.uesp.net/thumb/8/80/SR-ingredient-Juvenile_Mudcrab.png/48px-SR-ingredient-Juvenile_Mudcrab.png",
     "title": "Juvenile Mudcrab",
     "pkey": "JuvenileMudcrabCC",
-    "dlc": "CC",
+    "origin": "CC",
     "id": "xx0008F2",
     "collected_by": "Caught by Fishing on the surface.",
     "effects": [
@@ -4058,7 +4058,7 @@
     "image": "//images.uesp.net/thumb/8/81/SR-icon-ingredient-Kagouti_Hide.png/48px-SR-icon-ingredient-Kagouti_Hide.png",
     "title": "Kagouti Hide",
     "pkey": "KagoutiHideCC",
-    "dlc": "CC",
+    "origin": "CC",
     "id": "FExxx810",
     "collected_by": "Originating from Vvardenfell. One of the Rare Curios sold by Khajiit trade caravans.",
     "effects": [
@@ -4090,7 +4090,7 @@
     "image": "//images.uesp.net/thumb/9/99/SR-icon-ingredient-Kresh_Fiber.png/48px-SR-icon-ingredient-Kresh_Fiber.png",
     "title": "Kresh Fiber",
     "pkey": "KreshFiberCC",
-    "dlc": "CC",
+    "origin": "CC",
     "id": "FExxx811",
     "collected_by": "Originating from Vvardenfell. One of the Rare Curios sold by Khajiit trade caravans.",
     "effects": [
@@ -4124,7 +4124,7 @@
     "image": "//images.uesp.net/thumb/e/ee/SR-icon-ingredient-Lichor.png/48px-SR-icon-ingredient-Lichor.png",
     "title": "Lichor",
     "pkey": "LichorCC",
-    "dlc": "CC",
+    "origin": "CC",
     "id": "FExxx837",
     "collected_by": "Originating from Mankar Camoran's destroyed realm of Oblivion. One of the Rare Curios sold by Khajiit trade caravans.",
     "effects": [
@@ -4156,7 +4156,7 @@
     "image": "//images.uesp.net/thumb/6/63/SR-icon-ingredient-Luminous_Russula.png/48px-SR-icon-ingredient-Luminous_Russula.png",
     "title": "Luminous Russula",
     "pkey": "LuminousRussulaCC",
-    "dlc": "CC",
+    "origin": "CC",
     "id": "FExxx813",
     "collected_by": "Originating from Vvardenfell. One of the Rare Curios sold by Khajiit trade caravans.",
     "effects": [
@@ -4190,7 +4190,7 @@
     "image": "//images.uesp.net/thumb/0/09/SR-icon-ingredient-Lyretail_Anthias.png/48px-SR-icon-ingredient-Lyretail_Anthias.png",
     "title": "Lyretail Anthias",
     "pkey": "LyretailAnthiasCC",
-    "dlc": "CC",
+    "origin": "CC",
     "id": "xx0008F1",
     "collected_by": "Caught by Fishing in temperate streams and at Evergreen Grove.",
     "effects": [
@@ -4216,7 +4216,7 @@
     "image": "//images.uesp.net/thumb/a/a0/SR-icon-ingredient-Marshmerrow.png/48px-SR-icon-ingredient-Marshmerrow.png",
     "title": "Marshmerrow",
     "pkey": "MarshmerrowCC",
-    "dlc": "CC",
+    "origin": "CC",
     "id": "FExxx814",
     "collected_by": "Originating from Vvardenfell. One of the Rare Curios sold by Khajiit trade caravans.",
     "effects": [
@@ -4250,7 +4250,7 @@
     "image": "//images.uesp.net/thumb/2/27/SR-icon-ingredient-Minotaur_Horn.png/48px-SR-icon-ingredient-Minotaur_Horn.png",
     "title": "Minotaur Horn",
     "pkey": "MinotaurHornCC",
-    "dlc": "CC",
+    "origin": "CC",
     "id": "FExxx815",
     "collected_by": "Originating from Cyrodiil. One of the Rare Curios sold by Khajiit trade caravans.",
     "effects": [
@@ -4284,7 +4284,7 @@
     "image": "//images.uesp.net/thumb/c/c7/SR-icon-ingredient-Mort_Flesh.png/48px-SR-icon-ingredient-Mort_Flesh.png",
     "title": "Mort Flesh",
     "pkey": "MortFleshCC",
-    "dlc": "CC",
+    "origin": "CC",
     "id": "FExxx80C",
     "collected_by": "Originating from Cyrodiil. Dropped by the zombies from Skyrim:Plague of the Dead.",
     "effects": [
@@ -4310,7 +4310,7 @@
     "image": "//images.uesp.net/thumb/9/96/SR-icon-ingredient-Bloodchill_Nightshade.png/48px-SR-icon-ingredient-Bloodchill_Nightshade.png",
     "title": "Nightshade",
     "pkey": "NightshadeCC",
-    "dlc": "CC",
+    "origin": "CC",
     "id": "xx042A41",
     "collected_by": "A variant of the regular Nightshade that has one less leaf on its stem.",
     "effects": [
@@ -4337,7 +4337,7 @@
     "image": "//images.uesp.net/thumb/2/21/SR-icon-ingredient-Ogre%27s_Teeth.png/48px-SR-icon-ingredient-Ogre%27s_Teeth.png",
     "title": "Ogre's Teeth",
     "pkey": "OgresTeethCC",
-    "dlc": "CC",
+    "origin": "CC",
     "id": "FExxx816",
     "collected_by": "Originating from Cyrodiil. One of the Rare Curios sold by Khajiit trade caravans.",
     "effects": [
@@ -4371,7 +4371,7 @@
     "image": "//images.uesp.net/thumb/2/28/SR-icon-ingredient-Pearlfish.png/48px-SR-icon-ingredient-Pearlfish.png",
     "title": "Pearlfish",
     "pkey": "PearlfishCC",
-    "dlc": "CC",
+    "origin": "CC",
     "id": "xx0008EC",
     "collected_by": "Caught by Fishing in temperate lakes and streams in rainy weather.",
     "effects": [
@@ -4397,7 +4397,7 @@
     "image": "//images.uesp.net/thumb/9/9d/SR-icon-ingredient-Purple_Butterfly_Wing.png/48px-SR-icon-ingredient-Purple_Butterfly_Wing.png",
     "title": "Purple Butterfly Wing",
     "pkey": "PurpleButterflyWingCC",
-    "dlc": "CC",
+    "origin": "CC",
     "id": "xx059153",
     "collected_by": "Harvested by Saints & Seducers.",
     "effects": [
@@ -4423,7 +4423,7 @@
     "image": "//images.uesp.net/thumb/e/e2/SR-icon-ingredient-Pygmy_Sunfish.png/48px-SR-icon-ingredient-Pygmy_Sunfish.png",
     "title": "Pygmy Sunfish",
     "pkey": "PygmySunfishCC",
-    "dlc": "CC",
+    "origin": "CC",
     "id": "xx0008ED",
     "collected_by": "Caught by Fishing in temperate lakes in rainy weather.",
     "effects": [
@@ -4449,7 +4449,7 @@
     "image": "//images.uesp.net/thumb/a/a9/SR-icon-ingredient-Red_Kelp_Gas_Bladder.png/48px-SR-icon-ingredient-Red_Kelp_Gas_Bladder.png",
     "title": "Red Kelp Gas Bladder",
     "pkey": "RedKelpGasBladderCC",
-    "dlc": "CC",
+    "origin": "CC",
     "id": "FExxx817",
     "collected_by": "Originating from the Shivering Isle. One of the Rare Curios sold by Khajiit trade caravans.",
     "effects": [
@@ -4482,7 +4482,7 @@
     "image": "//images.uesp.net/thumb/1/16/SR-icon-ingredient-Redwort_Flower.png/48px-SR-icon-ingredient-Redwort_Flower.png",
     "title": "Redwort Flower",
     "pkey": "RedwortFlowerCC",
-    "dlc": "CC",
+    "origin": "CC",
     "id": "FExxx818",
     "collected_by": "Originating from Cyrodiil. One of the Rare Curios sold by Khajiit trade caravans.",
     "effects": [
@@ -4514,7 +4514,7 @@
     "image": "//images.uesp.net/thumb/7/76/SR-icon-ingredient-Roobrush.png/48px-SR-icon-ingredient-Roobrush.png",
     "title": "Roobrush",
     "pkey": "RoobrushCC",
-    "dlc": "CC",
+    "origin": "CC",
     "id": "FExxx819",
     "collected_by": "Originating from Vvardenfell. One of the Rare Curios sold by Khajiit trade caravans.",
     "effects": [
@@ -4546,7 +4546,7 @@
     "image": "//images.uesp.net/thumb/9/92/SR-icon-ingredient-Rot_Scale.png/48px-SR-icon-ingredient-Rot_Scale.png",
     "title": "Rot Scale",
     "pkey": "RotScaleCC",
-    "dlc": "CC",
+    "origin": "CC",
     "id": "0100306D",
     "collected_by": "Originating from the Shivering Isle.",
     "effects": [
@@ -4578,7 +4578,7 @@
     "image": "//images.uesp.net/thumb/4/49/SR-icon-ingredient-Saltrice.png/48px-SR-icon-ingredient-Saltrice.png",
     "title": "Saltrice",
     "pkey": "SaltriceCC",
-    "dlc": "CC",
+    "origin": "CC",
     "id": "FExxx81A",
     "collected_by": "Originating from Morrowind. One of the Rare Curios sold by Khajiit trade caravans.",
     "effects": [
@@ -4612,7 +4612,7 @@
     "image": "//images.uesp.net/thumb/d/df/SR-icon-ingredient-Scalon_Fin.png/48px-SR-icon-ingredient-Scalon_Fin.png",
     "title": "Scalon Fin",
     "pkey": "ScalonFinCC",
-    "dlc": "CC",
+    "origin": "CC",
     "id": "FExxx81B",
     "collected_by": "Originating from the Shivering Isle. One of the Rare Curios sold by Khajiit trade caravans.",
     "effects": [
@@ -4646,7 +4646,7 @@
     "image": "//images.uesp.net/thumb/2/2d/SR-icon-ingredient-Screaming_Maw.png/48px-SR-icon-ingredient-Screaming_Maw.png",
     "title": "Screaming Maw",
     "pkey": "ScreamingMawCC",
-    "dlc": "CC",
+    "origin": "CC",
     "id": "0100306E",
     "collected_by": "Originating from the Shivering Isle. Harvested by Saints & Seducers.",
     "effects": [
@@ -4682,7 +4682,7 @@
     "image": "//images.uesp.net/thumb/4/49/SR-icon-ingredient-Scrib_Jelly.png/48px-SR-icon-ingredient-Scrib_Jelly.png",
     "title": "Scrib Jelly",
     "pkey": "ScribJellyCC",
-    "dlc": "CC",
+    "origin": "CC",
     "id": "FExxx81C",
     "collected_by": "Originating from Vvardenfell. One of the Rare Curios sold by Khajiit trade caravans.",
     "effects": [
@@ -4713,7 +4713,7 @@
     "image": "//images.uesp.net/thumb/0/01/SR-icon-ingredient-Scrib_Jerky.png/48px-SR-icon-ingredient-Scrib_Jerky.png",
     "title": "Scrib Jerky",
     "pkey": "ScribJerkyCC",
-    "dlc": "CC",
+    "origin": "CC",
     "id": "FExxx81D",
     "collected_by": "Originating from Vvardenfell. One of the Rare Curios sold by Khajiit trade caravans.",
     "effects": [
@@ -4747,7 +4747,7 @@
     "image": "//images.uesp.net/thumb/6/65/SR-icon-ingredient-Sload_Soap.png/48px-SR-icon-ingredient-Sload_Soap.png",
     "title": "Sload Soap",
     "pkey": "SloadSoapCC",
-    "dlc": "CC",
+    "origin": "CC",
     "id": "FExxx81E",
     "collected_by": "Popular in Vvardenfell. One of the Rare Curios sold by Khajiit trade caravans.",
     "effects": [
@@ -4781,7 +4781,7 @@
     "image": "//images.uesp.net/thumb/1/15/SR-icon-ingredient-Spadefish.png/48px-SR-icon-ingredient-Spadefish.png",
     "title": "Spadefish",
     "pkey": "SpadefishCC",
-    "dlc": "CC",
+    "origin": "CC",
     "id": "xx0008F3",
     "collected_by": "Caught by Fishing in temperate streams on sunny days, in the Eldergleam Sanctuary, and the Evergreen Grove.",
     "effects": [
@@ -4807,7 +4807,7 @@
     "image": "//images.uesp.net/thumb/2/2a/SR-icon-ingredient-Spiddal_Stick.png/48px-SR-icon-ingredient-Spiddal_Stick.png",
     "title": "Spiddal Stick",
     "pkey": "SpiddalStickCC",
-    "dlc": "CC",
+    "origin": "CC",
     "id": "xx024C15",
     "collected_by": "Harvested from the Deadlands, if one has The Cause to go there.",
     "effects": [
@@ -4839,7 +4839,7 @@
     "image": "//images.uesp.net/thumb/6/6a/SR-icon-ingredient-Steel-Blue_Entoloma.png/48px-SR-icon-ingredient-Steel-Blue_Entoloma.png",
     "title": "Steel-Blue Entoloma",
     "pkey": "Steel-BlueEntolomaCC",
-    "dlc": "CC",
+    "origin": "CC",
     "id": "FExxx832",
     "collected_by": "Originating from Cyrodiil. Useful to con goblins",
     "effects": [
@@ -4865,7 +4865,7 @@
     "image": "//images.uesp.net/thumb/5/52/SR-icon-ingredient-Stoneflower_Petals.png/48px-SR-icon-ingredient-Stoneflower_Petals.png",
     "title": "Stoneflower Petals",
     "pkey": "StoneflowerPetalsCC",
-    "dlc": "CC",
+    "origin": "CC",
     "id": "FExxx81F",
     "collected_by": "Originating from Vvardenfell. One of the Rare Curios sold by Khajiit trade caravans.",
     "effects": [
@@ -4899,7 +4899,7 @@
     "image": "//images.uesp.net/thumb/1/10/SR-icon-ingredient-Thorn_Hook.png/48px-SR-icon-ingredient-Thorn_Hook.png",
     "title": "Thorn Hook",
     "pkey": "ThornHookCC",
-    "dlc": "CC",
+    "origin": "CC",
     "id": "0100306F",
     "collected_by": "Originating from the Shivering Isle. Harvested by Saints & Seducers.",
     "effects": [
@@ -4931,7 +4931,7 @@
     "image": "//images.uesp.net/thumb/5/5a/SR-icon-ingredient-Void_Essence.png/48px-SR-icon-ingredient-Void_Essence.png",
     "title": "Void Essence",
     "pkey": "VoidEssenceCC",
-    "dlc": "CC",
+    "origin": "CC",
     "id": "FExxx820",
     "collected_by": "Originating from the Shivering Isle. One of the Rare Curios sold by Khajiit trade caravans.",
     "effects": [
@@ -4967,7 +4967,7 @@
     "image": "//images.uesp.net/thumb/8/87/SR-icon-ingredient-Watcher%27s_Eye.png/48px-SR-icon-ingredient-Watcher%27s_Eye.png",
     "title": "Watcher's Eye",
     "pkey": "WatchersEyeCC",
-    "dlc": "CC",
+    "origin": "CC",
     "id": "FExxx821",
     "collected_by": "Originating from the Shivering Isle. One of the Rare Curios sold by Khajiit trade caravans.",
     "effects": [
@@ -4997,7 +4997,7 @@
     "image": "//images.uesp.net/thumb/f/f3/SR-icon-ingredient-Wild_Grass_Pod.png/48px-SR-icon-ingredient-Wild_Grass_Pod.png",
     "title": "Wild Grass Pod",
     "pkey": "WildGrassPodCC",
-    "dlc": "CC",
+    "origin": "CC",
     "id": "xx019D3A",
     "collected_by": "Growing near the entrance to the Runoff Caverns, made wild by Forgotten Seasons.",
     "effects": [
@@ -5023,7 +5023,7 @@
     "image": "//images.uesp.net/thumb/0/02/SR-icon-ingredient-Wisp_Stalk_Caps.png/48px-SR-icon-ingredient-Wisp_Stalk_Caps.png",
     "title": "Wisp Stalk Caps",
     "pkey": "WispStalkCapsCC",
-    "dlc": "CC",
+    "origin": "CC",
     "id": "FExxx823",
     "collected_by": "Originating from Cyrodiil. One of the Rare Curios sold by Khajiit trade caravans.",
     "effects": [
@@ -5057,7 +5057,7 @@
     "image": "//images.uesp.net/thumb/e/ef/SR-icon-ingredient-Withering_Moon.png/48px-SR-icon-ingredient-Withering_Moon.png",
     "title": "Withering Moon",
     "pkey": "WitheringMoonCC",
-    "dlc": "CC",
+    "origin": "CC",
     "id": "FExxx824",
     "collected_by": "Originating from the Shivering Isle. One of the Rare Curios sold by Khajiit trade caravans.",
     "effects": [
@@ -5088,7 +5088,7 @@
     "image": "//images.uesp.net/thumb/8/80/SR-icon-ingredient-Worm%27s_Head_Cap.png/48px-SR-icon-ingredient-Worm%27s_Head_Cap.png",
     "title": "Worm's Head Cap",
     "pkey": "WormsHeadCapCC",
-    "dlc": "CC",
+    "origin": "CC",
     "id": "FExxx825",
     "collected_by": "Originating from the Shivering Isle. One of the Rare Curios sold by Khajiit trade caravans.",
     "effects": [
@@ -5120,6 +5120,7 @@
     "image": "//images.uesp.net/thumb/9/95/SR-icon-ingredient-Jarrin_Root.png/48px-SR-icon-ingredient-Jarrin_Root.png",
     "title": "Jarrin Root",
     "pkey": "JarrinRoot",
+    "origin": "QT",
     "id": "0001bcbc",
     "collected_by": "You may only receive this ingredient once during the Dark Brotherhood quest line.",
     "effects": [
