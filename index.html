@@ -2,10 +2,35 @@
 <html>
 <head>
   <title>Skyrim's best alchemy recipes finder</title>
+  <meta charset="UTF-8">
+  <meta name="keywords" content="tes, the elder scrolls, skyrim, anniversary edition, alchemy, alchemical, brewing, recipes, potions, poisons, effects, Dawnguard, Hearthfire, Dragonborn, Creation Club, Rare Curios">
+  <meta name="description" content="TES Skyrim Best Alchemy Recipes Finder. Alchemy's quality of life improvement tool. Data includes ingredients and effects from Dawnguard, Hearthfire, Dragonborn DLCs and Creation Club creations (e.g. Rare Curios). There are plans to include ingredients from some popular mods too (e.g. Beyond Skyrim) as well as adding Price, Magnitude, Duration calculator.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="ikatinas">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <div id="loading-screen">
+    <span>Please wait, building recipes database...</span>
+    <div class="spinner"></div>
+  </div>
   <div class="searchContainer">
+    <div id="preFilterContainer">
+      <div title="hide potions with negative effects and poisons with positive effects">
+        <input type="checkbox" id="isPureCheck" onchange="preFilterLimiters()">
+        <label for="isPureCheck">Pure</label>
+      </div>
+      <div title="show 2 ingredients recipies only">
+        <input type="checkbox" id="isLimit2IgrCheck" onchange="preFilterLimiters()">
+        <label for="isLimit2IgrCheck">2 igr. limit</label>
+      </div>
+      <div title="show only garden plant ingredients">
+        <input type="checkbox" id="isGardenCheck" onchange="preFilterLimiters()">
+        <label for="isGardenCheck">Garden igr.</label>
+      </div>
+      <span style="padding-left: 5px;">Origins:</span>
+      <div id="originPreFilterContainer"></div>
+    </div>
     <input type="text" id="filterInput" onkeyup="filterDropdownOptions()" placeholder="Type to filter">
     <ul id="filterDropdown"></ul>
     <div id="filtersContainer"></div>
@@ -13,5 +38,8 @@
   <div id="results"></div>
 
   <script src="script.js"></script>
+  <footer>
+    Source code available on <a href="https://github.com/ikatinas/SkyrimBestAlchemyRecipesFinder">GitHub</a>
+  </footer>
 </body>
 </html>

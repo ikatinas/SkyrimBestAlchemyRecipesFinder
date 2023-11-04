@@ -9,20 +9,20 @@ interface EffectData {
   base_dur: number;
   gold_val: number;
   harmful: boolean;
-  relatedRecords?: IngredientData[];
 }
 
 interface IngredientData {
   image: string;
   title: string;
   pkey: string;
+  origin: string;
   id: string;
   collected_by: string;
   effects: IngredientEffect[];
   value: number;
   weight: number;
   merchant_avail: string;
-  garden_hf: null;
+  garden: null;
 }
 
 interface IngredientEffect { 
@@ -30,13 +30,16 @@ interface IngredientEffect {
   magnitude: number;
   duration: number;
   value: number;
+  effectData?: EffectData
 }
 
 interface Recipe {
-  ingredients: string[];
+  ingredientKeys: string[];
+  ingredients: IngredientData[];
   effects: IngredientEffect[];
 }
 var allRecipes: Recipe[] = [];
+var preFilteredRecipes: Recipe[] = [];
 async function fetchData(): Promise<void> {
   const promises: Promise<any>[] = [
     fetch('db/effects_db.json').then((response) => response.json()),
@@ -45,16 +48,47 @@ async function fetchData(): Promise<void> {
 
   try {
     const [effectsData, ingredientsData] = await Promise.all(promises);
-    const recipes = buildRecipesDB(ingredientsData)
-    allRecipes = recipes.sort((a, b) => b.effects.length - a.effects.length);
-    showRecipes(allRecipes);
+    drawOriginsFilterGUI(ingredientsData);
+    const recipes = buildRecipesDB(effectsData, ingredientsData)
+    allRecipes = preFilteredRecipes = recipes.sort((a, b) => b.effects.length - a.effects.length);
+    drawRecipesTableGUI(allRecipes);
     populateDropdown(effectsData, ingredientsData);
+    hideLoadingIndicator();
   } catch (error) {
     console.log('Error:', error);
   }
 }
 
-function buildRecipesDB(ingredientsData: IngredientData[]): Recipe[]{
+function hideLoadingIndicator(){
+  const loadingScreen = document.getElementById("loading-screen") as HTMLDivElement;
+  loadingScreen.style.display = "none";
+}
+
+function showLoadingIndicator(message: string){
+  const loadingScreen = document.getElementById("loading-screen") as HTMLDivElement;
+  const span = loadingScreen.querySelector("span") as HTMLSpanElement;
+  span.innerText = message;
+  loadingScreen.style.display = "flex";
+}
+
+function drawOriginsFilterGUI(ingredientsData: IngredientData[]){
+  const uniqueOrigins: string[] = Array.from(new Set(ingredientsData.map((ingredient) => ingredient.origin)));
+  const divContainer = document.getElementById("originPreFilterContainer") as HTMLDivElement;
+  for (const origin of uniqueOrigins) {
+    if (!origin) continue;
+    const checkboxHTML = `
+      <label>
+        <input type="checkbox" checked name="origin" value="${origin}" onchange="preFilterLimiters()">
+        ${origin}
+      </label>
+    `;
+    const checkboxDiv = document.createElement('div');
+    checkboxDiv.innerHTML = checkboxHTML;
+    divContainer.appendChild(checkboxDiv)
+  }
+}
+
+function buildRecipesDB(effectsData: EffectData[], ingredientsData: IngredientData[]): Recipe[]{
   let recipes2: Recipe[] = [];
   let recipes3: Recipe[] = [];
   // get 2 ingredients recipes
@@ -63,23 +97,31 @@ function buildRecipesDB(ingredientsData: IngredientData[]): Recipe[]{
     for (var index2 = index1+1; index2 < ingredientsData.length; index2++) { 
       const ingredient2 = ingredientsData[index2];
 
-      const twoIngredientsEffects = ingredient1.effects.filter(i1_ef => 
+      let twoIngredientsEffects = ingredient1.effects.filter(i1_ef => 
         ingredient2.effects.some(i2_ef => i2_ef.fkey == i1_ef.fkey)
       )
 
+      for (let ingEff of twoIngredientsEffects){
+        ingEff.effectData = effectsData.find(eff => eff.key == ingEff.fkey);
+      }
+      
       if(!twoIngredientsEffects || !twoIngredientsEffects.length){ 
         continue; // No matching effects
       }
       
-      if (recipes2.some(rec => rec.ingredients.every(ingredientKey =>
+      if (recipes2.some(rec => rec.ingredientKeys.every(ingredientKey =>
         ingredientKey == ingredient1.pkey || ingredientKey == ingredient2.pkey))) {
         continue; // Effects already exists
       }
       
       recipes2.push({
-        ingredients: [
+        ingredientKeys: [
           ingredient1.pkey,
           ingredient2.pkey
+        ],
+        ingredients: [
+          ingredient1,
+          ingredient2
         ],
         effects: twoIngredientsEffects
       });
@@ -99,10 +141,15 @@ function buildRecipesDB(ingredientsData: IngredientData[]): Recipe[]{
         }
 
         recipes3.push({
-          ingredients: [
+          ingredientKeys: [
             ingredient1.pkey,
             ingredient2.pkey,
             ingredient3.pkey
+          ],
+          ingredients: [
+            ingredient1,
+            ingredient2,
+            ingredient3
           ],
           effects: [...twoIngredientsEffects, ...thirdIngredientEffects]
         });
@@ -114,7 +161,7 @@ function buildRecipesDB(ingredientsData: IngredientData[]): Recipe[]{
   // discard 3 ingredient recipes with no added effect (same as 2 igr. rcp.)
   const filteredRecipes3 = recipes3.filter(recipe3 => {
     const matchingRecipes2 = recipes2.filter(recipe2 =>
-      recipe2.ingredients.every(ingredient => recipe3.ingredients.includes(ingredient))
+      recipe2.ingredientKeys.every(ingredient => recipe3.ingredientKeys.includes(ingredient))
     );
     if (!matchingRecipes2 || !matchingRecipes2.length) {
       console.warn("Some 2 ingridients recipes are missing")
@@ -130,7 +177,7 @@ function buildRecipesDB(ingredientsData: IngredientData[]): Recipe[]{
   return [...recipes2, ...filteredRecipes3];
 }
 
-function showRecipes(recipes: Recipe[]): void {
+function drawRecipesTableGUI(recipes: Recipe[]): void {
   const resultsTable = document.querySelector('#results') as HTMLElement;
   resultsTable.innerHTML = '';
 
@@ -147,23 +194,29 @@ function showRecipes(recipes: Recipe[]): void {
   recipes.slice(0, 50).forEach((recipe) => {
     const row = document.createElement('tr');
 
-    const ingredient1Cell = document.createElement('td');
-    ingredient1Cell.textContent = recipe.ingredients[0];
-    row.appendChild(ingredient1Cell);
-
-    const ingredient2Cell = document.createElement('td');
-    ingredient2Cell.textContent = recipe.ingredients[1];
-    row.appendChild(ingredient2Cell);
-
-    const ingredient3Cell = document.createElement('td');
-    ingredient3Cell.textContent = recipe.ingredients[2];
-    row.appendChild(ingredient3Cell);
+    for (const ingredient of recipe.ingredients){
+      const ingredient1Cell = document.createElement('td');
+      ingredient1Cell.textContent = ingredient.origin ? `${ingredient.title} [${ingredient.origin}]` : ingredient.title;
+      const includeIgrFilterButton = getFilterButton(ingredient.pkey, FilterAction.Include, FilterType.Ingredient);
+      ingredient1Cell.appendChild(includeIgrFilterButton);
+      const excludeIgrFilterButton = getFilterButton(ingredient.pkey, FilterAction.Exclude, FilterType.Ingredient);
+      ingredient1Cell.appendChild(excludeIgrFilterButton);
+      row.appendChild(ingredient1Cell);
+    }
+    if(recipe.ingredientKeys.length < 3){
+      row.appendChild(document.createElement('td'));
+    }
 
     const effectsCell = document.createElement('td');
     const effectsList = document.createElement('ul');
     recipe.effects.forEach((effect) => {
       const effectItem = document.createElement('li');
-      effectItem.textContent = effect.fkey;
+      effectItem.textContent = effect.effectData?.title ?? effect.fkey;
+      effectItem.classList.add(effect.effectData?.harmful ? "harmfull" : "beneficial")
+      const includeEffFilterButton = getFilterButton(effect.fkey, FilterAction.Include, FilterType.Effect);
+      effectItem.appendChild(includeEffFilterButton);
+      const excludeEffFilterButton = getFilterButton(effect.fkey, FilterAction.Exclude, FilterType.Effect);
+      effectItem.appendChild(excludeEffFilterButton);
       effectsList.appendChild(effectItem);
     });
     effectsCell.appendChild(effectsList);
@@ -175,9 +228,36 @@ function showRecipes(recipes: Recipe[]): void {
   resultsTable.appendChild(table);
 }
 
+
+function getFilterButton(key: string, filterAction: FilterAction, filterType: FilterType): HTMLSpanElement{
+  const includeSvgString = 
+  `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="filterShowIcon" viewBox="0 0 16 16">
+    <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
+    <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
+  </svg>`
+  const includeTitle = "show it";
+  const excludeSvgString = 
+  `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="filterHideIcon" viewBox="0 0 16 16">
+    <path d="m10.79 12.912-1.614-1.615a3.5 3.5 0 0 1-4.474-4.474l-2.06-2.06C.938 6.278 0 8 0 8s3 5.5 8 5.5a7.029 7.029 0 0 0 2.79-.588zM5.21 3.088A7.028 7.028 0 0 1 8 2.5c5 0 8 5.5 8 5.5s-.939 1.721-2.641 3.238l-2.062-2.062a3.5 3.5 0 0 0-4.474-4.474L5.21 3.089z"/>
+    <path d="M5.525 7.646a2.5 2.5 0 0 0 2.829 2.829l-2.83-2.829zm4.95.708-2.829-2.83a2.5 2.5 0 0 1 2.829 2.829zm3.171 6-12-12 .708-.708 12 12-.708.708z"/>
+  </svg>`
+  const excludeTile = "hide it";
+
+  const filterButton = document.createElement('span');
+  filterButton.innerHTML = filterAction == FilterAction.Include ? includeSvgString : excludeSvgString;
+  filterButton.title = filterAction == FilterAction.Include ? includeTitle : excludeTile;
+  filterButton.onmousedown = () => addFilterCondition(key, filterAction, filterType);
+  return filterButton;
+}
+
 enum FilterType {
   Effect,
   Ingredient
+}
+
+enum FilterAction {
+  Include,
+  Exclude
 }
 
 function populateDropdown(effects: EffectData[], ingredientsData: IngredientData[]) {
@@ -189,14 +269,15 @@ function populateDropdown(effects: EffectData[], ingredientsData: IngredientData
   effects.forEach((effect) => {
     const li = document.createElement("li");
     li.textContent = effect.title;
-    li.onmousedown = () => addFilterCondition(effect.key, FilterType.Effect);
+    li.classList.add(effect.harmful ? "harmfull" : "beneficial")
+    li.onmousedown = () => addFilterCondition(effect.key, FilterAction.Include, FilterType.Effect);
     dropdown.appendChild(li);
   });
 
   ingredientsData.forEach((ingredient) => {
     const li = document.createElement("li");
-    li.textContent = ingredient.title;
-    li.onmousedown = () => addFilterCondition(ingredient.pkey, FilterType.Ingredient);
+    li.textContent = ingredient.origin ? `${ingredient.title} [${ingredient.origin}]` : ingredient.title;
+    li.onmousedown = () => addFilterCondition(ingredient.pkey, FilterAction.Include, FilterType.Ingredient);
     dropdown.appendChild(li);
   });
 }
@@ -219,44 +300,98 @@ function filterDropdownOptions() {
   }
 }
 
+enum PreFilterType{
+  isPureCheck,
+  isLimit2IgrCheck,
+  isGardenCheck
+}
+
+function preFilterLimiters(){
+  preFilteredRecipes = allRecipes;
+  const allPreFilterTypeStrings = Object.keys(PreFilterType).filter(key => Number.isNaN(parseInt(key)));
+  for (const preFilterType of allPreFilterTypeStrings) {
+    const checkbox: HTMLInputElement = document.getElementById(preFilterType) as HTMLInputElement;
+    if (checkbox.checked && preFilterType == PreFilterType[PreFilterType.isPureCheck]){
+      preFilteredRecipes = preFilteredRecipes.filter(recipe => {
+        return !recipe.effects.some(effect => 
+          effect.effectData?.harmful != recipe.effects[0].effectData?.harmful
+        )
+      })
+    }
+    if (checkbox.checked && preFilterType == PreFilterType[PreFilterType.isLimit2IgrCheck]){
+      preFilteredRecipes = preFilteredRecipes.filter(recipe => {
+        return recipe.ingredients.length == 2
+      })
+    }
+    if (checkbox.checked && preFilterType == PreFilterType[PreFilterType.isGardenCheck]){
+      preFilteredRecipes = preFilteredRecipes.filter(recipe => {
+        return recipe.ingredients.every(ingredient => 
+          ingredient.garden != null
+        )
+      })
+    }
+  }
+  const divContainer = document.getElementById("originPreFilterContainer") as HTMLDivElement;
+  const inputFields = divContainer.querySelectorAll("input");
+  inputFields.forEach((input) => {
+    if (!input.checked){
+      preFilteredRecipes = preFilteredRecipes.filter(recipe => {
+        return !recipe.ingredients.some(ingredient => 
+          ingredient.origin == input.value
+        )
+      })
+    }
+  });
+  applyFilter();
+}
+
 interface FilterCondition {
   ingredientKeys: string[];
   effectKeys: string[];
 }
 
 var includeConditions: FilterCondition = { ingredientKeys: [], effectKeys: [] };
+var excludeConditions: FilterCondition = { ingredientKeys: [], effectKeys: [] };
 
-function addFilterCondition(key: string, type: FilterType) {
-  if(type == FilterType.Effect){
-    if(includeConditions.effectKeys.includes(key)){
-      return;
+function addFilterCondition(key: string, action: FilterAction, type: FilterType) {
+  removeFilterCondition(key, type);
+  if (action == FilterAction.Include){
+    if(type == FilterType.Effect){
+      includeConditions.effectKeys.push(key);
     }
-    includeConditions.effectKeys.push(key);
-  }
-  if(type == FilterType.Ingredient){
-    if(includeConditions.ingredientKeys.includes(key)){
-      return;
+    if(type == FilterType.Ingredient){
+      includeConditions.ingredientKeys.push(key);
     }
-    includeConditions.ingredientKeys.push(key);
   }
-  addFilterGUI(key, type);
+  if (action == FilterAction.Exclude){
+    if(type == FilterType.Effect){
+      excludeConditions.effectKeys.push(key);
+    }
+    if(type == FilterType.Ingredient){
+      excludeConditions.ingredientKeys.push(key);
+    }
+  }
+  addFilterGUI(key, action, type);
   applyFilter();
 }
 
 function removeFilterCondition(filterKey: string, type: FilterType) {
   if (type == FilterType.Effect){
     includeConditions.effectKeys = includeConditions.effectKeys.filter(key => key != filterKey);
+    excludeConditions.effectKeys = excludeConditions.effectKeys.filter(key => key != filterKey);
   }
   if (type == FilterType.Ingredient){
     includeConditions.ingredientKeys = includeConditions.ingredientKeys.filter(key => key != filterKey);
+    excludeConditions.ingredientKeys = excludeConditions.ingredientKeys.filter(key => key != filterKey);
   }
   removeFilterGUI(filterKey);
   applyFilter();
 }
 
-function addFilterGUI(effectKey: string, type: FilterType) {
+function addFilterGUI(effectKey: string, action: FilterAction, type: FilterType) {
   const filtersContainer = document.querySelector('#filtersContainer') as HTMLElement;
   const div = document.createElement('div');
+  div.className = `filterCondition${FilterAction[action]}`
   div.textContent = effectKey;
   div.onmousedown = () => removeFilterCondition(effectKey, type);
   filtersContainer.appendChild(div);
@@ -272,21 +407,45 @@ function removeFilterGUI(effectKey: string) {
 }
 
 function applyFilter() {
-  if (!includeConditions.effectKeys.length && !includeConditions.ingredientKeys.length){
-    showRecipes(allRecipes);
+  if (!includeConditions.effectKeys.length &&
+    !includeConditions.ingredientKeys.length &&
+    !excludeConditions.effectKeys.length &&
+    !excludeConditions.ingredientKeys.length) {
+    drawRecipesTableGUI(preFilteredRecipes);
     return;
   }
 
   // AND filter
-  const results = allRecipes.filter((recipe) => {
-    return includeConditions.effectKeys.every(effectKey => 
-      recipe.effects.find(effect => effect.fkey == effectKey)
+  let filteredResults: Recipe[] = []
+  if (!includeConditions.effectKeys.length &&
+    !includeConditions.ingredientKeys.length) {
+    filteredResults = preFilteredRecipes;
+  } else {
+    filteredResults = preFilteredRecipes.filter((recipe) => {
+      return includeConditions.effectKeys.every(effectKey =>
+        recipe.effects.find(effect => effect.fkey == effectKey)
+      )
+        && includeConditions.ingredientKeys.every(ingredientKey =>
+          recipe.ingredientKeys.find(ingredient => ingredient == ingredientKey)
+        );
+    });
+  }
+
+  if (!excludeConditions.effectKeys.length &&
+    !excludeConditions.ingredientKeys.length) {
+    drawRecipesTableGUI(filteredResults);
+    return;
+  }
+  const finalResults = filteredResults.filter((recipe) => {
+    return !excludeConditions.effectKeys.some(excludeEffect =>
+      recipe.effects.some(effect => effect.fkey == excludeEffect)
     ) 
-    && includeConditions.ingredientKeys.every(ingredientKey => 
-      recipe.ingredients.find(ingredient => ingredient == ingredientKey)
+    && !excludeConditions.ingredientKeys.some(excludeIgr =>
+      recipe.ingredientKeys.some(ingredient => ingredient == excludeIgr)
     );
   });
-  showRecipes(results)
+  
+  drawRecipesTableGUI(finalResults)
 }
 
 document.addEventListener('DOMContentLoaded', () => {
