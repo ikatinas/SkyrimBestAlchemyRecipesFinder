@@ -53,9 +53,22 @@ async function fetchData(): Promise<void> {
     allRecipes = preFilteredRecipes = recipes.sort((a, b) => b.effects.length - a.effects.length);
     drawRecipesTableGUI(allRecipes);
     populateDropdown(effectsData, ingredientsData);
+    hideLoadingIndicator();
   } catch (error) {
     console.log('Error:', error);
   }
+}
+
+function hideLoadingIndicator(){
+  const loadingScreen = document.getElementById("loading-screen") as HTMLDivElement;
+  loadingScreen.style.display = "none";
+}
+
+function showLoadingIndicator(message: string){
+  const loadingScreen = document.getElementById("loading-screen") as HTMLDivElement;
+  const span = loadingScreen.querySelector("span") as HTMLSpanElement;
+  span.innerText = message;
+  loadingScreen.style.display = "flex";
 }
 
 function drawOriginsFilterGUI(ingredientsData: IngredientData[]){
