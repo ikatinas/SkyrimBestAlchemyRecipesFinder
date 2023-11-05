@@ -97,12 +97,20 @@ function buildRecipesDB(effectsData: EffectData[], ingredientsData: IngredientDa
     for (var index2 = index1+1; index2 < ingredientsData.length; index2++) { 
       const ingredient2 = ingredientsData[index2];
 
-      let twoIngredientsEffects = ingredient1.effects.filter(i1_ef => 
-        ingredient2.effects.some(i2_ef => i2_ef.fkey == i1_ef.fkey)
-      )
-
-      for (let ingEff of twoIngredientsEffects){
-        ingEff.effectData = effectsData.find(eff => eff.key == ingEff.fkey);
+      let twoIngredientsEffects: IngredientEffect[] = [];
+      for (const i1_ef of ingredient1.effects){
+        const i2_ef = ingredient2.effects.find(i2_ef => i2_ef.fkey == i1_ef.fkey);
+        if (i2_ef){
+          twoIngredientsEffects.push(
+            { 
+              fkey: i2_ef.fkey,
+              magnitude: Math.max(i1_ef.magnitude ?? 1, i2_ef.magnitude ?? 1),
+              duration: Math.max(i1_ef.duration ?? 1, i2_ef.duration ?? 1),
+              value: Math.max(i1_ef.value ?? 1, i2_ef.value ?? 1),
+              effectData: effectsData.find(eff => eff.key == i2_ef.fkey)
+            }
+          )
+        }
       }
       
       if(!twoIngredientsEffects || !twoIngredientsEffects.length){ 
@@ -140,6 +148,34 @@ function buildRecipesDB(effectsData: EffectData[], ingredientsData: IngredientDa
           continue; // no new effect
         }
 
+        let threeIngredientsEffects: IngredientEffect[] =  [...twoIngredientsEffects];
+        for (const i3_ef of thirdIngredientEffects){
+          const i1_ef = ingredient1.effects.find(i1_ef => i1_ef.fkey == i3_ef.fkey);
+          if (i1_ef){
+            threeIngredientsEffects.push(
+              { 
+                fkey: i1_ef.fkey,
+                magnitude: Math.max(i3_ef.magnitude ?? 1, i1_ef.magnitude ?? 1),
+                duration: Math.max(i3_ef.duration ?? 1, i1_ef.duration ?? 1),
+                value: Math.max(i3_ef.value ?? 1, i1_ef.value ?? 1),
+                effectData: effectsData.find(eff => eff.key == i1_ef.fkey)
+              }
+            )
+          }
+          const i2_ef = ingredient2.effects.find(i2_ef => i2_ef.fkey == i3_ef.fkey);
+          if (i2_ef){
+            threeIngredientsEffects.push(
+              { 
+                fkey: i2_ef.fkey,
+                magnitude: Math.max(i3_ef.magnitude ?? 1, i2_ef.magnitude ?? 1),
+                duration: Math.max(i3_ef.duration ?? 1, i2_ef.duration ?? 1),
+                value: Math.max(i3_ef.value ?? 1, i2_ef.value ?? 1),
+                effectData: effectsData.find(eff => eff.key == i2_ef.fkey)
+              }
+            )
+          }
+        }
+
         recipes3.push({
           ingredientKeys: [
             ingredient1.pkey,
@@ -151,7 +187,7 @@ function buildRecipesDB(effectsData: EffectData[], ingredientsData: IngredientDa
             ingredient2,
             ingredient3
           ],
-          effects: [...twoIngredientsEffects, ...thirdIngredientEffects]
+          effects: threeIngredientsEffects
         });
 
       }
@@ -411,8 +447,8 @@ function applyFilter() {
     !includeConditions.ingredientKeys.length &&
     !excludeConditions.effectKeys.length &&
     !excludeConditions.ingredientKeys.length) {
-    drawRecipesTableGUI(preFilteredRecipes);
-    return;
+      drawRecipesTableGUI(preFilteredRecipes);
+      return;
   }
 
   // AND filter
