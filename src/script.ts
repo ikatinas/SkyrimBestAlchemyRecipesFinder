@@ -38,6 +38,7 @@ interface Recipe {
   ingredients: IngredientData[];
   effects: IngredientEffect[];
 }
+
 var allRecipes: Recipe[] = [];
 var preFilteredRecipes: Recipe[] = [];
 async function fetchData(): Promise<void> {
@@ -50,13 +51,42 @@ async function fetchData(): Promise<void> {
     const [effectsData, ingredientsData] = await Promise.all(promises);
     drawOriginsFilterGUI(ingredientsData);
     const recipes = buildRecipesDB(effectsData, ingredientsData)
-    allRecipes = preFilteredRecipes = recipes.sort((a, b) => b.effects.length - a.effects.length);
+    allRecipes = preFilteredRecipes = sortRecipesBy(recipes, SortBy.Magnifiers);
     drawRecipesTableGUI(allRecipes);
     populateDropdown(effectsData, ingredientsData);
     hideLoadingIndicator();
   } catch (error) {
     console.log('Error:', error);
   }
+}
+
+enum SortBy {
+  Magnifiers,
+  EffectsNum,
+  Price
+}
+
+function sortRecipesBy(recipes: Recipe[],  by: SortBy): Recipe[]{
+  if (by == SortBy.Magnifiers){
+    return recipes.sort((a, b) => {
+      const aggregateA = a.effects.reduce(
+        (acc, effect) => acc + effect.magnitude + effect.duration,
+        0
+      );
+      const aggregateB = b.effects.reduce(
+        (acc, effect) => acc + effect.magnitude + effect.duration,
+        0
+      );
+      return aggregateB - aggregateA;
+    });
+  }
+  if (by == SortBy.EffectsNum){
+    return recipes.sort((a, b) => b.effects.length - a.effects.length);
+  }
+  if (by == SortBy.Price){
+    console.log("TODO sortRecipesBy", SortBy.Price)
+  }
+  return recipes;
 }
 
 function hideLoadingIndicator(){
