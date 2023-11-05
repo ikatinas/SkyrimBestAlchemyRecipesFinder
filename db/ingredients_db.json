@@ -1800,7 +1800,7 @@
     "effects": [
       {
         "fkey": "DamageHealth",
-        "Mod": "(12.6×Value)"
+        "value": 12.6
       },
       {
         "fkey": "DamageStamina"
@@ -2111,11 +2111,13 @@
       {
         "fkey": "Waterbreathing",
         "duration": 12,
-        "Mod": "15.4×Value)"
+        "value": 15.4
       },
       {
         "fkey": "FortifyMagicka",
-        "Mod": "(12.5×Magnitude,0.08×Duration,1.05×Value)"
+        "duration": 0.08,
+        "magnitude": 12.5,
+        "value": 1.05
       },
       {
         "fkey": "RegenerateMagicka"
