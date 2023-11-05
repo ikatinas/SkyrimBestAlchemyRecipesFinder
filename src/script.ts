@@ -247,8 +247,14 @@ function drawRecipesTableGUI(recipes: Recipe[]): void {
     const effectsList = document.createElement('ul');
     recipe.effects.forEach((effect) => {
       const effectItem = document.createElement('li');
-      effectItem.textContent = effect.effectData?.title ?? effect.fkey;
-      effectItem.classList.add(effect.effectData?.harmful ? "harmfull" : "beneficial")
+      const effectText = document.createElement('span');
+      effectText.textContent = effect.effectData?.title ?? effect.fkey;
+      effectText.classList.add(effect.effectData?.harmful ? "harmfull" : "beneficial");
+      effectItem.appendChild(effectText);
+      const magnifiersContainer = getMagnifiersGUI(effect)
+      if(magnifiersContainer.childNodes.length > 0 ){
+        effectItem.appendChild(magnifiersContainer);
+      }
       const includeEffFilterButton = getFilterButton(effect.fkey, FilterAction.Include, FilterType.Effect);
       effectItem.appendChild(includeEffFilterButton);
       const excludeEffFilterButton = getFilterButton(effect.fkey, FilterAction.Exclude, FilterType.Effect);
@@ -262,6 +268,34 @@ function drawRecipesTableGUI(recipes: Recipe[]): void {
   });
 
   resultsTable.appendChild(table);
+}
+
+function getMagnifiersGUI(effect: IngredientEffect): HTMLSpanElement{
+  const magnitudeIcon = 
+  `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="orange" class="bi bi-fire" viewBox="0 0 16 16">
+    <path d="M8 16c3.314 0 6-2 6-5.5 0-1.5-.5-4-2.5-6 .25 1.5-1.25 2-1.25 2C11 4 9 .5 6 0c.357 2 .5 4-2 6-1.25 1-2 2.729-2 4.5C2 14 4.686 16 8 16Zm0-1c-1.657 0-3-1-3-2.75 0-.75.25-2 1.25-3C6.125 10 7 10.5 7 10.5c-.375-1.25.5-3.25 2-3.5-.179 1-.25 2 1 3 .625.5 1 1.364 1 2.25C11 14 9.657 15 8 15Z"/>
+  </svg>`
+  const durationIcon = 
+  `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="orange" class="bi bi-hourglass-split" viewBox="0 0 16 16">
+    <path d="M2.5 15a.5.5 0 1 1 0-1h1v-1a4.5 4.5 0 0 1 2.557-4.06c.29-.139.443-.377.443-.59v-.7c0-.213-.154-.451-.443-.59A4.5 4.5 0 0 1 3.5 3V2h-1a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-1v1a4.5 4.5 0 0 1-2.557 4.06c-.29.139-.443.377-.443.59v.7c0 .213.154.451.443.59A4.5 4.5 0 0 1 12.5 13v1h1a.5.5 0 0 1 0 1h-11zm2-13v1c0 .537.12 1.045.337 1.5h6.326c.216-.455.337-.963.337-1.5V2h-7zm3 6.35c0 .701-.478 1.236-1.011 1.492A3.5 3.5 0 0 0 4.5 13s.866-1.299 3-1.48V8.35zm1 0v3.17c2.134.181 3 1.48 3 1.48a3.5 3.5 0 0 0-1.989-3.158C8.978 9.586 8.5 9.052 8.5 8.351z"/>
+  </svg>`
+  const magnifiersContainer = document.createElement('span');
+  magnifiersContainer.classList.add("magnifier");
+  if (effect.magnitude && effect.magnitude != 1){
+    const power = document.createElement('span');
+    power.title = "Power magnifier"
+    power.innerHTML = `${effect.magnitude}x${magnitudeIcon}`    
+    power.classList.add(effect.magnitude < 1 ? "harmfull" : "beneficial");
+    magnifiersContainer.appendChild(power)
+  }
+  if (effect.duration && effect.duration != 1){
+    const duration = document.createElement('span');
+    duration.title = "Duration magnifier"
+    duration.innerHTML = `${effect.duration}x${durationIcon}`    
+    duration.classList.add(effect.magnitude < 1 ? "harmfull" : "beneficial");
+    magnifiersContainer.appendChild(duration)
+  }
+  return magnifiersContainer;
 }
 
 
