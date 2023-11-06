@@ -37,6 +37,18 @@ td svg.filterShowIcon:hover {
 .beneficial {
   color: #cbfbcb !important;
 }
+span.magnifier {
+  padding-left: 5px;
+}
+.magnifier .harmfull {
+  color: #ae5151 !important;
+}
+.magnifier .beneficial {
+  color: #699f69 !important;
+}
+.magnifier svg {
+  padding-left: 0;
+}
 #filterInput {
   min-width: 248px;
 }

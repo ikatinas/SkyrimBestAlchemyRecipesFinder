@@ -4,6 +4,7 @@
   "description": "",
   "main": "script.js",
   "scripts": {
+    "build": "npx tsc",
     "start": "node server.js"
   },
   "keywords": [],
