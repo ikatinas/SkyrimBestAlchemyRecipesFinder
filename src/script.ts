@@ -243,7 +243,7 @@ function buildRecipesDB(effectsData: EffectData[], ingredientsData: IngredientDa
   return [...recipes2, ...filteredRecipes3];
 }
 
-function drawRecipesTableGUI(recipes: Recipe[]): void {
+function drawRecipesTableGUI(recipes: Recipe[], part: number = 0): void {
   const resultsTable = document.querySelector('#results') as HTMLElement;
   resultsTable.innerHTML = '';
 
@@ -257,7 +257,11 @@ function drawRecipesTableGUI(recipes: Recipe[]): void {
     </tr>
   `;
 
-  const bestRecipes = recipes.slice(0, 50);
+  const maxPerPage = 50;
+  const start = part * maxPerPage;
+  const end = start + maxPerPage;
+  const maxPart = Math.ceil(recipes.length/maxPerPage);
+  const bestRecipes = recipes.slice(start, end);
   bestRecipes.forEach((recipe) => {
     const row = document.createElement('tr');
 
@@ -299,13 +303,30 @@ function drawRecipesTableGUI(recipes: Recipe[]): void {
   
   // table's footer
   const row = document.createElement('tr');
-  const tfooter = document.createElement('td')
-  tfooter.colSpan = 4
-  tfooter.classList.add("tableFooter")
-  tfooter.textContent = `${bestRecipes.length} out of ${recipes.length}`
+  const tfooter = document.createElement('td');
+  tfooter.colSpan = 4;
+  tfooter.classList.add("tableFooter");
+  if (bestRecipes.length < recipes.length){
+    if(part > 0){
+      const prevButton = document.createElement('button');
+      prevButton.innerText = " < ";
+      prevButton.onmousedown = () => drawRecipesTableGUI(recipes, part - 1);
+      tfooter.appendChild(prevButton);
+    }
+    const footerText = document.createElement('span');
+    footerText.innerText = `page ${part+1} out of ${maxPart} (${recipes.length} recipes)`;
+    tfooter.appendChild(footerText);
+    if (part+1 < maxPart){
+      const nextButton = document.createElement('button');
+      nextButton.innerText = " > ";
+      nextButton.onmousedown = () => drawRecipesTableGUI(recipes, part + 1);
+      tfooter.appendChild(nextButton);
+    }
+  } else {
+    tfooter.innerText = `${recipes.length} recipes`;
+  }
   row.appendChild(tfooter);
   table.appendChild(row);
-
   resultsTable.appendChild(table);
 }
 
