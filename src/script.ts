@@ -257,7 +257,8 @@ function drawRecipesTableGUI(recipes: Recipe[]): void {
     </tr>
   `;
 
-  recipes.slice(0, 50).forEach((recipe) => {
+  const bestRecipes = recipes.slice(0, 50);
+  bestRecipes.forEach((recipe) => {
     const row = document.createElement('tr');
 
     for (const ingredient of recipe.ingredients){
@@ -293,9 +294,17 @@ function drawRecipesTableGUI(recipes: Recipe[]): void {
     });
     effectsCell.appendChild(effectsList);
     row.appendChild(effectsCell);
-
     table.appendChild(row);
   });
+  
+  // table's footer
+  const row = document.createElement('tr');
+  const tfooter = document.createElement('td')
+  tfooter.colSpan = 4
+  tfooter.classList.add("tableFooter")
+  tfooter.textContent = `${bestRecipes.length} out of ${recipes.length}`
+  row.appendChild(tfooter);
+  table.appendChild(row);
 
   resultsTable.appendChild(table);
 }
