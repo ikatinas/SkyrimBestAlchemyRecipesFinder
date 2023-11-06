@@ -179,7 +179,7 @@ function buildRecipesDB(effectsData, ingredientsData) {
     });
     return [...recipes2, ...filteredRecipes3];
 }
-function drawRecipesTableGUI(recipes) {
+function drawRecipesTableGUI(recipes, part = 0) {
     const resultsTable = document.querySelector('#results');
     resultsTable.innerHTML = '';
     const table = document.createElement('table');
@@ -191,7 +191,12 @@ function drawRecipesTableGUI(recipes) {
       <th>Effects</th>
     </tr>
   `;
-    recipes.slice(0, 50).forEach((recipe) => {
+    const maxPerPage = 50;
+    const start = part * maxPerPage;
+    const end = start + maxPerPage;
+    const maxPart = Math.ceil(recipes.length / maxPerPage);
+    const bestRecipes = recipes.slice(start, end);
+    bestRecipes.forEach((recipe) => {
         const row = document.createElement('tr');
         for (const ingredient of recipe.ingredients) {
             const ingredient1Cell = document.createElement('td');
@@ -228,6 +233,33 @@ function drawRecipesTableGUI(recipes) {
         row.appendChild(effectsCell);
         table.appendChild(row);
     });
+    // table's footer
+    const row = document.createElement('tr');
+    const tfooter = document.createElement('td');
+    tfooter.colSpan = 4;
+    tfooter.classList.add("tableFooter");
+    if (bestRecipes.length < recipes.length) {
+        if (part > 0) {
+            const prevButton = document.createElement('button');
+            prevButton.innerText = " < ";
+            prevButton.onmousedown = () => drawRecipesTableGUI(recipes, part - 1);
+            tfooter.appendChild(prevButton);
+        }
+        const footerText = document.createElement('span');
+        footerText.innerText = `page ${part + 1} out of ${maxPart} (${recipes.length} recipes)`;
+        tfooter.appendChild(footerText);
+        if (part + 1 < maxPart) {
+            const nextButton = document.createElement('button');
+            nextButton.innerText = " > ";
+            nextButton.onmousedown = () => drawRecipesTableGUI(recipes, part + 1);
+            tfooter.appendChild(nextButton);
+        }
+    }
+    else {
+        tfooter.innerText = `${recipes.length} recipes`;
+    }
+    row.appendChild(tfooter);
+    table.appendChild(row);
     resultsTable.appendChild(table);
 }
 function getMagnifiersGUI(effect) {
