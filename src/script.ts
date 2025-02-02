@@ -54,6 +54,7 @@ async function fetchData(): Promise<void> {
     allRecipes = preFilteredRecipes = sortRecipesBy(recipes, SortBy.Magnifiers);
     drawRecipesTableGUI(allRecipes);
     populateDropdown(effectsData, ingredientsData);
+    applyFilterConditionsFromStorage();
     hideLoadingIndicator();
   } catch (error) {
     console.log('Error:', error);
@@ -483,22 +484,61 @@ interface FilterCondition {
 var includeConditions: FilterCondition = { ingredientKeys: [], effectKeys: [] };
 var excludeConditions: FilterCondition = { ingredientKeys: [], effectKeys: [] };
 
+function clearFilterConditions() {
+  localStorage.setItem('includeEffectKeys', '[]');
+  localStorage.setItem('includeIngredientKeys', '[]');
+  localStorage.setItem('excludeEffectKeys', '[]');
+  localStorage.setItem('excludeIngredientKeys', '[]');
+  includeConditions = { ingredientKeys: [], effectKeys: [] };
+  excludeConditions = { ingredientKeys: [], effectKeys: [] };
+  const filtersContainer = document.querySelector('#filtersContainer') as HTMLElement;
+  filtersContainer.innerHTML = '';
+  applyFilter();
+}
+
+function applyFilterConditionsFromStorage() {
+  const includeEffectKeys = JSON.parse(localStorage.getItem('includeEffectKeys') || '[]');
+  const includeIngredientKeys = JSON.parse(localStorage.getItem('includeIngredientKeys') || '[]');
+  const excludeEffectKeys = JSON.parse(localStorage.getItem('excludeEffectKeys') || '[]');
+  const excludeIngredientKeys = JSON.parse(localStorage.getItem('excludeIngredientKeys') || '[]');
+
+  includeConditions = { ingredientKeys: includeIngredientKeys, effectKeys: includeEffectKeys };
+  excludeConditions = { ingredientKeys: excludeIngredientKeys, effectKeys: excludeEffectKeys };
+  for (const key of includeEffectKeys) {
+    addFilterGUI(key, FilterAction.Include, FilterType.Effect);
+  }
+  for (const key of includeIngredientKeys) {
+    addFilterGUI(key, FilterAction.Include, FilterType.Ingredient);
+  }
+  for (const key of excludeEffectKeys) {
+    addFilterGUI(key, FilterAction.Exclude, FilterType.Effect);
+  }
+  for (const key of excludeIngredientKeys) {
+    addFilterGUI(key, FilterAction.Exclude, FilterType.Ingredient);
+  }
+  applyFilter();
+}
+
 function addFilterCondition(key: string, action: FilterAction, type: FilterType) {
   removeFilterCondition(key, type);
   if (action == FilterAction.Include){
     if(type == FilterType.Effect){
       includeConditions.effectKeys.push(key);
+      localStorage.setItem('includeEffectKeys', JSON.stringify(includeConditions.effectKeys));
     }
     if(type == FilterType.Ingredient){
       includeConditions.ingredientKeys.push(key);
+      localStorage.setItem('includeIngredientKeys', JSON.stringify(includeConditions.ingredientKeys));
     }
   }
   if (action == FilterAction.Exclude){
     if(type == FilterType.Effect){
       excludeConditions.effectKeys.push(key);
+      localStorage.setItem('excludeEffectKeys', JSON.stringify(excludeConditions.effectKeys));
     }
     if(type == FilterType.Ingredient){
       excludeConditions.ingredientKeys.push(key);
+      localStorage.setItem('excludeIngredientKeys', JSON.stringify(excludeConditions.ingredientKeys));
     }
   }
   addFilterGUI(key, action, type);
@@ -509,10 +549,14 @@ function removeFilterCondition(filterKey: string, type: FilterType) {
   if (type == FilterType.Effect){
     includeConditions.effectKeys = includeConditions.effectKeys.filter(key => key != filterKey);
     excludeConditions.effectKeys = excludeConditions.effectKeys.filter(key => key != filterKey);
+    localStorage.setItem('includeEffectKeys', JSON.stringify(includeConditions.effectKeys));
+    localStorage.setItem('excludeEffectKeys', JSON.stringify(excludeConditions.effectKeys));
   }
   if (type == FilterType.Ingredient){
     includeConditions.ingredientKeys = includeConditions.ingredientKeys.filter(key => key != filterKey);
     excludeConditions.ingredientKeys = excludeConditions.ingredientKeys.filter(key => key != filterKey);
+    localStorage.setItem('includeIngredientKeys', JSON.stringify(includeConditions.ingredientKeys));
+    localStorage.setItem('excludeIngredientKeys', JSON.stringify(excludeConditions.ingredientKeys));
   }
   removeFilterGUI(filterKey);
   applyFilter();
@@ -542,8 +586,10 @@ function applyFilter() {
     !excludeConditions.effectKeys.length &&
     !excludeConditions.ingredientKeys.length) {
       drawRecipesTableGUI(preFilteredRecipes);
+      setClearFilterAllButtonVisiblity(false);
       return;
   }
+  setClearFilterAllButtonVisiblity(true);
 
   // AND filter
   let filteredResults: Recipe[] = []
@@ -574,8 +620,13 @@ function applyFilter() {
       recipe.ingredientKeys.some(ingredient => ingredient == excludeIgr)
     );
   });
-  
+
   drawRecipesTableGUI(finalResults)
+}
+
+function setClearFilterAllButtonVisiblity(display = false){
+  const button = document.querySelector('#clearFilterAllButton') as HTMLElement;
+  button.style.display = display ? 'block':'none'
 }
 
 document.addEventListener('DOMContentLoaded', () => {
