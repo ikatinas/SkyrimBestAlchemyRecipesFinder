@@ -267,25 +267,42 @@ function drawRecipesTableGUI(recipes: Recipe[], part: number = 0): void {
     const row = document.createElement('tr');
 
     for (const ingredient of recipe.ingredients){
-      const ingredient1Cell = document.createElement('td');
-      ingredient1Cell.textContent = ingredient.origin ? `${ingredient.title} [${ingredient.origin}]` : ingredient.title;
+
+      const img = document.createElement('img');
+      img.src = ingredient.image;
+      const imgContainer = document.createElement('div');
+      imgContainer.appendChild(img);
+      
+      const ingrText = document.createElement('span');
+      ingrText.textContent = ingredient.origin ? `${ingredient.title} [${ingredient.origin}]` : ingredient.title;
       const includeIgrFilterButton = getFilterButton(ingredient.pkey, FilterAction.Include, FilterType.Ingredient);
-      ingredient1Cell.appendChild(includeIgrFilterButton);
       const excludeIgrFilterButton = getFilterButton(ingredient.pkey, FilterAction.Exclude, FilterType.Ingredient);
-      ingredient1Cell.appendChild(excludeIgrFilterButton);
-      row.appendChild(ingredient1Cell);
+
+      const textContainer = document.createElement('div');
+      textContainer.appendChild(ingrText);
+      textContainer.appendChild(includeIgrFilterButton);
+      textContainer.appendChild(excludeIgrFilterButton);
+
+      const ingredientTdCell = document.createElement('td');
+      ingredientTdCell.title = ingredient.collected_by ?? ingredient.title;
+      ingredientTdCell.style.textAlign = "center";
+      ingredientTdCell.appendChild(imgContainer);
+      ingredientTdCell.appendChild(textContainer);
+
+      row.appendChild(ingredientTdCell);      
     }
     if(recipe.ingredientKeys.length < 3){
       row.appendChild(document.createElement('td'));
     }
 
-    const effectsCell = document.createElement('td');
+    const effectsTdCell = document.createElement('td');
     const effectsList = document.createElement('ul');
     recipe.effects.forEach((effect) => {
       const effectItem = document.createElement('li');
       const effectText = document.createElement('span');
       effectText.textContent = effect.effectData?.title ?? effect.fkey;
       effectText.classList.add(effect.effectData?.harmful ? "harmfull" : "beneficial");
+      effectText.title = effect.effectData?.description ?? effectText.textContent;
       effectItem.appendChild(effectText);
       const magnifiersContainer = getMagnifiersGUI(effect)
       if(magnifiersContainer.childNodes.length > 0 ){
@@ -297,8 +314,8 @@ function drawRecipesTableGUI(recipes: Recipe[], part: number = 0): void {
       effectItem.appendChild(excludeEffFilterButton);
       effectsList.appendChild(effectItem);
     });
-    effectsCell.appendChild(effectsList);
-    row.appendChild(effectsCell);
+    effectsTdCell.appendChild(effectsList);
+    row.appendChild(effectsTdCell);
     table.appendChild(row);
   });
   
@@ -620,7 +637,7 @@ function applyFilter() {
       recipe.ingredientKeys.some(ingredient => ingredient == excludeIgr)
     );
   });
-
+  
   drawRecipesTableGUI(finalResults)
 }
 
