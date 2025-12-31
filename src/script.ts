@@ -102,14 +102,20 @@ function showLoadingIndicator(message: string){
   loadingScreen.style.display = "flex";
 }
 
+function getOriginTitle(originCode: string): string {
+  return (Origin as unknown as Record<string, string>)[originCode] ?? originCode;
+}
+
 function drawOriginsFilterGUI(ingredientsData: IngredientData[]){
   const uniqueOrigins: string[] = Array.from(new Set(ingredientsData.map((ingredient) => ingredient.origin)));
   const divContainer = document.getElementById("originPreFilterContainer") as HTMLDivElement;
+  divContainer.innerHTML = '';
   for (const origin of uniqueOrigins) {
     if (!origin) continue;
+    const originTitle = getOriginTitle(origin);
     const checkboxHTML = `
-      <label>
-        <input type="checkbox" checked name="origin" value="${origin}" onchange="preFilterLimiters()">
+      <label title="${originTitle}">
+        <input type="checkbox" checked name="origin" value="${origin}" onchange="preFilterLimiters()" title="${originTitle}">
         ${origin}
       </label>
     `;
