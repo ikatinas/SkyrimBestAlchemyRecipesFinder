@@ -6,7 +6,7 @@
   "scripts": {
     "build:recipes": "npx tsc -p tsconfig.scripts.json && node scripts-dist/build-recipes-db.js",
     "build": "npx tsc",
-    "start": "node server.js"
+    "start": "npx tsc && node server.js"
   },
   "keywords": [],
   "author": "",
