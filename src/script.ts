@@ -44,14 +44,14 @@ var preFilteredRecipes: Recipe[] = [];
 async function fetchData(): Promise<void> {
   const promises: Promise<any>[] = [
     fetch('db/effects_db.json').then((response) => response.json()),
-    fetch('db/ingredients_db.json').then((response) => response.json())
+    fetch('db/ingredients_db.json').then((response) => response.json()),
+    fetch('db/build_recipes_db.json').then((response) => response.json())
   ];
 
   try {
-    const [effectsData, ingredientsData] = await Promise.all(promises);
+    const [effectsData, ingredientsData, recipes] = await Promise.all(promises);
     drawOriginsFilterGUI(ingredientsData);
-    const recipes = buildRecipesDB(effectsData, ingredientsData)
-    allRecipes = preFilteredRecipes = sortRecipesBy(recipes, SortBy.Magnifiers);
+    allRecipes = preFilteredRecipes = sortRecipesBy(recipes as Recipe[], SortBy.Magnifiers);
     drawRecipesTableGUI(allRecipes);
     populateDropdown(effectsData, ingredientsData);
     applyFilterConditionsFromStorage();
@@ -123,131 +123,6 @@ function drawOriginsFilterGUI(ingredientsData: IngredientData[]){
     checkboxDiv.innerHTML = checkboxHTML;
     divContainer.appendChild(checkboxDiv)
   }
-}
-
-function buildRecipesDB(effectsData: EffectData[], ingredientsData: IngredientData[]): Recipe[]{
-  let recipes2: Recipe[] = [];
-  let recipes3: Recipe[] = [];
-  // get 2 ingredients recipes
-  for (var index1 = 0; index1 < ingredientsData.length; index1++) {
-    const ingredient1 = ingredientsData[index1];
-    for (var index2 = index1+1; index2 < ingredientsData.length; index2++) { 
-      const ingredient2 = ingredientsData[index2];
-
-      let twoIngredientsEffects: IngredientEffect[] = [];
-      for (const i1_ef of ingredient1.effects){
-        const i2_ef = ingredient2.effects.find(i2_ef => i2_ef.fkey == i1_ef.fkey);
-        if (i2_ef){
-          twoIngredientsEffects.push(
-            { 
-              fkey: i2_ef.fkey,
-              magnitude: Math.max(i1_ef.magnitude ?? 1, i2_ef.magnitude ?? 1),
-              duration: Math.max(i1_ef.duration ?? 1, i2_ef.duration ?? 1),
-              value: Math.max(i1_ef.value ?? 1, i2_ef.value ?? 1),
-              effectData: effectsData.find(eff => eff.key == i2_ef.fkey)
-            }
-          )
-        }
-      }
-      
-      if(!twoIngredientsEffects || !twoIngredientsEffects.length){ 
-        continue; // No matching effects
-      }
-      
-      if (recipes2.some(rec => rec.ingredientKeys.every(ingredientKey =>
-        ingredientKey == ingredient1.pkey || ingredientKey == ingredient2.pkey))) {
-        continue; // Effects already exists
-      }
-      
-      recipes2.push({
-        ingredientKeys: [
-          ingredient1.pkey,
-          ingredient2.pkey
-        ],
-        ingredients: [
-          ingredient1,
-          ingredient2
-        ],
-        effects: twoIngredientsEffects
-      });
-
-      // get 3 ingredients recipes
-      for (var index3 = index2+1; index3 < ingredientsData.length; index3++) { 
-        const ingredient3 = ingredientsData[index3];
-
-        const thirdIngredientEffects = ingredient3.effects.filter(i3_ef => 
-          !twoIngredientsEffects.some(existingEf => existingEf.fkey == i3_ef.fkey) &&
-          (ingredient1.effects.some(i1_ef => i1_ef.fkey == i3_ef.fkey) ||
-          ingredient2.effects.some(i2_ef => i2_ef.fkey == i3_ef.fkey))
-        )
-
-        if (!thirdIngredientEffects.length){
-          continue; // no new effect
-        }
-
-        let threeIngredientsEffects: IngredientEffect[] =  [...twoIngredientsEffects];
-        for (const i3_ef of thirdIngredientEffects){
-          const i1_ef = ingredient1.effects.find(i1_ef => i1_ef.fkey == i3_ef.fkey);
-          if (i1_ef){
-            threeIngredientsEffects.push(
-              { 
-                fkey: i1_ef.fkey,
-                magnitude: Math.max(i3_ef.magnitude ?? 1, i1_ef.magnitude ?? 1),
-                duration: Math.max(i3_ef.duration ?? 1, i1_ef.duration ?? 1),
-                value: Math.max(i3_ef.value ?? 1, i1_ef.value ?? 1),
-                effectData: effectsData.find(eff => eff.key == i1_ef.fkey)
-              }
-            )
-          }
-          const i2_ef = ingredient2.effects.find(i2_ef => i2_ef.fkey == i3_ef.fkey);
-          if (i2_ef){
-            threeIngredientsEffects.push(
-              { 
-                fkey: i2_ef.fkey,
-                magnitude: Math.max(i3_ef.magnitude ?? 1, i2_ef.magnitude ?? 1),
-                duration: Math.max(i3_ef.duration ?? 1, i2_ef.duration ?? 1),
-                value: Math.max(i3_ef.value ?? 1, i2_ef.value ?? 1),
-                effectData: effectsData.find(eff => eff.key == i2_ef.fkey)
-              }
-            )
-          }
-        }
-
-        recipes3.push({
-          ingredientKeys: [
-            ingredient1.pkey,
-            ingredient2.pkey,
-            ingredient3.pkey
-          ],
-          ingredients: [
-            ingredient1,
-            ingredient2,
-            ingredient3
-          ],
-          effects: threeIngredientsEffects
-        });
-
-      }
-     }
-  }
-  
-  // discard 3 ingredient recipes with no added effect (same as 2 igr. rcp.)
-  const filteredRecipes3 = recipes3.filter(recipe3 => {
-    const matchingRecipes2 = recipes2.filter(recipe2 =>
-      recipe2.ingredientKeys.every(ingredient => recipe3.ingredientKeys.includes(ingredient))
-    );
-    if (!matchingRecipes2 || !matchingRecipes2.length) {
-      console.warn("Some 2 ingridients recipes are missing")
-      return true;
-    };
-    const hasIdenticalEffectsOnly = matchingRecipes2.some(recipe2 => 
-      recipe3.effects.every(effect3 => 
-        recipe2.effects.some(effect2 => effect2.fkey == effect3.fkey)
-      )
-    );
-    return !hasIdenticalEffectsOnly;
-  });
-  return [...recipes2, ...filteredRecipes3];
 }
 
 function drawRecipesTableGUI(recipes: Recipe[], part: number = 0): void {

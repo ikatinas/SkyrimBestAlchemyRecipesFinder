@@ -4,6 +4,7 @@
   "description": "",
   "main": "script.js",
   "scripts": {
+    "build:recipes": "npx tsc -p tsconfig.scripts.json && node scripts-dist/build-recipes-db.js",
     "build": "npx tsc",
     "start": "node server.js"
   },
@@ -14,6 +15,7 @@
     "finalhandler": "^1.2.0",
     "http-server": "^14.1.1",
     "serve-static": "^1.15.0",
+    "@types/node": "^22.10.2",
     "typescript": "^5.2.2"
   }
 }

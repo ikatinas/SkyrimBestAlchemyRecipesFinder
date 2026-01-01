@@ -12,8 +12,16 @@ npm install
 ```
 ## Compile your TypeScript code by running the following command:
 ```
-npx tsc
+npm run build
 ```
+
+## Generate prebuilt recipes DB
+This generates `db/build_recipes_db.json` from `db/effects_db.json` and `db/ingredients_db.json`:
+```
+npm run build:recipes
+```
+
+In CI, the workflow will regenerate this file
 ## run in local npm web server
 ```
 npm start

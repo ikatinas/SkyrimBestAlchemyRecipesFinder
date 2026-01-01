@@ -1,0 +1,11 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "lib": ["ES2019"],
+    "types": ["node"],
+    "outDir": "./scripts-dist",
+    "rootDir": "./scripts"
+  },
+  "include": ["scripts/**/*.ts"],
+  "exclude": ["node_modules", "src/**/*", "models/**/*"]
+}
