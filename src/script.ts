@@ -41,6 +41,37 @@ interface Recipe {
 
 var allRecipes: Recipe[] = [];
 var preFilteredRecipes: Recipe[] = [];
+var effectsByKey: Record<string, EffectData> = {};
+
+function indexEffectsByKey(effectsData: EffectData[]): void {
+  effectsByKey = Object.fromEntries(effectsData.map((effect) => [effect.key, effect]));
+}
+
+function getEffectTitle(effectKey: string): string {
+  return effectsByKey[effectKey]?.title ?? effectKey;
+}
+
+function buildIngredientTooltipText(ingredient: IngredientData): string {
+  const lines: string[] = [];
+  const ingredientTitle = ingredient.origin ? `${ingredient.title} [${ingredient.origin}]` : ingredient.title;
+  lines.push(ingredientTitle);
+
+  const effects = ingredient.effects ?? [];
+  if (effects.length) {
+    lines.push('');
+    for (const effect of effects) {
+      lines.push(`- ${getEffectTitle(effect.fkey)}`);
+    }
+  }
+
+  const collectedBy = (ingredient.collected_by ?? '').trim();
+  if (collectedBy) {
+    lines.push('');
+    lines.push(collectedBy);
+  }
+
+  return lines.join('\n').trim();
+}
 async function fetchData(): Promise<void> {
   const promises: Promise<any>[] = [
     fetch('db/effects_db.json').then((response) => response.json()),
@@ -50,6 +81,7 @@ async function fetchData(): Promise<void> {
 
   try {
     const [effectsData, ingredientsData, recipes] = await Promise.all(promises);
+    indexEffectsByKey(effectsData as EffectData[]);
     drawOriginsFilterGUI(ingredientsData);
     allRecipes = preFilteredRecipes = sortRecipesBy(recipes as Recipe[], SortBy.Magnifiers);
     drawRecipesTableGUI(allRecipes);
@@ -104,6 +136,26 @@ function showLoadingIndicator(message: string){
 
 function getOriginTitle(originCode: string): string {
   return (Origin as unknown as Record<string, string>)[originCode] ?? originCode;
+}
+
+function formatTooltipText(text: string): string {
+  return text
+    .replace(/\.\s+/g, '.\n')
+    .replace(/;\s+/g, ';\n')
+    .trim();
+}
+
+function attachMultilineTooltip(target: HTMLElement, tooltipText: string): void {
+  const text = (tooltipText ?? '').trim();
+  if (!text) return;
+
+  target.classList.add('hasTooltip');
+  target.removeAttribute('title');
+
+  const tooltip = document.createElement('div');
+  tooltip.className = 'customTooltip';
+  tooltip.textContent = formatTooltipText(text);
+  target.appendChild(tooltip);
 }
 
 function drawOriginsFilterGUI(ingredientsData: IngredientData[]){
@@ -165,7 +217,8 @@ function drawRecipesTableGUI(recipes: Recipe[], part: number = 0): void {
       textContainer.appendChild(excludeIgrFilterButton);
 
       const ingredientTdCell = document.createElement('td');
-      ingredientTdCell.title = ingredient.collected_by ?? ingredient.title;
+      const tooltipText = buildIngredientTooltipText(ingredient);
+      attachMultilineTooltip(ingredientTdCell, tooltipText);
       ingredientTdCell.style.textAlign = "center";
       ingredientTdCell.appendChild(imgContainer);
       ingredientTdCell.appendChild(textContainer);

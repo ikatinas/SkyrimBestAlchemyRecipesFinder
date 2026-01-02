@@ -145,6 +145,34 @@ footer {
   border-radius: 50%;
   animation: spin 2s linear infinite;
 }
+
+.hasTooltip {
+  position: relative;
+}
+
+.hasTooltip .customTooltip {
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translateX(-50%);
+  margin-bottom: 6px;
+  padding: 6px 8px;
+  background: rgb(26 27 34);
+  color: rgb(248, 248, 242);
+  border: 1px solid #50555c;
+  border-radius: 0.25rem;
+  min-width: 320px;
+  max-width: 520px;
+  white-space: pre-wrap;
+  text-align: left;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.hasTooltip:hover .customTooltip {
+  display: block;
+}
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
