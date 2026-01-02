@@ -51,26 +51,42 @@ function getEffectTitle(effectKey: string): string {
   return effectsByKey[effectKey]?.title ?? effectKey;
 }
 
-function buildIngredientTooltipText(ingredient: IngredientData): string {
-  const lines: string[] = [];
-  const ingredientTitle = ingredient.origin ? `${ingredient.title} [${ingredient.origin}]` : ingredient.title;
-  lines.push(ingredientTitle);
+function buildIngredientTooltipText(ingredient: IngredientData): HTMLElement {
+  const container = document.createElement('div');
+
+  const ingredientTitle = ingredient.origin
+    ? `${ingredient.title} [${ingredient.origin}]`
+    : ingredient.title;
+  const titleDiv = document.createElement('div');
+  titleDiv.textContent = ingredientTitle;
+  container.appendChild(titleDiv);
 
   const effects = ingredient.effects ?? [];
   if (effects.length) {
-    lines.push('');
+    container.appendChild(document.createElement('br'));
     for (const effect of effects) {
-      lines.push(`- ${getEffectTitle(effect.fkey)}`);
+      const line = document.createElement('div');
+      line.appendChild(document.createTextNode('- '));
+
+      const effectSpan = document.createElement('span');
+      effectSpan.textContent = getEffectTitle(effect.fkey);
+      const harmful = effectsByKey[effect.fkey]?.harmful ?? false;
+      effectSpan.classList.add(harmful ? 'harmfull' : 'beneficial');
+      line.appendChild(effectSpan);
+
+      container.appendChild(line);
     }
   }
 
   const collectedBy = (ingredient.collected_by ?? '').trim();
   if (collectedBy) {
-    lines.push('');
-    lines.push(collectedBy);
+    container.appendChild(document.createElement('br'));
+    const collectedDiv = document.createElement('div');
+    collectedDiv.textContent = collectedBy;
+    container.appendChild(collectedDiv);
   }
 
-  return lines.join('\n').trim();
+  return container;
 }
 async function fetchData(): Promise<void> {
   const promises: Promise<any>[] = [
@@ -145,8 +161,9 @@ function formatTooltipText(text: string): string {
     .trim();
 }
 
-function attachMultilineTooltip(target: HTMLElement, tooltipText: string): void {
-  const text = (tooltipText ?? '').trim();
+function attachMultilineTooltip(target: HTMLElement, tooltipContent: HTMLElement): void {
+  if (!tooltipContent) return;
+  const text = (tooltipContent.textContent ?? '').trim();
   if (!text) return;
 
   target.classList.add('hasTooltip');
@@ -154,7 +171,7 @@ function attachMultilineTooltip(target: HTMLElement, tooltipText: string): void 
 
   const tooltip = document.createElement('div');
   tooltip.className = 'customTooltip';
-  tooltip.textContent = formatTooltipText(text);
+  tooltip.appendChild(tooltipContent);
   target.appendChild(tooltip);
 }
 
