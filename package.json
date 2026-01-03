@@ -5,6 +5,7 @@
   "main": "script.js",
   "scripts": {
     "build:scripts": "npx tsc -p tsconfig.scripts.json",
+    "build:sprites": "npm run build:scripts && node scripts-dist/build-sprite-sheet.js",
     "build:ingredients": "npm run build:scripts && node scripts-dist/build-ingredients-db.js",
     "build:recipes": "npm run build:scripts && node scripts-dist/build-recipes-db.js",
     "build:db": "npm run build:ingredients && npm run build:recipes",
@@ -19,6 +20,7 @@
     "http-server": "^14.1.1",
     "serve-static": "^1.15.0",
     "@types/node": "^22.10.2",
+    "sharp": "^0.33.5",
     "typescript": "^5.2.2"
   }
 }
