@@ -21,7 +21,6 @@ interface IngredientEffect {
   magnitude?: number;
   duration?: number;
   value?: number;
-  effectData?: EffectData;
 }
 
 interface IngredientData {
@@ -38,23 +37,30 @@ interface IngredientData {
   garden: null;
 }
 
-interface Recipe {
+interface BuildRecipe {
   ingredientKeys: string[];
-  ingredients: IngredientData[];
-  effects: (Required<Pick<IngredientEffect, 'fkey' | 'magnitude' | 'duration' | 'value'>> & {
-    effectData?: EffectData;
-  })[];
+  effectIds: string[];
 }
 
-function asNumberOrDefault(value: number | undefined | null, defaultValue: number): number {
-  return value === undefined || value === null ? defaultValue : value;
+function sharedEffectIdsBetween(a: IngredientData, b: IngredientData): string[] {
+  const aEffects = a.effects ?? [];
+  const bEffects = b.effects ?? [];
+
+  const [smaller, bigger] = aEffects.length <= bEffects.length ? [aEffects, bEffects] : [bEffects, aEffects];
+  const biggerKeys = new Set(bigger.map((e) => e.fkey));
+
+  const shared: string[] = [];
+  for (const eff of smaller) {
+    if (biggerKeys.has(eff.fkey)) shared.push(eff.fkey);
+  }
+
+  // Unique + deterministic.
+  return Array.from(new Set(shared)).sort();
 }
 
-function buildRecipesDB(effectsData: EffectData[], ingredientsData: IngredientData[]): Recipe[] {
-  const effectByKey = new Map<string, EffectData>(effectsData.map((eff) => [eff.key, eff]));
-
-  const recipes2: Recipe[] = [];
-  const recipes3: Recipe[] = [];
+function buildRecipesDB(_effectsData: EffectData[], ingredientsData: IngredientData[]): BuildRecipe[] {
+  const recipes2: BuildRecipe[] = [];
+  const recipes3: BuildRecipe[] = [];
 
   for (let index1 = 0; index1 < ingredientsData.length; index1++) {
     const ingredient1 = ingredientsData[index1];
@@ -62,27 +68,8 @@ function buildRecipesDB(effectsData: EffectData[], ingredientsData: IngredientDa
     for (let index2 = index1 + 1; index2 < ingredientsData.length; index2++) {
       const ingredient2 = ingredientsData[index2];
 
-      const twoIngredientsEffects: Recipe['effects'] = [];
-      for (const i1_ef of ingredient1.effects) {
-        const i2_ef = ingredient2.effects.find((e) => e.fkey === i1_ef.fkey);
-        if (!i2_ef) continue;
-
-        twoIngredientsEffects.push({
-          fkey: i2_ef.fkey,
-          magnitude: Math.max(
-            asNumberOrDefault(i1_ef.magnitude, 1),
-            asNumberOrDefault(i2_ef.magnitude, 1)
-          ),
-          duration: Math.max(
-            asNumberOrDefault(i1_ef.duration, 1),
-            asNumberOrDefault(i2_ef.duration, 1)
-          ),
-          value: Math.max(asNumberOrDefault(i1_ef.value, 1), asNumberOrDefault(i2_ef.value, 1)),
-          effectData: effectByKey.get(i2_ef.fkey),
-        });
-      }
-
-      if (!twoIngredientsEffects.length) continue;
+      const effectIds2 = sharedEffectIdsBetween(ingredient1, ingredient2);
+      if (!effectIds2.length) continue;
 
       const alreadyExists = recipes2.some((rec) =>
         rec.ingredientKeys.every(
@@ -93,69 +80,21 @@ function buildRecipesDB(effectsData: EffectData[], ingredientsData: IngredientDa
 
       recipes2.push({
         ingredientKeys: [ingredient1.pkey, ingredient2.pkey],
-        ingredients: [ingredient1, ingredient2],
-        effects: twoIngredientsEffects,
+        effectIds: effectIds2,
       });
 
       for (let index3 = index2 + 1; index3 < ingredientsData.length; index3++) {
         const ingredient3 = ingredientsData[index3];
 
-        const thirdIngredientEffects = ingredient3.effects.filter(
-          (i3_ef) =>
-            !twoIngredientsEffects.some((existingEf) => existingEf.fkey === i3_ef.fkey) &&
-            (ingredient1.effects.some((i1_ef) => i1_ef.fkey === i3_ef.fkey) ||
-              ingredient2.effects.some((i2_ef) => i2_ef.fkey === i3_ef.fkey))
-        );
+        const effectIds13 = sharedEffectIdsBetween(ingredient1, ingredient3);
+        const effectIds23 = sharedEffectIdsBetween(ingredient2, ingredient3);
+        const effectIds3 = Array.from(new Set([...effectIds2, ...effectIds13, ...effectIds23])).sort();
 
-        if (!thirdIngredientEffects.length) continue;
-
-        const threeIngredientsEffects: Recipe['effects'] = [...twoIngredientsEffects];
-        for (const i3_ef of thirdIngredientEffects) {
-          const i1_ef = ingredient1.effects.find((e) => e.fkey === i3_ef.fkey);
-          if (i1_ef) {
-            threeIngredientsEffects.push({
-              fkey: i1_ef.fkey,
-              magnitude: Math.max(
-                asNumberOrDefault(i3_ef.magnitude, 1),
-                asNumberOrDefault(i1_ef.magnitude, 1)
-              ),
-              duration: Math.max(
-                asNumberOrDefault(i3_ef.duration, 1),
-                asNumberOrDefault(i1_ef.duration, 1)
-              ),
-              value: Math.max(
-                asNumberOrDefault(i3_ef.value, 1),
-                asNumberOrDefault(i1_ef.value, 1)
-              ),
-              effectData: effectByKey.get(i1_ef.fkey),
-            });
-          }
-
-          const i2_ef = ingredient2.effects.find((e) => e.fkey === i3_ef.fkey);
-          if (i2_ef) {
-            threeIngredientsEffects.push({
-              fkey: i2_ef.fkey,
-              magnitude: Math.max(
-                asNumberOrDefault(i3_ef.magnitude, 1),
-                asNumberOrDefault(i2_ef.magnitude, 1)
-              ),
-              duration: Math.max(
-                asNumberOrDefault(i3_ef.duration, 1),
-                asNumberOrDefault(i2_ef.duration, 1)
-              ),
-              value: Math.max(
-                asNumberOrDefault(i3_ef.value, 1),
-                asNumberOrDefault(i2_ef.value, 1)
-              ),
-              effectData: effectByKey.get(i2_ef.fkey),
-            });
-          }
-        }
+        if (!effectIds3.length) continue;
 
         recipes3.push({
           ingredientKeys: [ingredient1.pkey, ingredient2.pkey, ingredient3.pkey],
-          ingredients: [ingredient1, ingredient2, ingredient3],
-          effects: threeIngredientsEffects,
+          effectIds: effectIds3,
         });
       }
     }
@@ -168,11 +107,13 @@ function buildRecipesDB(effectsData: EffectData[], ingredientsData: IngredientDa
 
     if (!matchingRecipes2.length) return true;
 
-    const hasIdenticalEffectsOnly = matchingRecipes2.some((recipe2) =>
-      recipe3.effects.every((effect3) => recipe2.effects.some((effect2) => effect2.fkey === effect3.fkey))
-    );
+    // drop if 3rd ingredient doesn't add any new effects
+    const hasSameEffectsAsSomePair = matchingRecipes2.some((recipe2) => {
+      if (recipe2.effectIds.length !== recipe3.effectIds.length) return false;
+      return recipe2.effectIds.every((id, idx) => id === recipe3.effectIds[idx]);
+    });
 
-    return !hasIdenticalEffectsOnly;
+    return !hasSameEffectsAsSomePair;
   });
 
   return [...recipes2, ...filteredRecipes3];

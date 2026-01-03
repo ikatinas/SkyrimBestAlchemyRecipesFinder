@@ -33,6 +33,11 @@ interface IngredientEffect {
   effectData?: EffectData
 }
 
+interface BuildRecipe {
+  ingredientKeys: string[];
+  effectIds: string[];
+}
+
 interface Recipe {
   ingredientKeys: string[];
   ingredients: IngredientData[];
@@ -42,6 +47,59 @@ interface Recipe {
 var allRecipes: Recipe[] = [];
 var preFilteredRecipes: Recipe[] = [];
 var effectsByKey: Record<string, EffectData> = {};
+
+function asNumberOrDefault(value: number | undefined | null, defaultValue: number): number {
+  return value === undefined || value === null ? defaultValue : value;
+}
+
+function buildIngredientByKeyMap(ingredientsData: IngredientData[]): Record<string, IngredientData> {
+  return Object.fromEntries(ingredientsData.map((ing) => [ing.pkey, ing]));
+}
+
+function rehydrateRecipes(
+  buildRecipes: BuildRecipe[],
+  ingredientsData: IngredientData[],
+  effectsData: EffectData[]
+): Recipe[] {
+  indexEffectsByKey(effectsData);
+  const ingredientByKey = buildIngredientByKeyMap(ingredientsData);
+
+  return buildRecipes
+    .map((buildRec) => {
+      const ingredients: IngredientData[] = buildRec.ingredientKeys
+        .map((key) => ingredientByKey[key])
+        .filter((ing): ing is IngredientData => Boolean(ing));
+
+      const effects: IngredientEffect[] = (buildRec.effectIds ?? []).map((effectId) => {
+        let magnitude = 0;
+        let duration = 0;
+        let value = 0;
+
+        for (const ing of ingredients) {
+          const eff = (ing.effects ?? []).find((e) => e.fkey === effectId);
+          if (!eff) continue;
+          magnitude = Math.max(magnitude, asNumberOrDefault(eff.magnitude, 1));
+          duration = Math.max(duration, asNumberOrDefault(eff.duration, 1));
+          value = Math.max(value, asNumberOrDefault(eff.value, 1));
+        }
+
+        return {
+          fkey: effectId,
+          magnitude,
+          duration,
+          value,
+          effectData: effectsByKey[effectId],
+        };
+      });
+
+      return {
+        ingredientKeys: buildRec.ingredientKeys,
+        ingredients,
+        effects,
+      };
+    })
+    .filter((rec) => rec.ingredients.length >= 2 && rec.effects.length > 0);
+}
 
 function indexEffectsByKey(effectsData: EffectData[]): void {
   effectsByKey = Object.fromEntries(effectsData.map((effect) => [effect.key, effect]));
@@ -96,12 +154,16 @@ async function fetchData(): Promise<void> {
   ];
 
   try {
-    const [effectsData, ingredientsData, recipes] = await Promise.all(promises);
-    indexEffectsByKey(effectsData as EffectData[]);
-    drawOriginsFilterGUI(ingredientsData);
-    allRecipes = preFilteredRecipes = sortRecipesBy(recipes as Recipe[], SortBy.Magnifiers);
+    const [effectsData, ingredientsData, buildRecipes] = await Promise.all(promises);
+    const hydratedRecipes = rehydrateRecipes(
+      buildRecipes as BuildRecipe[],
+      ingredientsData as IngredientData[],
+      effectsData as EffectData[]
+    );
+    drawOriginsFilterGUI(ingredientsData as IngredientData[]);
+    allRecipes = preFilteredRecipes = sortRecipesBy(hydratedRecipes, SortBy.Magnifiers);
     drawRecipesTableGUI(allRecipes);
-    populateDropdown(effectsData, ingredientsData);
+    populateDropdown(effectsData as EffectData[], ingredientsData as IngredientData[]);
     applyFilterConditionsFromStorage();
     hideLoadingIndicator();
   } catch (error) {
