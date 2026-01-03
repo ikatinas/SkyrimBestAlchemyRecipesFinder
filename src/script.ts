@@ -47,27 +47,33 @@ interface Recipe {
 var allRecipes: Recipe[] = [];
 var preFilteredRecipes: Recipe[] = [];
 var effectsByKey: Record<string, EffectData> = {};
+var ingredientsByKey: Record<string, IngredientData> = {};
 
 function asNumberOrDefault(value: number | undefined | null, defaultValue: number): number {
   return value === undefined || value === null ? defaultValue : value;
 }
 
-function buildIngredientByKeyMap(ingredientsData: IngredientData[]): Record<string, IngredientData> {
-  return Object.fromEntries(ingredientsData.map((ing) => [ing.pkey, ing]));
+function indexByKey<T>(items: T[], getKey: (item: T) => string): Record<string, T> {
+  return Object.fromEntries(items.map((item) => [getKey(item), item]));
+}
+
+function indexEffectsByKey(effectsData: EffectData[]): void {
+  effectsByKey = indexByKey(effectsData, (effect) => effect.key);
+}
+
+function indexIngredientsByKey(ingredientsData: IngredientData[]): void {
+  ingredientsByKey = indexByKey(ingredientsData, (ing) => ing.pkey);
 }
 
 function rehydrateRecipes(
   buildRecipes: BuildRecipe[],
-  ingredientsData: IngredientData[],
-  effectsData: EffectData[]
+  ingredientsByKeyMap: Record<string, IngredientData>,
+  effectsByKeyMap: Record<string, EffectData>
 ): Recipe[] {
-  indexEffectsByKey(effectsData);
-  const ingredientByKey = buildIngredientByKeyMap(ingredientsData);
-
   return buildRecipes
     .map((buildRec) => {
       const ingredients: IngredientData[] = buildRec.ingredientKeys
-        .map((key) => ingredientByKey[key])
+        .map((key) => ingredientsByKeyMap[key])
         .filter((ing): ing is IngredientData => Boolean(ing));
 
       const effects: IngredientEffect[] = (buildRec.effectIds ?? []).map((effectId) => {
@@ -88,7 +94,7 @@ function rehydrateRecipes(
           magnitude,
           duration,
           value,
-          effectData: effectsByKey[effectId],
+          effectData: effectsByKeyMap[effectId],
         };
       });
 
@@ -101,12 +107,15 @@ function rehydrateRecipes(
     .filter((rec) => rec.ingredients.length >= 2 && rec.effects.length > 0);
 }
 
-function indexEffectsByKey(effectsData: EffectData[]): void {
-  effectsByKey = Object.fromEntries(effectsData.map((effect) => [effect.key, effect]));
-}
-
 function getEffectTitle(effectKey: string): string {
   return effectsByKey[effectKey]?.title ?? effectKey;
+}
+
+function getIngredientTitle(ingredientKey: string): string {
+  const ing = ingredientsByKey[ingredientKey];
+  if (!ing) return ingredientKey;
+  const title = ing.title ?? ingredientKey;
+  return ing.origin ? `${title} [${ing.origin}]` : title;
 }
 
 function buildIngredientTooltipText(ingredient: IngredientData): HTMLElement {
@@ -155,10 +164,14 @@ async function fetchData(): Promise<void> {
 
   try {
     const [effectsData, ingredientsData, buildRecipes] = await Promise.all(promises);
+
+    indexEffectsByKey(effectsData as EffectData[]);
+    indexIngredientsByKey(ingredientsData as IngredientData[]);
+
     const hydratedRecipes = rehydrateRecipes(
       buildRecipes as BuildRecipe[],
-      ingredientsData as IngredientData[],
-      effectsData as EffectData[]
+      ingredientsByKey,
+      effectsByKey
     );
     drawOriginsFilterGUI(ingredientsData as IngredientData[]);
     allRecipes = preFilteredRecipes = sortRecipesBy(hydratedRecipes, SortBy.Magnifiers);
@@ -603,19 +616,27 @@ function removeFilterCondition(filterKey: string, type: FilterType) {
   applyFilter();
 }
 
-function addFilterGUI(effectKey: string, action: FilterAction, type: FilterType) {
+function addFilterGUI(itemKey: string, action: FilterAction, type: FilterType) {
   const filtersContainer = document.querySelector('#filtersContainer') as HTMLElement;
   const div = document.createElement('div');
   div.className = `filterCondition${FilterAction[action]}`
-  div.textContent = effectKey;
-  div.onmousedown = () => removeFilterCondition(effectKey, type);
+
+  const displayText = type === FilterType.Effect
+    ? getEffectTitle(itemKey)
+    : getIngredientTitle(itemKey);
+
+  div.dataset.filterKey = itemKey;
+  div.dataset.filterType = FilterType[type];
+  div.textContent = displayText;
+  div.title = `remove ${FilterType[type].toLowerCase()} filter`;
+  div.onmousedown = () => removeFilterCondition(itemKey, type);
   filtersContainer.appendChild(div);
 }
 
 function removeFilterGUI(effectKey: string) {
   const filtersContainer = document.querySelector('#filtersContainer') as HTMLElement;
   for (const filterItem of filtersContainer.getElementsByTagName("div")){
-    if(filterItem.textContent == effectKey){
+    if(filterItem.dataset.filterKey === effectKey){
       filterItem.remove();
     }
   }

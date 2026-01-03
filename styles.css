@@ -118,6 +118,8 @@ span.magnifier {
 }
 #filtersContainer div:hover {
   border-color: #4a4a4a;
+  color:#747474;
+  text-decoration: line-through;
 }
 footer {
   text-align: center;
