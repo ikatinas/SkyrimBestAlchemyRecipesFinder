@@ -21,5 +21,8 @@ jobs:
       - name: Install deps
         run: npm install
 
+      - name: Generate compressed DBs
+        run: npm run build:ingredients
+
       - name: Generate build_recipes_db.json
         run: npm run build:recipes

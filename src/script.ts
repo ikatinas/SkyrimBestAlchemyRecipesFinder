@@ -2,7 +2,7 @@ interface EffectData {
   key: string;
   title: string;
   id: string;
-  ingredients: string[];
+  ingredients: number[];
   description: string;
   base_cost: number;
   base_mag: number;
@@ -14,7 +14,7 @@ interface EffectData {
 interface IngredientData {
   image: string;
   title: string;
-  pkey: string;
+  pkey: number;
   origin: string;
   id: string;
   collected_by: string;
@@ -22,11 +22,11 @@ interface IngredientData {
   value: number;
   weight: number;
   merchant_avail: string;
-  garden: null;
+  garden: number | null;
 }
 
 interface IngredientEffect { 
-  fkey: string;
+  fkey: number;
   magnitude: number;
   duration: number;
   value: number;
@@ -34,41 +34,41 @@ interface IngredientEffect {
 }
 
 interface BuildRecipe {
-  ingredientKeys: string[];
-  effectIds: string[];
+  ingredientKeys: number[];
+  effectIds: number[];
 }
 
 interface Recipe {
-  ingredientKeys: string[];
+  ingredientKeys: number[];
   ingredients: IngredientData[];
   effects: IngredientEffect[];
 }
 
 var allRecipes: Recipe[] = [];
 var preFilteredRecipes: Recipe[] = [];
-var effectsByKey: Record<string, EffectData> = {};
-var ingredientsByKey: Record<string, IngredientData> = {};
+var effectsByKey: Record<number, EffectData> = {};
+var ingredientsByKey: Record<number, IngredientData> = {};
 
 function asNumberOrDefault(value: number | undefined | null, defaultValue: number): number {
   return value === undefined || value === null ? defaultValue : value;
 }
 
-function indexByKey<T>(items: T[], getKey: (item: T) => string): Record<string, T> {
-  return Object.fromEntries(items.map((item) => [getKey(item), item]));
+function indexById<T>(items: T[]): Record<number, T> {
+  return Object.fromEntries(items.map((item, idx) => [idx, item])) as unknown as Record<number, T>;
 }
 
 function indexEffectsByKey(effectsData: EffectData[]): void {
-  effectsByKey = indexByKey(effectsData, (effect) => effect.key);
+  effectsByKey = indexById(effectsData);
 }
 
 function indexIngredientsByKey(ingredientsData: IngredientData[]): void {
-  ingredientsByKey = indexByKey(ingredientsData, (ing) => ing.pkey);
+  ingredientsByKey = indexById(ingredientsData);
 }
 
 function rehydrateRecipes(
   buildRecipes: BuildRecipe[],
-  ingredientsByKeyMap: Record<string, IngredientData>,
-  effectsByKeyMap: Record<string, EffectData>
+  ingredientsByKeyMap: Record<number, IngredientData>,
+  effectsByKeyMap: Record<number, EffectData>
 ): Recipe[] {
   return buildRecipes
     .map((buildRec) => {
@@ -107,14 +107,14 @@ function rehydrateRecipes(
     .filter((rec) => rec.ingredients.length >= 2 && rec.effects.length > 0);
 }
 
-function getEffectTitle(effectKey: string): string {
-  return effectsByKey[effectKey]?.title ?? effectKey;
+function getEffectTitle(effectKey: number): string {
+  return effectsByKey[effectKey]?.title ?? String(effectKey);
 }
 
-function getIngredientTitle(ingredientKey: string): string {
+function getIngredientTitle(ingredientKey: number): string {
   const ing = ingredientsByKey[ingredientKey];
-  if (!ing) return ingredientKey;
-  const title = ing.title ?? ingredientKey;
+  if (!ing) return String(ingredientKey);
+  const title = ing.title ?? String(ingredientKey);
   return ing.origin ? `${title} [${ing.origin}]` : title;
 }
 
@@ -157,9 +157,9 @@ function buildIngredientTooltipText(ingredient: IngredientData): HTMLElement {
 }
 async function fetchData(): Promise<void> {
   const promises: Promise<any>[] = [
-    fetch('db/effects_db.json').then((response) => response.json()),
-    fetch('db/ingredients_db.json').then((response) => response.json()),
-    fetch('db/build_recipes_db.json').then((response) => response.json())
+    fetch('dist/db/effects_db.json').then((response) => response.json()),
+    fetch('dist/db/ingredients_db.json').then((response) => response.json()),
+    fetch('dist/db/build_recipes_db.json').then((response) => response.json())
   ];
 
   try {
@@ -326,7 +326,7 @@ function drawRecipesTableGUI(recipes: Recipe[], part: number = 0): void {
     recipe.effects.forEach((effect) => {
       const effectItem = document.createElement('li');
       const effectText = document.createElement('span');
-      effectText.textContent = effect.effectData?.title ?? effect.fkey;
+      effectText.textContent = effect.effectData?.title ?? String(effect.fkey);
       effectText.classList.add(effect.effectData?.harmful ? "harmfull" : "beneficial");
       effectText.title = effect.effectData?.description ?? effectText.textContent;
       effectItem.appendChild(effectText);
@@ -414,7 +414,7 @@ function getMagnifiersGUI(effect: IngredientEffect): HTMLSpanElement{
 }
 
 
-function getFilterButton(key: string, filterAction: FilterAction, filterType: FilterType): HTMLSpanElement{
+function getFilterButton(key: number, filterAction: FilterAction, filterType: FilterType): HTMLSpanElement{
   const includeSvgString = 
   `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="filterShowIcon" viewBox="0 0 16 16">
     <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
@@ -451,11 +451,11 @@ function populateDropdown(effects: EffectData[], ingredientsData: IngredientData
 
   dropdown.innerHTML = '';
 
-  effects.forEach((effect) => {
+  effects.forEach((effect, effectId) => {
     const li = document.createElement("li");
     li.textContent = effect.title;
     li.classList.add(effect.harmful ? "harmfull" : "beneficial")
-    li.onmousedown = () => addFilterCondition(effect.key, FilterAction.Include, FilterType.Effect);
+    li.onmousedown = () => addFilterCondition(effectId, FilterAction.Include, FilterType.Effect);
     dropdown.appendChild(li);
   });
 
@@ -531,12 +531,26 @@ function preFilterLimiters(){
 }
 
 interface FilterCondition {
-  ingredientKeys: string[];
-  effectKeys: string[];
+  ingredientKeys: number[];
+  effectKeys: number[];
 }
 
 var includeConditions: FilterCondition = { ingredientKeys: [], effectKeys: [] };
 var excludeConditions: FilterCondition = { ingredientKeys: [], effectKeys: [] };
+
+function loadStoredNumberArray(storageKey: string): number[] {
+  const raw = localStorage.getItem(storageKey);
+  if (!raw) return [];
+  try {
+    const parsed = JSON.parse(raw);
+    if (!Array.isArray(parsed)) return [];
+    return parsed
+      .map((v) => (typeof v === 'number' ? v : Number(v)))
+      .filter((n) => Number.isFinite(n));
+  } catch {
+    return [];
+  }
+}
 
 function clearFilterConditions() {
   localStorage.setItem('includeEffectKeys', '[]');
@@ -551,29 +565,21 @@ function clearFilterConditions() {
 }
 
 function applyFilterConditionsFromStorage() {
-  const includeEffectKeys = JSON.parse(localStorage.getItem('includeEffectKeys') || '[]');
-  const includeIngredientKeys = JSON.parse(localStorage.getItem('includeIngredientKeys') || '[]');
-  const excludeEffectKeys = JSON.parse(localStorage.getItem('excludeEffectKeys') || '[]');
-  const excludeIngredientKeys = JSON.parse(localStorage.getItem('excludeIngredientKeys') || '[]');
+  const includeEffectKeys = loadStoredNumberArray('includeEffectKeys');
+  const includeIngredientKeys = loadStoredNumberArray('includeIngredientKeys');
+  const excludeEffectKeys = loadStoredNumberArray('excludeEffectKeys');
+  const excludeIngredientKeys = loadStoredNumberArray('excludeIngredientKeys');
 
   includeConditions = { ingredientKeys: includeIngredientKeys, effectKeys: includeEffectKeys };
   excludeConditions = { ingredientKeys: excludeIngredientKeys, effectKeys: excludeEffectKeys };
-  for (const key of includeEffectKeys) {
-    addFilterGUI(key, FilterAction.Include, FilterType.Effect);
-  }
-  for (const key of includeIngredientKeys) {
-    addFilterGUI(key, FilterAction.Include, FilterType.Ingredient);
-  }
-  for (const key of excludeEffectKeys) {
-    addFilterGUI(key, FilterAction.Exclude, FilterType.Effect);
-  }
-  for (const key of excludeIngredientKeys) {
-    addFilterGUI(key, FilterAction.Exclude, FilterType.Ingredient);
-  }
+  for (const key of includeEffectKeys) addFilterGUI(key, FilterAction.Include, FilterType.Effect);
+  for (const key of includeIngredientKeys) addFilterGUI(key, FilterAction.Include, FilterType.Ingredient);
+  for (const key of excludeEffectKeys) addFilterGUI(key, FilterAction.Exclude, FilterType.Effect);
+  for (const key of excludeIngredientKeys) addFilterGUI(key, FilterAction.Exclude, FilterType.Ingredient);
   applyFilter();
 }
 
-function addFilterCondition(key: string, action: FilterAction, type: FilterType) {
+function addFilterCondition(key: number, action: FilterAction, type: FilterType) {
   removeFilterCondition(key, type);
   if (action == FilterAction.Include){
     if(type == FilterType.Effect){
@@ -599,7 +605,7 @@ function addFilterCondition(key: string, action: FilterAction, type: FilterType)
   applyFilter();
 }
 
-function removeFilterCondition(filterKey: string, type: FilterType) {
+function removeFilterCondition(filterKey: number, type: FilterType) {
   if (type == FilterType.Effect){
     includeConditions.effectKeys = includeConditions.effectKeys.filter(key => key != filterKey);
     excludeConditions.effectKeys = excludeConditions.effectKeys.filter(key => key != filterKey);
@@ -616,7 +622,7 @@ function removeFilterCondition(filterKey: string, type: FilterType) {
   applyFilter();
 }
 
-function addFilterGUI(itemKey: string, action: FilterAction, type: FilterType) {
+function addFilterGUI(itemKey: number, action: FilterAction, type: FilterType) {
   const filtersContainer = document.querySelector('#filtersContainer') as HTMLElement;
   const div = document.createElement('div');
   div.className = `filterCondition${FilterAction[action]}`
@@ -625,7 +631,7 @@ function addFilterGUI(itemKey: string, action: FilterAction, type: FilterType) {
     ? getEffectTitle(itemKey)
     : getIngredientTitle(itemKey);
 
-  div.dataset.filterKey = itemKey;
+  div.dataset.filterKey = String(itemKey);
   div.dataset.filterType = FilterType[type];
   div.textContent = displayText;
   div.title = `remove ${FilterType[type].toLowerCase()} filter`;
@@ -633,10 +639,10 @@ function addFilterGUI(itemKey: string, action: FilterAction, type: FilterType) {
   filtersContainer.appendChild(div);
 }
 
-function removeFilterGUI(effectKey: string) {
+function removeFilterGUI(filterKey: number) {
   const filtersContainer = document.querySelector('#filtersContainer') as HTMLElement;
   for (const filterItem of filtersContainer.getElementsByTagName("div")){
-    if(filterItem.dataset.filterKey === effectKey){
+    if(filterItem.dataset.filterKey === String(filterKey)){
       filterItem.remove();
     }
   }

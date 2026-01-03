@@ -16,13 +16,13 @@ npm install
 ```
 # quick start
 ```shell
-npm run build:recipes && npm start
+npm run build:db && npm start
 ```
 
 ## step by step explained
-- This generates `db/build_recipes_db.json` from `db/effects_db.json` and `db/ingredients_db.json`:
+- This builds optimised db files from human readable ones in `/db` folder
 ```shell
-npm run build:recipes 
+npm run build:db 
 ```
 
 ### start local dev. http server

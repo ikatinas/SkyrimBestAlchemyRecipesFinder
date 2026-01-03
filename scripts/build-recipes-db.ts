@@ -7,7 +7,7 @@ interface EffectData {
   key: string;
   title: string;
   id: string;
-  ingredients: string[];
+  ingredients: number[];
   description: string;
   base_cost: number;
   base_mag: number;
@@ -17,7 +17,7 @@ interface EffectData {
 }
 
 interface IngredientEffect {
-  fkey: string;
+  fkey: number;
   magnitude?: number;
   duration?: number;
   value?: number;
@@ -26,7 +26,7 @@ interface IngredientEffect {
 interface IngredientData {
   image: string;
   title: string;
-  pkey: string;
+  pkey: number;
   origin: string;
   id: string;
   collected_by: string;
@@ -34,22 +34,22 @@ interface IngredientData {
   value: number;
   weight: number;
   merchant_avail: string;
-  garden: null;
+  garden: number | null;
 }
 
 interface BuildRecipe {
-  ingredientKeys: string[];
-  effectIds: string[];
+  ingredientKeys: number[];
+  effectIds: number[];
 }
 
-function sharedEffectIdsBetween(a: IngredientData, b: IngredientData): string[] {
+function sharedEffectIdsBetween(a: IngredientData, b: IngredientData): number[] {
   const aEffects = a.effects ?? [];
   const bEffects = b.effects ?? [];
 
   const [smaller, bigger] = aEffects.length <= bEffects.length ? [aEffects, bEffects] : [bEffects, aEffects];
   const biggerKeys = new Set(bigger.map((e) => e.fkey));
 
-  const shared: string[] = [];
+  const shared: number[] = [];
   for (const eff of smaller) {
     if (biggerKeys.has(eff.fkey)) shared.push(eff.fkey);
   }
@@ -121,9 +121,9 @@ function buildRecipesDB(_effectsData: EffectData[], ingredientsData: IngredientD
 
 async function main(): Promise<void> {
   const projectRoot = path.resolve(__dirname, '..');
-  const effectsPath = path.join(projectRoot, 'db', 'effects_db.json');
-  const ingredientsPath = path.join(projectRoot, 'db', 'ingredients_db.json');
-  const outPath = path.join(projectRoot, 'db', 'build_recipes_db.json');
+  const effectsPath = path.join(projectRoot, 'dist', 'db', 'effects_db.json');
+  const ingredientsPath = path.join(projectRoot, 'dist', 'db', 'ingredients_db.json');
+  const outPath = path.join(projectRoot, 'dist', 'db', 'build_recipes_db.json');
 
   const [effectsDataRaw, ingredientsDataRaw] = await Promise.all([
     readFile(effectsPath, 'utf8'),
