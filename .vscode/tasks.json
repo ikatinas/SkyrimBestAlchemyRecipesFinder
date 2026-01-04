@@ -1,0 +1,40 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "tsc: build",
+      "type": "shell",
+      "command": "npx",
+      "args": ["tsc"],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": "$tsc"
+    },
+    {
+      "label": "tsc: watch",
+      "type": "shell",
+      "command": "npx",
+      "args": ["tsc", "-w"],
+      "isBackground": true,
+      "problemMatcher": "$tsc-watch",
+      "group": "build"
+    },
+    {
+      "label": "npm: start",
+      "type": "shell",
+      "command": "npm",
+      "args": ["start"],
+      "isBackground": true,
+      "problemMatcher": []
+    },
+    {
+      "label": "npm: build:db",
+      "type": "shell",
+      "command": "npm",
+      "args": ["run", "build:db"],
+      "problemMatcher": []
+    }
+  ]
+}
