@@ -6,7 +6,7 @@ _TES Skyrim Best Alchemy Recipes Finder_. Alchemy's quality of life improvement 
 
 The code is structured so it is easy to add new ingredients from other creations/mods and auto generate recipes DB.
 
-Build to be lightweight and fast, no frameworks, no external runtime packages.
+Build to be lightweight and fast, no frameworks, no external runtime packages. Pure vanilla JS (once build)
 
 # Development setup
 required [nodejs](https://nodejs.org)
@@ -16,21 +16,21 @@ npm install
 ```
 # quick start
 ```shell
-npm run build:db && npm start
+npm run build:sprites && npm run build:db && npm start
 ```
 
 ## step by step explained
-- This builds optimised db files from human readable ones in `/db` folder
+
 ```shell
+### build sprites sheet and frame lookup data needed for db build
+npm run build:sprites
+
+### build optimised db files from human readable ones in `/db` folder
 npm run build:db 
-```
 
 ### start local dev. http server
-```shell
 npm start
-```
 
 ### re-compile your TS code to JS when changed
-```shell
 npm run build
 ```

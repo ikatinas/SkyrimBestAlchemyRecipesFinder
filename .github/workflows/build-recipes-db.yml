@@ -21,8 +21,11 @@ jobs:
       - name: Install deps
         run: npm install
 
-      - name: Generate compressed DBs
-        run: npm run build:ingredients
+      - name: Generate sprites-sheet
+        run: npm run build:sprites
 
-      - name: Generate build_recipes_db.json
-        run: npm run build:recipes
+      - name: Generate compressed DB json
+        run:  npm run build:db
+
+      - name: Build app's scripts
+        run: npm run build:scripts
