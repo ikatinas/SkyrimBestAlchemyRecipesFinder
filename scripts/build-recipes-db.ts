@@ -49,6 +49,33 @@ interface BuildRecipe {
   effectIds: number[];
 }
 
+function asNumberOrDefault(value: number | undefined | null, defaultValue: number): number {
+  return value === undefined || value === null ? defaultValue : value;
+}
+
+function computeMagnifiersSortScore(recipe: BuildRecipe, ingredientsByKey: Map<number, IngredientData>): number {
+  const ingredients: IngredientData[] = recipe.ingredientKeys
+    .map((key) => ingredientsByKey.get(key))
+    .filter((ing): ing is IngredientData => Boolean(ing));
+
+  let total = 0;
+  for (const effectId of recipe.effectIds ?? []) {
+    let magnitude = 0;
+    let duration = 0;
+
+    for (const ing of ingredients) {
+      const eff = (ing.effects ?? []).find((e) => e.fkey === effectId);
+      if (!eff) continue;
+      magnitude = Math.max(magnitude, asNumberOrDefault(eff.magnitude, 1));
+      duration = Math.max(duration, asNumberOrDefault(eff.duration, 1));
+    }
+
+    total += magnitude + duration;
+  }
+
+  return total;
+}
+
 function sharedEffectIdsBetween(a: IngredientData, b: IngredientData): number[] {
   const aEffects = a.effects ?? [];
   const bEffects = b.effects ?? [];
@@ -123,7 +150,24 @@ function buildRecipesDB(_effectsData: EffectData[], ingredientsData: IngredientD
     return !hasSameEffectsAsSomePair;
   });
 
-  return [...recipes2, ...filteredRecipes3];
+  const ingredientsByKey = new Map<number, IngredientData>(ingredientsData.map((i) => [i.pkey, i]));
+  const all = [...recipes2, ...filteredRecipes3];
+
+  // Persist recipes already sorted by Magnifiers (descending) to avoid sorting cost on app init.
+  all.sort((a, b) => {
+    const scoreA = computeMagnifiersSortScore(a, ingredientsByKey);
+    const scoreB = computeMagnifiersSortScore(b, ingredientsByKey);
+    if (scoreA !== scoreB) return scoreB - scoreA;
+
+    // Deterministic tie-breaker to keep output stable.
+    const aKey = a.ingredientKeys.join(',');
+    const bKey = b.ingredientKeys.join(',');
+    if (aKey !== bKey) return aKey.localeCompare(bKey);
+
+    return a.effectIds.join(',').localeCompare(b.effectIds.join(','));
+  });
+
+  return all;
 }
 
 async function main(): Promise<void> {

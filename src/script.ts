@@ -217,7 +217,7 @@ async function fetchData(): Promise<void> {
       effectsByKey
     );
     drawOriginsFilterGUI(ingredientsData);
-    allRecipes = preFilteredRecipes = sortRecipesBy(hydratedRecipes, SortBy.Magnifiers);
+    allRecipes = preFilteredRecipes = hydratedRecipes;
     drawRecipesTableGUI(allRecipes);
     populateDropdown(effectsData as EffectData[], ingredientsData);
     applyFilterConditionsFromStorage();
