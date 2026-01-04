@@ -322,7 +322,7 @@ function drawRecipesTableGUI(recipes: Recipe[], part: number = 0): void {
       <th>Ingredient 1</th>
       <th>Ingredient 2</th>
       <th>Ingredient 3</th>
-      <th>Effects</th>
+      <th>Sorted by <span>(Effects * Magnifiers)</span></th>
     </tr>
   `;
 
