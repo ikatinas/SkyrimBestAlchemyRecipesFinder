@@ -19,7 +19,10 @@
       "args": ["tsc", "-w"],
       "isBackground": true,
       "problemMatcher": "$tsc-watch",
-      "group": "build"
+      "group": "build",
+      "runOptions": {
+        "runOn": "folderOpen"
+      }
     },
     {
       "label": "npm: start",
