@@ -744,7 +744,7 @@ function applyFilter() {
         recipe.effects.find(effect => effect.fkey == effectKey)
       )
         && includeConditions.ingredientKeys.every(ingredientKey =>
-          recipe.ingredientKeys.find(ingredient => ingredient == ingredientKey)
+          recipe.ingredientKeys.includes(ingredientKey)
         );
     });
   }
