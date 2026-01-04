@@ -233,6 +233,25 @@ enum SortBy {
   Price
 }
 
+let currentSortBy: SortBy = SortBy.Magnifiers;
+
+function parseSortBy(value: string): SortBy {
+  switch (value) {
+    case 'Magnifiers':
+      return SortBy.Magnifiers;
+    case 'EffectsNum':
+      return SortBy.EffectsNum;
+    default:
+      return SortBy.Magnifiers;
+  }
+}
+
+function maybeSortRecipes(recipes: Recipe[]): Recipe[] {
+  // Recipes are persisted pre-sorted by Magnifiers; keep that order.
+  if (currentSortBy === SortBy.Magnifiers) return recipes;
+  return sortRecipesBy(recipes.slice(), currentSortBy);
+}
+
 function sortRecipesBy(recipes: Recipe[],  by: SortBy): Recipe[]{
   if (by == SortBy.Magnifiers){
     return recipes.sort((a, b) => {
@@ -322,9 +341,24 @@ function drawRecipesTableGUI(recipes: Recipe[], part: number = 0): void {
       <th>Ingredient 1</th>
       <th>Ingredient 2</th>
       <th>Ingredient 3</th>
-      <th>Sorted by <span>(Effects * Magnifiers)</span></th>
+      <th>
+        Sort by
+        <select id="sortBySelect">
+          <option value="Magnifiers">Effects x Magnifiers</option>
+          <option value="EffectsNum">Effects quantity</option>
+        </select>
+      </th>
     </tr>
   `;
+
+  const sortBySelect = table.querySelector('#sortBySelect') as HTMLSelectElement | null;
+  if (sortBySelect) {
+    sortBySelect.value = SortBy[currentSortBy];
+    sortBySelect.onchange = () => {
+      currentSortBy = parseSortBy(sortBySelect.value);
+      applyFilter();
+    };
+  }
 
   const maxPerPage = 50;
   const start = part * maxPerPage;
@@ -693,7 +727,7 @@ function applyFilter() {
     !includeConditions.ingredientKeys.length &&
     !excludeConditions.effectKeys.length &&
     !excludeConditions.ingredientKeys.length) {
-      drawRecipesTableGUI(preFilteredRecipes);
+      drawRecipesTableGUI(maybeSortRecipes(preFilteredRecipes));
       setClearFilterAllButtonVisiblity(false);
       return;
   }
@@ -717,7 +751,7 @@ function applyFilter() {
 
   if (!excludeConditions.effectKeys.length &&
     !excludeConditions.ingredientKeys.length) {
-    drawRecipesTableGUI(filteredResults);
+    drawRecipesTableGUI(maybeSortRecipes(filteredResults));
     return;
   }
   const finalResults = filteredResults.filter((recipe) => {
@@ -729,7 +763,7 @@ function applyFilter() {
     );
   });
   
-  drawRecipesTableGUI(finalResults)
+  drawRecipesTableGUI(maybeSortRecipes(finalResults))
 }
 
 function setClearFilterAllButtonVisiblity(display = false){
