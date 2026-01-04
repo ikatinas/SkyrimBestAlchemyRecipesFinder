@@ -24,7 +24,7 @@ interface IngredientEffect {
 }
 
 interface IngredientData {
-  image: string;
+  image: unknown;
   title: string;
   pkey: number;
   origin: string;
@@ -35,6 +35,13 @@ interface IngredientData {
   weight: number;
   merchant_avail: string;
   garden: number | null;
+}
+
+interface IngredientsDb {
+  meta: {
+    spriteSheetUrl: string;
+  };
+  ingredients: IngredientData[];
 }
 
 interface BuildRecipe {
@@ -131,7 +138,8 @@ async function main(): Promise<void> {
   ]);
 
   const effectsData = JSON.parse(effectsDataRaw) as EffectData[];
-  const ingredientsData = JSON.parse(ingredientsDataRaw) as IngredientData[];
+  const ingredientsDb = JSON.parse(ingredientsDataRaw) as IngredientsDb;
+  const ingredientsData = ingredientsDb.ingredients ?? [];
 
   const recipes = buildRecipesDB(effectsData, ingredientsData);
 

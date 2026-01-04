@@ -12,7 +12,7 @@ interface EffectData {
 }
 
 interface IngredientData {
-  image: string;
+  image: string | SpriteFrame;
   title: string;
   pkey: number;
   origin: string;
@@ -23,6 +23,45 @@ interface IngredientData {
   weight: number;
   merchant_avail: string;
   garden: number | null;
+}
+
+interface SpriteFrame {
+  x: number;
+  y: number;
+  w: number;
+  h: number;
+}
+
+interface IngredientsDb {
+  meta: {
+    spriteSheetUrl: string;
+  };
+  ingredients: IngredientData[];
+}
+
+var spriteSheetUrl: string | null = null;
+
+function createIngredientIcon(image: IngredientData['image']): HTMLElement {
+  if (typeof image === 'string') {
+    const img = document.createElement('img');
+    img.src = image;
+    return img;
+  }
+
+  if (!spriteSheetUrl) {
+    const span = document.createElement('span');
+    span.textContent = '';
+    return span;
+  }
+
+  const div = document.createElement('div');
+  div.style.display = 'inline-block';
+  div.style.width = `${image.w}px`;
+  div.style.height = `${image.h}px`;
+  div.style.backgroundImage = `url(${spriteSheetUrl})`;
+  div.style.backgroundRepeat = 'no-repeat';
+  div.style.backgroundPosition = `-${image.x}px -${image.y}px`;
+  return div;
 }
 
 interface IngredientEffect { 
@@ -163,20 +202,24 @@ async function fetchData(): Promise<void> {
   ];
 
   try {
-    const [effectsData, ingredientsData, buildRecipes] = await Promise.all(promises);
+    const [effectsData, ingredientsDbRaw, buildRecipes] = await Promise.all(promises);
+
+    const ingredientsDb = ingredientsDbRaw as IngredientsDb;
+    spriteSheetUrl = ingredientsDb?.meta?.spriteSheetUrl ?? null;
+    const ingredientsData = (ingredientsDb?.ingredients ?? []) as IngredientData[];
 
     indexEffectsByKey(effectsData as EffectData[]);
-    indexIngredientsByKey(ingredientsData as IngredientData[]);
+    indexIngredientsByKey(ingredientsData);
 
     const hydratedRecipes = rehydrateRecipes(
       buildRecipes as BuildRecipe[],
       ingredientsByKey,
       effectsByKey
     );
-    drawOriginsFilterGUI(ingredientsData as IngredientData[]);
+    drawOriginsFilterGUI(ingredientsData);
     allRecipes = preFilteredRecipes = sortRecipesBy(hydratedRecipes, SortBy.Magnifiers);
     drawRecipesTableGUI(allRecipes);
-    populateDropdown(effectsData as EffectData[], ingredientsData as IngredientData[]);
+    populateDropdown(effectsData as EffectData[], ingredientsData);
     applyFilterConditionsFromStorage();
     hideLoadingIndicator();
   } catch (error) {
@@ -292,11 +335,8 @@ function drawRecipesTableGUI(recipes: Recipe[], part: number = 0): void {
     const row = document.createElement('tr');
 
     for (const ingredient of recipe.ingredients){
-
-      const img = document.createElement('img');
-      img.src = ingredient.image;
       const imgContainer = document.createElement('div');
-      imgContainer.appendChild(img);
+      imgContainer.appendChild(createIngredientIcon(ingredient.image));
       
       const ingrText = document.createElement('span');
       ingrText.textContent = ingredient.origin ? `${ingredient.title} [${ingredient.origin}]` : ingredient.title;

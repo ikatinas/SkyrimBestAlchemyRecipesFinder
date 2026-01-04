@@ -3,6 +3,27 @@
 import * as path from 'node:path';
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 
+interface SpriteFrame {
+  x: number;
+  y: number;
+  w: number;
+  h: number;
+}
+
+interface SpriteSheetMap {
+  meta: {
+    image: string;
+    width: number;
+    height: number;
+    cell: number;
+    padding: number;
+    cols: number;
+    rows: number;
+    count: number;
+  };
+  sprites: Record<string, SpriteFrame>;
+}
+
 interface EffectDataRaw {
   key: string;
   title: string;
@@ -37,6 +58,13 @@ interface IngredientDataRaw {
   garden: number | null;
 }
 
+interface SpriteFrame {
+  x: number;
+  y: number;
+  w: number;
+  h: number;
+}
+
 interface EffectDataBuild extends Omit<EffectDataRaw, 'ingredients'> {
   ingredients: number[];
 }
@@ -45,9 +73,17 @@ interface IngredientEffectBuild extends Omit<IngredientEffectRaw, 'fkey'> {
   fkey: number;
 }
 
-interface IngredientDataBuild extends Omit<IngredientDataRaw, 'pkey' | 'effects'> {
+interface IngredientDataBuild extends Omit<IngredientDataRaw, 'pkey' | 'effects' | 'image'> {
+  image: SpriteFrame;
   pkey: number;
   effects: IngredientEffectBuild[];
+}
+
+interface IngredientsDbBuild {
+  meta: {
+    spriteSheetUrl: string;
+  };
+  ingredients: IngredientDataBuild[];
 }
 
 function sortByStringKey<T>(items: T[], getKey: (item: T) => string): T[] {
@@ -58,23 +94,37 @@ function sortByStringKey<T>(items: T[], getKey: (item: T) => string): T[] {
   });
 }
 
+function getSpriteKeyFromIngredientImageUrl(imageUrl: string): string {
+  const base = path.posix.basename(imageUrl);
+  try {
+    return decodeURIComponent(base);
+  } catch {
+    return base;
+  }
+}
+
 async function main(): Promise<void> {
   const projectRoot = path.resolve(__dirname, '..');
 
   const effectsPath = path.join(projectRoot, 'db', 'effects_db.json');
   const ingredientsPath = path.join(projectRoot, 'db', 'ingredients_db.json');
+  const spriteSheetMapPath = path.join(projectRoot, 'dist', 'images', 'skyrim-sprite-sheet.json');
 
   const outDir = path.join(projectRoot, 'dist', 'db');
   const outEffectsPath = path.join(outDir, 'effects_db.json');
   const outIngredientsPath = path.join(outDir, 'ingredients_db.json');
 
-  const [effectsDataRawText, ingredientsDataRawText] = await Promise.all([
+  const [effectsDataRawText, ingredientsDataRawText, spriteSheetMapText] = await Promise.all([
     readFile(effectsPath, 'utf8'),
     readFile(ingredientsPath, 'utf8'),
+    readFile(spriteSheetMapPath, 'utf8'),
   ]);
 
   const effectsDataRaw = JSON.parse(effectsDataRawText) as EffectDataRaw[];
   const ingredientsDataRaw = JSON.parse(ingredientsDataRawText) as IngredientDataRaw[];
+  const spriteSheetMap = JSON.parse(spriteSheetMapText) as SpriteSheetMap;
+
+  const spriteSheetUrl = `dist/images/${spriteSheetMap.meta.image}`;
 
   // Deterministic IDs.
   const effectsSorted = sortByStringKey(effectsDataRaw, (e) => e.key);
@@ -90,6 +140,14 @@ async function main(): Promise<void> {
     const pkey = ingredientKeyToId.get(ing.pkey);
     if (pkey === undefined) throw new Error(`Missing ingredient id mapping for ${ing.pkey}`);
 
+    const spriteKey = getSpriteKeyFromIngredientImageUrl(ing.image);
+    const sprite = spriteSheetMap.sprites[spriteKey];
+    if (!sprite) {
+      throw new Error(
+        `Missing sprite for ingredient ${ing.pkey} (expected key: ${spriteKey}). Run: npm run build:sprites`
+      );
+    }
+
     const effectsBuild = (ing.effects ?? [])
       .map((eff): IngredientEffectBuild | null => {
         const fkey = effectKeyToId.get(eff.fkey);
@@ -104,7 +162,12 @@ async function main(): Promise<void> {
       .filter((x): x is IngredientEffectBuild => x !== null);
 
     return {
-      image: ing.image,
+      image: {
+        x: sprite.x,
+        y: sprite.y,
+        w: sprite.w,
+        h: sprite.h,
+      },
       title: ing.title,
       pkey,
       origin: ing.origin,
@@ -141,7 +204,11 @@ async function main(): Promise<void> {
 
   // No pretty-print to keep size smaller.
   await Promise.all([
-    writeFile(outIngredientsPath, JSON.stringify(ingredientsBuild), 'utf8'),
+    writeFile(
+      outIngredientsPath,
+      JSON.stringify({ meta: { spriteSheetUrl }, ingredients: ingredientsBuild } satisfies IngredientsDbBuild),
+      'utf8'
+    ),
     writeFile(outEffectsPath, JSON.stringify(effectsBuild), 'utf8'),
   ]);
 

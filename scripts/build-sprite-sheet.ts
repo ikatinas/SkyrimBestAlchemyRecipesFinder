@@ -36,7 +36,7 @@ type SpriteSheetMap = {
 
 function parseArgs(argv: string[], projectRoot: string): CliArgs {
   const inputDefault = path.join(projectRoot, 'db', 'images', 'skyrim');
-  const outputDefault = path.join(projectRoot, 'db', 'images', 'skyrim-sprite-sheet.png');
+  const outputDefault = path.join(projectRoot, 'dist', 'images', 'skyrim-sprite-sheet.png');
 
   const get = (flag: string): string | undefined => {
     const idx = argv.indexOf(flag);

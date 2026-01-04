@@ -6,7 +6,7 @@
   "scripts": {
     "build:scripts": "npx tsc -p tsconfig.scripts.json",
     "build:sprites": "npm run build:scripts && node scripts-dist/build-sprite-sheet.js",
-    "build:ingredients": "npm run build:scripts && node scripts-dist/build-ingredients-db.js",
+    "build:ingredients": "npm run build:sprites && node scripts-dist/build-ingredients-db.js",
     "build:recipes": "npm run build:scripts && node scripts-dist/build-recipes-db.js",
     "build:db": "npm run build:ingredients && npm run build:recipes",
     "build": "npx tsc",
