@@ -180,6 +180,11 @@ function buildIngredientTooltipText(ingredient: IngredientData): HTMLElement {
       effectSpan.classList.add(harmful ? 'harmfull' : 'beneficial');
       line.appendChild(effectSpan);
 
+      const magnifiersContainer = getMagnifiersGUI(effect);
+      if (magnifiersContainer.childNodes.length > 0) {
+        line.appendChild(magnifiersContainer);
+      }
+
       container.appendChild(line);
     }
   }
